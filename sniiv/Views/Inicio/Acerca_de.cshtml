@@ -1,0 +1,217 @@
+﻿@{
+    ViewData["Title"] = "Acerca de";
+    string banner = (string)ViewBag.banner;
+}
+
+@section Scripts{
+    @*<link href="~/css/bootstrap.min.css" rel="stylesheet" type="text/css" />*@
+    <script src="~/js/acerca-de.js" type="text/javascript"></script>
+    <script src="~/js/jquery.backstretch.min.js"></script>
+    <link href="~/css/diag.css" rel="stylesheet" type="text/css" />
+    <style>
+        #img_sedatu {
+            width: 100%;
+            height: auto;
+            /*position: fixed;
+            height: 400px;
+            width: 100%;*/
+            /*background: url(../img/img.jpeg) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;*/
+        }
+
+        #sniiv_home {
+            width: 35%;
+            float: left;
+            padding-right: 50px;
+        }
+
+        #prnv {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 95%;
+            padding: 10px;
+        }
+
+        .img-text {
+            text-align: center;
+            font-size: 14px;
+        }
+    </style>
+}
+@section Image{
+    <div class="tm-container">
+        <div>
+            <div class="tm-row pt-4">
+                <div class="tm-col-left">
+                </div>
+                <div class="tm-col-right">
+                    <br /><br />
+                    <img class="img-responsive" src="~/img/sniiv02.png" alt="SNIIV">
+                </div>
+            </div>
+            <div class="tm-row">
+                <div class="tm-col-left"></div>
+                <main class="tm-col-right">
+                    <section class="tm-content">
+                        <h2 class="mb-5 tm-content-title">¿Qué es el SNIIV?</h2>
+                        <p class="mb-5" style="text-align: justify;">
+                            El Sistema Nacional de Información e Indicadores de Vivienda (SNIIV), es una herramienta que reúne los datos producidos por los sectores público, social y privado en materia de vivienda y el mercado habitacional, así como las mediciones del impacto de las políticas públicas en el sector.
+                        </p>
+                        <hr class="mb-5">
+                        <p class="mb-5" style="text-align: justify;">
+                            Con el objetivo de fortalecer la oferta de vivienda en el país, la Secretaría de Desarrollo Agrario, Territorial y Urbano (Sedatu) pone a disposición el SNIIV para impulsar la adecuada planeación, instrumentación y seguimiento de la Política Nacional de Vivienda (PNV).
+                        </p>
+                    </section>
+                </main>
+
+            </div>
+        </div>
+
+        <div class="tm-row">
+            <div class="tm-col-left text-center">
+                <ul class="tm-bg-controls-wrapper">
+                    <li class="tm-bg-control active" data-id="0"></li>
+                </ul>
+            </div>
+        </div>
+
+
+
+        <!-- Diagonal background design -->
+        <div class="tm-bg">
+            <div class="tm-bg-left"></div>
+            <div class="tm-bg-right"></div>
+        </div>
+    </div>
+    <br />
+    <br />
+}
+
+<div style="background-color: white; color:black;">
+
+    <br />
+    <div class="tm-row container">
+        <a href="@banner"><img id="prnv" src="https://sistemas.sedatu.gob.mx/repositorio/proxy/alfresco-noauth/api/internal/shared/node/YnLiSO53TM6QN5zJ6sHVrg/content/banner.jpg" class="img-responsive" alt="Banner" /></a>
+    </div>
+    <h3 style="padding-left:4%;">Sitios de Interés</h3>
+    <br />
+    <br />
+    <div class="row ">
+        <div class="col-sm-6">
+            <a href="https://decideyconstruye.gob.mx"><img id="prnv" src="https://sistemas.sedatu.gob.mx/repositorio/proxy/alfresco-noauth/api/internal/shared/node/5-rkFhNaRk25vvBmnyjBqw/content/cons-dec.png" class="img-responsive" alt="Decide y construye" /></a>
+            <div class="img-text">
+                Plataforma Decide y Construye
+                <br />
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <a href="https://situ.sedatu.gob.mx"><img id="prnv" src="https://sistemas.sedatu.gob.mx/repositorio/proxy/alfresco-noauth/api/internal/shared/node/tn5BHMDUTtuYyePGh6lDeA/content/situ.jpg" class="img-responsive" alt="Situ" /></a>
+            <div class="img-text">
+                Sistema de Información Territorial y Urbana
+                <br />
+                SITU
+                <br />
+
+            </div>
+        </div>
+    </div>
+    <div class="row ">
+        <div class="col-sm-4">
+            <a href="https://www.gob.mx/conavi">
+                <img src="~/img/conavi.png" class="img-responsive" alt="CONAVI">
+            </a>
+            <div class="img-text">
+                Comisión Nacional de Vivienda
+                <br />
+                55 9138 9991 ext. 162 y 422
+                <br />
+                <a class="contacto" href="mailto:atencionciudadana@conavi.gob.mx">atencionciudadana@conavi.gob.mx</a>
+
+            </div>
+
+        </div>
+        <div class="col-sm-4">
+            <a href="https://www.gob.mx/cnbv">
+                <img src="~/img/cnbv.jpg" class="img-responsive" alt="CNBV">
+            </a>
+            <div class="img-text">
+                Comisión Nacional Bancaria y de Valores
+                <br />
+                55 1454 6000
+                <br />
+                <a class="contacto" href="mailto:info@cnbv.gob.mx">info@cnbv.gob.mx</a>
+
+            </div>
+
+        </div>
+        <div class="col-sm-4">
+            <a href="https://www.gob.mx/insus">
+                <img src="~/img/INSUS.png" class="img-responsive" alt="INSUS">
+            </a>
+            <div class="img-text">
+                Instituto Nacional del Suelo Sustentable
+                <br />
+                55 5080 9600
+                <br />
+                <a class="contacto" href="mailto:atencion_ciudadana@insus.gob.mx">atencion_ciudadana@insus.gob.mx</a>
+
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <a href="https://portalmx.infonavit.org.mx">
+                <img src="~/img/infonavit.png" class="img-responsive" alt="INFONAVIT">
+            </a>
+            <div class="img-text">
+                Instituto del Fondo Nacional de la Vivienda para los Trabajadores
+                <br />
+                55 9171 5050
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <a href="https://portal.ruv.org.mx"><img src="~/img/ruv.png" class="img-responsive" alt="RUV"></a>
+            <div class="img-text">
+                Registro Único de Vivienda
+                <br />
+                55 1204 2571
+                <br />
+                <a class="contacto" href="mailto:soporte@ruv.org.mx">soporte@ruv.org.mx</a>
+
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <a href="https://www.gob.mx/fovissste">
+                <img src="~/img/fovissste.png" class="img-responsive" alt="FOVISSSTE">
+            </a>
+            <div class="img-text">
+                Fondo de la Vivienda del ISSSTE
+                <br />
+                800 368 4783
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+            <a href="https://www.gob.mx/shf">
+                <img src="~/img/shf.png" class="img-responsive" alt="SHF">
+            </a>
+            <div class="img-text">
+                Sociedad Hipotecaria Federal
+                <br />
+                <a class="contacto" href="mailto:info@shf.gob.mx">info@shf.gob.mx</a>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <br />
+</div>

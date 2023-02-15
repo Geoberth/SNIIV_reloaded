@@ -1,0 +1,310 @@
+﻿@{
+    Layout = null;
+}
+
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="indicadores" content="Indicadores">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indicadores</title>
+
+    <link rel="shortcut icon" href="https://framework-gb.cdn.gob.mx/favicon.ico">
+    <link href="https://framework-gb.cdn.gob.mx/assets/styles/main.css" rel="stylesheet">
+
+    @*JQuery*@
+    <script src="~/js/jquery-1.11/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var columns = [
+            {
+                data: 'Nombre',
+                'render': function (data, type, row) {
+                    if (type === 'display') {
+                        // mostrarFicha(Id); parametro Id, por el momento mandamos Nombre
+                        data = '<a href="#"  onclick="mostrarFicha(\'' + data + '\');">' + data + '</a>';
+                    }
+                    return data;
+                }
+            },
+            { data: 'VALOR_DE_LINEA_BASE_Y_METAS.Linea_base.Anio' }
+        ];
+
+        $(function () {
+            $.getJSON('json/fichas.json', function (json) {
+                var table = $('#table').DataTable({
+                    data: json,
+                    columns: columns,
+                    destroy: true,
+                    paging: false,
+                    info: false,
+                    ordering: false
+                });
+                table.buttons().container().appendTo($('.col-sm-6:eq(0)', table.table().container()));
+            });
+        });
+
+        function mostrarFicha(Nombre) {
+            //$('#lbl_titulo').text('Indicador');
+            $.getJSON('json/ficha.json', function (json) {
+                var indicador = json[0];
+                $('#Nombre').text(indicador.Nombre);
+                $('#Objetivo_prioritario').text(indicador.Objetivo_prioritario);
+                $('#Definicion_o_descripcion').text(indicador.Definicion_o_descripcion);
+                $('#Nivel_de_desagregacion').text(indicador.Nivel_de_desagregacion);
+                $('#Periodicidad_o_frecuencia_de_medicion').text(indicador.Periodicidad_o_frecuencia_de_medicion);
+                $('#Tipo').text(indicador.Tipo);
+                $('#Acumulado_o_periodico').text(indicador.Acumulado_o_periodico);
+                $('#Unidad_de_medida').text(indicador.Unidad_de_medida);
+                $('#Periodo_de_recoleccion_de_datos').text(indicador.Periodo_de_recoleccion_de_datos);
+                $('#Dimension').text(indicador.Dimension);
+                $('#Disponibilidad_de_la_informacion').text(indicador.Disponibilidad_de_la_informacion);
+                $('#Tendencia_esperada').text(indicador.Tendencia_esperada);
+                $('#Unidad_responsable_de_reportar_el_avance').text(indicador.Unidad_responsable_de_reportar_el_avance);
+                $('#Metodo_de_calculo').text(indicador.Metodo_de_calculo);
+                $('#Observaciones').text(indicador.Observaciones);
+                if (indicador.APLICACION_DEL_METODO_DE_CALCULO.Variables.length) {
+                    var variables = indicador.APLICACION_DEL_METODO_DE_CALCULO.Variables;
+                    $(".tr_variable").remove();
+                    variables.forEach(function (variable, indice) {
+                        var i = indice + 1;
+                        var lbl_nombre = "<td colspan='2' class='col-md-2 lbl'><span>Nombre variable " + i + "</span></td>";
+                        var val_nombre = "<td colspan='2' class='col-md-2'><span>" + variable.Nombre + "</span></td>";
+                        var lbl_valor = "<td colspan='2' class='col-md-2 lbl'><span>Valor variable " + i + "</span></td>";
+                        var val_valor = "<td colspan='2' class='col-md-2'><span>" + variable.Valor + "</span></td>";
+                        var lbl_fuente = "<td colspan='2' class='col-md-2 lbl'><span>Fuente de información variable " + i + "</span></td>";
+                        var val_fuente = "<td colspan='2' class='col-md-2'><span>" + variable.Fuente + "</span></td>";
+                        var fila = "<tr class='tr_variable'>" + lbl_nombre + val_nombre + lbl_valor + val_valor + lbl_fuente + val_fuente + "</tr>";
+                        $("#tr_calculo").before(fila);
+                        //$("#table_indicador").append(fila);
+                    });
+                }
+                $('#Sustitucion_en_metodo_de_calculo_del_indicador').text(indicador.APLICACION_DEL_METODO_DE_CALCULO.Sustitucion_en_metodo_de_calculo_del_indicador);
+                $('#Valor').text(indicador.VALOR_DE_LINEA_BASE_Y_METAS.Linea_base.Valor);
+                $('#Anio').text(indicador.VALOR_DE_LINEA_BASE_Y_METAS.Linea_base.Anio);
+                $('#Nota_sobre_la_linea_base').text(indicador.VALOR_DE_LINEA_BASE_Y_METAS.Nota_sobre_la_linea_base);
+                $('#META_2024').text(indicador.VALOR_DE_LINEA_BASE_Y_METAS.META_2024);
+                $('#Nota_sobre_la_meta_2024').text(indicador.VALOR_DE_LINEA_BASE_Y_METAS.Nota_sobre_la_meta_2024);
+                $('#H_2012').text(indicador.SERIE_HISTORICA_DE_LA_META_PARA_EL_BIENESTAR_O_PARAMETRO.H_2012);
+                $('#H_2013').text(indicador.SERIE_HISTORICA_DE_LA_META_PARA_EL_BIENESTAR_O_PARAMETRO.H_2013);
+                $('#H_2014').text(indicador.SERIE_HISTORICA_DE_LA_META_PARA_EL_BIENESTAR_O_PARAMETRO.H_2014);
+                $('#H_2015').text(indicador.SERIE_HISTORICA_DE_LA_META_PARA_EL_BIENESTAR_O_PARAMETRO.H_2015);
+                $('#H_2016').text(indicador.SERIE_HISTORICA_DE_LA_META_PARA_EL_BIENESTAR_O_PARAMETRO.H_2016);
+                $('#H_2017').text(indicador.SERIE_HISTORICA_DE_LA_META_PARA_EL_BIENESTAR_O_PARAMETRO.H_2017);
+                $('#H_2018').text(indicador.SERIE_HISTORICA_DE_LA_META_PARA_EL_BIENESTAR_O_PARAMETRO.H_2018);
+                $('#H_2019').text(indicador.SERIE_HISTORICA_DE_LA_META_PARA_EL_BIENESTAR_O_PARAMETRO.H_2019);
+                $('#H_2020').text(indicador.SERIE_HISTORICA_DE_LA_META_PARA_EL_BIENESTAR_O_PARAMETRO.H_2020);
+                console.log(indicador.METAS_INTERMEDIAS);
+                if (typeof indicador.METAS_INTERMEDIAS !== 'undefined') {
+                    console.log('si');
+                    $(".tr_metas").show();
+                    $('#M_2021').text(indicador.METAS_INTERMEDIAS.M_2021);
+                    $('#M_2022').text(indicador.METAS_INTERMEDIAS.M_2022);
+                    $('#M_2023').text(indicador.METAS_INTERMEDIAS.M_2023);
+                    $('#M_2024').text(indicador.METAS_INTERMEDIAS.M_2024);
+                }
+                else {
+                    console.log('no');
+                    $(".tr_metas").hide();
+                }
+            });
+            $('#mdl').modal();
+        }
+    </script>
+    @*Bootstrap*@
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/js/bootstrap.min.js" type="text/javascript"></script>
+    @*SNIIV*@
+    <link href="~/css/style1.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        .lbl {
+            background-color: #ccc;
+            font-weight: bold;
+        }
+    </style>
+
+    @* DataTables *@
+    <link href="~/js/datatable2/datatables.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/js/datatable2/datatables.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="page-header">
+            <h2>
+                Indicadores de bienestar
+            </h2>
+        </div>
+
+        <div class="row">
+            <table id="table" class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Indicador</th>
+                        <th>Año</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+
+    <div id="mdl" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-lbl="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="lbl_titulo">Indicador</h4>
+                </div>
+                <div class="modal-body text-center" style="font-size: 9px">
+
+                    <div class="table-responsive">
+                        <table id="table_indicador" class="table table-bordered table-condensed">
+                            <tr>
+                                <td colspan="12" class="lbl"><span>ELEMENTOS DE META PARA EL BIENESTAR O PARÁMETRO</span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="col-md-3 lbl"><span>Nombre</span></td>
+                                <td colspan="9" class="col-md-9"><span id="Nombre"></span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="col-md-3 lbl"><span>Objetivo prioritario</span></td>
+                                <td colspan="9" class="col-md-9"><span id="Objetivo_prioritario"></span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="col-md-3 lbl"><span>Definición o descripción</span></td>
+                                <td colspan="9" class="col-md-9"><span id="Definicion_o_descripcion"></span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="col-md-3 lbl"><span>Nivel de desagregación</span></td>
+                                <td colspan="3" class="col-md-3"><span id="Nivel_de_desagregacion"></span></td>
+                                <td colspan="3" class="col-md-3 lbl"><span>Periodicidad o frecuencia de medición</span></td>
+                                <td colspan="3" class="col-md-3"><span id="Periodicidad_o_frecuencia_de_medicion"></span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="col-md-3 lbl"><span>Tipo</span></td>
+                                <td colspan="3" class="col-md-3"><span id="Tipo"></span></td>
+                                <td colspan="3" class="col-md-3 lbl"><span>Acumulado o periódico</span></td>
+                                <td colspan="3" class="col-md-3"><span id="Acumulado_o_periodico"></span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="col-md-3 lbl"><span>Unidad de medida</span></td>
+                                <td colspan="3" class="col-md-3"><span id="Unidad_de_medida"></span></td>
+                                <td colspan="3" class="col-md-3 lbl"><span>Periodo de recolección de datos</span></td>
+                                <td colspan="3" class="col-md-3"><span id="Periodo_de_recoleccion_de_datos"></span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="col-md-3 lbl"><span>Dimensión</span></td>
+                                <td colspan="3" class="col-md-3"><span id="Dimension"></span></td>
+                                <td colspan="3" class="col-md-3 lbl"><span>Disponibilidad de la información</span></td>
+                                <td colspan="3" class="col-md-3"><span id="Disponibilidad_de_la_informacion"></span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="col-md-3 lbl"><span>Tendencia esperada</span></td>
+                                <td colspan="3" class="col-md-3"><span id="Tendencia_esperada"></span></td>
+                                <td colspan="3" class="col-md-3 lbl"><span>Unidad Responsable de reportar el avance</span></td>
+                                <td colspan="3" class="col-md-3"><span id="Unidad_responsable_de_reportar_el_avance"></span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="col-md-3 lbl"><span>Método de cálculo</span></td>
+                                <td colspan="9" class="col-md-9"><span id="Metodo_de_calculo"></span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="col-md-3 lbl"><span>Observaciones</span></td>
+                                <td colspan="9" class="col-md-9"><span id="Observaciones"></span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="12" class="lbl"><span>APLICACIÓN DEL MÉTODO DE CÁLCULO DEL INDICADOR PARA LA OBTENCIÓN DEL VALOR DE LA LÍNEA BASE</span></td>
+                            </tr>
+                            <tr id="tr_calculo">
+                                <td colspan="3" class="col-md-3 lbl"><span>Sustitución en método de cálculo del indicador</span></td>
+                                <td colspan="9" class="col-md-9"><span id="Sustitucion_en_metodo_de_calculo_del_indicador"></span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="12" class="lbl"><span>VALOR DE LÍNEA BASE Y METAS</span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="6" class="col-md-6 lbl"><span>Línea base</span></td>
+                                <td colspan="6" class="col-md-6 lbl"><span>Nota sobre la línea base</span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="col-md-3 lbl"><span>Valor</span></td>
+                                <td colspan="3" class="col-md-3" id="Valor"><span></span></td>
+                                <td colspan="6" rowspan="2" class="col-md-6" id="Nota_sobre_la_linea_base"><span></span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="col-md-3 lbl"><span>Año</span></td>
+                                <td colspan="3" class="col-md-3" id="Anio"><span></span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="6" class="col-md-6 lbl"><span>META 2024</span></td>
+                                <td colspan="6" class="col-md-6 lbl"><span>Nota sobre la meta 2024</span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="6" class="col-md-6" id="META_2024"><span></span></td>
+                                <td colspan="6" class="col-md-6" id="Nota_sobre_la_meta_2024"><span></span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="12" class="lbl"><span>SERIE HISTÓRICA DE LA META PARA EL BIENESTAR O PARÁMETRO</span></td>
+                            </tr>
+                            <tr>
+                                <td class="lbl"><span>2012</span></td>
+                                <td class="lbl"><span>2013</span></td>
+                                <td class="lbl"><span>2014</span></td>
+                                <td class="lbl"><span>2015</span></td>
+                                <td class="lbl"><span>2016</span></td>
+                                <td class="lbl"><span>2017</span></td>
+                                <td class="lbl"><span>2018</span></td>
+                                <td class="lbl"><span>2019</span></td>
+                                <td class="lbl"><span>2020</span></td>
+                                <td class="lbl"><span></span></td>
+                                <td class="lbl"><span></span></td>
+                                <td class="lbl"><span></span></td>
+                            </tr>
+                            <tr>
+                                <td id="H_2012"><span></span></td>
+                                <td id="H_2013"><span></span></td>
+                                <td id="H_2014"><span></span></td>
+                                <td id="H_2015"><span></span></td>
+                                <td id="H_2016"><span></span></td>
+                                <td id="H_2017"><span></span></td>
+                                <td id="H_2018"><span></span></td>
+                                <td id="H_2019"><span></span></td>
+                                <td id="H_2020"><span></span></td>
+                                <td><span></span></td>
+                                <td><span></span></td>
+                                <td><span></span></td>
+                            </tr>
+                            <tr class="tr_metas">
+                                <td colspan="12" class="lbl"><span>METAS INTERMEDIAS</span></td>
+                            </tr>
+                            <tr class="tr_metas">
+                                <td colspan="3" class="col-md-3 lbl"><span>2021</span></td>
+                                <td colspan="3" class="col-md-3 lbl"><span>2022</span></td>
+                                <td colspan="3" class="col-md-3 lbl"><span>2023</span></td>
+                                <td colspan="3" class="col-md-3 lbl"><span>2024</span></td>
+                            </tr>
+                            <tr class="tr_metas">
+                                <td colspan="3" class="col-md-3" id="M_2021"><span></span></td>
+                                <td colspan="3" class="col-md-3" id="M_2022"><span></span></td>
+                                <td colspan="3" class="col-md-3" id="M_2023"><span></span></td>
+                                <td colspan="3" class="col-md-3" id="M_2024"><span></span></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Salir</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
+</body>
+
+
+
+</html>

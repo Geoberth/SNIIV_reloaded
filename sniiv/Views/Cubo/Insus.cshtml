@@ -1,0 +1,293 @@
+﻿@{
+    ViewData["Title"] = "INSUS - Programa para Regularizar Asentamientos Humanos (PRAH)";
+    List<SelectListItem> anios = (List<SelectListItem>)ViewBag.anios;
+    string fecha = ViewBag.fecha;
+}
+
+@section Scripts
+{
+    @* Plotly *@
+    <script src="~/js/plotly/plotly-basic-latest.min.js" type="text/javascript"></script>
+    @* JQuery UI *@
+    <script src="~/js/jquery-1.11/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="~/js/jquery-1.11/jquery.ui.touch-punch.min.js" type="text/javascript"></script>
+    @* PivotTable *@
+    <link href="~/js/pivottable/pivot.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/js/pivottable/pivot.min.js" type="text/javascript"></script>
+    <script src="~/js/plotly/plotly_renderers.js" type="text/javascript"></script>
+    <!-- jqueryBase64 -->
+    <script src="~/js/jquery-base64/jquery.base64.min.js"></script>
+
+    <script src="~/js/util.js" type="text/javascript"></script>
+    <link href="~/css/cubo.css" rel="stylesheet" type="text/css" />
+    <script src="~/js/cubo_v2.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function () {
+            $("#myBtn").click(function () {
+                $("#myModal").modal();
+            });
+        });
+    </script>
+    <script type="text/javascript">
+function mostrarCubo(isDefault) {
+            variables = []; dimensionesSelect = [];
+            //IE no soporta parametros opcionales
+            if (typeof (isDefault) === 'undefined') isDefault = false;
+
+            anio_inicio = $('#ddl_inicio').val();
+            anio_fin = $('#ddl_fin').val();
+            if (anio_inicio != anio_fin)
+                variables.push('anio');
+
+            clave_estado = ($('#ddl_estado').val() == null) ? '0' : $('#ddl_estado').val();
+            clave_municipio = ($('#ddl_municipio').val() == null) ? '0' : $('#ddl_municipio').val();
+            if (clave_estado == '00')
+                variables.push('estado');
+            if (clave_municipio == '000')
+                variables.push('municipio');
+
+            $.each($("input[name='variable']:checked"), function () {
+                variables.push($(this).val());
+            });
+
+            dimensionesSelect = isDefault ? ['municipio', 'estado'] : variables;
+            if (dimensionesSelect.length > 0) {
+                if (dimensionesSelect.length > limite)
+                    mostrarMensaje('Sólo puede seleccionar ' + limite + ' variables');
+                else {
+                    var numberFormat = $.pivotUtilities.numberFormat;
+                    var intFormat = numberFormat({ digitsAfterDecimal: digitsAfterDecimal });
+                    var decimalFormat = numberFormat({ prefix: prefix });
+                    var cols = isDefault ? [] : [];
+                    var rows = isDefault ? ['estado', 'municipio'] : [];
+                    var hidden = traerDimensionesHidden(anio_inicio, anio_fin);
+                    var tpl = $.pivotUtilities.aggregatorTemplates;
+                    var renderers = $.extend($.pivotUtilities.renderers,
+                        $.pivotUtilities.plotly_renderers);
+
+                    var functionsConfig = {
+                        renderers: renderers,
+                        cols: cols,
+                        rows: rows,
+                        hiddenAttributes: hidden,
+                        aggregators: {
+                            'acciones': function () { return tpl.sum(intFormat)(['acciones']) },
+                            'monto': function () { return tpl.sum(decimalFormat)(['monto']) }/*,
+                            'numero_cuartos': function () { return tpl.sum(intFormat)(['numero_cuartos']) },
+                            'numero_acciones': function () { return tpl.sum(intFormat)(['numero_acciones']) }*/
+                        },
+                        sorters: {
+                            mes: $.pivotUtilities.sortAs(lstMes)
+                        },
+                        rendererName: "Mapa de calor"
+                    };
+                    $(".load").show();
+                    $.getJSON(path + 'CuboAPI/GetInsus/' + traerAnios(anio_inicio, anio_fin) + '/' + clave_estado + '/' + clave_municipio + '/' + dimensionesSelect)
+                        .done(function (mps) {
+                            if (mps.length > 0)
+                                $('#output').pivotUI(mps, functionsConfig, true);
+                            else
+                                mostrarMensaje('No hay datos, favor de cambiar su busqueda');
+                        })
+                        .always(function () {
+                            $(".load").hide();
+                        });
+
+                    crearNotas(dimensionesSelect);
+                }
+            }
+            else
+                mostrarMensaje('Seleccione al menos un indicador');
+        }
+
+        function crearNotas(dimensionesSelect) {
+            var notas = $('#notes');
+            notas.empty();
+            $.each(dimensionesSelect, function (index, value) {
+                if (value == 'rango_salarial')
+                    notas.append('<li class="list-group-item">' + nota_rango_salarial + '</li>');
+            });
+            if (notas.children().length > 0)
+                $('#info').show();
+            else
+                $('#info').hide();
+        }</script>
+}
+
+<div class="page-header">
+    <h3>
+        INSUS - Programa para Regularizar Asentamientos Humanos (PRAH)
+    </h3>
+    <h2><small>@fecha</small></h2>
+        
+    
+</div>
+
+<div class="alert alert-info alert-dismissible" role="alert" style="display: none">
+    <button type="button" class="close" aria-label="Close" onclick="$('.alert').hide()"><span aria-hidden="true">&times;</span></button>
+    <strong>¡Atento!</strong><span class="lbl_msj"></span>
+</div>
+
+<div class="alert alert-success" role="alert">
+    <strong>Da clic en el botón para ver el tutorial de como utilizar los cubos dinámicos &nbsp;&nbsp;&nbsp;</strong>
+    <button type="button" class="btn btn-success" id="myBtn">Abrir Tutorial</button>
+</div>
+
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+
+        <div class="modal-content">
+            <div class="modal-header" style="background-color: #0C231E !important;">
+                <button type="button" class="btn btn-modal btn-lg" data-dismiss="modal" style="background-color: #123b32 !important; ">Cerrar Tutorial</button>
+            </div>
+            <div class="modal-body">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe src="/Inicio/Tutorial_cubos"></iframe>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-2">
+        <div class="form-group">
+            <label>Año:</label>
+            @Html.DropDownList("ddl_inicio", anios, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <label>a:</label>
+            @Html.DropDownList("ddl_fin", anios, new { @class = "form-control" })
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="form-group">
+            <label>Estado:</label>
+            <select id="ddl_estado" class="form-control"></select>
+        </div>
+        <div id="dv_municipio" class="form-group">
+            <label>Municipio:</label>
+            <select id="ddl_municipio" class="form-control"></select>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="form-group">
+            <label>Variables:</label>
+            <div class="div-var">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="variable" value="rango_edad">Grupos de edad
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="variable" value="genero">Sexo
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="variable" value="escolaridad">Escolaridad
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="variable" value="estado_civil">Estado civil
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="variable" value="mes">Mes
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="variable" value="discapacidad">Discapacidad
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="variable" value="condicion_indigena">Condición indígena
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="variable" value="alfabetismo">Alfabetismo
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="variable" value="intentos_desalojo">Intentos de desalojo
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="variable" value="pavimentacion">Vialidad pavimentada
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="variable" value="alumbrado">Alumbrado público
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="variable" value="transporte_publico">Transporte público
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="variable" value="numero_integrantes">Número de integrantes
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="variable" value="numero_cuartos">Número de cuartos
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="variable" value="poblacion_indigena">Población indígena
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="variable" value="zona">Zona
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-2">
+        <div class="form-group">
+            <button type="button" id="btn_aceptar" data-loading-text="Loading..." class="btn btn-default btn-block">Aceptar</button>
+            <a id="insus" class="btn btn-default btn-block btn-export" href="#" role="button">Descargar</a>
+        </div>
+    </div>
+</div>
+
+<div class="load"><br /><br /><h5>Cargando información del cubo...</h5></div>
+<div id="output" class="table-responsive"></div>
+
+<br />
+<div id="info" class="row">
+    <div class="col-md-12">
+        <div class="panel-group" role="tablist">
+            <div class="panel panel-info">
+                <div class="panel-heading" role="tab" id="collapseListGroupHeading1">
+                    <h4 class="panel-title">
+                        <a href="#collapseListGroup1" class="" role="button" data-toggle="collapse" aria-expanded="true" aria-controls="collapseListGroup1">
+                            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>Notas
+                        </a>
+                    </h4>
+                </div>
+                <div class="panel-collapse collapse in" role="tabpanel" id="collapseListGroup1" aria-labelledby="collapseListGroupHeading1" aria-expanded="true" style="">
+                    <ul id="notes" class="list-group"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,10 @@
+E:\Azure\Entity\bin\Debug\netcoreapp3.1\Entity.deps.json
+E:\Azure\Entity\bin\Debug\netcoreapp3.1\Entity.dll
+E:\Azure\Entity\bin\Debug\netcoreapp3.1\Entity.pdb
+E:\Azure\Entity\obj\Debug\netcoreapp3.1\Entity.csproj.AssemblyReference.cache
+E:\Azure\Entity\obj\Debug\netcoreapp3.1\Entity.GeneratedMSBuildEditorConfig.editorconfig
+E:\Azure\Entity\obj\Debug\netcoreapp3.1\Entity.AssemblyInfoInputs.cache
+E:\Azure\Entity\obj\Debug\netcoreapp3.1\Entity.AssemblyInfo.cs
+E:\Azure\Entity\obj\Debug\netcoreapp3.1\Entity.csproj.CoreCompileInputs.cache
+E:\Azure\Entity\obj\Debug\netcoreapp3.1\Entity.dll
+E:\Azure\Entity\obj\Debug\netcoreapp3.1\Entity.pdb

@@ -1,0 +1,696 @@
+﻿@{
+    ViewData["Title"] = "Programas CONAVI";
+    List<SelectListItem> anios = (List<SelectListItem>)ViewBag.anios;
+    List<SelectListItem> programas = (List<SelectListItem>)ViewBag.programas;
+    string fecha = ViewBag.fecha;
+}
+
+@section Scripts
+{
+    <script src="~/js/util.js" type="text/javascript"></script>
+
+    <!-- DC -->
+    <link href="~/css/dc/dc.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/dashboard.css" rel="stylesheet" type="text/css" />
+    <script src="~/js/dc/d3.js" type="text/javascript"></script>
+    <script src="~/js/dc/d3.tip.js" type="text/javascript"></script>
+    <script src="~/js/dc/crossfilter.js" type="text/javascript"></script>
+    <script src="~/js/dc/dc.min.js" type="text/javascript"></script>
+    <script src="~/js/colorbrewer.js" type="text/javascript"></script>
+    <script src="~/js/dc/FileSaver.js" type="text/javascript"></script>
+
+    <script src="~/js/dc/d3-dsv.v1.min.js" type="text/javascript"></script>
+    <style>
+        .dc-table-group {
+            font-weight: bold;
+        }
+    </style>
+    <script type="text/javascript">
+        var mxLocate = d3.locale({
+            "decimal": ".",
+            "thousands": ",",
+            "grouping": [3],
+            "currency": ["$", ""],
+            "dateTime": "%a %b %e %X %Y",
+            "date": "%m/%d/%Y",
+            "time": "%H:%M:%S",
+            "periods": ["AM", "PM"],
+            "days": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "shortDays": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+            "months": ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
+            "shortMonths": ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"] //["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"]
+        });
+
+        var anio,
+            mapEstado,
+            rowChartMunicipio,
+            rowChartComite,
+            rowChartLinea,
+            rowChartVertiente,
+            rowChartPrograma,
+            numberDisplayTotal,
+            numberDisplayTotalMonto,
+            barChartFecha,
+            pieChartEdad,
+            pieChartGenero,
+            dataTable;
+        var programa;
+
+        var ordenamiento = "Estado";
+        $(function () {
+            showVertiente($('[id$=ddl_programa]').val());
+            $(document).on('click', '.dv > div > span', function () {
+                var isMonto = $(this).parent().get(0).id.indexOf('Monto') >= 0 ? true : false;
+                $('#numberDisplayTotal').css('color', isMonto ? colorOff : colorOn);
+                $('#numberDisplayTotalMonto').css('color', isMonto ? colorOn : colorOff);
+                dc.filterAll();
+                showDashBoard(isMonto);
+            });
+
+            $('[id$=ddl_anio]').change(async function () {
+                anio = $('#ddl_anio').val();
+                programa = await mostrarPrograma();
+                initializeDashBoard(anio, programa);
+
+            });
+
+            $('[id$=ddl_programa]').change(function () {
+                programa = $('[id$=ddl_programa]').val()
+                showVertiente(programa);
+                initializeDashBoard(anio,programa)
+            });
+
+            initializeDashBoard();
+        });
+
+        async function mostrarPrograma() {
+            anio = $('#ddl_anio').val();
+            var data = await $.getJSON(path + 'CatalogoAPI/GetPrograma/' + anio, function (json) {
+                $('#ddl_programa').empty();
+                $.each(json, function (key, obj) {
+                    $('#ddl_programa').append($('<option></option>').attr('value', obj.id).text(obj.descripcion));
+                });
+            });
+            return data[0].id;
+            //$('#ddl_programa').trigger('change');
+        }
+
+        function initializeDashBoard(anio_v,programa_v) {
+            mapEstado = dc.geoChoroplethChart('#mapEstado');
+            rowChartMunicipio = dc.rowChart('#rowChartMunicipio');
+            rowChartComite = dc.rowChart('#rowChartComite');
+            rowChartLinea = dc.rowChart('#rowChartLinea');
+            rowChartVertiente = dc.barChart('#rowChartVertiente');
+            rowChartPrograma = dc.rowChart('#rowChartPrograma');
+            numberDisplayTotal = dc.numberDisplay('#numberDisplayTotal');
+            numberDisplayTotalMonto = dc.numberDisplay('#numberDisplayTotalMonto');
+            barChartFecha = dc.barChart('#barChartFecha');
+            pieChartEdad = dc.pieChart('#pieChartEdad');
+            pieChartGenero = dc.pieChart('#pieChartGenero');
+            dataTable = dc.dataTable('#dataTable');
+
+            showDashBoard(false,anio_v, programa_v);
+        }
+
+        function showDashBoard(isMonto,anio_v,programa_v) {
+            var incluye_claves = 0;
+            programa = (programa_v != undefined) ? programa_v : $('[id$=ddl_programa]').val();
+            anio = (anio_v != undefined) ? anio_v : $('[id$=ddl_anio]').val();
+            d3.json(path + 'DashboardAPI/GetKPIsCONAVI/' + programa + '/' + incluye_claves + '/' + anio, function (error, counts) {
+                var formatDate = d3.time.format("%d/%m/%Y");
+                console.log(counts);
+                counts.forEach(function (e) {
+                    e.fecha = formatDate.parse(e.fecha);
+                });
+
+                var ndx = crossfilter(counts),
+                    estado = ndx.dimension(function (d) { return d.estado; }),
+                    groupEstado = estado.group().reduceSum(function (d) { return + isMonto ? d.monto : d.beneficiarios; }),
+                    municipio = ndx.dimension(function (d) { return d.municipio + ', ' + d.estado; }),
+                    groupMunicipio = municipio.group().reduceSum(function (d) { return + isMonto ? d.monto : d.beneficiarios; }),
+                    comite = ndx.dimension(function (d) { return d.comite; }),
+                    groupComite = comite.group().reduceSum(function (d) { return + isMonto ? d.monto : d.beneficiarios; }),
+                    linea = ndx.dimension(function (d) { return d.linea_apoyo; }),
+                    groupLinea = linea.group().reduceSum(function (d) { return + isMonto ? d.monto : d.beneficiarios; }),
+                    vertiente = ndx.dimension(function (d) { return d.vertiente; }),
+                    groupVertiente = vertiente.group().reduceSum(function (d) { return + isMonto ? d.monto : d.beneficiarios; }),
+                    rango_edad = ndx.dimension(function (d) { return d.rango_edad; }),
+                    groupEdad = rango_edad.group().reduceSum(function (d) { return + isMonto ? d.monto : d.beneficiarios; }),
+                    genero = ndx.dimension(function (d) { return d.genero; }),
+                    groupGenero = genero.group().reduceSum(function (d) { return + isMonto ? d.monto : d.beneficiarios; }),
+                    total = ndx.groupAll().reduceSum(function (d) { return + d.beneficiarios; }),
+                    totalMonto = ndx.groupAll().reduceSum(function (d) { return + d.monto; }),
+                    fecha = ndx.dimension(function (d) { return d.fecha; }),
+                    groupFecha = fecha.group().reduceSum(function (d) { return + isMonto ? d.monto : d.beneficiarios; });
+
+                d3.json('../js/maps/mx.json', function (jsonData) {
+                    var projection = d3.geo.mercator()
+                        .center(center_map)
+                        .translate([width_map / 1.7, height_map / 1.7])
+                        .scale([width_map / .6]);
+                    var colorSchemeSelect = color_map;
+                    var colorScheme = colorbrewer[colorSchemeSelect];
+                    var quantiles = quantiles_map;
+
+                    var estados = groupEstado.all();
+                    var min = Math.min.apply(null, estados.map(x => x.value));
+                    var max = Math.max.apply(null, estados.map(x => x.value));
+
+                    var height_municipio = groupMunicipio.size() * 25;
+                    var height_comite;
+                    if (groupComite.size() === 1)
+                        height_comite = 200;
+                    else
+                        height_comite = groupComite.size() * 30;
+
+                    mapEstado
+                        .width(width_map)
+                        .height(height_map)
+                        .dimension(estado)
+                        .group(groupEstado)
+                        .projection(projection)
+                        .overlayGeoJson(jsonData.features, 'name', function (d) {
+                            return d.properties.name;
+                        })
+                        .colors(d3.scale.quantile().range(colorScheme[quantiles]))
+                        .colorDomain([min, max])
+                        .colorCalculator(function (d) {
+                            return d ? mapEstado.colors()(d) : '#ccc';
+                        })
+                        .title(function (d) {
+                            return d.key + ": " + d3.format(isMonto ? '$,.0f' : ',.0f')(d.value) + (isMonto ? ' pesos':' acciones');
+                        });
+
+                    rowChartMunicipio
+                        .height(height_municipio)
+                        .dimension(municipio)
+                        .group(groupMunicipio)
+                        .elasticX(true)
+                        .margins({ top: 5, left: 5, right: 10, bottom: 40 })
+                        /*.label(function (d) {
+                            return d.key + ": " + d3.format(isMonto ? '$,.0f' : ',.0f')(d.value);
+                        })*/
+                        .title(function (d) { return ''; });
+                    rowChartMunicipio.xAxis().tickFormat(d3.format('s'));
+
+                    rowChartComite
+                        .dimension(comite)
+                        .group(groupComite)
+                        .elasticX(true)
+                        /*.ordering(function (d) {
+                            var order = 0;
+                            switch (d.key) {
+                                case '9A. SESIÓN EXTRAORDINARIA':
+                                    order = 1;
+                                    break;
+                                case '2A. SESIÓN ORDINARIA':
+                                    order = 2;
+                                    break;
+                                case '8A. SESIÓN EXTRAORDINARIA':
+                                    order = 3;
+                                    break;
+                                case '7A. SESIÓN EXTRAORDINARIA':
+                                    order = 4;
+                                    break;
+                                case '6A. SESIÓN EXTRAORDINARIA':
+                                    order = 5;
+                                    break;
+                                case '5A. SESIÓN EXTRAORDINARIA':
+                                    order = 6;
+                                    break;
+                                case '4A. SESIÓN EXTRAORDINARIA':
+                                    order = 7;
+                                    break;
+                                case '1A. SESIÓN ORDINARIA':
+                                    order = 8;
+                                    break;
+                                case '3A. SESIÓN EXTRAORDINARIA':
+                                    order = 9;
+                                    break;
+                                case '2A. SESIÓN EXTRAORDINARIA':
+                                    order = 10;
+                                    break;
+                                case 'H. JUNTA DE GOBIERNO':
+                                    order = 11;
+                                    break;
+                                case '1A. SESIÓN EXTRAORDINARIA':
+                                    order = 12;
+                                    break;
+                                default:
+                                    order = 15;
+                            }
+                            return order;
+                        })*/
+                        .margins({ top: 5, left: 5, right: 10, bottom: 40 })
+                        /*.label(function (d) {
+                            return d.key + ": " + d3.format(isMonto ? '$,.0f' : ',.0f')(d.value);
+                        })*/
+                        .title(function (d) { return ''; });
+                    rowChartComite.xAxis().tickFormat(d3.format('s'));
+
+                    rowChartLinea
+                        .dimension(linea)
+                        .group(groupLinea)
+                        .elasticX(true)
+                        .margins({ top: 5, left: 5, right: 10, bottom: 40 })
+                        /*.label(function (d) {
+                            return d.key + ": " + d3.format(isMonto ? '$,.0f' : ',.0f')(d.value);
+                        })*/
+                        .title(function (d) { return ''; });
+                    rowChartLinea.xAxis().tickFormat(d3.format('s'));
+
+                    rowChartVertiente
+                        .height(250)
+                        .dimension(vertiente)
+                        .group(groupVertiente)
+                        .x(d3.scale.ordinal())
+                        .xUnits(dc.units.ordinal)
+                        .elasticY(true)
+                        .margins({ top: 5, left: 40, right: 0, bottom: 170 });
+                    rowChartVertiente.yAxis().tickFormat(d3.format('s'));
+
+                    rowChartPrograma
+                        .height(250)
+                        .dimension(vertiente)
+                        .group(groupVertiente)
+                        .elasticX(true)
+                        .margins({ top: 5, left: 5, right: 10, bottom: 40 })
+                        /*.label(function (d) {
+                            return d.key + ": " + d3.format(isMonto ? '$,.0f' : ',.0f')(d.value);
+                        })*/
+                        .title(function (d) { return ''; });
+                    rowChartPrograma.xAxis().tickFormat(d3.format('s'));
+
+                    pieChartEdad
+                        .height(250)
+                        .innerRadius(60)
+                        .legend(dc.legend().y(5))
+                        .dimension(rango_edad)
+                        .group(groupEdad);
+                    pieChartEdad.ordering(function (d) {
+                        var order = 0;
+                        switch (d.key) {
+                            case '29 o menos':
+                                order = 1;
+                                break;
+                            case '30 a 59':
+                                order = 2;
+                                break;
+                            default:
+                                order = 3;
+                        }
+                        return order;
+                    });
+
+                    pieChartGenero
+                        .height(250)
+                        .title(function (d) { return ''; })
+                        .legend(dc.legend().y(5))
+                        .dimension(genero)
+                        .group(groupGenero);
+
+                    numberDisplayTotal
+                        .group(total)
+                        .formatNumber(d3.format(',.0f'))
+                        .valueAccessor(function (d) { return d; });
+                    numberDisplayTotalMonto
+                        .group(totalMonto)
+                        .formatNumber(d3.format('$,.2f'))
+                        .valueAccessor(function (d) { return d; });
+
+                    barChartFecha
+                        .height(180)
+                        .dimension(fecha)
+                        .group(groupFecha)
+                        .x(d3.time.scale())
+                        .xUnits(d3.time.days)
+                        .elasticY(true)
+                        .centerBar(true)
+                        //.yAxisPadding(100)
+                        .margins({ top: 20, left: 30, right: 20, bottom: 45 });
+                    barChartFecha.yAxis().tickFormat(d3.format('s'));
+                    barChartFecha.xAxis().tickFormat(mxLocate.timeFormat('%Y %b'));
+                    function calc_domain(chart) {
+                        var min = d3.min(chart.group().all(), function (kv) { return kv.key; }),
+                            max = d3.max(chart.group().all(), function (kv) { return kv.key; });
+                        max = d3.time.month.offset(max, 1);
+                        chart.x().domain([min, max]);
+                    }
+                    barChartFecha.on('preRender', calc_domain);
+                    barChartFecha.on('preRedraw', calc_domain);
+
+                    var tableHeader = d3.select(".header")
+                        .selectAll("th");
+                    tableHeader = tableHeader.data(
+                        [
+                            { label: "Estado", field_name: "estado", sort_state: "descending" },
+                            { label: "Municipio", field_name: "municipio", sort_state: "ascending" },
+                            { label: "Modalidad", field_name: "modalidad", sort_state: "ascending" },
+                            { label: "Línea", field_name: "linea_apoyo", sort_state: "ascending" },
+                            { label: "Subsidio Aprobado", field_name: "beneficiarios", sort_state: "ascending" },
+                            { label: "Monto Aprobado", field_name: "monto", sort_state: "ascending" } 
+                        ]
+                    );
+                    tableHeader = tableHeader.enter()
+                        .append("th")
+                        .text(function (d) { return d.label; })
+                        .on("click", tableHeaderCallback);
+
+                    function tableHeaderCallback(d) {
+                        var activeClass = "info";
+
+                        d3.selectAll("#dataTable th") 
+                            .classed(activeClass, false)
+                            .selectAll("span")
+                            .style("visibility", "hidden")
+
+                        var activeSpan = d3.select(this) 
+                            .classed(activeClass, true)  
+                            .select("span")
+                            .style("visibility", "visible");
+
+                        var isAscendingOrder = d.sort_state === "ascending";
+                        d.sort_state = isAscendingOrder ? "descending" : "ascending";
+
+                        dataTable
+                            .order(isAscendingOrder ? d3.ascending : d3.descending)
+                            .sortBy(function (datum) { return datum[d.field_name]; });
+
+                        activeSpan.node().className = ''; 
+
+                        activeSpan.classed(
+                            isAscendingOrder ? "glyphicon glyphicon-sort-by-attributes" :
+                                "glyphicon glyphicon-sort-by-attributes-alt", true);
+                        update_offset();
+                        dataTable.redraw();
+                    }
+
+                    tableHeader.filter(function (d) { return d.label === ordenamiento; })
+                        .classed("info", true);
+
+                    var tableSpans = tableHeader
+                        .append("span")
+                        .classed("glyphicon glyphicon-sort-by-attributes-alt", true)
+                        .style("visibility", "hidden")
+                        .filter(function (d) { return d.label === ordenamiento; })
+                        .style("visibility", "visible");
+
+                    var columnFunctions = [
+                        function (d) { return d.estado; },
+                        function (d) { return d.municipio; },
+                        function (d) { return d.modalidad; },
+                        function (d) { return d.linea_apoyo; },
+                        function (d) { return d3.format(',.0f')(d.beneficiarios) },
+                        function (d) { return d3.format('$,.2f')(d.monto); },
+                    ];
+                    //FIN 
+                    dataTable
+                        .dimension(estado)
+                        .group(function (d) { return d.estado; })
+                        .size(Infinity)
+                        .columns(columnFunctions)
+                        .showGroups(false)
+                        .sortBy(function (d) { return d.estado; })
+                        .order(d3.ascending)
+                        .on('preRender', update_offset)
+                        .on('preRedraw', update_offset)
+                        .on('pretransition', display);
+
+                    d3.select('#btn_descargar')
+                        .on('click', function () {
+                            var data = estado.top(Infinity);
+                            var csvContent = d3.csvFormat(data, ['comite', 'estado', 'municipio', 'modalidad', 'linea_apoyo', 'rango_edad', 'genero', 'beneficiarios', 'monto']);;
+                            var blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+                            saveAs(blob, 'subsidios_conavi.csv');
+                        });
+
+                    setStyleS(isMonto);
+                    dc.renderAll();
+                    update_offset();
+                    dataTable.redraw();
+                    AddXAxis(rowChartPrograma, isMonto ? "pesos" : "acciones");
+                    AddXAxis(rowChartVertiente, isMonto ? "pesos" : "acciones");
+                    AddXAxis(rowChartLinea, isMonto ? "pesos" : "acciones");
+                    AddXAxis(rowChartComite, isMonto ? "pesos" : "acciones");
+                    AddXAxis(rowChartMunicipio, isMonto ? "pesos" : "acciones");
+                    
+                });
+
+                var ofs = 0, pag = 20;
+                function update_offset() {
+                    var totFilteredRecs = ndx.groupAll().value();
+                    var end = ofs + pag > totFilteredRecs ? totFilteredRecs : ofs + pag;
+                    ofs = ofs >= totFilteredRecs ? Math.floor((totFilteredRecs - 1) / pag) * pag : ofs;
+                    ofs = ofs < 0 ? 0 : ofs;
+                    dataTable.beginSlice(ofs);
+                    dataTable.endSlice(ofs + pag);
+                    display();
+                }
+                function display() {
+                    var totFilteredRecs = ndx.groupAll().value();
+                    var end = ofs + pag > totFilteredRecs ? totFilteredRecs : ofs + pag;
+                    d3.select('#begin')
+                        .text(end === 0 ? ofs : ofs + 1);
+                    d3.select('#end')
+                        .text(end);
+                    d3.select('#last')
+                        .attr('disabled', ofs - pag < 0 ? 'true' : null);
+                    d3.select('#next')
+                        .attr('disabled', ofs + pag >= totFilteredRecs ? 'true' : null);
+                    d3.select('#size').text(totFilteredRecs);
+                    if (totFilteredRecs != ndx.size()) {
+                        d3.select('#totalsize').text(' (Total: ' + ndx.size() + ') ');
+                    } else {
+                        d3.select('#totalsize').text('');
+                    }
+                }
+                function next() {
+                    ofs += pag;
+                    update_offset();
+                    dataTable.redraw();
+                }
+                function last() {
+                    ofs -= pag;
+                    update_offset();
+                    dataTable.redraw();
+                }
+
+                $("#btn_siguiente").click(function () {
+                    next();
+                });
+                $("#btn_anterior").click(function () {
+                    last();
+                });
+
+            });
+
+            function setStyleS(isMonto) {
+                var f = isMonto ? d3.format('$,.0f') : d3.format(',.0f');
+                var unidades = isMonto ? ' pesos' : ' acciones';
+                var pieTip = d3.tip()
+                    .attr('class', 'd3-tip')
+                    .offset([-10, 0])
+                    .html(function (d) { return "<span class='label-tip'>" + d.data.key + "</span><br/>" + f(d.value) + unidades+ ' (' + dc.utils.printSingleValue((d.endAngle - d.startAngle) / (2 * Math.PI) * 100) + '%)'; });
+                var rowTip = d3.tip()
+                    .attr('class', 'd3-tip')
+                    .offset([-10, 0])
+                    .html(function (d) { return "<span class='label-tip'>" + d.key + "</span><br/>" + f(d.value) + unidades; });
+                var barTip = d3.tip()
+                    .attr('class', 'd3-tip')
+                    .offset([-10, 0])
+                    .html(function (d) { return "<span class='label-tip'>" + d.x + "</span><br/>" + f(d.y) + unidades; });
+
+                barChartFecha.on('pretransition', function (chart) {
+                    chart.selectAll("rect.bar").call(barTip).on('mouseover.tip', barTip.show).on('mouseout.tip', barTip.hide);
+                });
+
+                rowChartMunicipio.on('pretransition', function (chart) {
+                    chart.selectAll("g.row").call(rowTip).on('mouseover.tip', rowTip.show).on('mouseout.tip', rowTip.hide);
+                });
+
+                rowChartLinea.on('pretransition', function (chart) {
+                    chart.selectAll("g.row").call(rowTip).on('mouseover.tip', rowTip.show).on('mouseout.tip', rowTip.hide);
+                });
+
+                rowChartVertiente.on('pretransition', function (chart) {
+                    chart.selectAll("rect.bar").call(barTip).on('mouseover.tip', barTip.show).on('mouseout.tip', barTip.hide);
+                });
+
+                rowChartPrograma.on('pretransition', function (chart) {
+                    chart.selectAll("g.row").call(rowTip).on('mouseover.tip', rowTip.show).on('mouseout.tip', rowTip.hide);
+                });
+
+                rowChartComite.on('pretransition', function (chart) {
+                    chart.selectAll("g.row").call(rowTip).on('mouseover.tip', rowTip.show).on('mouseout.tip', rowTip.hide);
+                });
+
+                pieChartEdad.on('pretransition', function (chart) {
+                    chart.selectAll(".pie-slice").call(pieTip).on('mouseover.tip', pieTip.show).on('mouseout.tip', pieTip.hide);
+                    chart.selectAll('text.pie-slice').text(function (d) {
+                        return dc.utils.printSingleValue((d.endAngle - d.startAngle) / (2 * Math.PI) * 100) + '%';
+                    });
+                });
+
+                pieChartGenero.on('pretransition', function (chart) {
+                    chart.selectAll(".pie-slice").call(pieTip).on('mouseover.tip', pieTip.show).on('mouseout.tip', pieTip.hide);
+                    chart.selectAll('text.pie-slice').text(function (d) {
+                        return dc.utils.printSingleValue((d.endAngle - d.startAngle) / (2 * Math.PI) * 100) + '%';
+                    });
+                });
+
+                barChartFecha.ordinalColors(baseColor);
+                rowChartMunicipio.ordinalColors(baseColor);
+                rowChartLinea.ordinalColors(baseColor);
+                rowChartVertiente.ordinalColors(baseColor);
+                rowChartPrograma.ordinalColors(baseColor);
+                rowChartComite.ordinalColors(baseColor);
+                pieChartEdad.ordinalColors(baseColor);
+                pieChartGenero.ordinalColors(baseColor);
+            }
+
+        }
+
+        function showVertiente(id) {
+            anio = $('[id$=ddl_anio]').val();
+            if (id != 1 || anio >= 2020)
+                $('#divRowChartVertiente').hide();
+            else
+                $('#divRowChartVertiente').show();
+
+            if (id != 6)
+                $('#divRowChartPrograma').hide();
+            else
+                $('#divRowChartPrograma').show();
+        }
+    </script>
+}
+
+<div class="page-header">
+    <h2>
+        Subsidios CONAVI <small>
+            @fecha
+        </small>
+        <a href="javascript:dc.filterAll(); dc.renderAll();" title="Recargar" data-toggle="tooltip" data-placement="bottom"><span class="icon s7-refresh-2"></span></a>
+    </h2>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="form-group">
+            <label>Año: </label>
+            @Html.DropDownList("ddl_anio", anios, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <label>Programa:</label>
+            @Html.DropDownList("ddl_programa", programas, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="col-md-8">
+        <div id="barChartFecha" class="chart"></div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-8">
+        <h3>Estado</h3>
+        <div id="mapEstado" class="geoChoroplethChart" style="overflow-x: auto"></div>
+    </div>
+    <div class="col-md-4">
+        <h3>Municipio</h3>
+        <div style="overflow-y: auto; overflow-x: hidden">
+            <div id="rowChartMunicipio" class="chart" style="height: 420px"></div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h3>Comité de Financiamiento</h3>
+        <div style="overflow-y: auto; overflow-x: hidden">
+            <div id="rowChartComite" class="chart" style="height: 300px"></div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <h3>Línea de apoyo</h3>
+        <div id="rowChartLinea" class="chart" style="height: 300px"></div>
+    </div>
+    <div class="col-md-4 dv">
+        <h3>Total aprobado en Comité de Financiamiento</h3>
+        <div id="numberDisplayTotal" class="number-acciones"></div>
+        <div id="numberDisplayTotalMonto" class="number-monto"></div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4" id="divRowChartVertiente">
+        <h3>Vertiente</h3>
+        <div id="rowChartVertiente" class="chart" style="height: 300px"></div>
+    </div>
+    <div class="col-md-4" id="divRowChartPrograma">
+        <h3>Programa</h3>
+        <div id="rowChartPrograma" class="chart" style="height: 300px"></div>
+    </div>
+    <div class="col-md-4">
+        <h3>Grupos de edad</h3>
+        <div id="pieChartEdad" class="chart" style="height: 300px"></div>
+    </div>
+    <div class="col-md-4">
+        <h3>Sexo</h3>
+        <div id="pieChartGenero" class="chart" style="height: 300px"></div>
+    </div>
+</div>
+
+<div id="info" class="row">
+    <div class="col-md-12">
+        <div class="panel-group" role="tablist">
+            <div class="panel panel-info">
+                <div class="panel-heading" role="tab" id="collapseListGroupHeading1">
+                    <h4 class="panel-title">
+                        <a href="#collapseListGroup1" class="" role="button" data-toggle="collapse" aria-expanded="true" aria-controls="collapseListGroup1">
+                            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>Notas
+                        </a>
+                    </h4>
+                </div>
+                <div class="panel-collapse collapse" role="tabpanel" id="collapseListGroup1" aria-labelledby="collapseListGroupHeading1" aria-expanded="true" style="">
+                    <ul id="notes" class="list-group">
+                        <li class="list-group-item">Cifras preliminares sujetas al proceso de ejecución del subsidio.</li>
+                        <li class="list-group-item">(PSVA) Vertiente Producción Social de Vivienda Asistida, del Programa de Vivienda Social.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="col-md-6">
+            <button id="btn_anterior" type="button" class="btn btn-default">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </button>
+            <button id="btn_siguiente" type="button" class="btn btn-default">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </button>
+            <button id="btn_descargar" type="button" class="btn btn-default">
+                <span class="glyphicon glyphicon-download-alt"></span>
+            </button>
+        </div>
+        <div class="col-md-6 text-right">
+            Mostrando <span id="begin"></span>-<span id="end"></span> de <span id="size"></span><span id="totalsize"></span>
+        </div>
+    </div>
+</div>
+<div id="search"></div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="table-responsive">
+            <table class='table table-hover table-striped table-bordered' id='dataTable'>
+                <thead>
+                    <tr class='header'>
+                       
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+</div>

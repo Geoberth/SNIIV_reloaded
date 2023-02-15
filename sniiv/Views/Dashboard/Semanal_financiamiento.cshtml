@@ -1,0 +1,841 @@
+﻿@{
+    ViewData["Title"] = "Financiamientos";
+    List<SelectListItem> anios = (List<SelectListItem>)ViewBag.anios;
+    List<SelectListItem> regiones = (List<SelectListItem>)ViewBag.regiones;
+    List<SelectListItem> regiones2 = (List<SelectListItem>)ViewBag.regiones2;
+    //List<SelectListItem> estados = (List<SelectListItem>)ViewBag.estados;
+    string semana = ViewBag.semana;
+}
+
+@section Scripts
+{
+    <script src="~/js/util.js" type="text/javascript"></script>
+    <script src="~/js/functions.js" type="text/javascript"></script>
+    <!-- DC -->
+    <link href="~/css/dc/dc.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/dashboard.css" rel="stylesheet" type="text/css" />
+    <script src="~/js/dc/d3.js" type="text/javascript"></script>
+    <script src="~/js/dc/d3.tip.js" type="text/javascript"></script>
+    <script src="~/js/dc/crossfilter.js" type="text/javascript"></script>
+    <script src="~/js/dc/dc.min.js" type="text/javascript"></script>
+    <script src="~/js/colorbrewer.js" type="text/javascript"></script>
+    <!-- ECharts -->
+    <link href="~/css/echarts.css" rel="stylesheet" type="text/css" />
+    <script src="~/js/echarts/echarts-all-3.js" type="text/javascript"></script>
+    <!-- LINQ -->
+    <script src="~/js/linq.min.js" type="text/javascript"></script>
+    <!-- Slider -->
+    <script src="~/js/bootstrap-slider/bootstrap-slider.min.js" type="text/javascript"></script>
+    <link href="~/js/bootstrap-slider/css/bootstrap-slider.min.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        .align-middle {
+            margin-top: 25px;
+        }
+
+        .slider.slider-horizontal {
+            width: 100%;
+        }
+
+        .slider .slider-selection {
+            background: #ccc;
+        }
+
+        .slider .slider-track-high {
+            background: #ddd;
+        }
+
+        .slider .slider-track-low {
+            background: #ddd;
+        }
+
+        .slider-handle {
+            background-image: -webkit-linear-gradient(top,#D4C19C 0,#B38E5D 100%);
+        }
+    </style>
+
+    <script type="text/javascript">
+        var mapEstado,
+            numberDisplayAcciones,
+            numberDisplayMonto,
+            pieChartOrganismo;
+        var anio_inicio, anio_fin;
+
+        $(function () {
+            $(document).on('click', '.dv-s > div > span', function () {
+                var isMonto = $(this).parent().get(0).id.indexOf('Monto') >= 0 ? true : false;
+                $('#numberDisplayAcciones').css('color', isMonto ? colorOff : colorOn);
+                $('#numberDisplayMonto').css('color', isMonto ? colorOn : colorOff);
+                dc.filterAll();
+                showDashBoard(isMonto);
+            });
+
+            $('[id$=ddl_region]').change(function () {
+                showDashBoard(false);
+            });
+
+            $('[id$=ddl_anio]').change(function () {
+                showSlider();
+            });
+
+            $('[id$=dv_estado]').hide();
+            $('[id$=ddl_region2]').change(function () {
+                var id_region = $(this).val();
+                if (id_region === '0')
+                    $('[id$=dv_estado]').hide();
+                else {
+                    mostrarEstados();
+                    $('[id$=dv_estado]').show();
+                }
+            });
+
+            initializeDashBoard();
+            initializeDashBoardWeekly();
+
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+
+        function mostrarEstados() {
+            var region = $('#ddl_region2').val();
+            $.getJSON(path + 'CatalogoAPI/GetEntidadFederativaRegion/' + region, function (json) {
+                $('#ddl_estado').empty();
+                //$('#ddl_estado').append($('<option></option>').attr('value', 0).text('Acumulado'));
+                $.each(json, function (key, obj) {
+                    $('#ddl_estado').append($('<option></option>').attr('value', obj.id).text(obj.descripcion));
+                });
+            });
+        }
+
+        //#region DC
+        function initializeDashBoard() {
+            mapEstado = dc.geoChoroplethChart('#mapEstado');
+            numberDisplayAcciones = dc.numberDisplay('#numberDisplayAcciones');
+            numberDisplayMonto = dc.numberDisplay('#numberDisplayMonto');
+            pieChartOrganismo = dc.pieChart('#pieChartOrganismo');
+
+            showDashBoard(false);
+        }
+
+        function showDashBoard(isMonto) {
+            var region = $('[id$=ddl_region]').val();
+            d3.json(path + 'DashboardAPI/getKPIsSemanalFinanciamientos/' + region, function (error, counts) {
+                var ndx = crossfilter(counts),
+                    estado = ndx.dimension(function (d) { return d.estado; }),
+                    groupEstado = estado.group().reduceSum(function (d) { return + isMonto ? d.monto : d.acciones; }),
+                    organismo = ndx.dimension(function (d) { return d.organismo; }),
+                    groupOrganismo = organismo.group().reduceSum(function (d) { return + isMonto ? d.monto : d.acciones; }),
+                    totalAcciones = ndx.groupAll().reduceSum(function (d) { return + d.acciones; }),
+                    totalMonto = ndx.groupAll().reduceSum(function (d) { return + d.monto; });
+
+                d3.json('../js/maps/mx.json', function (jsonData) {
+                    var projection = d3.geo.mercator()
+                        .center(center_map)
+                        .translate([width_map / 1.7, height_map / 1.7])
+                        .scale([width_map / .6]);
+                    var colorSchemeSelect = color_map;
+                    var colorScheme = colorbrewer[colorSchemeSelect];
+                    var quantiles = quantiles_map;
+                    var estados = groupEstado.all();
+                    var min = Math.min.apply(null, estados.map(x => x.value));
+                    var max = Math.max.apply(null, estados.map(x => x.value));
+
+                    mapEstado
+                        .width(width_map)
+                        .height(height_map)
+                        .dimension(estado)
+                        .group(groupEstado)
+                        .projection(projection)
+                        .overlayGeoJson(jsonData.features, 'name', function (d) {
+                            return d.properties.name;
+                        })
+                        .colors(d3.scale.quantile().range(colorScheme[quantiles]))
+                        .colorDomain([min, max])
+                        .colorCalculator(function (d) {
+                            return d ? mapEstado.colors()(d) : '#ccc';
+                        })
+                        .title(function (d) {
+                            //return d.key + ": " + d3.format(isMonto ? '$,.0f' : ',.0f')(d.value);
+                            return d.key + ": " + d3.format(',.0f')(d.value);
+                        });
+
+                    pieChartOrganismo
+                        .height(200)
+                        .dimension(organismo)
+                        .group(groupOrganismo)
+                        .innerRadius(50)
+                        .legend(dc.legend().y(5))
+                        .title(function (d) { return ''; });
+
+                    numberDisplayAcciones
+                        .group(totalAcciones)
+                        .formatNumber(d3.format(',.0f'))
+                        .valueAccessor(function (d) { return d; });
+
+                    numberDisplayMonto
+                        .group(totalMonto)
+                        //.formatNumber(d3.format('$,.0f'))
+                        .formatNumber(d3.format(',.1f'))
+                        .valueAccessor(function (d) { return d; });
+
+                    setStyle(isMonto);
+                    dc.renderAll();
+                });
+            });
+        }
+
+        function setStyle(isMonto) {
+            var f = isMonto ? d3.format('$,.0f') : d3.format(',.0f');
+
+            var pieTip = d3.tip()
+                .attr('class', 'd3-tip')
+                .offset([-10, 0])
+                .html(function (d) { return "<span class='label-tip'>" + d.data.key + "</span><br/>" + f(d.value) + ' (' + dc.utils.printSingleValue((d.endAngle - d.startAngle) / (2 * Math.PI) * 100) + '%)'; });
+            var rowTip = d3.tip()
+                .attr('class', 'd3-tip')
+                .offset([-10, 0])
+                .html(function (d) { return "<span class='label-tip'>" + d.key + "</span><br/>" + f(d.value); });
+            var barTip = d3.tip()
+                .attr('class', 'd3-tip')
+                .offset([-10, 0])
+                .html(function (d) { return "<span class='label-tip'>" + d.x + "</span><br/>" + f(d.y); });
+
+            pieChartOrganismo.on('pretransition', function (chart) {
+                chart.selectAll(".pie-slice").call(pieTip).on('mouseover.tip', pieTip.show).on('mouseout.tip', pieTip.hide);
+                chart.selectAll('text.pie-slice').text(function (d) {
+                    return dc.utils.printSingleValue((d.endAngle - d.startAngle) / (2 * Math.PI) * 100) + '%';
+                });
+            })
+            pieChartOrganismo.ordinalColors(baseColor);
+        }
+        //#endregion
+
+        //#region Echart
+        var barChartSemana,
+            //barChartSemanaVariacion,
+            barChartSemanaPromedio,
+            pieChartOrganismo2,
+            barChartOrganismo,
+            barChartSemanaPromedioVariacion;
+        function initializeDashBoardWeekly() {
+            showSlider();
+            barChartSemana = echarts.init($('#barChartSemana')[0]);
+            //barChartSemanaVariacion = echarts.init($('#barChartSemanaVariacion')[0]);
+            barChartSemanaPromedio = echarts.init($('#barChartSemanaPromedio')[0]);
+            pieChartOrganismo2 = echarts.init($('#pieChartOrganismo2')[0]);
+            barChartOrganismo = echarts.init($('#barChartOrganismo')[0]);
+            barChartSemanaPromedioVariacion = echarts.init($('#barChartSemanaPromedioVariacion')[0]);
+            getData();
+        }
+
+        var range,
+            slider,
+            valMin,
+            valMax;
+        function showSlider() {
+            anio = $('[id$=ddl_anio]').val();
+
+            $.ajax({
+                url: path + 'DashboardAPI/getSemanas/' + anio,
+                success: function (respuesta) { range = respuesta.split(','); },
+                async: false // async: false será obsoleto, pero solo así me permite obtener el valor de semana_inicio_fin
+            });
+
+            valMin = parseInt(range[0]);
+            valMax = parseInt(range[1]);
+            slider = new Slider('.slider', {
+                min: valMin,
+                max: valMax,
+                range: true,
+                value: [valMin, valMax]
+            });
+
+            /*
+            $.get(path + '/getSemanas/' + anio).done(function (obj) {
+            });
+            */
+        }
+
+        function renderCharts() {
+            barChartSemana.resize();
+            //barChartSemanaVariacion.resize();
+            barChartSemanaPromedio.resize();
+            pieChartOrganismo2.resize();
+            barChartOrganismo.resize();
+            barChartSemanaPromedioVariacion.resize();
+        }
+
+        var data,
+            id_region,
+            clave_estado,
+            anio,
+            organismo,
+            semana_inicio_fin;
+        function getData() {
+            clave_estado = ($('#ddl_estado').val() == null) ? '0' : $('#ddl_estado').val();
+            id_region = $('[id$=ddl_region2]').val();
+            anio = $('[id$=ddl_anio]').val();
+            crearNotas(anio);
+            organismo = $('[id$=ddl_organismo]').val();
+            semana_inicio_fin = slider.element.value;
+            $.get(path + 'DashboardAPI/getSemanalFinanciamientos/' + id_region + '/' + clave_estado + '/' + anio + '/' + semana_inicio_fin + '/' + organismo).done(function (json) {
+                data = json;
+                mostrarGraficas();
+            });
+        }
+
+        function crearNotas(anio) {
+            var notas = $('#notes');
+            notas.empty();
+            if (anio == 2020)
+                notas.append('<li class="list-group-item">Las metas anuales del Infonavit son de 500,001 créditos y 233,436 mdp; de Fovissste son 54,300 créditos y 36,556 mdp y de SHF es de 190,508 acciones y 85,071 mdp</li>');
+            notas.append('<li class="list-group-item">INFONAVIT: Los montos corresponden a la derrama Infonavit (monto de crédito más Subcuenta de Vivienda) más la derrama de la entidad financiera</li>');
+            notas.append('<li class="list-group-item">SHF: La información de <strong>SHF (FONDEO)</strong> contiene el número de créditos directos e inducidos</li>');
+            notas.append('<li class="list-group-item">SHF: Las acciones “No distribuibles” son aquellas que no pudieron ser clasificadas por estado</li>');
+            notas.append('<li class="list-group-item">Los valores se reportan con cierres semanales</li>');
+        }
+
+        var metrica,
+            isMonto,
+            groupOrganismo,
+            names_organismo,
+            values_organismo,
+            values_organismo_anterior,
+            groupSemana,
+            names_semana,
+            values_semana,
+            values_semana_anterior,
+            semanas,
+            variacion_semana,
+            promedio_semana,
+            variacion_promedio,
+            total,
+            legend,
+            series,
+            color,
+            anio_anterior;
+        var grid = {
+            left: '3%',
+            right: '3%',
+            bottom: '3%',
+            containLabel: true
+        };
+        function mostrarGraficas() {
+            metrica = $("input:radio[name='chk_metrica']:checked").val();
+            isMonto = metrica === 'monto' ? true : false;
+            anio = $('[id$=ddl_anio]').val();
+            anio_anterior = (anio - 1).toString();
+            organismo = $('[id$=ddl_organismo]').val();
+
+            //Organismo
+            groupOrganismo = Enumerable.From(data)
+                .GroupBy(
+                    "{ anio: $.año, organismo: $.organismo }",
+                    null,
+                    "{ anio: $.anio, organismo: $.organismo, acciones: $$.Sum('$.acciones'), monto: $$.Sum('$.monto') }",
+                    "$.anio + ' ' + $.organismo").Where("$.organismo != ''").OrderBy("$.organismo");
+            names_organismo = groupOrganismo.Where(p => p.anio == anio).Select(p => p.organismo).ToArray();
+            values_organismo = isMonto ? groupOrganismo.Where(p => p.anio == anio).Select('p => { name: p.organismo, value: parseFloat(p.monto.toFixed(2)) }').ToArray() : groupOrganismo.Where(p => p.anio == anio).Select('p => { name: p.organismo, value: p.acciones }').ToArray();
+            values_organismo_anterior = isMonto ? groupOrganismo.Where(p => p.anio == anio_anterior).Select('p => { name: p.organismo, value: parseFloat(p.monto.toFixed(2)) }').ToArray() : groupOrganismo.Where(p => p.anio == anio_anterior).Select('p => { name: p.organismo, value: p.acciones }').ToArray();
+
+            total = values_organismo.reduce((a, b) => a + b.value, 0);
+            $('#lbl_total_valor').text(addCommas(isMonto ? total.toFixed(1) + ' MDP' : total + ' créditos'));
+
+            groupSemana = Enumerable.From(data)
+                .GroupBy(
+                    "{ anio: $.año, semana: $.semana }",
+                    null,
+                    "{ anio: $.anio, semana: $.semana, acciones: $$.Sum('$.acciones'), monto: $$.Sum('$.monto') }",
+                    "$.anio + ' ' + $.semana").OrderBy("$.semana");
+            names_semana = groupSemana.Where(p => p.anio == anio).Select(p => p.semana).ToArray();
+            values_semana = isMonto ? groupSemana.Where(p => p.anio == anio).Select(p => parseFloat(p.monto.toFixed(2))).ToArray() : groupSemana.Where(p => p.anio == anio).Select(p => p.acciones).ToArray();
+            values_semana_anterior = isMonto ? groupSemana.Where(p => p.anio == anio_anterior).Select(p => parseFloat(p.monto.toFixed(2))).ToArray() : groupSemana.Where(p => p.anio == anio_anterior).Select(p => p.acciones).ToArray();
+
+            semanas = groupSemana.Where(p => p.anio == anio).ToArray();
+            for (i = 0; i < semanas.length; i++) {
+                /*
+                if (i > 0) {
+                    if (isMonto)
+                        semanas[i].variacion = (((semanas[i].monto / semanas[i - 1].monto) - 1) * 100).toFixed(1);
+                    else
+                        semanas[i].variacion = (((semanas[i].acciones / semanas[i - 1].acciones) - 1) * 100).toFixed(1);
+                }
+                else semanas[i].variacion = NaN;
+                */
+                if (i > 2) {
+                    if (isMonto) {
+                        semanas[i].promedio = (semanas[i - 3].monto + semanas[i - 2].monto + semanas[i - 1].monto + semanas[i].monto) / 4;
+                        semanas[i].promedio_variacion = (((semanas[i].promedio / ((values_semana_anterior[i - 3] + values_semana_anterior[i - 2] + values_semana_anterior[i - 1] + values_semana_anterior[i]) / 4)) - 1) * 100).toFixed(1);
+                    }
+                    else {
+                        semanas[i].promedio = (semanas[i - 3].acciones + semanas[i - 2].acciones + semanas[i - 1].acciones + semanas[i].acciones) / 4;
+                        semanas[i].promedio_variacion = (((semanas[i].promedio / ((values_semana_anterior[i - 3] + values_semana_anterior[i - 2] + values_semana_anterior[i - 1] + values_semana_anterior[i]) / 4)) - 1) * 100).toFixed(1);
+                    }
+                }
+                else {
+                    semanas[i].promedio = NaN;
+                    semanas[i].promedio_variacion = NaN;
+                }
+            }
+            //variacion_semana = Enumerable.From(semanas).Select(p => p.variacion).ToArray();
+            promedio_semana = isMonto ? Enumerable.From(semanas).Select(p => p.promedio.toFixed(2)).ToArray() : Enumerable.From(semanas).Select(p => p.promedio.toFixed(2)).ToArray();
+            variacion_promedio = Enumerable.From(semanas).Select(p => p.promedio_variacion).ToArray();
+
+            /*
+            var min_variacion_semana = Enumerable.From(semanas).Min(p => parseFloat(p.variacion));
+            var max_variacion_semana = Enumerable.From(semanas).Max(p => parseFloat(p.variacion));
+
+            var variacion_semana_p = Enumerable.From(semanas).Select(p => (p.variacion < 0 ? '-' : p.variacion)).ToArray();
+            var variacion_semana_n = Enumerable.From(semanas).Select(p => (p.variacion >= 0 ? '-' : p.variacion)).ToArray();
+            */
+
+            if (names_semana.length <= 10) {
+                $('#dv_semanal').removeClass("col-md-12").addClass("col-md-6");
+                //$('#dv_semanal_variacion').removeClass("col-md-12").addClass("col-md-6");
+                $('#dv_semanal_promedio').removeClass("col-md-12").addClass("col-md-6");
+                $('#dv_semanal_promedio_variacion').removeClass("col-md-12").addClass("col-md-6");
+            }
+            else {
+                $('#dv_semanal').removeClass("col-md-6").addClass("col-md-12");
+                //$('#dv_semanal_variacion').removeClass("col-md-6").addClass("col-md-12");
+                $('#dv_semanal_promedio').removeClass("col-md-6").addClass("col-md-12");
+                $('#dv_semanal_promedio_variacion').removeClass("col-md-6").addClass("col-md-12");
+            }
+
+            if (organismo != '0') {
+                barChartOrganismo.setOption({
+                    color: baseColor,
+                    tooltip: {
+                        trigger: 'axis',
+                        axisPointer: { type: 'shadow' }
+                    },
+                    xAxis: {
+                        data: [anio_anterior, anio],
+                        type: 'category'
+
+                    },
+                    yAxis: { type: 'value' },
+                    series: [
+                        {
+                            name: names_organismo[0],
+                            data: [anio_anterior > 2018 ? values_organismo_anterior[0].value : NaN, values_organismo[0].value],
+                            type: 'bar'
+                        }]
+                }, true);
+                $('#dv_organismo_pie').hide();
+                $('#dv_organismo_bar').show();
+            }
+            else {
+                pieChartOrganismo2.setOption({
+                    color: baseColor,
+                    tooltip: {
+                        trigger: 'item'
+                    },
+                    legend: {
+                        orient: 'vertical',
+                        left: 0,
+                        top: 20,
+                        data: names_organismo
+                    },
+                    series: [
+                        {
+                            name: anio,
+                            type: 'pie',
+                            center: ['60%', '50%'],
+                            radius: ['50%', '70%'],
+                            label: {
+                                normal: {
+                                    formatter: '{a|{a}}{abg|} \n {per|{d}%}  ',
+                                    backgroundColor: '#eee',
+                                    borderRadius: 4,
+                                    rich: {
+                                        a: {
+                                            color: '#999',
+                                            fontSize: 14,
+                                            lineHeight: 22,
+                                            align: 'center'
+                                        },
+                                        per: {
+                                            color: '#333'
+                                        }
+                                    }
+                                }
+                            },
+                            data: values_organismo
+                        },
+                        {
+                            name: anio_anterior,
+                            type: 'pie',
+                            center: ['60%', '50%'],
+                            radius: [0, '35%'],
+                            label: {
+                                normal: {
+                                    formatter: '{a|{a}}{abg|} \n {per|{d}%}  ',
+                                    backgroundColor: '#eee',
+                                    borderRadius: 4,
+                                    rich: {
+                                        a: {
+                                            color: '#999',
+                                            fontSize: 14,
+                                            lineHeight: 22,
+                                            align: 'center'
+                                        },
+                                        per: {
+                                            color: '#333'
+                                        }
+                                    }
+                                }
+                            },
+                            data: values_organismo_anterior
+                        }]
+                }, true);
+                $('#dv_organismo_pie').show();
+                $('#dv_organismo_bar').hide();
+            }
+
+            if (anio_anterior > 2018) {
+                color = ['#74c493', '#e4bf80']; //['#e4bf80', '#74c493', '#51574a'];
+                series = [
+                    {
+                        name: anio_anterior,
+                        data: values_semana_anterior,
+                        type: 'bar'
+                    },
+                    {
+                        name: anio,
+                        data: values_semana,
+                        type: 'bar'
+                    }/*,
+                                {
+                                    name: 'variación %',
+                                    data: variacion_promedio,
+                                    type: 'line',
+                                    yAxisIndex: 1,
+                                    label: {
+                                        normal: { show: true }
+                                    }
+                                }*/];
+                $('#dv_semanal_promedio_variacion').show();
+            }
+            else {
+                color = baseColor; //['#e4bf80', '#c94a53'];
+                series = [
+                    {
+                        name: anio,
+                        data: values_semana,
+                        type: 'bar'
+                    }/*,
+                                {
+                                    name: 'variación %',
+                                    data: variacion_promedio,
+                                    type: 'line',
+                                    yAxisIndex: 1,
+                                    label: {
+                                        normal: { show: true }
+                                    }
+                                }*/];
+                $('#dv_semanal_promedio_variacion').hide();
+            }
+
+            legend = isMonto ? 'monto MDP' : 'créditos';
+
+            barChartSemana.setOption({
+                color: color,
+                tooltip: {
+                    trigger: 'axis',
+                    axisPointer: { type: 'shadow' }
+                },
+                legend: {
+                    data: [anio, anio_anterior, 'variación %']
+                },
+                grid: grid,
+                xAxis: {
+                    data: names_semana,
+                    type: 'category'
+
+                },
+                yAxis: [
+                    {
+                        type: 'value',
+                        name: legend/*,
+                                    splitLine: {
+                                        show: false
+                                    }*/
+                    }/*,
+                                {
+                                    type: 'value',
+                                    name: 'variación %',
+                                    axisLabel: {
+                                        formatter: '{value} %'
+                                    },
+                                    splitLine: {
+                                        show: false
+                                    }
+                                }*/
+                ],
+                series: series
+            }, true);
+
+            /*
+            barChartSemanaVariacion.setOption({
+                color: ['#e4bf80', '#c94a53'],
+                tooltip: {
+                    trigger: 'axis',
+                    axisPointer: { type: 'shadow' }
+                },
+                legend: {
+                    data: [legend, 'variación']
+                },
+                grid: grid,
+                xAxis: {
+                    data: names_semana,
+                    type: 'category'
+                },
+                yAxis: [
+                    {
+                        type: 'value',
+                        name: legend,
+                        splitLine: {
+                            show: false
+                        }
+                    },
+                    {
+                        type: 'value',
+                        name: 'variación',
+                        //min: min_variacion_semana,
+                        //max: max_variacion_semana,
+                        axisLabel: {
+                            formatter: '{value} %'
+                        },
+                        splitLine: {
+                            show: false
+                        }
+                    }
+                ],
+                series: [
+                    {
+                        name: legend,
+                        data: values_semana,
+                        type: 'bar'
+                    },
+                    {
+                        name: 'variación',
+                        data: variacion_semana,
+                        type: 'line',
+                        yAxisIndex: 1,
+                        label: {
+                            normal: { show: true }
+                        }
+                    }]
+            }, true);
+            */
+            barChartSemanaPromedio.setOption({
+                color: ['#e4bf80', '#c94a53'],
+                tooltip: {
+                    trigger: 'axis',
+                    axisPointer: { type: 'shadow' }
+                },
+                legend: {
+                    data: [legend, 'promedio']
+                },
+                grid: grid,
+                xAxis: {
+                    data: names_semana,
+                    type: 'category'
+
+                },
+                yAxis: {
+                    type: 'value',
+                    name: legend
+                },
+                series: [
+                    {
+                        name: legend,
+                        data: values_semana,
+                        type: 'line',
+                        areaStyle: {
+                            normal: {}
+                        }
+                    },
+                    {
+                        name: 'promedio',
+                        data: promedio_semana,
+                        type: 'line'
+                    }]
+            }, true);
+
+            barChartSemanaPromedioVariacion.setOption({
+                color: ['#DD515B'],
+                tooltip: {
+                    trigger: 'axis',
+                    axisPointer: { type: 'shadow' }
+                },
+                grid: grid,
+                xAxis: {
+                    data: names_semana,
+                    type: 'category'
+
+                },
+                yAxis: {
+                    type: 'value',
+                    show: false
+                },
+                series: [
+                    {
+                        data: variacion_promedio,
+                        type: 'bar',
+                        label: {
+                            normal: { show: true }
+                        }
+                    }]
+            }, true);
+
+            renderCharts();
+        }
+        //#endregion
+    </script>
+}
+
+<div class="page-header">
+    <h2>
+        INFONAVIT, FOVISSSTE y SHF <small>
+            @semana
+        </small>
+        <a href="javascript:dc.filterAll(); dc.renderAll();" title="Recargar" data-toggle="tooltip" data-placement="bottom"><span class="icon s7-refresh-2"></span></a>
+    </h2>
+</div>
+
+<div class="row">
+    <div class="col-md-8">
+        <h3>Estado</h3>
+        <div id="mapEstado" class="geoChoroplethChart" style="overflow-x: auto"></div>
+    </div>
+    <div class="col-md-4 dv-s">
+        <h3>Región</h3>
+        <div class="form-group">
+            @Html.DropDownList("ddl_region", regiones, new { @class = "form-control" })
+        </div>
+        <h3>Total de acciones de crédito</h3>
+        <div id="numberDisplayAcciones" class="number-acciones-top"></div>
+        <div id="numberDisplayMonto" class="number-monto" style="float:inherit"></div><span class="number-monto" data-toggle="tooltip" data-placement="top" title="Millones de pesos">&nbsp;MDP</span>
+    </div>
+    <div class="col-md-4">
+        <h3>Organismo</h3>
+        <div id="pieChartOrganismo"></div>
+    </div>
+</div>
+
+<div class="page-header"></div>
+
+<div id="info" class="row">
+    <div class="col-md-12">
+        <div class="panel-group" role="tablist">
+            <div class="panel panel-info">
+                <div class="panel-heading" role="tab" id="collapseListGroupHeading1">
+                    <h4 class="panel-title">
+                        <a href="#collapseListGroup1" class="" role="button" data-toggle="collapse" aria-expanded="true" aria-controls="collapseListGroup1">
+                            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>Notas
+                        </a>
+                    </h4>
+                </div>
+                <div class="panel-collapse collapse" role="tabpanel" id="collapseListGroup1" aria-labelledby="collapseListGroupHeading1" aria-expanded="true" style="">
+                    <ul id="notes" class="list-group"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Año:</label>
+                    @Html.DropDownList("ddl_anio", anios, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <button type="button" id="btn_aceptar" class="btn btn-default btn-block align-middle" onclick="getData()">Consultar</button>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <label>Rango semanal:</label>
+                <input id="rng_semanal" class="slider" type="text" />
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Región:</label>
+                    @Html.DropDownList("ddl_region2", regiones2, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Organismo:</label>
+                    <select id="ddl_organismo" class="form-control">
+                        <option value="0">Todos</option>
+                        <option value="00635">INFONAVIT</option>
+                        <option value="00621">FOVISSSTE</option>
+                        <option value="06610">SHF</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div id="dv_estado" class="form-group">
+                    <label>Entidad Federativa:</label>
+                    <select id="ddl_estado" class="form-control">
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Total de acciones de crédito</h3>
+                <h3 class="text-center"><strong><span id="lbl_total_valor"></span></strong></h3>
+                <div class="btn-group btn-group-justified" data-toggle="buttons">
+                    <label class="btn btn-default active">
+                        <input type="radio" name="chk_metrica" id="acciones" value="acciones" autocomplete="off" onchange="mostrarGraficas()" checked>
+                        Créditos
+                    </label>
+                    <label class="btn btn-default">
+                        <input type="radio" name="chk_metrica" id="monto" value="monto" autocomplete="off" onchange="mostrarGraficas()">
+                        Monto
+                    </label>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="dv_organismo_pie" class="col-md-6">
+        <h3>Organismo <small>Anual</small></h3>
+        <div id="pieChartOrganismo2" class="chart"></div>
+    </div>
+    <div id="dv_organismo_bar" class="col-md-6">
+        <h3>Organismo <small>Anual</small></h3>
+        <div id="barChartOrganismo" class="chart"></div>
+    </div>
+</div>
+
+<div class="row">
+    <div id="dv_semanal_promedio" class="col-md-6">
+        <h3>Colocación semanal <small>Promedio móvil (4 semanas)</small></h3>
+        <div id="barChartSemanaPromedio" class="chart2"></div>
+    </div>
+    <div id="dv_semanal_promedio_variacion" class="col-md-6">
+        <h3>Variación porcentual <small>Promedio móvil (4 semanas)</small></h3>
+        <div id="barChartSemanaPromedioVariacion" class="chart2"></div>
+    </div>
+</div>
+
+<div class="row">
+    <div id="dv_semanal" class="col-md-6">
+        <h3>Colocación Semanal</h3>
+        <div id="barChartSemana" class="chart2"></div>
+    </div>
+    <div id="dv_semanal_variacion" class="col-md-6">
+        @*<h3>Semana <small>Variación porcentual</small></h3>
+            <div id="barChartSemanaVariacion" class="chart2"></div>*@
+    </div>
+</div>

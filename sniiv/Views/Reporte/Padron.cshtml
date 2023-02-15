@@ -1,0 +1,92 @@
+﻿@{
+    ViewData["Title"] = "Padrón de beneficiarios";
+
+    List<SelectListItem> anios = (List<SelectListItem>)ViewBag.anios;
+    List<SelectListItem> meses = (List<SelectListItem>)ViewBag.meses;
+}
+
+@section Scripts{
+    <script src="~/js/util.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var padron_beneficiario = 6;
+        $(function () {
+            $('[id$=ddl_anio_pb]').change(function () {
+                mostrarTrimestre();
+            });
+
+            $('#tab-active').addClass('active');
+            $(".lst").click(function () {
+                $("#lbl_subtitulo").text($(this).first().text());
+            });
+        });
+
+        function mostrarTrimestre() {
+            anio = $('#ddl_anio_pb').val();
+            $.getJSON(path + 'CatalogoAPI/GetMesDatosAbiertos/' + padron_beneficiario + '/' + anio, function (json) {
+                $('#ddl_mes_pb').empty();
+                $.each(json, function (key, obj) {
+                    $('#ddl_mes_pb').append($('<option></option>').attr('value', obj.id).text(obj.descripcion));
+                });
+            });
+            //$('#ddl_trimestre').trigger('change');
+        }
+
+        var name_file;
+
+        function descargarPadronBeneficiario() {
+            anio = $('[id$=ddl_anio_pb]').val();
+            mes = pad($('[id$=ddl_mes_pb]').val(), 2);
+            console.log(anio + ' ' + mes);
+            /*name_file = $('[id$=ddl_anio_pb]').val() + pad($('[id$=ddl_mes_pb]').val(), 2) + '.xlsx';
+            window.open(host_path + 'doc/datos_abiertos/padron_beneficiario/' + name_file);*/
+            $.getJSON(path + 'ReporteAPI/GetDocumentoMes/' + padron_beneficiario + '/' + anio + '/' + mes+'/1', function (json) {
+                var items = [];
+                $.each(json, function (key, val) {
+                    items.push(val);
+                });
+                window.open(items[0]);
+            });
+        }
+    </script>
+}
+
+<div class="page-header">
+    <h2>Padrón de Beneficiarios</h2>
+</div>
+<div id="div-form" class="form-inline">
+    <div class="form-group">
+        <div class="form-group">
+            <label>Año:</label>
+            @Html.DropDownList("ddl_anio_pb", anios, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <label>Trimestre:</label>
+            @Html.DropDownList("ddl_mes_pb", meses, new { @class = "form-control" })
+        </div>
+        <button id="btn_descargar_pb" type="button" class="btn btn-default" onclick="descargarPadronBeneficiario();">
+            <span class="glyphicon glyphicon-download-alt"></span> Descargar
+        </button>
+    </div>
+</div>
+
+<br />
+<div id="info" class="row">
+    <div class="col-md-12">
+        <div class="panel-group" role="tablist">
+            <div class="panel panel-info">
+                <div class="panel-heading" role="tab" id="collapseListGroupHeading1">
+                    <h4 class="panel-title">
+                        <a href="#collapseListGroup1" class="" role="button" data-toggle="collapse" aria-expanded="true" aria-controls="collapseListGroup1">
+                            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> Nota
+                        </a>
+                    </h4>
+                </div>
+                <div class="panel-collapse collapse in" role="tabpanel" id="collapseListGroup1" aria-labelledby="collapseListGroupHeading1" aria-expanded="true" style="">
+                    <ul id="notes" class="list-group">
+                        <li class="list-group-item">La información publicada corresponde a los subsidios otorgados en torno a los programas presupuestarios que opera la Conavi, siendo estos datos acumulados, por lo que pueden presentar variaciones en relación a lo reportado en cada trimestre.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

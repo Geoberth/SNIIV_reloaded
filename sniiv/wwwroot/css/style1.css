@@ -1,0 +1,267 @@
+﻿body {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 12px !important;
+}
+h5 {
+    font-family: 'Montserrat', sans-serif !important;
+}
+/*Ajustres*/
+
+.div-var {
+    height: 105px;
+    overflow-y: auto;
+}
+
+/*
+a {
+    color: #B38E5D !important;
+}
+
+a:hover, a:focus {
+    color: #D4C19C !important;
+    text-decoration: none !important;
+}
+*/
+
+.navbar-inverse {
+    background-color: #0C231E !important;
+    border-color: #0C231E !important;
+}
+
+.menu-nav:hover {
+    background-color: transparent !important;
+    border-color: transparent !important;
+}
+
+.nav-tabs > li > a {
+    border: 0;
+}
+
+    .nav-tabs > li > a:hover,
+    .nav-tabs > li > a:focus {
+        color: #B38E5D !important;
+    }
+
+.nav-tabs > li > a {
+    margin-right: 0px;
+}
+
+.nav-tabs {
+    border: 0;
+}
+
+.menu {
+    /*padding-top: 1%;*/
+    padding-top: 20px;
+    padding-bottom:5px;
+    background-color: #13322B; /*#393c3e;*/
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+}
+.icon {
+    padding-right: 1%;
+}
+.footer {
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    /* height: 100px; */
+    background-color: #13322B; /*#393c3e; /* ; /*#393c3e;*/
+    color: #ddd;
+}
+    .footer > .container {
+        padding-right: 10%;
+        padding-left: 10%;
+    }
+
+.contacto {
+    color: #B38E5D;
+}
+.container .address {
+    margin: 1.5% 0;
+    text-align:center;
+}
+
+#map, #chart {
+    width: 100%;
+    height: 450px;
+}
+
+#map2, #chart2 {
+    width: 100%;
+    height: 350px;
+}
+
+#map3, #chart3 {
+    width: 100%;
+    height: 600px;
+}
+
+#map4, #chart4 {
+    width: 100%;
+    height: 350px;
+}
+
+#map5, #chart5 {
+    width: 100%;
+    height: 250px;
+}
+
+#content_map {
+    width: 100%;
+    height: 450px;
+}
+
+#content_map2 {
+    width: 100%;
+    height: 350px;
+}
+
+
+.menu-nav {
+    background-color: #13322B !important;
+    color: #ddd !important;
+    width: max-content !important;
+}
+
+.menu-nav:hover {
+    color: #808080 !important;
+    border-color: #808080 !important;
+}
+
+.img-sniiv{
+    width:80px;
+}
+
+.img-sniiv2 {
+    width: 60px !important;
+    display: none;
+    margin-left: auto;
+    margin-right: auto
+}
+.sedatu{
+    width: 81% !important;
+    
+}
+navbar navbar-inverse navbar-fixed-top {
+    width: 100% !important;
+    background-color: #000; /*#393c3e;*/
+}
+
+.sp-white {
+    color: #fff !important;
+}
+
+.item.header {
+    background-image: url(../img/carousel.jpeg);
+    background-repeat: no-repeat;
+    background-position: 0% top;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: rgba(0,0,0,0);
+}
+
+.text-homeimage {
+    text-align: center;
+    color: #fff;
+    z-index: 2;
+    position: relative;
+    font-size: 75px;
+    line-height: 90px;
+    text-transform: uppercase;
+    padding-top: 190px;
+    padding-bottom: 190px;
+    font-weight: 700;
+}
+
+.subtext-image {
+    text-transform: none;
+    font-weight: 100 !Important;
+}
+
+.toparea {
+    background: #fff;
+    margin-top: -100px;
+}
+
+.numbertext {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 38px;
+    color: #444;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.numberstep {
+    background-color: #00bba7;
+    border-radius: 50%;
+    color: #fff;
+    margin-right: 4px;
+    text-align: center;
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+    display: inline-block;
+    font-size: 25px;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+header .navbar-white {
+    background: #fff;
+    box-shadow: 0px 3px 2px 0px rgba(50,50,50,0.1);
+}
+
+.container.foot {
+    background-color: white !important;
+}
+
+    .container.foot h5 {
+        color: black;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif !important;
+    }
+}
+
+.tab-content {
+    padding: 0px;
+    border: 0;
+}
+
+.load {
+    display:none;
+    position: center;
+    text-align:center;
+    top: 52%;
+    left: 0;
+    height: 10%;
+    width: 100%;
+    background: rgba( 255, 255, 255, .8 ) url('../img/loader.gif') 50% 50% no-repeat;
+}
+
+.cache-disclaimer {
+    background: #000 !important;
+    color: #FFF !important;
+    opacity: 0.9;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    height: 150px;
+    position: fixed;
+}
+
+    .cache-disclaimer .container {
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .cache-disclaimer .cache-close {
+        float: right;
+        padding: 10px;
+        cursor: pointer;
+    }

@@ -1,0 +1,751 @@
+[
+  {
+    "Nombre": "1.1 Porcentaje de viviendas en rezago habitacional en el país, respecto al total de viviendas",
+    "Objetivo_prioritario": "Garantizar el ejercicio del derecho a la vivienda adecuada a todas las personas, especialmente a los grupos en mayor condición de discriminación y vulnerabilidad, a través de soluciones financieras, técnicas y sociales de acuerdo con las necesidades específicas de cada grupo de población",
+    "Definicion_o_descripcion": "Medición del porcentaje de viviendas en rezago habitacional. El indicador de rezago habitacional se construye a partir de tres componentes principales como establece CONAVI: 1) materiales deteriorados, 2) materiales regulares, y 3) precariedad en espacios. La medición de este indicador permitirá dar seguimiento al número de viviendas que logran salir del rezago.",
+    "Nivel_de_desagregacion": "Nacional",
+    "Periodicidad_o_frecuencia_de_medicion": "Bienal",
+    "Tipo": "Estratégica",
+    "Acumulado_o_periodico": "Periódico",
+    "Unidad_de_medida": "Porcentaje de viviendas en rezago",
+    "Periodo_de_recoleccion_de_datos": "Agosto-Julio (ciclo escolar)",
+    "Dimension": "Eficacia",
+    "Disponibilidad_de_la_informacion": "Agosto",
+    "Tendencia_esperada": "Descendente",
+    "Unidad_responsable_de_reportar_el_avance": "15.- Desarrollo Agrario, Territorial y Urbano\nQCW.- Comisión Nacional de Vivienda",
+    "Metodo_de_calculo": " PVRH = (VFRH/TV)*100\nEsta meta se calculará como el porcentaje de viviendas en rezago habitacional publicado por la ENIGH deforma bienal",
+    "Observaciones": "Los datos para esta Meta provendrán del Módulo de Condiciones Socioeconómicas de la ENIGH (MCS-ENIGH), que es publicado bienalmente y se utiliza por la CONAVI para estimar el Rezago Habitacional",
+    "APLICACION_DEL_METODO_DE_CALCULO_DEL_INDICADOR_PARA_LA_OBTENCION_DEL_VALOR_DE_LA_LINEA_BASE": {
+      "Nombre_variable_1": "1.- VFRH =Viviendas en rezago en 2018",
+      "Nombre_variable_2": "2.- TV = Total de viviendas en 2018",
+      "Valor_variable_1": 9409845,
+      "Valor_variable_2": 34155615,
+      "Fuente_de_informacion_variable_1": "ENIGH",
+      "Fuente_de_informacion_variable_2": "ENIGH",
+      "Sustitucion_en_metodo_de_calculo_del_indicador": "PVRH= (9409845/34155615)*100=27.54\nNúmero de viviendas en rezago: 27.54% viviendas en rezago como porcentaje del total de viviendas\nPVRH = (VFRH/TV)*100"
+    },
+    "VALOR_DE_LINEA_BASE_Y_METAS": {
+      "Linea_base": {
+        "Valor": 27.54,
+        "Anio": 2018
+      },
+      "Nota_sobre_la_linea_base": "",
+      "META_2024": 24.58,
+      "Nota_sobre_la_meta_2024": ""
+    },
+    "SERIE_HISTORICA_DE_LA_META_PARA_EL_BIENESTAR_O_PARAMETRO": {
+      "2012": 30.68,
+      "2013": 0,
+      "2014": 28.34,
+      "2015": 0,
+      "2016": 28.06,
+      "2017": 0,
+      "2018": 27.54,
+      "2019": 0,
+      "2020": "ND"
+    },
+    "METAS_INTERMEDIAS": {
+      "2021": 0,
+      "2022": 25.54,
+      "2023": 0,
+      "2024": 24.58
+    }
+  },
+
+  {
+    "Nombre": "1.2 Porcentaje del gasto en vivienda como porcentaje del gasto total en los hogares de menores ingresos",
+    "Objetivo_prioritario": "Garantizar el ejercicio del derecho a la vivienda adecuada a todas las personas, especialmente a los grupos en mayor condición de discriminación y vulnerabilidad, a través de soluciones financieras, técnicas y sociales de acuerdo con las necesidades específicas de cada grupo de población",
+    "Definicion_o_descripcion": "Este parámetro busca medir el elemento de asequibilidad, calculado con base en el porcentaje del gasto familiar que se destina a la vivienda. Este indicador busca demostrar como el precio de vivienda y la capacidad de pago de las familias es un indicador fundamental del acceso de la población a vivienda adecuada. El parámetro se medirá específicamente para hogares en los deciles I a V.",
+    "Nivel_de_desagregacion": "Nacional, con enfoque en los 5 deciles de ingreso inferiores",
+    "Periodicidad_o_frecuencia_de_medicion": "Bienal",
+    "Tipo": "Estratégica",
+    "Acumulado_o_periodico": "Periódico",
+    "Unidad_de_medida": "Porcentaje",
+    "Periodo_de_recoleccion_de_datos": "Agosto-Julio (ciclo escolar)",
+    "Dimension": "Eficacia",
+    "Disponibilidad_de_la_informacion": "Agosto",
+    "Tendencia_esperada": "Descendente",
+    "Unidad_responsable_de_reportar_el_avance": "15.- Desarrollo Agrario, Territorial y Urbano\n511 Dirección General de Desarrollo Urbano, Suelo y Vivienda",
+    "Metodo_de_calculo": " Para estimar la asequibilidad de la vivienda, este parámetro busca comparar el cambio en el gasto familiar destinado a la vivienda con respecto al año base (2018)\nPorcentaje de gasto en vivienda de los deciles I a V=(( Gasto del hogar destinado a vivienda))/(Gasto totales del hogar) x 100",
+    "Observaciones": "El gasto destinado a la vivienda incluye los gastos que realizan los miembros del hogar mensualmente para hacer los pagos de todos los servicios que requiere la vivienda particular para su funcionamiento. La vivienda puede ser propia o rentada, o bien, puede tratarse de viviendas prestadas por otro hogar o cuya tenencia se deba a una prestación laboral que recibe alguno de los integrantes del hogar. Las variables que incorpora son las siguientes: a) alquileres brutos; b) impuesto predial y cuotas por servicios de conservación; c) agua y d) electricidad y combustibles",
+    "APLICACION_DEL_METODO_DE_CALCULO_DEL_INDICADOR_PARA_LA_OBTENCION_DEL_VALOR_DE_LA_LINEA_BASE": {
+      "Nombre_variable_1": "1.- Gasto destinado a vivienda en 2018 (Hogares en deciles I-V) en miles de pesos",
+      "Nombre_variable_2": "2.- Gastos totales en 2018 (Hogares en deciles I-V) en miles de pesos",
+      "Valor_variable_1": 32035801,
+      "Valor_variable_2": 299939010,
+      "Fuente_de_informacion_variable_1": "ENIGH",
+      "Fuente_de_informacion_variable_2": "ENIGH",
+      "Sustitucion_en_metodo_de_calculo_del_indicador": "32,035,801/( 299,939,010 ) x 100=10.7%"
+    },
+    "VALOR_DE_LINEA_BASE_Y_METAS": {
+      "Linea_base": {
+        "Valor": 10.7,
+        "Anio": 2018
+      },
+      "Nota_sobre_la_linea_base": "No aplica",
+      "META_2024": "",
+      "Nota_sobre_la_meta_2024": ""
+    },
+    "SERIE_HISTORICA_DE_LA_META_PARA_EL_BIENESTAR_O_PARAMETRO": {
+      "2012": 10.1,
+      "2013": 0,
+      "2014": 7.1,
+      "2015": 0,
+      "2016": 10.4,
+      "2017": 0,
+      "2018": 10.7,
+      "2019": 0,
+      "2020": "ND"
+    }
+  },
+
+  {
+    "Nombre": "1.3 Número de acciones de financiamiento y subsidios de vivienda para personas en condiciones de vulnerabilidad",
+    "Objetivo_prioritario": "Garantizar el ejercicio del derecho a la vivienda adecuada a todas las personas, especialmente a los grupos en mayor condición de discriminación y vulnerabilidad, a través de soluciones financieras, técnicas y sociales de acuerdo con las necesidades específicas de cada grupo de población",
+    "Definicion_o_descripcion": "Medición del número de acciones de financiamiento o subsidios otorgadas a personas de población indígena,  mujeres y adultos mayores (más de 60 años). Este indicador permitirá dar seguimiento a la asequibilidad de las viviendas con base en el número de personas en condiciones de vulnerabilidad que reciben apoyos públicos para vivienda. Las modalidades de financiamiento para este cálculo incluyen créditos individuales, cofinanciamiento, subsidios, entre otros, otorgados principalmente por las ONAVIS (CONAVI, FOVISSSTE, INFONAVIT, SHF) y la Banca Privada. Estas acciones pueden ser para autoproducción, contragarantías, lote con servicios, mejoramiento, reconstrucción, renta, acceso a vivienda nueva y vivienda existente",
+    "Nivel_de_desagregacion": "Nacional",
+    "Periodicidad_o_frecuencia_de_medicion": "Anual",
+    "Tipo": "Gestión",
+    "Acumulado_o_periodico": "Periódico",
+    "Unidad_de_medida": "Número de acciones",
+    "Periodo_de_recoleccion_de_datos": "Enero-Diciembre",
+    "Dimension": "Eficacia",
+    "Disponibilidad_de_la_informacion": "Diciembre",
+    "Tendencia_esperada": "Ascendente",
+    "Unidad_responsable_de_reportar_el_avance": "15.- Desarrollo Agrario, Territorial y Urbano\n511 Dirección General de Desarrollo Urbano, Suelo y Vivienda",
+    "Metodo_de_calculo": "El aumento en acciones de subsidios y financiamiento para soluciones de vivienda se medirá basado en el número de acciones de subsidios y financiamientos para las poblaciones vulnerables seleccionadas, el cuál es publicado por el SNIIV\nAcciones de subsidios y financiamiento de poblaciones vulnerables= X1+X2+X3\nDonde: X1=Subsidios y financiamiento a hombres de municipios indígenas\nX2= Subsidios y financiamiento a mujeres (de todas las edades)\nX3=Subsidios y financiamiento a hombres que no residen en municipios indígenas en el rango de edad de 60 o más.",
+    "Observaciones": "La selección de las variables se determinó para evitar duplicados en el cálculo, de manera que se abarcan todas las poblaciones vulnerables seleccionadas para el indicador (mujeres, indígenas y adultos mayores)",
+    "APLICACION_DEL_METODO_DE_CALCULO_DEL_INDICADOR_PARA_LA_OBTENCION_DEL_VALOR_DE_LA_LINEA_BASE": {
+      "Nombre_variable_1": "1.- Acciones de financiamiento y subsidios a hombres de municipios indígenas en 2018",
+      "Nombre_variable_2": "2.- Acciones de financiamiento y subsidios a mujeres en 2018",
+      "Nombre_variable_3": "3.- Acciones de financiamiento y subsidios a hombres en municipios indígenas en el rango de edad de 60 o más en 2018",
+      "Valor_variable_1": 22958,
+      "Valor_variable_2": 489395,
+      "Valor_variable_3": 21248,
+      "Fuente_de_informacion_variable_1": "SNIIV",
+      "Fuente_de_informacion_variable_2": "SNIIV",
+      "Fuente_de_informacion_variable_3": "SNIIV",
+      "Sustitucion_en_metodo_de_calculo_del_indicador": "Acciones de subsidios y financiamiento de poblaciones vulnerables= 22,958+489,395+21,248"
+    },
+    "VALOR_DE_LINEA_BASE_Y_METAS": {
+      "Linea_base": {
+        "Valor": 533601,
+        "Anio": 2018
+      },
+      "Nota_sobre_la_linea_base": "No aplica",
+      "META_2024": "",
+      "Nota_sobre_la_meta_2024": ""
+    },
+    "SERIE_HISTORICA_DE_LA_META_PARA_EL_BIENESTAR_O_PARAMETRO": {
+      "2012": 406975,
+      "2013": 486120,
+      "2014": 523353,
+      "2015": 440058,
+      "2016": 429571,
+      "2017": 495809,
+      "2018": 533601,
+      "2019": "ND",
+      "2020": "ND"
+    }
+  },
+
+  {
+    "Nombre": "2.1 Eficiencia en el uso del gasto operativo de instituciones de vivienda",
+    "Objetivo_prioritario": "Garantizar la coordinación entre los organismos nacionales de vivienda y los distintos órdenes de gobierno para el uso eficiente de los recursos públicos",
+    "Definicion_o_descripcion": "Mide el costo operativo de los organismos nacionales de vivienda, específicamente FOVISSSTE y Sociedad Hipotecaria Federal, respecto al número total de viviendas producidas en el año, buscando medir la mejora en eficiencia en el uso de los recursos públicos destinados al desarrollo de la vivienda en el país",
+    "Nivel_de_desagregacion": "Sectorial (organismos nacionales de vivienda) y nacional",
+    "Periodicidad_o_frecuencia_de_medicion": "Anual",
+    "Tipo": "Estratégico",
+    "Acumulado_o_periodico": "Periódico",
+    "Unidad_de_medida": "Pesos mexicanos",
+    "Periodo_de_recoleccion_de_datos": "Enero-Diciembre",
+    "Dimension": "Eficiencia",
+    "Disponibilidad_de_la_informacion": "Marzo",
+    "Tendencia_esperada": "Descendente",
+    "Unidad_responsable_de_reportar_el_avance": "15.- Desarrollo Agrario, Territorial y Urbano\n511 Dirección General de Desarrollo Urbano, Suelo y Vivienda",
+    "Metodo_de_calculo": "x =Suma2 i=1 Costo operativo anual del organismo nacional de vivienda Xi en el año t / Número de hogares registrados ante INEGI durante el año\nt - Número de hogares registrados ante INEGI durante el año t - 1\ni=FOVISSSTE, SHF\nt= año en curso; t-1= año anterior",
+    "Observaciones": "El costo operativo tiene un nombre distinto en cada organismo nacional de vivienda:\nFOVISSSTE = Gastos de administración y promoción; SHF = Gastos de administración y promoción",
+    "APLICACION_DEL_METODO_DE_CALCULO_DEL_INDICADOR_PARA_LA_OBTENCION_DEL_VALOR_DE_LA_LINEA_BASE": {
+      "Nombre_variable_1": "1.- Costo operativo anual de FOVISSSTE en 2017 (millones de pesos)",
+      "Nombre_variable_2": "2.- Costo operativo anual de SHF en 2017 (millones de pesos)",
+      "Nombre_variable_3": "3.- Número de hogares registrados ante INEGI 2017",
+      "Nombre_variable_4": "4.- Número de hogares registrados ante INEGI 2016",
+      "Valor_variable_1": 975,
+      "Valor_variable_2": 1834,
+      "Valor_variable_3": 34100000,
+      "Valor_variable_4": 32900000,
+      "Fuente_de_informacion_variable_1": "Estados Financieros de 2017 de FOVISSSTE",
+      "Fuente_de_informacion_variable_2": "Estados Financieros de 2017 de FOVISSSTE",
+      "Fuente_de_informacion_variable_3": "Encuesta Nacional de los Hogares 2017",
+      "Fuente_de_informacion_variable_4": "Encuesta Nacional de los Hogares 2016",
+      "Sustitucion_en_metodo_de_calculo_del_indicador": "x = 2809 / 34.1 - 32.9 = 2,340\n34,100,000 = 34.1 Millones de viviendas\n32,900,000 = 32.9 Millones de viviendas"
+    },
+    "VALOR_DE_LINEA_BASE_Y_METAS": {
+      "Linea_base": {
+        "Valor": 2340,
+        "Anio": 2017
+      },
+      "Nota_sobre_la_linea_base": "No aplica",
+      "META_2024": 1891,
+      "Nota_sobre_la_meta_2024": "No aplica"
+    },
+    "SERIE_HISTORICA_DE_LA_META_PARA_EL_BIENESTAR_O_PARAMETRO": {
+      "2012": 0,
+      "2013": 6444.13,
+      "2014": 4232.85,
+      "2015": 5121.05,
+      "2016": 2486.25,
+      "2017": 2340,
+      "2018": "ND",
+      "2019": "ND",
+      "2020": "ND"
+    },
+    "METAS_INTERMEDIAS": {
+      "2021": 2072,
+      "2022": 2010,
+      "2023": 1949,
+      "2024": 1891
+    }
+  },
+
+  {
+    "Nombre": "2.2 Tiempo necesario para obtener un permiso de construcción en el país",
+    "Objetivo_prioritario": "Garantizar la coordinación entre los organismos nacionales de vivienda y los distintos órdenes de gobierno para el uso eficiente de los recursos públicos",
+    "Definicion_o_descripcion": "El Banco Mundial, en su reporte Facilidad para hacer negocios, analiza el tiempo de regulaciones federales y locales que impactan en el desarrollo de negocios de cada país. Este parámetro busca medir el número de días promedio que se requiere en el país para obtener un permiso de construcción, analizando el nivel de eficiencia del sector público (principalmente a nivel municipal) así como el efecto que este tiempo tiene en las personas y el desarrollo de negocios en las localidades.",
+    "Nivel_de_desagregacion": "Nacional",
+    "Periodicidad_o_frecuencia_de_medicion": "Anual",
+    "Tipo": "Gestión",
+    "Acumulado_o_periodico": "Periódico",
+    "Unidad_de_medida": "Días",
+    "Periodo_de_recoleccion_de_datos": "Enero-Diciembre",
+    "Dimension": "Eficacia",
+    "Disponibilidad_de_la_informacion": "Octubre",
+    "Tendencia_esperada": "Descendente",
+    "Unidad_responsable_de_reportar_el_avance": "15.- Desarrollo Agrario, Territorial y Urbano\n511 Dirección General de Desarrollo Urbano, Suelo y Vivienda",
+    "Metodo_de_calculo": "Número de días que se requieren para obtener un permiso o licencia de construcción.",
+    "Observaciones": " El indicador ya está calculado por el Banco Mundial y reportado en su publicación anual titulada Doing Business (Facilidad para hacer negocios)",
+    "APLICACION_DEL_METODO_DE_CALCULO_DEL_INDICADOR_PARA_LA_OBTENCION_DEL_VALOR_DE_LA_LINEA_BASE": {
+      "Nombre_variable_1": "1.- Número de días que se requieren para obtener un permiso o licencia de construcción en 2017-2018",
+      "Valor_variable_1": 82.1,
+      "Fuente_de_informacion_variable_1": "Doing Business 2019 del Banco Mundial",
+      "Sustitucion_en_metodo_de_calculo_del_indicador": "82.1 (Se tomará el número publicado por el Banco Mundial)"
+    },
+    "VALOR_DE_LINEA_BASE_Y_METAS": {
+      "Linea_base": {
+        "Valor": 82.1,
+        "Anio": 2017
+      },
+      "Nota_sobre_la_linea_base": "No aplica",
+      "META_2024": "",
+      "Nota_sobre_la_meta_2024": ""
+    },
+    "SERIE_HISTORICA_DE_LA_META_PARA_EL_BIENESTAR_O_PARAMETRO": {
+      "2012": 81,
+      "2013": 69,
+      "2014": 82,
+      "2015": 87.6,
+      "2016": 86.4,
+      "2017": 82.1,
+      "2018": 82.1,
+      "2019": "ND",
+      "2020": "ND"
+
+    }
+  },
+
+  {
+    "Nombre": "2.3 Índice de control de calidad de la construcción en México",
+    "Objetivo_prioritario": "Garantizar la coordinación entre los organismos nacionales de vivienda y los distintos órdenes de gobierno para el uso eficiente de los recursos públicos",
+    "Definicion_o_descripcion": "Este parámetro mide el índice de control de calidad de la construcción como un puntaje entre 1 y 15, el cual evalúa la calidad de los reglamentos de construcción; la fortaleza del control de calidad y mecanismos de seguridad; los regímenes de responsabilidad legal y de seguros y los requisitos de certificación profesional en el país",
+    "Nivel_de_desagregacion": "Nacional",
+    "Periodicidad_o_frecuencia_de_medicion": "Anual",
+    "Tipo": "Estratégico",
+    "Acumulado_o_periodico": "Periódico",
+    "Unidad_de_medida": "Valor numérico del 1 al 15 (a mayor valor numérico, mejor control de calidad de la construcción)",
+    "Periodo_de_recoleccion_de_datos": "Enero-Diciembre",
+    "Dimension": "Calidad",
+    "Disponibilidad_de_la_informacion": "Octubre",
+    "Tendencia_esperada": "Ascendente",
+    "Unidad_responsable_de_reportar_el_avance": "15.- Desarrollo Agrario, Territorial y Urbano\n511 Dirección General de Desarrollo Urbano, Suelo y Vivienda",
+    "Metodo_de_calculo": " El indicador está calculado por el Banco Mundial y reportado en su publicación anual titulada Doing Business (Facilidad para hacer negocios) El control de calidad de la construcción se basa en seis subíndices: los índices de calidad de las normas de construcción; los índices de control de calidad antes, durante y después de la construcción; los regímenes de responsabilidad y seguros; y el índice de certificaciones profesionales.",
+    "Observaciones": "",
+    "APLICACION_DEL_METODO_DE_CALCULO_DEL_INDICADOR_PARA_LA_OBTENCION_DEL_VALOR_DE_LA_LINEA_BASE": {
+      "Nombre_variable_1": "1.- Control de calidad de la construcción ",
+      "Valor_variable_1": 11.7,
+      "Fuente_de_informacion_variable_1": "Doing Business 2019 del Banco Mundial",
+      "Sustitucion_en_metodo_de_calculo_del_indicador": "11.7 (Se tomará el número publicado por el Banco Mundial)"
+    },
+    "VALOR_DE_LINEA_BASE_Y_METAS": {
+      "Linea_base": {
+        "Valor": 11.7,
+        "Anio": 2017
+      },
+      "Nota_sobre_la_linea_base": "No aplica",
+      "META_2024": "",
+      "Nota_sobre_la_meta_2024": "No aplica"
+    },
+    "SERIE_HISTORICA_DE_LA_META_PARA_EL_BIENESTAR_O_PARAMETRO": {
+      "2012": 0,
+      "2013": 11.7,
+      "2014": 11.7,
+      "2015": 11.7,
+      "2016": 11.7,
+      "2017": 11.7,
+      "2018": 11.7,
+      "2019": "ND",
+      "2020": "ND"
+
+    }
+  },
+
+  {
+    "Nombre": "3.1 Valor de la aportación del sector y las acciones de la vivienda en el Producto Interno Bruto de México en valores constantes",
+    "Objetivo_prioritario": "Fomentar conjuntamente con el sector social y privado, condiciones que propicien el ejercicio del derecho a la vivienda adecuada",
+    "Definicion_o_descripcion": "Mide el Producto Interno Bruto que representa el sector y las acciones de vivienda en México con base en la información publicada por INEGI en la Cuenta Satélite de Vivienda en México, tomando en cuenta la construcción, los servicios financieros y de seguros, los servicios inmobiliarios y de alquiler de bienes muebles e intangibles y otros sectores.",
+    "Nivel_de_desagregacion": "Nacional",
+    "Periodicidad_o_frecuencia_de_medicion": "Anual",
+    "Tipo": "Estratégico",
+    "Acumulado_o_periodico": "Periódico",
+    "Unidad_de_medida": "Millones de pesos constantes (base 2013)",
+    "Periodo_de_recoleccion_de_datos": "Enero-Diciembre",
+    "Dimension": "Economía",
+    "Disponibilidad_de_la_informacion": "Febrero",
+    "Tendencia_esperada": "Ascendente",
+    "Unidad_responsable_de_reportar_el_avance": "15.- Desarrollo Agrario, Territorial y Urbano\n511 Dirección General de Desarrollo Urbano, Suelo y Vivienda",
+    "Metodo_de_calculo": "PIB del sector vivienda del año en cuestión en valores constantes con base en 2013 publicado por INEGI",
+    "Observaciones": "",
+    "APLICACION_DEL_METODO_DE_CALCULO_DEL_INDICADOR_PARA_LA_OBTENCION_DEL_VALOR_DE_LA_LINEA_BASE": {
+      "Nombre_variable_1": "1.- PIB de vivienda 2017 en precios constantes (base 2013)",
+      "Valor_variable_1": 1034129,
+      "Fuente_de_informacion_variable_1": "INEGI",
+      "Sustitucion_en_metodo_de_calculo_del_indicador": "1,034,129"
+    },
+    "VALOR_DE_LINEA_BASE_Y_METAS": {
+      "Linea_base": {
+        "Valor": 1034129,
+        "Anio": 2017
+      },
+      "Nota_sobre_la_linea_base": "No aplica",
+      "META_2024": 1147723,
+      "Nota_sobre_la_meta_2024": ""
+    },
+    "SERIE_HISTORICA_DE_LA_META_PARA_EL_BIENESTAR_O_PARAMETRO": {
+      "2012": 917073,
+      "2013": 892025,
+      "2014": 931701,
+      "2015": 972553,
+      "2016": 1015800,
+      "2017": 1034129,
+      "2018": "ND",
+      "2019": "ND",
+      "2020": "ND"
+    },
+    "METAS_INTERMEDIAS": {
+      "2021": 1114051,
+      "2022": 1130761,
+      "2023": 1147723,
+      "2024": 1147723
+    }
+  },
+
+  {
+    "Nombre": "3.2 Número de créditos para la autoproducción de vivienda",
+    "Objetivo_prioritario": "Fomentar conjuntamente con el sector social y privado, condiciones que propicien el ejercicio del derecho a la vivienda adecuada",
+    "Definicion_o_descripcion": "Mide el número de créditos otorgados para la autoproducción de vivienda por INFONAVIT, FOVISSSTE Banca Múltiple, SOFOMES, Microfinancieras, Orevis, Banjército, Issfam, Pemex, Habitat para la Humanidad México, A.C. y otras agencias productoras de vivienda que otorgan créditos para la autoproducción",
+    "Nivel_de_desagregacion": "Nacional",
+    "Periodicidad_o_frecuencia_de_medicion": "Anual",
+    "Tipo": "Gestión",
+    "Acumulado_o_periodico": "Periódico",
+    "Unidad_de_medida": "Créditos",
+    "Periodo_de_recoleccion_de_datos": "Enero-Diciembre",
+    "Dimension": "Eficiencia",
+    "Disponibilidad_de_la_informacion": "Septiembre",
+    "Tendencia_esperada": "Ascendente",
+    "Unidad_responsable_de_reportar_el_avance": "15.- Desarrollo Agrario, Territorial y Urbano\n511 Dirección General de Desarrollo Urbano, Suelo y Vivienda",
+    "Metodo_de_calculo": "El indicador ya está calculado por la Sociedad Hipotecaria Federal y reportado en su publicación anual del estado actual de la vivienda en México (EAVM)",
+    "Observaciones": "",
+    "APLICACION_DEL_METODO_DE_CALCULO_DEL_INDICADOR_PARA_LA_OBTENCION_DEL_VALOR_DE_LA_LINEA_BASE": {
+      "Nombre_variable_1": "1.- Número de créditos otorgados para la autoproducción en 2018",
+      "Valor_variable_1": 37865,
+      "Fuente_de_informacion_variable_1": "EAVM (SHF)",
+      "Sustitucion_en_metodo_de_calculo_del_indicador": "37,865"
+    },
+    "VALOR_DE_LINEA_BASE_Y_METAS": {
+      "Linea_base": {
+        "Valor": 37865,
+        "Anio": 2018
+      },
+      "Nota_sobre_la_linea_base": "No aplica",
+      "META_2024": "",
+      "Nota_sobre_la_meta_2024": "No aplica"
+    },
+    "SERIE_HISTORICA_DE_LA_META_PARA_EL_BIENESTAR_O_PARAMETRO": {
+      "2012": 233704,
+      "2013": 161390,
+      "2014": 108357,
+      "2015": 100748,
+      "2016": 116110,
+      "2017": 59080,
+      "2018": 37865,
+      "2019": "ND",
+      "2020": "ND"
+
+    }
+  },
+
+  {
+    "Nombre": "3.3 Cartera de crédito puente de la Sociedad Hipotecaria Federal y la banca comercial",
+    "Objetivo_prioritario": "Fomentar conjuntamente con el sector social y privado, condiciones que propicien el ejercicio del derecho a la vivienda adecuada",
+    "Definicion_o_descripcion": "Un crédito puente es un crédito de medio plazo que los Intermediarios Financieros otorgan a los desarrolladores de vivienda para la edificación de conjuntos habitacionales, equipamiento comercial y mejoramiento de grupos de vivienda. Este parámetro buscar medir el valor de la cartera de crédito puente de la Sociedad Hipotecaria Federal y la banca comercial, con el objetivo de conocer el crédito que se otorga a la construcción en México.",
+    "Nivel_de_desagregacion": "Nacional",
+    "Periodicidad_o_frecuencia_de_medicion": "Anual",
+    "Tipo": "Gestión",
+    "Acumulado_o_periodico": "Periódico",
+    "Unidad_de_medida": "Millones de pesos",
+    "Periodo_de_recoleccion_de_datos": "Enero-Diciembre",
+    "Dimension": "Economía",
+    "Disponibilidad_de_la_informacion": "Enero",
+    "Tendencia_esperada": "Ascendente",
+    "Unidad_responsable_de_reportar_el_avance": "15.- Desarrollo Agrario, Territorial y Urbano\n511 Dirección General de Desarrollo Urbano, Suelo y Vivienda",
+    "Metodo_de_calculo": "Cartera de crédito puente=Cartera de crédito puente de la SHF+Cartera de crédito puente de la banca comercial",
+    "Observaciones": "",
+    "APLICACION_DEL_METODO_DE_CALCULO_DEL_INDICADOR_PARA_LA_OBTENCION_DEL_VALOR_DE_LA_LINEA_BASE": {
+      "Nombre_variable_1": "1.- Cartera de crédito puente de la SHF en millones de pesos en 2018",
+      "Nombre_variable_2": "2.- Cartera de crédito puente de la banca comercial en millones de pesos en 2018",
+      "Valor_variable_1": 26256,
+      "Valor_variable_2": 81296,
+      "Fuente_de_informacion_variable_1": "SHF",
+      "Fuente_de_informacion_variable_2": "CNBV",
+      "Sustitucion_en_metodo_de_calculo_del_indicador": "Cartera de crédito puente = 26,256 + 81,296"
+    },
+    "VALOR_DE_LINEA_BASE_Y_METAS": {
+      "Linea_base": {
+        "Valor": 107553,
+        "Anio": 2018
+      },
+      "Nota_sobre_la_linea_base": "No aplica",
+      "META_2024": "",
+      "Nota_sobre_la_meta_2024": "No aplica"
+    },
+    "SERIE_HISTORICA_DE_LA_META_PARA_EL_BIENESTAR_O_PARAMETRO": {
+      "2012": 0,
+      "2013": 0,
+      "2014": 0,
+      "2015": 0,
+      "2016": 76990,
+      "2017": 86632,
+      "2018": 107553,
+      "2019": "ND",
+      "2020": "ND"
+
+    }
+  },
+
+  {
+    "Nombre": "4.1 Proporción de usuarios que experimentan corrupción en trámites relacionados con permisos de la propiedad",
+    "Objetivo_prioritario": "Asegurar el derecho a la información y la rendición de cuentas de todos los actores del sistema de vivienda adecuada",
+    "Definicion_o_descripcion": "La meta busca medir el porcentaje de usuarios que experimentan corrupción en trámites relacionados con permisos de la propiedad. El ENCIG (Encuesta Nacional de Calidad e Impacto Gubernamental) reporta la calidad regulatoria de los servicios públicos y, en este caso, trámites relacionados con permiso de propiedad donde hay corrupción.",
+    "Nivel_de_desagregacion": "Nacional",
+    "Periodicidad_o_frecuencia_de_medicion": "Bienal",
+    "Tipo": "Gestión",
+    "Acumulado_o_periodico": "Periódico",
+    "Unidad_de_medida": "Porcentaje",
+    "Periodo_de_recoleccion_de_datos": "Enero-Diciembre",
+    "Dimension": "Eficacia",
+    "Disponibilidad_de_la_informacion": "Marzo",
+    "Tendencia_esperada": "Descendente",
+    "Unidad_responsable_de_reportar_el_avance": "15.- Desarrollo Agrario, Territorial y Urbano\n511 Dirección General de Desarrollo Urbano, Suelo y Vivienda",
+    "Metodo_de_calculo": " Esta meta busca calcular la disminución de corrupción en trámites relacionados con el permiso de vivienda utilizando un año base (2017 año de última publicación de la encuesta) para estimar el cambio relativo a ese año. Porcentaje de usuarios que experimentan corrupción en trámites relacionados con la propiedad=(Usuarios que experimentan corrupción en trámites de propiedad/Usuarios totales en trámites de propiedad)*100",
+    "Observaciones": "",
+    "APLICACION_DEL_METODO_DE_CALCULO_DEL_INDICADOR_PARA_LA_OBTENCION_DEL_VALOR_DE_LA_LINEA_BASE": {
+      "Nombre_variable_1": "1.- Usuarios que experimentaron corrupción en 2017",
+      "Nombre_variable_2": "2.- Usuarios totales en 2017",
+      "Valor_variable_1": 132099,
+      "Valor_variable_2": 430180,
+      "Fuente_de_informacion_variable_1": "ENCIG",
+      "Fuente_de_informacion_variable_2": "ENCIG",
+      "Sustitucion_en_metodo_de_calculo_del_indicador": "Porcentaje de usuarios que experimentan corrupción en trámites relacionados con la propiedad=(132,099/430,180)*100"
+    },
+    "VALOR_DE_LINEA_BASE_Y_METAS": {
+      "Linea_base": {
+        "Valor": 30.7,
+        "Anio": 2017
+      },
+      "Nota_sobre_la_linea_base": "Incluye pagos, trámites o solicitudes de servicios más frecuentes",
+      "META_2024": 18,
+      "Nota_sobre_la_meta_2024": ""
+    },
+    "SERIE_HISTORICA_DE_LA_META_PARA_EL_BIENESTAR_O_PARAMETRO": {
+      "2012": 0,
+      "2013": 24.8,
+      "2014": 0,
+      "2015": 24.8,
+      "2016": 0,
+      "2017": 30.7,
+      "2018": 0,
+      "2019": "ND",
+      "2020": ""
+
+    },
+    "METAS_INTERMEDIAS": {
+      "2021": 20,
+      "2022": 0,
+      "2023": 18,
+      "2024": 18
+    }
+  },
+
+  {
+    "Nombre": "4.2 Proporción de usuarios que perciben experimentar corrupción en trámites relacionados con créditos de vivienda o programas sociales",
+    "Objetivo_prioritario": "Asegurar el derecho a la información y la rendición de cuentas de todos los actores del sistema de vivienda adecuada",
+    "Definicion_o_descripcion": "La ENCIG busca medir la calidad regulatoria de los servicios públicos y, en este caso, trámites relacionados con programas sociales o créditos de vivienda donde el usuario final tiene una experiencia de corrupción.",
+    "Nivel_de_desagregacion": "Nacional",
+    "Periodicidad_o_frecuencia_de_medicion": "Bienal",
+    "Tipo": "Estratégico",
+    "Acumulado_o_periodico": "Periódico",
+    "Unidad_de_medida": "Porcentaje",
+    "Periodo_de_recoleccion_de_datos": "Enero-Diciembre",
+    "Dimension": "Eficacia",
+    "Disponibilidad_de_la_informacion": "Marzo",
+    "Tendencia_esperada": "Descendente",
+    "Unidad_responsable_de_reportar_el_avance": "15.- Desarrollo Agrario, Territorial y Urbano\n511 Dirección General de Desarrollo Urbano, Suelo y Vivienda",
+    "Metodo_de_calculo": " Parámetro que busca medir el porcentaje de usuarios que experimenta corrupción en trámites relacionados con créditos de vivienda o programas sociales.\n% usuarios que enfrentan corrupción en trámites relacionados con créditos de vivienda o programas sociales= ((Usuarios que experimentan corrupción en trámites de créditos de vivienda o programas sociales)/(Usuarios totales en trámites de créditos de vivienda o programas sociales))*100",
+    "Observaciones": "Los datos para este parámetro son publicados por el INEGI como parte de la ENCIG",
+    "APLICACION_DEL_METODO_DE_CALCULO_DEL_INDICADOR_PARA_LA_OBTENCION_DEL_VALOR_DE_LA_LINEA_BASE": {
+      "Nombre_variable_1": "1.- Usuarios que experimentaron corrupción en 2017",
+      "Nombre_variable_2": "2.- Usuarios totales en 2017",
+      "Valor_variable_1": 21471,
+      "Valor_variable_2": 1034354,
+      "Fuente_de_informacion_variable_1": "ENCIG",
+      "Fuente_de_informacion_variable_2": "ENCIG",
+      "Sustitucion_en_metodo_de_calculo_del_indicador": "Porcentaje de usuarios que experimentaron algún acto de corrupción en permisos relacionados con créditos de vivienda o programas sociales = (21 471 / 1,034,354)*100"
+    },
+    "VALOR_DE_LINEA_BASE_Y_METAS": {
+      "Linea_base": {
+        "Valor": 2.1,
+        "Anio": 2017
+      },
+      "Nota_sobre_la_linea_base": "Incluye pagos, trámites o solicitudes de servicios más frecuentes",
+      "META_2024": "",
+      "Nota_sobre_la_meta_2024": ""
+    },
+    "SERIE_HISTORICA_DE_LA_META_PARA_EL_BIENESTAR_O_PARAMETRO": {
+      "2012": 0,
+      "2013": 4,
+      "2014": 0,
+      "2015": 4,
+      "2016": 0,
+      "2017": 2.1,
+      "2018": 0,
+      "2019": "ND",
+      "2020": ""
+
+
+    }
+  },
+
+  {
+    "Nombre": "4.3 Prevalencia de corrupción en las entidades federativas por trámite, pago o solicitud para permisos relacionados con la propiedad",
+    "Objetivo_prioritario": "Asegurar el derecho a la información y la rendición de cuentas de todos los actores del sistema de vivienda adecuada",
+    "Definicion_o_descripcion": "Con frecuencia, los permisos relacionados con la propiedad son el tipo de trámite, pago o solicitud más frecuente con prevalencia de corrupción, particularmente en algunas entidades federativas. Este parámetro busca dar seguimiento a la frecuencia con la cual los trámites de permiso relacionado con la propiedad son el 1º, 2 º o 3 º con mayor prevalencia por entidad federativa",
+    "Nivel_de_desagregacion": "Nacional",
+    "Periodicidad_o_frecuencia_de_medicion": "Bienal",
+    "Tipo": "Estratégico",
+    "Acumulado_o_periodico": "Periódico",
+    "Unidad_de_medida": "Número de entidades federativas",
+    "Periodo_de_recoleccion_de_datos": "Enero-Diciembre",
+    "Dimension": "Eficacia",
+    "Disponibilidad_de_la_informacion": "Marzo",
+    "Tendencia_esperada": "Descendente",
+    "Unidad_responsable_de_reportar_el_avance": "15.- Desarrollo Agrario, Territorial y Urbano\n511 Dirección General de Desarrollo Urbano, Suelo y Vivienda",
+    "Metodo_de_calculo": "Para cada entidad se registrará si existe corrupción en trámites relacionados con la propiedad se encuentra dentro de las tres primeras menciones de corrupción en trámites. Todas las entidades en las cuales se cumpla lo anterior, se sumarán para indicar en cuantas entidades la corrupción en trámites relacionados con la propiedad prevalece dentro de los tres principales trámites con corrupción.",
+    "Observaciones": "Los datos para este parámetro son publicados por el INEGI como parte de la ENCIG",
+    "APLICACION_DEL_METODO_DE_CALCULO_DEL_INDICADOR_PARA_LA_OBTENCION_DEL_VALOR_DE_LA_LINEA_BASE": {
+      "Nombre_variable_1": "1.- Número de Entidades Federativas en que trámites relacionados con la propiedad se identifica como 1ro más frecuente",
+      "Nombre_variable_2": "2.- Número de Entidades Federativas en que trámites relacionados con la propiedad se identifica como 2do más frecuente",
+      "Nombre_variable_3": "3.- Número de Entidades Federativas en que trámites relacionados con la propiedad se identifica como 3ro más frecuente",
+      "Valor_variable_1": 1,
+      "Valor_variable_2": 10,
+      "Valor_variable_3": 9,
+      "Fuente_de_informacion_variable_1": "ENCIG",
+      "Fuente_de_informacion_variable_2": "ENCIG",
+      "Fuente_de_informacion_variable_3": "ENCIG",
+      "Sustitucion_en_metodo_de_calculo_del_indicador": "Número de entidades federativas con prevalencia de corrupción en el año base (2017) = 20"
+    },
+    "VALOR_DE_LINEA_BASE_Y_METAS": {
+      "Linea_base": {
+        "Valor": 20,
+        "Anio": 2017
+      },
+      "Nota_sobre_la_linea_base": "Incluye pagos, trámites o solicitudes de servicios más frecuentes",
+      "META_2024": "",
+      "Nota_sobre_la_meta_2024": ""
+    },
+    "SERIE_HISTORICA_DE_LA_META_PARA_EL_BIENESTAR_O_PARAMETRO": {
+      "2012": 0,
+      "2013": 0,
+      "2014": 0,
+      "2015": 0,
+      "2016": 0,
+      "2017": 20,
+      "2018": 0,
+      "2019": "ND",
+      "2020": ""
+
+
+    }
+  },
+
+  {
+    "Nombre": "5.1 Proporción de viviendas nuevas construidas fuera de los Polígonos de Contención Urbana",
+    "Objetivo_prioritario": "Establecer un modelo de ordenamiento territorial y gestión del suelo que considere la vivienda adecuada como elemento central de planeación de territorio",
+    "Definicion_o_descripcion": "Esta meta de bienestar busca aproximar el desarrollo de vivienda de acuerdo con una ubicación adecuada, midiendo este desarrollo a través de la vivienda que, registrada ante el RUV, se lleva a cabo fuera de los perímetros de contención urbana",
+    "Nivel_de_desagregacion": "Nacional",
+    "Periodicidad_o_frecuencia_de_medicion": "Anual",
+    "Tipo": "Estratégico",
+    "Acumulado_o_periodico": "Periódico",
+    "Unidad_de_medida": "Porcentaje",
+    "Periodo_de_recoleccion_de_datos": "Enero-Diciembre",
+    "Dimension": "Eficacia",
+    "Disponibilidad_de_la_informacion": "Enero",
+    "Tendencia_esperada": "Descendente",
+    "Unidad_responsable_de_reportar_el_avance": "15.- Desarrollo Agrario, Territorial y Urbano\nQCW.- Comisión Nacional de Vivienda",
+    "Metodo_de_calculo": " Se toman los registros de vivienda acumulados dentro del RUV cada año, diferenciando si su ubicación se encuentra dentro de los perímetros de contención urbana.\n% de viviendas registradas fuera de PCUs=[(Número de viviendas registradas en el RUV fuera de FC)/(Número de viviendas registradas en el RUV)] x100",
+    "Observaciones": "Los datos para este parámetro son publicados por el SNIIV en la página de CONAVI.",
+    "APLICACION_DEL_METODO_DE_CALCULO_DEL_INDICADOR_PARA_LA_OBTENCION_DEL_VALOR_DE_LA_LINEA_BASE": {
+      "Nombre_variable_1": "1.- Número de viviendas registradas en el RUV fuera de FC",
+      "Nombre_variable_2": "2.- Número de viviendas registradas en el RUV total",
+      "Valor_variable_1": 31800,
+      "Valor_variable_2": 262978,
+      "Fuente_de_informacion_variable_1": "SNIIV",
+      "Fuente_de_informacion_variable_2": "SNIIV",
+      "Sustitucion_en_metodo_de_calculo_del_indicador": "% de viviendas registradas fuera de PCUs=(31,800/262,978)*100"
+    },
+    "VALOR_DE_LINEA_BASE_Y_METAS": {
+      "Linea_base": {
+        "Valor": 12.1,
+        "Anio": 2018
+      },
+      "Nota_sobre_la_linea_base": "",
+      "META_2024": "10",
+      "Nota_sobre_la_meta_2024": ""
+    },
+    "SERIE_HISTORICA_DE_LA_META_PARA_EL_BIENESTAR_O_PARAMETRO": {
+      "2012": 0,
+      "2013": 0,
+      "2014": 27.6,
+      "2015": 19.4,
+      "2016": 20.6,
+      "2017": 12.1,
+      "2018": 12.1,
+      "2019": "ND",
+      "2020": "ND"
+
+
+    },
+    "METAS_INTERMEDIAS": {
+      "2021": 13,
+      "2022": 12,
+      "2023": 11,
+      "2024": 10
+    }
+  },
+
+  {
+    "Nombre": "5.2 Proporción de viviendas en vulnerabilidad ante sismos",
+    "Objetivo_prioritario": "Establecer un modelo de ordenamiento territorial y gestión del suelo que considere la vivienda adecuada como elemento central de planeación de territorio",
+    "Definicion_o_descripcion": "Este parámetro se usa para identificar y mejorar la condición de viviendas en vulnerabilidad en estados de alto riesgo, debido a la naturaleza de los materiales de sus muros y techos. Cuanto más débiles sean éstos, mayor vulnerabilidad presentan para la vivienda y los integrantes de ella. El CENAPRED publica indicadores municipales de riesgo por sismo y viento dentro de la página del Atlas Nacional de Riesgos. Asimismo, publica una zonificación por riesgo sísmico de A (siendo el más bajo) a D (el más alto). Los estados de Jalisco, Colima, Michoacán, Guerrero, Oaxaca y Chiapas se encuentran en su mayoría dentro de la zona D, y el restante en la zona C.",
+    "Nivel_de_desagregacion": "Nacional",
+    "Periodicidad_o_frecuencia_de_medicion": "Bienal",
+    "Tipo": "Estratégico",
+    "Acumulado_o_periodico": "Periódico",
+    "Unidad_de_medida": "Porcentaje",
+    "Periodo_de_recoleccion_de_datos": "Enero-Diciembre",
+    "Dimension": "Eficacia",
+    "Disponibilidad_de_la_informacion": "Mayo",
+    "Tendencia_esperada": "Descendente",
+    "Unidad_responsable_de_reportar_el_avance": "15.- Desarrollo Agrario, Territorial y Urbano\n511 Dirección General de Desarrollo Urbano, Suelo y Vivienda",
+    "Metodo_de_calculo": "% de vivienda en vulnerabilidad ante sismos = (# de viviendas con riesgo sísmico alto + # de viviendas con riesgo sísmico muy alto / # de viviendas totales) X 100",
+    "Observaciones": "Los datos para este parámetro son publicados por el CENAPRED y son tomados de la ENIGH",
+    "APLICACION_DEL_METODO_DE_CALCULO_DEL_INDICADOR_PARA_LA_OBTENCION_DEL_VALOR_DE_LA_LINEA_BASE": {
+      "Nombre_variable_1": "1.- Número de viviendas con riesgo sísmico alto en 2018",
+      "Nombre_variable_2": "2.- Número de viviendas con riesgo sísmico muy alto en 2018",
+      "Nombre_variable_3": "3.- Número de viviendas totales en 2018",
+      "Valor_variable_1": 540141,
+      "Valor_variable_2": 99011,
+      "Valor_variable_3": 6631256,
+      "Fuente_de_informacion_variable_1": "CENAPRED",
+      "Fuente_de_informacion_variable_2": "CENAPRED",
+      "Fuente_de_informacion_variable_3": "CENAPRED",
+      "Sustitucion_en_metodo_de_calculo_del_indicador": "% de vivienda en vulnerabilidad ante sismos = (540,141 + 99,011 / 6,631,256) X 100"
+    },
+    "VALOR_DE_LINEA_BASE_Y_METAS": {
+      "Linea_base": {
+        "Valor": 9.6,
+        "Anio": 2018
+      },
+      "Nota_sobre_la_linea_base": "",
+      "META_2024": "",
+      "Nota_sobre_la_meta_2024": ""
+    },
+    "SERIE_HISTORICA_DE_LA_META_PARA_EL_BIENESTAR_O_PARAMETRO": {
+      "2012": 0,
+      "2013": 0,
+      "2014": 0,
+      "2015": 0,
+      "2016": 0,
+      "2017": 0,
+      "2018": 9.6,
+      "2019": 0,
+      "2020": "ND"
+
+
+    }
+  },
+
+  {
+    "Nombre": "5.3 Número de municipios que cuentan con un Atlas Municipal de Riesgo actualizado (de acuerdo con la publicación del Atlas Municipal de riesgo de CENAPRED)",
+    "Objetivo_prioritario": "Establecer un modelo de ordenamiento territorial y gestión del suelo que considere la vivienda adecuada como elemento central de planeación de territorio",
+    "Definicion_o_descripcion": "Este parámetro mide el número acumulado de municipios que cuenta con un Atlas Municipal de Riesgo, el cual se determina con información de CENAPRED y CNPC",
+    "Nivel_de_desagregacion": "Nacional",
+    "Periodicidad_o_frecuencia_de_medicion": "Anual",
+    "Tipo": "Gestión",
+    "Acumulado_o_periodico": "Acumulado",
+    "Unidad_de_medida": "Municipios",
+    "Periodo_de_recoleccion_de_datos": "Enero-Diciembre",
+    "Dimension": "Eficacia",
+    "Disponibilidad_de_la_informacion": "Diciembre",
+    "Tendencia_esperada": "Ascendente",
+    "Unidad_responsable_de_reportar_el_avance": "15.- Desarrollo Agrario, Territorial y Urbano\n511 Dirección General de Desarrollo Urbano, Suelo y Vivienda",
+    "Metodo_de_calculo": "El parámetro se reporta como el número de municipios que cuentan con un Atlas Municipal de Riesgo actualizado",
+    "Observaciones": "El indicador ya está calculado por CENAPRED y es reportado en su publicación: Atlas Municipales de riesgos (SEDATU y elaborado por el municipio con recursos propios)",
+    "APLICACION_DEL_METODO_DE_CALCULO_DEL_INDICADOR_PARA_LA_OBTENCION_DEL_VALOR_DE_LA_LINEA_BASE": {
+      "Nombre_variable_1": "1.- Número de municipios con Atlas Municipal de Riesgo actualizado 2018",
+      "Valor_variable_1": 370,
+      "Fuente_de_informacion_variable_1": "CENAPRED",
+      "Sustitucion_en_metodo_de_calculo_del_indicador": "370"
+    },
+    "VALOR_DE_LINEA_BASE_Y_METAS": {
+      "Linea_base": {
+        "Valor": 370,
+        "Anio": 2018
+      },
+      "Nota_sobre_la_linea_base": "No aplica",
+      "META_2024": "",
+      "Nota_sobre_la_meta_2024": ""
+    },
+    "SERIE_HISTORICA_DE_LA_META_PARA_EL_BIENESTAR_O_PARAMETRO": {
+      "2012": 0,
+      "2013": 0,
+      "2014": 0,
+      "2015": 0,
+      "2016": 0,
+      "2017": 0,
+      "2018": 370,
+      "2019": "ND",
+      "2020": "ND"
+
+
+    }
+  }
+]

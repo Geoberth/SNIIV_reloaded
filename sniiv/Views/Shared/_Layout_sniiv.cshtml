@@ -1,0 +1,459 @@
+﻿-@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> _signInManager;
+@inject UserManager<IdentityUser> _userManager;
+@inject RoleManager<IdentityRole> _roleManager;
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="sniiv">
+    <meta name="author" content="developer">
+    @*<link rel="icon" href="../../favicon.ico">*@
+    <title>@ViewData["Title"] - SNIIV</title>
+
+    
+
+    <link rel="shortcut icon" href="https://framework-gb.cdn.gob.mx/favicon.ico">
+    <link href="https://framework-gb.cdn.gob.mx/assets/styles/main.css" rel="stylesheet">
+
+    @*JQuery*@
+    <script src="~/js/jquery-1.11/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            var url = window.location.pathname;
+            var urlaspx = url.length != 0 ? url : 'Dashboard/Inicio';
+
+            var idtab;
+
+        });
+        var clickMenu = false;
+
+        $(document).ready(function () {
+            var cookie = false;
+            var cookieContent = $('.cache-disclaimer');
+
+            $(".parent").click(function () {
+                $(".multi-collapse").collapse('hide');
+            });
+
+            $(".child").click(function () {
+                $(".submenu").collapse('hide');
+            });
+            $(".navbar-toggler").click(function () {
+                $(".nav-tog").css("display", "block");
+                clickMenu = !clickMenu;
+                if (clickMenu) {
+                    $(".nav-tog").show();
+                }
+                else {
+                    $(".nav-tog").hide();
+                }
+            });
+            if ($(window).width() < 930) {
+                $('.img-sniiv').hide();
+            } else {
+                $('.img-sniiv').show();
+            }
+            checkCookie();
+
+            if (cookie === true) {
+                cookieContent.hide();
+            }
+
+            function setCookie(cname, cvalue, exdays) {
+                var d = new Date();
+                d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+                console.log(exdays * 24 * 60 * 60 * 1000);
+                var expires = "expires=" + d.toGMTString();
+                document.cookie = cname + "=" + cvalue + "; " + expires;
+            }
+
+            function getCookie(cname) {
+                var name = cname + "=";
+                var ca = document.cookie.split(';');
+                for (var i = 0; i < ca.length; i++) {
+                    var c = ca[i].trim();
+                    if (c.indexOf(name) === 0) return c.substring(name.length, c.length);
+                }
+                return "";
+            }
+
+            function checkCookie() {
+                var check = getCookie("acache");
+                if (check !== "") {
+                    return cookie = true;
+                } else {
+                    return cookie = false;
+                }
+
+            }
+            $('.accept-cache').click(function () {
+                setCookie("acache", "accepted", 8);
+                cookieContent.hide(500);
+            });
+
+        });
+
+        function pages(url) {
+            window.location.href = url;
+        }
+
+        function activaTab(tab) {
+            $('.nav-tabs a[href="#' + tab + '"]').tab('show');
+        }
+        $(window).on('resize', function () {
+            if ($(window).width() < 930) {
+                $('.img-sniiv').hide();
+            }
+            else {
+                $('.img-sniiv').show();
+            }
+        });
+    </script>
+    @*Bootstrap*@
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/js/bootstrap.min.js" type="text/javascript"></script>
+    @*Stroke-7*@
+    <link href="~/css/stroke-7/style.css" rel="stylesheet" type="text/css" />
+    @*SNIIV*@
+    <link href="~/css/style1.css" rel="stylesheet" type="text/css" />
+    @RenderSection("Scripts", required: false)
+</head>
+<body>
+    <nav class="menu navbar-expand-md">
+        <ul class="nav nav-tabs navbar-toggle collapsed" style="float:left; padding:0px; margin:1px">
+            <li role="presentation">
+                <a href="#" class=" menu-nav parent navbar-toggler" data-toggle="collapse" data-target="#navbarToggler"><span class="icon s7-menu"></span><span>Menú</span></a>
+                <img class="img-sniiv2 nav-tog" src="/img/sniiv_ic.png" alt="SNIIV" data-toggle="tooltip" data-placement="middle" title="Sistema Nacional de Información e Indicadores de Vivienda">
+
+            </li>
+        </ul>
+        <div class=" collapse navbar-collapse" id="navbarToggler">
+            <ul class="nav nav-tabs">
+                <li role="presentation">
+                    <a href="#inicio" id="inicio-tab" class="parent menu-nav" aria-controls="inicio" role="tab" data-toggle="collapse"><span class="icon s7-home"></span><span>Inicio</span></a>
+                </li>
+                <li role="presentation">
+                    <a href="/Dashboard/Inicio" class="menu-nav"><span class="icon s7-graph"></span><span>Estadísticas&nbsp;generales</span></a>
+                </li>
+                <li role="presentation">
+                    <a href="#oferta" id="oferta-tab" class="parent menu-nav" aria-controls="oferta" role="tab" data-toggle="collapse"><span class="icon s7-graph1"></span><span>Oferta</span></a>
+                </li>
+                <li role="presentation">
+                    <a href="#demanda" id="demanda-tab" class="parent menu-nav" aria-controls="demanda" role="tab" data-toggle="collapse"><span class="icon s7-graph3"></span><span>Demanda</span></a>
+                </li>
+                <li role="presentation">
+                    <a href="#sustentabilidad" id="sustentabilidad-tab" class="parent menu-nav" aria-controls="sustentabilidad" role="tab" data-toggle="collapse"><span class="icon s7-leaf"></span><span>Sustentabilidad</span></a>
+                </li>
+                <li role="presentation">
+                    <a href="#reportes" id="reportes-tab" class="parent menu-nav" aria-controls="reportes" role="tab" data-toggle="collapse"><span class="icon s7-wallet"></span><span>Reportes</span></a>
+                </li>
+                <li role="presentation">
+                    <a href="#PNV" id="pnv-tab" class="parent menu-nav" aria-controls="pnv" role="tab" data-toggle="collapse"><span class="icon s7-display1"></span><span>PNV</span></a>
+                </li>
+                <li role="presentation">
+                    <a href="/Reporte/Datos_abiertos" class="menu-nav"><span class="icon s7-unlock"></span><span>Datos&nbsp;abiertos</span></a>
+                </li>
+
+                @if (_signInManager.IsSignedIn(User))
+                {
+                    <li role="presentation">
+                        <a href="#intranet" id="intranet-tab" class="parent menu-nav" aria-controls="intranet" role="tab" data-toggle="collapse"><span class="icon s7-user"></span><span>@User.Identity.Name</span></a>
+                    </li>
+                }
+                <li role="presentation" style="float:right">
+                    <img class="img-sniiv d-sm-none d-md-block" src="/img/sniiv_ic.png" alt="SNIIV" data-toggle="tooltip" data-placement="middle" title="Sistema Nacional de Información e Indicadores de Vivienda">
+                </li>
+            </ul>
+        </div>
+        <div class=" collapse multi-collapse" id="inicio">
+            <ul class="nav nav-tabs">
+                <li>
+                    <a href="/Inicio/Acerca_de" class="menu-nav">
+                        <span class="icon s7-info"></span><span>Acerca&nbsp;de</span>
+                    </a>
+                </li>
+                @if (!_signInManager.IsSignedIn(User))
+                {
+                    <li>
+                        <a href="/Reporte/Login" class="menu-nav">
+                            <span class="icon s7-user"></span><span>Intranet</span>
+                        </a>
+                    </li>
+                }
+            </ul>
+        </div>
+        <div class=" collapse multi-collapse" id="oferta">
+            <ul class="nav nav-tabs">
+                <li>
+                    <a href="/Dashboard/Oferta" class="menu-nav">
+                        <span class="icon s7-graph3"></span><span>General</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#vivienda" class="menu-nav" aria-controls="vivienda" role="tab" data-toggle="collapse">
+                        <span class="icon s7-box2"></span><span>Consulta&nbsp;dinámica </span>
+                    </a>
+                <li>
+                    <a href="/Oferta/Mapa" class="menu-nav">
+                        <span class="icon s7-global"></span><span>Mapa</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/Oferta/Renaret" class="menu-nav">
+                        <span class="icon s7-map-2"></span><span>RENARET</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/Oferta/Dias_inventario" class="menu-nav">
+                        <span class="icon s7-date"></span><span>Días&nbsp;de&nbsp;inventario</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/Oferta/Parque" class="menu-nav">
+                        <span class="icon s7-home"></span><span>Parque&nbsp;habitacional</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class=" collapse multi-collapse" id="demanda">
+            <ul class="nav nav-tabs">
+                <li>
+                    <a href="/Dashboard/Demanda" class="menu-nav"><span class="icon s7-graph2"></span><span>General </span></a>
+                </li>
+                <li>
+                    <a href="#cubos" id="cubos-tab" class="child menu-nav" aria-controls="cubos" role="tab" data-toggle="collapse"><span class="icon s7-box2"></span><span>Consulta&nbsp;dinámica</span></a>
+                </li>
+                <li>
+                    <a class="menu-nav" href="/Dashboard/Conavi"><span class="icon s7-display1"></span><span>Programas&nbsp;CONAVI</span></a>
+                </li>
+                <li>
+                    <a class="menu-nav" href="/Demanda/Potencial">
+                        <span class="icon s7-cash"></span><span>INFONAVIT</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#empleo" id="empleo-tab" class="child menu-nav" aria-controls="empleo" role="tab" data-toggle="collapse">
+                        <span class="icon s7-users"></span><span>Empleo </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#rezago" id="rezago-tab" class="child menu-nav" aria-controls="rezago" role="tab" data-toggle="collapse">
+                        <span class="icon s7-piggy"></span><span>Rezago&nbsp;habitacional </span>
+                    </a>
+                </li>
+                <!--<li>
+                    <a href="#poblacion" id="poblacion-tab" class="child menu-nav" aria-controls="poblacion" role="tab" data-toggle="collapse">
+                        <span class="icon s7-users"></span><span>Población </span>
+                    </a>
+                </li>-->
+            </ul>
+        </div>
+        <div class=" collapse multi-collapse submenu" id="vivienda">
+            <ul class="nav nav-tabs">
+                <li><a class="menu-nav" href="/Cubo/Inventario">Inventario de vivienda</a></li>
+                <li><a class="menu-nav" href="/Cubo/Registro">Registro de vivienda</a></li>
+            </ul>
+        </div>
+        <div class=" collapse multi-collapse submenu" id="cubos">
+            <ul class="nav nav-tabs">
+                <li><a class="menu-nav" href="/Cubo/financiamiento">Financiamientos</a></li>
+                <li><a class="menu-nav" href="/Cubo/Conavi">CONAVI</a></li>
+                <li><a class="menu-nav" href="/Cubo/Fovissste">FOVISSSTE</a></li>
+                <li><a class="menu-nav" href="/Cubo/Infonavit">INFONAVIT</a></li>
+                <li><a class="menu-nav" href="/Cubo/Cnbv">CNBV</a></li>
+                <li><a class="menu-nav" href="/Cubo/Insus">INSUS</a></li>
+                <li><a class="menu-nav" href="/Cubo/Fonhapo">FONHAPO</a></li>
+            </ul>
+        </div>
+        <div class=" collapse multi-collapse submenu" id="empleo">
+            <ul class="nav nav-tabs">
+                <li><a class="menu-nav" href="/Cubo/Issste">Consulta dinámica ISSSTE</a></li>
+                <li><a class="menu-nav" href="/Dashboard/Issste">Reporte de empleo ISSSTE</a></li>
+                <li><a class="menu-nav" href="/Cubo/Imss">Consulta dinámica IMSS</a></li>
+                <li><a class="menu-nav" href="/Dashboard/Imss">Reporte de empleo IMSS</a></li>
+            </ul>
+        </div>
+        <div class=" collapse multi-collapse submenu" id="rezago">
+            <ul class="nav nav-tabs">
+                <li><a class="menu-nav" href="/Demanda/Rezago_estatal">Estatal</a></li>
+                <li><a class="menu-nav" href="/Demanda/Rezago_municipal">Municipal</a></li>
+            </ul>
+        </div>
+        <div class=" collapse multi-collapse submenu" id="poblacion">
+            <ul class="nav nav-tabs">
+                <li><a class="menu-nav" href="/Demanda/Poblacion_historico">Histórico</a></li>
+                <li><a class="menu-nav" href="/Demanda/Poblacion_proyeccion">Proyecciones</a></li>
+            </ul>
+        </div>
+        <div class=" collapse multi-collapse" id="sustentabilidad">
+            <ul class="nav nav-tabs ">
+                <li>
+                    <a href="/Dashboard/Sisevive" class="menu-nav">
+                        <span class="icon s7-graph"></span><span>Sustentabilidad</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/Cubo/Sisevive" class="menu-nav">
+                        <span class="icon s7-box2"></span><span>Consulta&nbsp;Dinámica&nbsp;SISEVIVE</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class=" collapse multi-collapse" id="PNV">
+            <ul class="nav nav-tabs">
+                <li>
+                    <a href="/Indicadores/Pnv" class="menu-nav"><span class="icon s7-settings"></span><span>PNV </span></a>
+                </li>
+                <li>
+                    <a href="/Indicadores/Avances" class="menu-nav"><span class="icon s7-graph2"></span><span>Avances </span></a>
+                </li>
+                <li>
+                    <a href="/Indicadores/Vivienda" class="menu-nav"><span class="icon s7-menu"></span><span>Vivienda </span></a>
+                </li>
+
+
+
+            </ul>
+        </div>
+        <div class=" collapse multi-collapse" id="reportes">
+            <ul class="nav nav-tabs">
+                <li>
+                    <a class="menu-nav" href="/Reporte/Mensual">
+                        <span class="icon s7-date"></span><span>Mensual</span>
+                    </a>
+                </li>
+                @*<li>
+                        <a href="#temas" id="child temas-tab" class="menu-nav" aria-controls="temas" role="tab" data-toggle="collapse"><span class="icon s7-graph"></span><span>Temáticos&nbsp;estatales</span></a>
+                    </li>*@
+                <li>
+                    <a class="menu-nav" href="/Cubo/Desarrollador">
+                        <span class="icon s7-tools"></span><span>Desarrolladores</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="menu-nav" href="/Reporte/Padron">
+                        <span class="icon s7-users"></span><span>Padrón&nbsp;de&nbsp;beneficiarios</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="menu-nav" href="/Reporte/Analisis">
+                        <span class="icon s7-folder"></span><span>Documentos&nbsp;de&nbsp;análisis</span>
+                    </a>
+                </li>
+                <!--
+                    <li>
+                        <a class="menu-nav" href="/Reporte/Meta">
+                            <span class="icon s7-graph2"></span><span>Metas</span>
+                        </a>
+                    </li>
+                -->
+            </ul>
+        </div>
+        <div class=" collapse multi-collapse submenu" id="temas">
+            <ul class="nav nav-tabs">
+                <li><a class="menu-nav" href="/Reporte/Conavi">CONAVI</a></li>
+                <li><a class="menu-nav" href="/Reporte/Fovissste">FOVISSSTE</a></li>
+                <li><a class="menu-nav" href="/Reporte/Infonavit">INFONAVIT</a></li>
+                <li><a class="menu-nav" href="/Reporte/Oferta_vivienda">Oferta de vivienda</a></li>
+                <li><a class="menu-nav" href="/Reporte/Financiamientos">Financiamientos</a></li>
+            </ul>
+        </div>
+        @if (_signInManager.IsSignedIn(User))
+        {
+            var rol = await _userManager.GetRolesAsync(await _userManager.GetUserAsync(User));
+            @if (rol.First().Equals("Reporte semanal"))
+            {
+                <div class=" collapse multi-collapse" id="intranet">
+                    <ul class="nav nav-tabs">
+                        <li>
+                            <a href="/Cubo/Semanal" class="menu-nav">
+                                <span class="icon s7-box2"></span><span>Financiamientos</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Dashboard/Semanal_financiamiento" class="menu-nav">
+                                <span class="icon s7-graph"></span><span>Temático&nbsp;Financiamientos</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Dashboard/Semanal_hipotecario" class="menu-nav">
+                                <span class="icon s7-graph2"></span><span>Temático&nbsp;por&nbsp;tipo</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Reporte/Semanal_m2" class="menu-nav">
+                                <span class="icon s7-file"></span><span>Análisis&nbsp;de&nbsp;metros&nbsp;cuadrados</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Reporte/Semanal_empleo" class="menu-nav">
+                                <span class="icon s7-file"></span><span>Empleos&nbsp;por&nbsp;sector&nbsp;vivienda</span>
+                            </a>
+                        </li>
+                        }
+                        <li>
+                            <a href="/Reporte/Logout" class="menu-nav">
+                                <span>Cerrar&nbsp;Sesión</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            }
+        }
+    </nav>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <div class="cache-disclaimer">
+        <div class="cache-close accept-cache"><i class="fa fa-times"></i></div>
+        <div class="container">
+            <p>
+                Si presenta problemas con la visualización de la información le recomendamos
+                <b>borrar cache del explorador o abrir una ventana en modo incognito.</b>
+            </p>
+            <button type="button" class="btn btn-success accept-cache">¡De acuerdo!</button>
+        </div>
+    </div>
+
+    @RenderSection("Image", required: false)
+
+    @RenderSection("Mapa", required: false)
+
+    <div class="container">
+        @RenderBody()
+    </div>
+
+    <br />
+    <br />
+    <br />
+    <!-- /footer -->
+    <div class="footer">
+        <div class="container foot">
+            <h5>La información presentada  en esta plataforma es de carácter  informativo y está sujeta a modificaciones.</h5>
+        </div>
+
+        <div class="container">
+            <address class="address">
+                <br />
+                <a href="https://www.gob.mx/sedatu"><img class="sedatu" src="/img/sedatu.png" alt="SEDATU" data-toggle="tooltip" data-placement="bottom" title="Secretaría de Desarrollo Agrario, Territorial y Urbano"></a>
+                <br /><br /><b class="contacto">Contacto</b>
+                <br />Nuevo León No. 210. Col. Hipódromo Condesa. Alcaldía Cuauhtémoc. C.P. 06100. Ciudad de México.
+                <br /> 5568209700 &emsp; <a class="contacto" href="mailto:contacto.sniiv@sedatu.gob.mx">contacto.sniiv@sedatu.gob.mx</a>
+            </address>
+        </div>
+    </div>
+
+    <script src="https://framework-gb.cdn.gob.mx/gobmx.js"></script>
+</body>
+</html>

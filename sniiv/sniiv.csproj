@@ -1,0 +1,55 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <CopyRefAssembliesToPublishDirectory>false</CopyRefAssembliesToPublishDirectory>
+    <ServerGarbageCollection>false</ServerGarbageCollection>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Reporte\Indicadores.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Elastic.Apm.NetCoreAll" Version="1.14.0" />
+    <PackageReference Include="Elastic.Apm.SerilogEnricher" Version="1.5.3" />
+    <PackageReference Include="Elastic.CommonSchema.Serilog" Version="1.5.3" />
+    <PackageReference Include="JavaScriptEngineSwitcher.Extensions.MsDependencyInjection" Version="3.3.0" />
+    <PackageReference Include="JavaScriptEngineSwitcher.V8" Version="3.14.0" />
+    <PackageReference Include="JavaScriptEngineSwitcher.V8.Native.win-x64" Version="3.14.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.18" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.3">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="3.1.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.3" />
+    <PackageReference Include="React.AspNet" Version="5.2.12" />
+    <PackageReference Include="Serilog.AspNetCore" Version="4.1.0" />
+    <PackageReference Include="Serilog.Settings.Configuration" Version="3.3.0" />
+    <PackageReference Include="Serilog.Sinks.Async" Version="1.5.0" />
+    <PackageReference Include="Serilog.Sinks.Elasticsearch" Version="8.4.1" />
+    <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+    <PackageReference Include="Serilog.Sinks.Http" Version="7.2.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AccessData\AccessData.csproj" />
+    <ProjectReference Include="..\Entity\Entity.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\fonts\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Microsoft.EntityFrameworkCore.Tools" />
+    <None Remove="Npgsql.EntityFrameworkCore.PostgreSQL" />
+    <None Remove="Microsoft.AspNetCore.Identity.EntityFrameworkCore" />
+  </ItemGroup>
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
+
+</Project>

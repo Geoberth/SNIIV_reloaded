@@ -1,0 +1,371 @@
+﻿@{
+    ViewData["Title"] = "Sisevive";
+    List<SelectListItem> anios = (List<SelectListItem>)ViewBag.anios;
+    string fecha = ViewBag.fecha;
+}
+
+@section Scripts
+{
+    <script src="~/js/util.js" type="text/javascript"></script>
+    <!-- DC -->
+    <link href="~/css/dc/dc.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/dashboard.css" rel="stylesheet" type="text/css" />
+    <script src="~/js/dc/d3.js" type="text/javascript"></script>
+    <script src="~/js/dc/d3.tip.js" type="text/javascript"></script>
+    <script src="~/js/dc/crossfilter.js" type="text/javascript"></script>
+    <script src="~/js/dc/dc.min.js" type="text/javascript"></script>
+    <script src="~/js/colorbrewer.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var mxLocate = d3.locale({
+            "decimal": ".",
+            "thousands": ",",
+            "grouping": [3],
+            "currency": ["$", ""],
+            "dateTime": "%a %b %e %X %Y",
+            "date": "%m/%d/%Y",
+            "time": "%H:%M:%S",
+            "periods": ["AM", "PM"],
+            "days": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "shortDays": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+            "months": ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
+            "shortMonths": ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"] //["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"]
+        });
+        var unidadesCharts = "viviendas";
+        var mapEstado,
+            numberDisplayTotal,
+            barChartFecha,
+            rowChartTipologia,
+            barChartClima,
+            pieChartIdg,
+            rowChartPrograma,
+            pieChartGrupo;
+        var anio_inicio, anio_fin;
+
+        $(function () {
+            //activaTab('sustentabilidad');
+
+            $("#btn_aceptar").click(function () {
+                initializeDashBoard();
+            });
+            initializeDashBoard();
+        });
+
+        function initializeDashBoard() {
+            anio_inicio = $('[id$=ddl_inicio]').val();
+            anio_fin = $('[id$=ddl_fin]').val();
+            var aux;
+            if (anio_inicio > anio_fin) {
+                aux = anio_inicio;
+                anio_inicio = anio_fin;
+                anio_fin = aux;
+            }
+
+            mapEstado = dc.geoChoroplethChart('#mapEstado');
+            numberDisplayTotal = dc.numberDisplay('#numberDisplayTotal');
+            barChartFecha = dc.barChart('#barChartFecha');
+            rowChartTipologia = dc.rowChart('#rowChartTipologia');
+            barChartClima = dc.barChart('#barChartClima');
+            pieChartIdg = dc.pieChart('#pieChartIdg');
+            rowChartPrograma = dc.rowChart('#rowChartPrograma');
+            pieChartGrupo = dc.pieChart('#pieChartGrupo');
+
+            d3.json(path + 'DashboardAPI/GetKPIsSisevive/' + anio_inicio + '/' + anio_fin, function (error, counts) {
+                var formatDate = d3.time.format("%d/%m/%Y");
+                counts.forEach(function (e) {
+                    e.fecha_corte = formatDate.parse(e.fecha_corte);
+                    //e.mes = d3.time.month(e.fecha_corte); // pre-calculate month for better performance
+                });
+
+                var ndx = crossfilter(counts),
+                    estado = ndx.dimension(function (d) { return d.estado; }),
+                    groupEstado = estado.group().reduceSum(function (d) { return + d.viviendas; }),
+                    total = ndx.groupAll().reduceSum(function (d) { return + d.viviendas; }),
+                    fecha = ndx.dimension(function (d) { return d.fecha_corte; }),
+                    groupFecha = fecha.group().reduceSum(function (d) { return + d.viviendas; }),
+                    tipologia = ndx.dimension(function (d) { return d.tipologia_vivienda; }),
+                    groupTipologia = tipologia.group().reduceSum(function (d) { return + d.viviendas; }),
+                    clima = ndx.dimension(function (d) { return d.clima; }),
+                    groupClima = clima.group().reduceSum(function (d) { return + d.viviendas; }),
+                    idg = ndx.dimension(function (d) { return d.idg; }),
+                    groupIdg = idg.group().reduceSum(function (d) { return + d.viviendas; }),
+                    programa = ndx.dimension(function (d) { return d.programa; }),
+                    groupPrograma = programa.group().reduceSum(function (d) { return + d.viviendas; }),
+                    grupo = ndx.dimension(function (d) { return d.grupo; }),
+                    groupGrupo = grupo.group().reduceSum(function (d) { return + d.viviendas; });
+
+                d3.json('../js/maps/mx.json', function (jsonData) {
+                    var projection = d3.geo.mercator()
+                        .center(center_map)
+                        .translate([width_map / 1.7, height_map / 1.7])
+                        .scale([width_map / .6]);
+                    var colorSchemeSelect = color_map;
+                    var colorScheme = colorbrewer[colorSchemeSelect];
+                    var quantiles = quantiles_map;
+                    var estados = groupEstado.all();
+                    var min = Math.min.apply(null, estados.map(x => x.value));
+                    var max = Math.max.apply(null, estados.map(x => x.value));
+
+                    mapEstado
+                        .width(width_map)
+                        .height(height_map)
+                        .dimension(estado)
+                        .group(groupEstado)
+                        .projection(projection)
+                        .overlayGeoJson(jsonData.features, 'name', function (d) {
+                            return d.properties.name;
+                        })
+                        .colors(d3.scale.quantile().range(colorScheme[quantiles]))
+                        .colorDomain([min, max])
+                        .colorCalculator(function (d) {
+                            return d ? mapEstado.colors()(d) : '#ccc';
+                        })
+                        .title(function (d) {
+                            return d.key + ": " + d3.format(',.0f')(d.value) + ' ' + unidadesCharts;
+                        });
+
+                    numberDisplayTotal
+                        .group(total)
+                        .formatNumber(d3.format(',.0f'))
+                        .valueAccessor(function (d) { return d; });
+
+                    barChartFecha
+                        .yAxisLabel(unidadesCharts)
+                        .height(200)
+                        .dimension(fecha)
+                        .group(groupFecha)
+                        .x(d3.time.scale())
+                        .xUnits(d3.time.days)
+                        .elasticY(true)
+                        .renderHorizontalGridLines(true)
+                        .centerBar(true)
+                        .margins({ top: 20, left: 50, right: 0, bottom: 45 })
+                    barChartFecha.yAxis().tickFormat(d3.format('s'));
+                    barChartFecha.xAxis().tickFormat(mxLocate.timeFormat('%Y %b'));
+                    function calc_domain(chart) {
+                        var min = d3.min(chart.group().all(), function (kv) { return kv.key; }),
+                            max = d3.max(chart.group().all(), function (kv) { return kv.key; });
+                        max = d3.time.month.offset(max, 1);
+                        chart.x().domain([min, max]);
+                    }
+                    barChartFecha.on('preRender', calc_domain);
+                    barChartFecha.on('preRedraw', calc_domain);
+
+                    rowChartTipologia
+                        .dimension(tipologia)
+                        .group(groupTipologia)
+                        .elasticX(true)
+                        .margins({ top: 5, left: 5, right: 10, bottom: 40 })
+                        /*.label(function (d) {
+                            return d.key + ": " + d3.format(',.0f')(d.value);
+                        })*/
+                        .title(function (d) { return ''; });
+                    rowChartTipologia.xAxis().tickFormat(d3.format('s'));
+
+                    barChartClima
+                        .yAxisLabel(unidadesCharts)
+                        .height(250)
+                        .dimension(clima)
+                        .group(groupClima)
+                        .x(d3.scale.ordinal())
+                        .xUnits(dc.units.ordinal)
+                        .elasticY(true)
+                        .renderHorizontalGridLines(true)
+                        .barPadding(0.1)
+                        .margins({ top: 20, left: 50, right: 0, bottom: 80 })
+                        .brushOn(false)
+                        .clipPadding(20)
+                        .title(function (d) { return ''; })
+                        .renderLabel(true)
+                        .label(function (d) {
+                            return d3.format(',.0f')(d.y);
+                        });
+                    barChartClima.yAxis().tickFormat(d3.format('s'));
+
+                    pieChartIdg
+                        .height(200)
+                        .dimension(idg)
+                        .group(groupIdg)
+                        .innerRadius(50)
+                        .legend(dc.legend().y(5))
+                        .title(function (d) { return ''; });
+                    pieChartIdg.ordering(function (d) {
+                        var order = 0;
+                        switch (d.key) {
+                            case 'A':
+                                order = 1;
+                                break;
+                            case 'B':
+                                order = 2;
+                                break;
+                            case 'C':
+                                order = 3;
+                                break;
+                            case 'D':
+                                order = 4;
+                                break;
+                            case 'E':
+                                order = 5;
+                                break;
+                            case 'F':
+                                order = 6;
+                                break;
+                            case 'G':
+                                order = 7;
+                                break;
+                            default:
+                                order = 8;
+                        }
+                        return order;
+                    });
+
+                    rowChartPrograma
+                        .dimension(programa)
+                        .group(groupPrograma)
+                        .elasticX(true)
+                        .margins({ top: 5, left: 5, right: 10, bottom: 50 })
+                        /*.label(function (d) {
+                            return d.key + ": " + d3.format(',.0f')(d.value);
+                        })*/
+                        .title(function (d) { return ''; });
+                    rowChartPrograma.xAxis().tickFormat(d3.format('s'));
+
+                    pieChartGrupo
+                    pieChartGrupo
+                        .height(200)
+                        .dimension(grupo)
+                        .group(groupGrupo)
+                        .legend(dc.legend().y(5))
+                        .title(function (d) { return ''; });
+                    pieChartGrupo.ordering(function (d) {
+                        if (d.key === 'Vivienda evaluada CONAVI-SHF')
+                            return 1;
+                        else
+                            return 2;
+                    });
+
+                    setStyleS();
+                    dc.renderAll();
+
+                    AddXAxis(rowChartPrograma, unidadesCharts);
+                    AddXAxis(rowChartTipologia, unidadesCharts);
+                });
+            });
+
+            function setStyleS() {
+                var f = d3.format(',.0f');
+                var pieTip = d3.tip()
+                    .attr('class', 'd3-tip')
+                    .offset([-10, 0])
+                    .html(function (d) { return "<span class='label-tip'>" + d.data.key + "</span><br/>" + f(d.value) + " " + unidadesCharts + ' (' + dc.utils.printSingleValue((d.endAngle - d.startAngle) / (2 * Math.PI) * 100) + '%)'; });
+                var rowTip = d3.tip()
+                    .attr('class', 'd3-tip')
+                    .offset([-10, 0])
+                    .html(function (d) { return "<span class='label-tip'>" + d.key + "</span><br/>" + f(d.value) + " " + unidadesCharts; });
+                var barTip = d3.tip()
+                    .attr('class', 'd3-tip')
+                    .offset([-10, 0])
+                    .html(function (d) { return "<span class='label-tip'>" + d.x + "</span><br/>" + f(d.y) + " " + unidadesCharts; });
+
+                barChartFecha.on('pretransition', function (chart) {
+                    chart.selectAll("rect.bar").call(barTip).on('mouseover.tip', barTip.show).on('mouseout.tip', barTip.hide);
+                });
+
+                rowChartTipologia.on('pretransition', function (chart) {
+                    chart.selectAll("g.row").call(rowTip).on('mouseover.tip', rowTip.show).on('mouseout.tip', rowTip.hide);
+                });
+
+                barChartClima.on('pretransition', function (chart) {
+                    chart.selectAll("rect.bar").call(barTip).on('mouseover.tip', barTip.show).on('mouseout.tip', barTip.hide);
+                });
+
+                pieChartIdg.on('pretransition', function (chart) {
+                    chart.selectAll(".pie-slice").call(pieTip).on('mouseover.tip', pieTip.show).on('mouseout.tip', pieTip.hide);
+                    chart.selectAll('text.pie-slice').text(function (d) {
+                        return dc.utils.printSingleValue((d.endAngle - d.startAngle) / (2 * Math.PI) * 100) + '%';
+                    });
+                });
+
+                rowChartPrograma.on('pretransition', function (chart) {
+                    chart.selectAll("g.row").call(rowTip).on('mouseover.tip', rowTip.show).on('mouseout.tip', rowTip.hide);
+                });
+
+                pieChartGrupo.on('pretransition', function (chart) {
+                    chart.selectAll(".pie-slice").call(pieTip).on('mouseover.tip', pieTip.show).on('mouseout.tip', pieTip.hide);
+                    chart.selectAll('text.pie-slice').text(function (d) {
+                        return dc.utils.printSingleValue((d.endAngle - d.startAngle) / (2 * Math.PI) * 100) + '%';
+                    });
+                });
+
+                barChartFecha.ordinalColors(baseColor);
+                rowChartTipologia.ordinalColors(baseColor);
+                barChartClima.ordinalColors(baseColor);
+                pieChartIdg.ordinalColors(baseColor);
+                rowChartPrograma.ordinalColors(baseColor);
+                pieChartGrupo.ordinalColors(baseColor);
+            }
+        }
+    </script>
+}
+
+<div class="page-header">
+    <h2>Estadística SISEVIVE <small>@fecha</small>
+        <a href="javascript:dc.filterAll(); dc.renderAll();" title="Recargar" data-toggle="tooltip" data-placement="bottom"><span class="icon s7-refresh-2"></span></a>
+        <a href="/Cubo/Sisevive" title="Ver todas las variables"><span class="icon s7-edit" data-toggle="tooltip" data-placement="bottom" title="Ver todas las variables"></span></a>
+        <a href="../oferta/mapa?layer=sisevive" target="_blank" title="Ver mapa"><span class="icon s7-map-marker" data-toggle="tooltip" data-placement="bottom" title="Ver mapa"></span></a>
+    </h2>
+</div>
+
+<div id="div-form" class="form-inline">
+    <div class="form-group">
+        <label>Año:</label>
+        @Html.DropDownList("ddl_inicio", anios, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>a</label>
+        @Html.DropDownList("ddl_fin", anios, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <button type="button" id="btn_aceptar" class="btn btn-default">Aceptar</button>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-8">
+        <h3>Estado</h3>
+        <div id="mapEstado" class="geoChoroplethChart" style="overflow-x: auto"></div>
+    </div>
+    <div class="col-md-4 dv">
+        <h3>Total (viviendas)</h3>
+        <div id="numberDisplayTotal" class="number-acciones"></div>
+    </div>
+    <div class="col-md-4">
+        <h3>Clima</h3>
+        <div id="barChartClima" class="chart"></div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h3>Grupo</h3>
+        <div id="pieChartGrupo" class="chart"></div>
+    </div>
+    <div class="col-md-4">
+        <h3>Programa</h3>
+        <div id="rowChartPrograma" class="chart"></div>
+    </div>
+    <div class="col-md-4">
+        <h3>IDG</h3>
+        <div id="pieChartIdg" class="chart"></div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-8">
+        <h3>Fecha</h3>
+        <div id="barChartFecha" class="chart"></div>
+    </div>
+    <div class="col-md-4">
+        <h3>Tipología</h3>
+        <div id="rowChartTipologia" class="chart"></div>
+    </div>
+</div>

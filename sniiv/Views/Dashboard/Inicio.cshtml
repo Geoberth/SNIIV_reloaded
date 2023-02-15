@@ -1,0 +1,493 @@
+﻿@{
+    ViewData["Title"] = "Inicio";
+    string fechaSubsidios = ViewBag.fechaSubsidios;
+    string fechaFinanciamientos = ViewBag.fechaFinanciamientos;
+    string fechaRegistro = ViewBag.fechaRegistro;
+    string fechaInventario = ViewBag.fechaInventario;
+}
+
+@section Scripts
+{
+    <script src="~/js/util.js" type="text/javascript"></script>
+    <!-- DC -->
+    <link href="~/css/dc/dc.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/dashboard.css" rel="stylesheet" type="text/css" />
+    <script src="~/js/dc/d3.js" type="text/javascript"></script>
+    <script src="~/js/dc/d3.tip.js" type="text/javascript"></script>
+    <script src="~/js/dc/crossfilter.js" type="text/javascript"></script>
+    <script src="~/js/dc/dc.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        //CONAVI
+        var numberDisplayAccionesS,
+            numberDisplayMontoS,
+            pieChartModalidadS,
+            rowChartEe,
+            //Financiamiento
+            numberDisplayAccionesF,
+            numberDisplayMontoF,
+            pieChartModalidadF,
+            rowChartOrganismo,
+            //Registro
+            numberDisplayViviendasR,
+            barChartTipo,
+            pieChartPCU,
+            rowChartSegmento,
+            //Inventario
+            numberDisplayViviendasI,
+            barChartTipoI,
+            pieChartSegmento,
+            rowChartAvance;
+
+        var unidadesChart = " viviendas";
+        $(function () {
+            //activaTab('inicio');
+
+            initializeDashBoardS();
+            initializeDashBoardF();
+            initializeDashBoardR();
+            initializeDashBoardI();
+
+            var colorOn = '#333';
+            var colorOff = '#808080';
+
+            $(document).on('click', '.dv-s > div > span', function () {
+                var isMonto = $(this).parent().get(0).id.indexOf('Monto') >= 0 ? true : false;
+                $('#numberDisplayAccionesS').css('color', isMonto ? colorOff : colorOn);
+                $('#numberDisplayMontoS').css('color', isMonto ? colorOn : colorOff);
+                dc.filterAll('subsidios');
+                showDashBoardS(isMonto);
+            });
+
+            $(document).on('click', '.dv-f > div > span', function () {
+                var isMonto = $(this).parent().get(0).id.indexOf('Monto') >= 0 ? true : false;
+                $('#numberDisplayAccionesF').css('color', isMonto ? colorOff : colorOn);
+                $('#numberDisplayMontoF').css('color', isMonto ? colorOn : colorOff);
+                dc.filterAll('financiamientos');
+                showDashBoardF(isMonto);
+            });
+        });
+
+        function initializeDashBoardS() {
+            numberDisplayAccionesS = dc.numberDisplay('#numberDisplayAccionesS', 'subsidios');
+            numberDisplayMontoS = dc.numberDisplay('#numberDisplayMontoS', 'subsidios');
+            pieChartModalidadS = dc.pieChart('#pieChartModalidadS', 'subsidios');
+            rowChartEe = dc.rowChart('#rowChartEe', 'subsidios');
+            showDashBoardS(false);
+        }
+        function showDashBoardS(isMonto) {
+            d3.json(path + 'DashboardAPI/GetKPIsCONAVI', function (error, counts) {
+                var ndx = crossfilter(counts),
+                    acciones = ndx.groupAll().reduceSum(function (d) { return + d.acciones; }),
+                    monto = ndx.groupAll().reduceSum(function (d) { return + d.monto; }),
+                    modalidad = ndx.dimension(function (d) { return d.modalidad; }),
+                    ee = ndx.dimension(function (d) { return d.programa_presupuestal; }),
+                    groupModalidad = modalidad.group().reduceSum(function (d) { return + isMonto ? d.monto : d.acciones; }),
+                    groupEe = ee.group().reduceSum(function (d) { return + isMonto ? d.monto : d.acciones; })
+                numberDisplayAccionesS
+                    .group(acciones)
+                    .formatNumber(d3.format(',.0f'))
+                    .valueAccessor(function (d) { return d; });
+                numberDisplayMontoS
+                    .group(monto)
+                    .formatNumber(d3.format('$,.0f'))
+                    .valueAccessor(function (d) { return d; });
+                pieChartModalidadS
+                    .dimension(modalidad)
+                    .group(groupModalidad)
+                    .innerRadius(50)
+                    .legend(dc.legend().y(5).itemHeight(item_height))
+                    .title(function (d) { return ''; });
+                rowChartEe
+                    .dimension(ee)
+                    .group(groupEe)
+                    .elasticX(true)
+                    .margins({ top: 5, left: 5, right: 10, bottom: 40 })
+                    /*.label(function (d) {
+                        return d.key + ": " + d3.format(isMonto ? '$,.0f' : ',.0f')(d.value);
+                    })*/
+                    .title(function (d) { return ''; });
+
+                rowChartEe.xAxis().tickFormat(d3.format('s'));
+                setStyleS(isMonto);
+                dc.renderAll('subsidios');
+                AddXAxis(rowChartEe, isMonto ? "pesos": "acciones");
+            });
+        }
+        function setStyleS(isMonto) {
+            var f = isMonto ? d3.format('$,.0f') : d3.format(',.0f');
+            var unidades = isMonto ? " pesos" : " acciones"
+            var pieTip = d3.tip()
+                .attr('class', 'd3-tip')
+                .offset([-10, 0])
+                .html(function (d) { return "<span class='label-tip'>" + d.data.key + "</span><br/>" + f(d.value) + unidades +' (' + dc.utils.printSingleValue((d.endAngle - d.startAngle) / (2 * Math.PI) * 100) + '%)'; });
+            var rowTip = d3.tip()
+                .attr('class', 'd3-tip')
+                .offset([-10, 0])
+                .html(function (d) { return "<span class='label-tip'>" + d.key + "</span><br/>" + f(d.value) + unidades; });
+            pieChartModalidadS.on('pretransition', function (chart) {
+                chart.selectAll('text.pie-slice').text(function (d) {
+                    return '';
+                });
+                chart.selectAll(".pie-slice").call(pieTip).on('mouseover.tip', pieTip.show).on('mouseout.tip', pieTip.hide);
+            });
+            rowChartEe.on('pretransition', function (chart) {
+                chart.selectAll("g.row").call(rowTip).on('mouseover.tip', rowTip.show).on('mouseout.tip', rowTip.hide);
+            });
+            pieChartModalidadS.ordinalColors(baseColor);
+            rowChartEe.ordinalColors(baseColor);
+        }
+
+        function initializeDashBoardF() {
+            numberDisplayAccionesF = dc.numberDisplay('#numberDisplayAccionesF', 'financiamientos');
+            numberDisplayMontoF = dc.numberDisplay('#numberDisplayMontoF', 'financiamientos');
+            pieChartModalidadF = dc.pieChart('#pieChartModalidadF', 'financiamientos');
+            rowChartOrganismo = dc.rowChart('#rowChartOrganismo', 'financiamientos');
+            showDashBoardF(false);
+        }
+        function showDashBoardF(isMonto) {
+            d3.json(path + 'DashboardAPI/GetKPIsFinanciamiento', function (error, counts) {
+                var ndx = crossfilter(counts),
+                    acciones = ndx.groupAll().reduceSum(function (d) { return + d.acciones; }),
+                    monto = ndx.groupAll().reduceSum(function (d) { return + d.monto; }),
+                    modalidad = ndx.dimension(function (d) { return d.modalidad; }),
+                    organismo = ndx.dimension(function (d) { return d.organismo; }),
+                    groupModalidad = modalidad.group().reduceSum(function (d) { return + isMonto ? d.monto : d.acciones; }),
+                    groupOrganismo = organismo.group().reduceSum(function (d) { return + isMonto ? d.monto : d.acciones; })
+                numberDisplayAccionesF
+                    .group(acciones)
+                    .formatNumber(d3.format(',.0f'))
+                    .valueAccessor(function (d) { return d; });
+                numberDisplayMontoF
+                    .group(monto)
+                    .formatNumber(d3.format('$,.0f'))
+                    .valueAccessor(function (d) { return d; });
+                pieChartModalidadF
+                    .dimension(modalidad)
+                    .group(groupModalidad)
+                    .innerRadius(50)
+                    .legend(dc.legend().y(5).itemHeight(item_height))
+                    .title(function (d) { return ''; });
+                rowChartOrganismo
+                    .dimension(organismo)
+                    .group(groupOrganismo)
+                    .elasticX(true)
+                    .margins({ top: 5, left: 5, right: 10, bottom: 40 })
+                    /*.label(function (d) {
+                        return d.key + ": " + d3.format(isMonto ? '$,.0f' : ',.0f')(d.value);
+                    })*/
+                    .title(function (d) { return ''; });
+
+                rowChartOrganismo.xAxis().tickFormat(d3.format('s'));
+                setStyleF(isMonto);
+                dc.renderAll('financiamientos');
+
+                AddXAxis(rowChartOrganismo, isMonto ? "pesos" : "acciones");
+            });
+        }
+        function setStyleF(isMonto) {
+            var f = isMonto ? d3.format('$,.0f') : d3.format(',.0f');
+            var unidades = isMonto ? " pesos" : " acciones"
+            var pieTip = d3.tip()
+                .attr('class', 'd3-tip')
+                .offset([-10, 0])
+                .html(function (d) { return "<span class='label-tip'>" + d.data.key + "</span><br/>" + f(d.value) +unidades+ ' (' + dc.utils.printSingleValue((d.endAngle - d.startAngle) / (2 * Math.PI) * 100) + '%)'; });
+            var rowTip = d3.tip()
+                .attr('class', 'd3-tip')
+                .offset([-10, 0])
+                .html(function (d) { return "<span class='label-tip'>" + d.key + "</span><br/>" + f(d.value) + unidades; });
+            pieChartModalidadF.on('pretransition', function (chart) {
+                chart.selectAll('text.pie-slice').text(function (d) {
+                    return '';
+                })
+                chart.selectAll(".pie-slice").call(pieTip).on('mouseover.tip', pieTip.show).on('mouseout.tip', pieTip.hide);
+            });
+            rowChartOrganismo.on('pretransition', function (chart) {
+                chart.selectAll("g.row").call(rowTip).on('mouseover.tip', rowTip.show).on('mouseout.tip', rowTip.hide);
+            });
+            pieChartModalidadF.ordinalColors(baseColor);
+            rowChartOrganismo.ordinalColors(baseColor);
+        }
+
+        function initializeDashBoardR() {
+            numberDisplayViviendasR = dc.numberDisplay('#numberDisplayViviendasR', 'Registro');
+            barChartTipo = dc.barChart('#barChartTipo', 'Registro');
+            pieChartPCU = dc.pieChart('#pieChartPCU', 'Registro');
+            rowChartSegmento = dc.rowChart('#rowChartSegmento', 'Registro');
+            showDashBoardR(false);
+        }
+        function showDashBoardR(isMonto) {
+            d3.json(path + 'DashboardAPI/GetKPIsRegistro', function (error, counts) {
+                var ndx = crossfilter(counts),
+                    viviendas = ndx.groupAll().reduceSum(function (d) { return + d.viviendas; }),
+                    pcu = ndx.dimension(function (d) { return d.pcu; }),
+                    segmento = ndx.dimension(function (d) { return d.segmento; }),
+                    tipo_vivienda = ndx.dimension(function (d) { return d.tipo_vivienda; }),
+                    groupTipoVivienda = tipo_vivienda.group().reduceSum(function (d) { return + isMonto ? d.monto : d.viviendas; }),
+                    groupPCU = pcu.group().reduceSum(function (d) { return + isMonto ? d.monto : d.viviendas; }),
+                    groupSegmento = segmento.group().reduceSum(function (d) { return + isMonto ? d.monto : d.viviendas; })
+                numberDisplayViviendasR
+                    .group(viviendas)
+                    .formatNumber(d3.format(',.0f'))
+                    .valueAccessor(function (d) { return d; });
+                barChartTipo
+                    .brushOn(false)
+                    .width(250)
+                    .height(150)
+                    .barPadding(0.1)
+                    .outerPadding(0.05)
+                    .xAxisLabel("Tipo de vivienda")
+                    .x(d3.scale.ordinal())
+                    .xUnits(dc.units.ordinal)
+                    .dimension(tipo_vivienda)
+                    .group(groupTipoVivienda)
+                pieChartPCU
+                    .dimension(pcu)
+                    .group(groupPCU)
+                    .innerRadius(50)
+                    .legend(dc.legend().y(5))
+                    .title(function (d) { return ''; });
+                rowChartSegmento
+                    .dimension(segmento)
+                    .group(groupSegmento)
+                    .elasticX(true)
+                    .margins({ top: 30, left: 5, right: 10, bottom: 40 })
+                    /*.label(function (d) {
+                        return d.key + ": " + d3.format(',')(d.value);
+                    })*/
+                    .title(function (d) { return ''; });
+
+                barChartTipo.yAxis().tickFormat(d3.format('s'));
+                pieChartPCU.ordering(function (d) {
+                    if (d.key === 'U1') return 0;
+                    else if (d.key === 'U2') return 1;
+                    else if (d.key === 'U3') return 2;
+                    else if (d.key === 'FC') return 3;
+                });
+                rowChartSegmento.xAxis().tickFormat(d3.format('s'));
+
+                setStyleR(isMonto);
+                dc.renderAll('Registro');
+                AddXAxis(rowChartSegmento, unidadesChart);
+            });
+        }
+        function setStyleR(isMonto) {
+            var f = isMonto ? d3.format('$,.0f') : d3.format(',.0f');
+            var pieTip = d3.tip()
+                .attr('class', 'd3-tip')
+                .offset([-10, 0])
+                .html(function (d) { return "<span class='label-tip'>" + d.data.key + "</span><br/>" + f(d.value) + unidadesChart + ' (' + dc.utils.printSingleValue((d.endAngle - d.startAngle) / (2 * Math.PI) * 100) + '%)'; });
+            var rowTip = d3.tip()
+                .attr('class', 'd3-tip')
+                .offset([-10, 0])
+                .html(function (d) { return "<span class='label-tip'>" + d.key + "</span><br/>" + f(d.value) + unidadesChart; });
+            pieChartPCU.on('pretransition', function (chart) {
+                chart.selectAll('text.pie-slice').text(function (d) {
+                    return '';
+                });
+                chart.selectAll(".pie-slice").call(pieTip).on('mouseover.tip', pieTip.show).on('mouseout.tip', pieTip.hide);
+            });
+            rowChartSegmento.on('pretransition', function (chart) {
+                chart.selectAll("g.row").call(rowTip).on('mouseover.tip', rowTip.show).on('mouseout.tip', rowTip.hide);
+            });
+            pieChartPCU.ordinalColors(baseColor);
+            rowChartSegmento.ordinalColors(baseColor);
+            barChartTipo.ordinalColors(baseColor);
+        }
+
+        function initializeDashBoardI() {
+            numberDisplayViviendasI = dc.numberDisplay('#numberDisplayViviendasI', 'Inventario');
+            barChartTipoI = dc.barChart('#barChartTipoI', 'Inventario');
+            pieChartSegmento = dc.pieChart('#pieChartSegmento', 'Inventario');
+            rowChartAvance = dc.rowChart('#rowChartAvance', 'Inventario');
+            showDashBoardI(false);
+        }
+        function showDashBoardI(isMonto) {
+            d3.json(path + 'DashboardAPI/GetKPIsInventario', function (error, counts) {
+                var ndx = crossfilter(counts),
+                    viviendas = ndx.groupAll().reduceSum(function (d) { return + d.viviendas; }),
+                    segmento = ndx.dimension(function (d) { return d.segmento; }),
+                    avance = ndx.dimension(function (d) { return d.avance_obra; }),
+                    tipo_vivienda = ndx.dimension(function (d) { return d.tipo_vivienda; }),
+                    groupTipoVivienda = tipo_vivienda.group().reduceSum(function (d) { return + isMonto ? d.monto : d.viviendas; }),
+                    groupSegmento = segmento.group().reduceSum(function (d) { return + isMonto ? d.monto : d.viviendas; }),
+                    groupAvanceObra = avance.group().reduceSum(function (d) { return + isMonto ? d.monto : d.viviendas; })
+                numberDisplayViviendasI
+                    .group(viviendas)
+                    .formatNumber(d3.format(',.0f'))
+                    .valueAccessor(function (d) { return d; });
+                barChartTipoI
+                    .brushOn(false)
+                    .width(250)
+                    .height(150)
+                    .barPadding(0.1)
+                    .outerPadding(0.05)
+                    .xAxisLabel("Tipo de vivienda")
+                    .x(d3.scale.ordinal())
+                    .xUnits(dc.units.ordinal)
+                    .dimension(tipo_vivienda)
+                    .group(groupTipoVivienda)
+                pieChartSegmento
+                    .dimension(segmento)
+                    .group(groupSegmento)
+                    .innerRadius(50)
+                    .legend(dc.legend().y(5).itemHeight(item_height))
+                    .title(function (d) { return ''; });
+                rowChartAvance
+                    .dimension(avance)
+                    .group(groupAvanceObra)
+                    .elasticX(true)
+                    .margins({ top: 5, left: 5, right: 10, bottom: 40 })
+                    /*.label(function (d) {
+                        return d.key + ": " + d3.format(',')(d.value);
+                    })*/
+                    .title(function (d) { return ''; });
+
+                rowChartAvance.xAxis().tickFormat(d3.format('s'));
+                barChartTipo.yAxis().tickFormat(d3.format('s'));
+                pieChartSegmento.ordering(function (d) {
+                    if (d.key === 'Económica') return 0;
+                    else if (d.key === 'Popular') return 1;
+                    else if (d.key === 'Tradicional') return 2;
+                    else if (d.key === 'Media') return 3;
+                    else if (d.key === 'Residencial') return 4;
+                    else if (d.key === 'Residencial plus') return 5;
+                });
+                setStyleI(isMonto);
+                dc.renderAll('Inventario');
+                AddXAxis(rowChartAvance, unidadesChart);
+            });
+        }
+        function setStyleI(isMonto) {
+            var f = isMonto ? d3.format('$,.0f') : d3.format(',.0f');
+            var pieTip = d3.tip()
+                .attr('class', 'd3-tip')
+                .offset([-10, 0])
+                .html(function (d) { return "<span class='label-tip'>" + d.data.key + "</span><br/>" + f(d.value) + unidadesChart  + ' (' + dc.utils.printSingleValue((d.endAngle - d.startAngle) / (2 * Math.PI) * 100) + '%)'; });
+            var rowTip = d3.tip()
+                .attr('class', 'd3-tip')
+                .offset([-10, 0])
+                .html(function (d) { return "<span class='label-tip'>" + d.key + "</span><br/>" + f(d.value) + unidadesChart ; });
+            pieChartSegmento.on('pretransition', function (chart) {
+                chart.selectAll('text.pie-slice').text(function (d) {
+                    return '';
+                });
+                chart.selectAll(".pie-slice").call(pieTip).on('mouseover.tip', pieTip.show).on('mouseout.tip', pieTip.hide);
+            });
+            rowChartAvance.on('pretransition', function (chart) {
+                chart.selectAll("g.row").call(rowTip).on('mouseover.tip', rowTip.show).on('mouseout.tip', rowTip.hide);
+            });
+            pieChartSegmento.ordinalColors(baseColor);
+            rowChartAvance.ordinalColors(baseColor);
+            barChartTipoI.ordinalColors(baseColor);
+        }
+    </script>
+}
+
+<div id="divDemanda">
+    <div class="page-header">
+        <h2>
+            Subsidios CONAVI 
+            <small>
+                @fechaSubsidios
+            </small>
+            <a href="javascript:dc.filterAll('subsidios'); dc.renderAll('subsidios');" title="Recargar" data-toggle="tooltip" data-placement="bottom"><span class="icon s7-refresh-2"></span></a>
+            <a href="/Cubo/Conavi" title="Editar consulta"><span class="icon s7-edit" data-toggle="tooltip" data-placement="bottom" title="Editar consulta"></span></a>
+        </h2>
+    </div>
+    <div class="row">
+        <div class="col-md-3 dv-s">
+            <h3>Total de subsidios</h3>
+            <div id="numberDisplayAccionesS" class="number-acciones"></div>
+            <div id="numberDisplayMontoS" class="number-monto"></div>
+        </div>
+        <div class="col-md-5">
+            <h3>Modalidad</h3>
+            <div id="pieChartModalidadS"></div>
+        </div>
+        <div class="col-md-4">
+            <h3>Programa presupuestal</h3>
+            <div id="rowChartEe"></div>
+        </div>
+    </div>
+
+    <div class="page-header">
+        <h2>
+            Financiamientos
+            <small>
+                @fechaFinanciamientos
+            </small>
+            <a href="javascript:dc.filterAll('financiamientos'); dc.renderAll('financiamientos');" title="Recargar" data-toggle="tooltip" data-placement="bottom"><span class="icon s7-refresh-2"></span></a>
+            <a href="/Cubo/Financiamiento" title="Editar consulta"><span class="icon s7-edit" data-toggle="tooltip" data-placement="bottom" title="Editar consulta"></span></a>
+        </h2>
+    </div>
+    <div class="row">
+        <div class="col-md-3 dv-f">
+            <h3>Total de financiamientos</h3>
+            <div id="numberDisplayAccionesF" class="number-acciones"></div>
+            <div id="numberDisplayMontoF" class="number-monto"></div>
+        </div>
+        <div class="col-md-5">
+            <h3>Modalidad</h3>
+            <div id="pieChartModalidadF"></div>
+        </div>
+        <div class="col-md-4">
+            <h3>Organismo</h3>
+            <div id="rowChartOrganismo"></div>
+        </div>
+    </div>
+</div>
+
+<div id="divOferta">
+    <div class="page-header">
+        <h2>
+            Inventario de Vivienda
+            <small>
+                desde 2014 hasta el
+                @fechaInventario
+            </small>
+            <a href="javascript:dc.filterAll('Inventario'); dc.renderAll('Inventario');" title="Recargar" data-toggle="tooltip" data-placement="bottom"><span class="icon s7-refresh-2"></span></a>
+            <a href="/Cubo/Inventario" title="Editar consulta"><span class="icon s7-edit" data-toggle="tooltip" data-placement="bottom" title="Editar consulta"></span></a>
+        </h2>
+    </div>
+    <div class="row">
+        <div class="col-md-3 dv-i">
+            <h3>Total de viviendas vigentes</h3>
+            <div id="numberDisplayViviendasI" class="number-acciones"></div>
+            <div id="barChartTipoI" style="display: none"></div>
+        </div>
+        <div class="col-md-5">
+            <h3>Segmento</h3>
+            <div id="pieChartSegmento"></div>
+        </div>
+        <div class="col-md-4">
+            <h3>Avance de Obra</h3>
+            <div id="rowChartAvance"></div>
+        </div>
+    </div>
+
+    <div class="page-header">
+        <h2>
+            Registro de Vivienda
+            <small>
+                @fechaRegistro
+            </small>
+            <a href="javascript:dc.filterAll('Registro'); dc.renderAll('Registro');" title="Recargar" data-toggle="tooltip" data-placement="bottom"><span class="icon s7-refresh-2"></span></a>
+            <a href="/Cubo/Registro" title="Editar consulta"><span class="icon s7-edit" data-toggle="tooltip" data-placement="bottom" title="Editar consulta"></span></a>
+        </h2>
+    </div>
+    <div class="row">
+        <div class="col-md-3 dv-r">
+            <h3>Total de viviendas registradas</h3>
+            <div id="numberDisplayViviendasR" class="number-acciones"></div>
+            <div id="barChartTipo" style="display: none"></div>
+        </div>
+        <div class="col-md-5">
+            <h3>PCU</h3>
+            <div id="pieChartPCU"></div>
+        </div>
+        <div class="col-md-4">
+            <h3>Segmento VSM</h3>
+            <div id="rowChartSegmento"></div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "Login";
+}
+<div class="container">
+    <h3 class="form-signin-heading text-center text-success">Cargando... </h3>
+    <div class="alert alert-danger" asp-validation-summary="ModelOnly"><button class="close" data-dismiss="alert" aria-hidden="true">&times;</button></div>
+    
+    @{
+    Context.Response.Redirect("/reporte/login");
+    }
+</div>

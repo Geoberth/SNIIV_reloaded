@@ -1,0 +1,159 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    @* JQuery *@
+    <script src="../js/jquery-2.2.3.min.js" type="text/javascript"></script>
+    @* Reqwest *@
+    <script src="../js/reqwest.min.js" type="text/javascript"></script>
+    @* FormatCurrency *@
+    @*
+    <script src="../js/jquery.formatCurrency-1.4.0.min.js" type="text/javascript"></script>*@
+    @* Bootstrap *@
+    <link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="../js/bootstrap.min.js" type="text/javascript"></script>
+    @* OpenLayer 3 *@
+    <link rel="stylesheet" href="../css/ol3/ol.css" type="text/css" />
+    <script src="../js/ol3/ol.js" type="text/javascript"></script>
+    @* CONAVI *@
+    <script src="../js/util.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="../css/map.css" type="text/css" />
+    <script src="../js/map.js" type="text/javascript"></script>
+    @* Geocoder *@
+    @*
+    <link href="../css/geocoder/ol3-geocoder.css" rel="stylesheet" type="text/css" />
+    <script src="../js/geocoder/ol3-geocoder.js" type="text/javascript"></script>*@
+    @* Geocomplete *@
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places&key=AIzaSyC09E3_m_YiP5yaRMfUPoXwG6AIB9Kg5X8"></script>
+    <script src="../js/geocomplete/jquery.geocomplete.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109077299-1"></script>
+        <script type="text/javascript">
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'UA-109077299-1');
+            $(window).on('resize', function () {
+                if ($(window).width() < 1100) {
+                    $('.sidebar-left .slide-submenu').trigger('click');
+                }
+            });
+        </script>
+    <title>Mapa SNIIV</title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="map" class="map"></div>
+
+        <!-- Popup -->
+        <div id="popup" title=""></div>
+
+        <div class="row main-row">
+            <div class="col-xs-5 sidebar sidebar-left">
+                @*pull-left*@
+                <div class="panel-group sidebar-body" id="accordion-left">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" href="#mapas">
+                                    <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>Mapas
+                                </a>
+                                <span class="pull-right slide-submenu">
+                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                </span>
+                            </h4>
+                        </div>
+                        <div id="mapas" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                                <div class="input-group">
+                                    <input class="form-control" id="geocomplete" placeholder="Buscar" />
+                                    <span class="input-group-addon">
+                                        <i class="glyphicon glyphicon-search"></i>
+                                    </span>
+                                </div>
+                                <br />
+                                <div class="list-group">
+                                    <a id="openstreetmap" href="#" class="list-group-item">Estándar</a>@*OpenStreetMap*@
+                                    <a id="xyxesri" href="#" class="list-group-item active">Topográfico</a>@*XYZ Esri*@
+                                    <a id="bingmaproad" href="#" class="list-group-item">Carreteras</a>@*Bing Maps Road*@
+                                    <a id="bingmapaerial" href="#" class="list-group-item">Aérea</a>@*Bing Maps Aerial*@
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" href="#capas">
+                                    <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>Capas
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="capas" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                                @*<div class="checkbox">
+                                    <label>
+                                        <input id="conabio" type="checkbox" value="" />
+                                        CONABIO
+                                    </label>
+                                </div>*@
+                                <div class="checkbox">
+                                    <label>
+                                        <input id="indigenas" type="checkbox" value="" />
+                                        Población indígena
+                                    </label>
+                                    <a href="#">
+                                        <span id="lbl-indigenas" class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+                                    </a>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input id="pcus" type="checkbox" value="" />
+                                        Perímetros de Contención Urbana
+                                    </label>
+                                    <a href="https://sistemas.sedatu.gob.mx/repositorio/proxy/alfresco-noauth/api/internal/shared/node/RHL8wWdAR3qyVU6Dje9tJA/content/PCUs_2018.pdf?a=true" target="_blank">
+                                        <span id="lbl-pcu" class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+                                    </a>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input id="oferta" type="checkbox" value="" />
+                                        Oferta de vivienda
+                                    </label>
+                                    <a href="#">
+                                        <span id="lbl-oferta" class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+                                    </a>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input id="sisevive" type="checkbox" value="" />
+                                        SISEVIVE
+                                    </label>
+                                    <a href="#">
+                                        <span id="lbl-sisevive" class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+                                    </a>
+                                </div>
+                                <div class="checkbox">
+                                    <a href="http://www.atlasnacionalderiesgos.gob.mx/archivo/cob-atlas-municipales.html" target="_blank">Atlas municipales de riesgos</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mini-submenu mini-submenu-left pull-left">
+            <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+        </div>
+    </form>
+</body>
+</html>

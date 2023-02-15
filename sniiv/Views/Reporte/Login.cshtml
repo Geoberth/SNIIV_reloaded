@@ -1,0 +1,39 @@
+﻿@model sniiv.Models.LoginViewModel
+@{
+    ViewBag.Title = "Login";
+}
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> _signInManager;
+    
+    <div class="row">
+        <h3 class="form-signin-heading text-center text-success">Bienvenido </h3>
+    </div>
+
+    <div class="form-signin">
+        <h2 class="form-signin-heading">Datos de acceso</h2>
+
+        @if (!_signInManager.IsSignedIn(User))
+        {
+            <form method="post" asp-action="Login">
+                <div class="alert alert-danger" asp-validation-summary="ModelOnly"><button class="close" data-dismiss="alert" aria-hidden="true">&times;</button></div>
+
+                <div>
+                    <label asp-for="Usuario"></label>
+                    <input class="form-control" asp-for="Usuario" />
+                    <span asp-validation-for="Usuario" class="text-danger"></span>
+                </div>
+                <br />
+                <div>
+                    <label asp-for="Contraseña"></label>
+                    <input class="form-control" asp-for="Contraseña" />
+                    <span asp-validation-for="Contraseña" class="text-danger"></span>
+                </div>
+                <br />
+
+                <input class="btn btn-lg btn-primary btn-block" type="submit" value="Iniciar Sesión" />
+            </form>
+        }
+        else{
+            Context.Response.Redirect("/inicio/Acerca_de");
+        }
+    </div>

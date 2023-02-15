@@ -1,0 +1,56 @@
+﻿@{
+    ViewData["Title"] = "Mapa";
+    string environment = (string)ViewBag.environment;
+}
+
+@section Scripts{
+    <script type="text/javascript">
+        var webValues = ["-95px"];
+        var tabletValues = ["-70px"];
+        var mediumValues = ["-10px"];
+        var mobileValues = ["0px"];
+        var windowWidth = [600, 1129, 1600];
+        var valueArray = [];
+        $(document).ready(function () {
+            var width = $(window).width();
+            if (width < windowWidth[2]) {
+                if (width < windowWidth[1]) {
+                    if (width < windowWidth[0]) {
+                        valueArray = mobileValues;
+                    } else {
+                        valueArray = mediumValues;
+                    }
+                }
+                else {
+                    valueArray = tabletValues;
+                }
+
+            } else {
+                valueArray = webValues;
+            }
+            $(".frameHeight").css("margin-left", valueArray);
+        });
+
+        $(window).on('resize', function () {
+            var width = $(window).width();
+            if (width < windowWidth[2]) {
+                if (width < windowWidth[1]) {
+                    if (width < windowWidth[0]) {
+                        valueArray = mobileValues;
+                    } else {
+                        valueArray = mediumValues;
+                    }
+                }
+                else {
+                    valueArray = tabletValues;
+                }
+
+            } else {
+                valueArray = webValues;
+            }
+            $(".frameHeight").css("margin-left", valueArray);
+        });
+    </script>
+}
+<iframe class="frameHeight" style="background: #fff; border: none;height: 100vh;width: 100vw; " src="@environment#!/dashboard/insus"></iframe>
+<div class="frameDiv"></div>

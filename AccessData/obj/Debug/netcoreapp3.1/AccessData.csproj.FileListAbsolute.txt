@@ -1,0 +1,13 @@
+E:\Azure\AccessData\bin\Debug\netcoreapp3.1\AccessData.deps.json
+E:\Azure\AccessData\bin\Debug\netcoreapp3.1\AccessData.dll
+E:\Azure\AccessData\bin\Debug\netcoreapp3.1\AccessData.pdb
+E:\Azure\AccessData\bin\Debug\netcoreapp3.1\Entity.dll
+E:\Azure\AccessData\bin\Debug\netcoreapp3.1\Entity.pdb
+E:\Azure\AccessData\obj\Debug\netcoreapp3.1\AccessData.csproj.AssemblyReference.cache
+E:\Azure\AccessData\obj\Debug\netcoreapp3.1\AccessData.GeneratedMSBuildEditorConfig.editorconfig
+E:\Azure\AccessData\obj\Debug\netcoreapp3.1\AccessData.AssemblyInfoInputs.cache
+E:\Azure\AccessData\obj\Debug\netcoreapp3.1\AccessData.AssemblyInfo.cs
+E:\Azure\AccessData\obj\Debug\netcoreapp3.1\AccessData.csproj.CoreCompileInputs.cache
+E:\Azure\AccessData\obj\Debug\netcoreapp3.1\AccessData.csproj.CopyComplete
+E:\Azure\AccessData\obj\Debug\netcoreapp3.1\AccessData.dll
+E:\Azure\AccessData\obj\Debug\netcoreapp3.1\AccessData.pdb

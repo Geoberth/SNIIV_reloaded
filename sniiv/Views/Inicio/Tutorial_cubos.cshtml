@@ -1,0 +1,380 @@
+﻿@{
+    ViewData["Title"] = "Tutorial cubos";
+    Layout = null;
+}
+<link rel="stylesheet" href="~/reveal-js/reveal.css">
+<link rel="stylesheet" href="~/reveal-js/theme/sniiv-theme.css" id="theme">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<style>
+    .container {
+        display: grid;
+        grid-auto-flow: column;
+    }
+</style>
+
+<div class="reveal">
+    <div class="slides">
+        <section>
+            <section id="fit-text">
+                <img src="~/img/sedatusniiv01.png" style="width: 100%;">
+                <h4 style="color: #0C231E !important;">Tutorial de Cubos Dinámicos</h4>
+                <p style="font-size:30px;">Los cubos dinámicos son una herramienta que permite seleciconar información deseada mediante filtros y generar algunos gráficos para una mejor interpretación.</p>
+
+                <img src="~/img/cubo/cubo1.png" style="width: 65%;">
+
+            </section>
+
+            <section data-auto-animate id="periodo">
+
+                <img src="~/img/sedatusniiv01.png" style=" width: 100%;">
+                <div class="r-hstack">
+                    <a href="#/periodo"><h6 style=" color : #0C231E !important; padding: 0.75em; margin: 0.25em;">Seleccionar filtros</h6></a>
+                    <a href="#/filas"><h6 style="padding: 0.75em; margin: 0.25em; opacity: 0.2; ">Acomodo de filtros</h6></a>
+                </div>
+                <div class="r-hstack">
+                    <a href="#/periodo"><p style="padding: 0.75em; margin: 0.25em; font-size: 35px;">Periodo</p></a>
+                    <a href="#/estado"><p style="padding: 0.75em; margin: 0.25em; font-size: 35px; opacity: 0.2; ">Estado</p></a>
+                    <a href="#/municipio"><p style="padding: 0.75em; margin: 0.25em; font-size: 35px; opacity: 0.2;">Municipio</p></a>
+                    <a href="#/variables"><p style="padding: 0.75em; margin: 0.25em; font-size: 35px; opacity: 0.2;">Variables</p></a>
+                </div>
+                <p style="font-size:30px;">Para seleccionar el periodo a visualizar:</p>
+                <p style="font-size:30px;">Da clic a la lista de año o mes</p>
+                <img src="~/img/cubo/cubo2.png" style="width: 100%;">
+
+            </section>
+
+            <section data-auto-animate>
+
+                <img src="~/img/sedatusniiv01.png" style=" width: 100%;">
+                <div class="r-hstack">
+                    <a href="#/periodo"><h6 style="color: #0C231E !important; padding: 0.75em; margin: 0.25em;">Seleccionar filtros</h6></a>
+                    <a href="#/filas"><h6 style="padding: 0.75em; margin: 0.25em; opacity: 0.2; ">Acomodo de filtros</h6></a>
+                </div>
+                <div class="r-hstack">
+
+                    <a href="#/periodo"><p style="padding: 0.75em; margin: 0.25em; font-size: 35px;">Periodo</p></a>
+                    <a href="#/estado"><p style="padding: 0.75em; margin: 0.25em; font-size: 35px; opacity: 0.2; ">Estado</p></a>
+                    <a href="#/municipio"><p style="padding: 0.75em; margin: 0.25em; font-size: 35px; opacity: 0.2;">Municipio</p></a>
+                    <a href="#/variables"><p style="padding: 0.75em; margin: 0.25em; font-size: 35px; opacity: 0.2;">Variables</p></a>
+                </div><p style="font-size:30px;">Para seleccionar el periodo a visualizar:</p>
+                <p style="font-size:30px;">Da clic al año o mes de tu elección</p>
+
+                <img src="~/img/cubo/cubo3.png" style="width: 100%;">
+
+
+            </section>
+
+            <section data-auto-animate id="estado">
+
+                <img src="~/img/sedatusniiv01.png" style=" width: 100%;">
+                <div class="r-hstack">
+                    <a href="#/periodo"><h6 style="color: #0C231E !important; padding: 0.75em; margin: 0.25em;">Seleccionar filtros</h6></a>
+                    <a href="#/filas"><h6 style="padding: 0.75em; margin: 0.25em; opacity: 0.2; ">Acomodo de filtros</h6></a>
+                </div>
+                <div class="r-hstack">
+
+                    <a href="#/periodo"><p style="padding: 0.75em; margin: 0.25em; font-size: 35px; opacity: 0.2;">Periodo</p></a>
+                    <a href="#/estado"><p style="padding: 0.75em; margin: 0.25em; font-size: 35px;  ">Estado</p></a>
+                    <a href="#/municipio"><p style="padding: 0.75em; margin: 0.25em; font-size: 35px; opacity: 0.2;">Municipio</p></a>
+                    <a href="#/variables"><p style="padding: 0.75em; margin: 0.25em; font-size: 35px; opacity: 0.2;">Variables</p></a>
+
+                </div>
+                <p style="font-size:30px;">Para mostrar los resultados a nivel estatal, dejamos en blanco la lista de municipio.</p>
+
+                <img src="~/img/cubo/cubo4.png" style="width: 100%;">
+
+            </section>
+
+            <section data-auto-animate>
+
+                <img src="~/img/sedatusniiv01.png" style=" width: 100%;">
+                <div class="r-hstack">
+                    <a href="#/periodo"><h6 style="color: #0C231E !important; padding: 0.75em; margin: 0.25em;">Seleccionar filtros</h6></a>
+                    <a href="#/filas"><h6 style="padding: 0.75em; margin: 0.25em; opacity: 0.2; ">Acomodo de filtros</h6></a>
+                </div>
+                <div class="r-hstack">
+                    <a href="#/periodo"><p style="padding: 0.75em; margin: 0.25em; font-size: 35px; opacity: 0.2;">Periodo</p></a>
+                    <a href="#/estado"><p style="padding: 0.75em; margin: 0.25em; font-size: 35px;  ">Estado</p></a>
+                    <a href="#/municipio"><p style="padding: 0.75em; margin: 0.25em; font-size: 35px; opacity: 0.2;">Municipio</p></a>
+                    <a href="#/variables"><p style="padding: 0.75em; margin: 0.25em; font-size: 35px; opacity: 0.2;">Variables</p></a>
+                </div>
+                <p style="font-size:30px;">Para seleccionar el estado a visualizar:</p>
+                <p style="font-size:30px;">Da clic a la lista de estado</p>
+
+                <img src="~/img/cubo/cubo4.png" style="width: 100%;">
+
+            </section>
+
+            <section data-auto-animate>
+
+                <img src="~/img/sedatusniiv01.png" style=" width: 100%;">
+                <div class="r-hstack">
+                    <a href="#/periodo"><h6 style="color: #0C231E !important; padding: 0.75em; margin: 0.25em;">Seleccionar filtros</h6></a>
+                    <a href="#/filas"><h6 style="padding: 0.75em; margin: 0.25em; opacity: 0.2; ">Acomodo de filtros</h6></a>
+                </div>
+                <div class="r-hstack">
+                    <a href="#/periodo"><p style="padding: 0.75em; margin: 0.25em; font-size: 35px; opacity: 0.2;">Periodo</p></a>
+                    <a href="#/estado"><p style="padding: 0.75em; margin: 0.25em; font-size: 35px;  ">Estado</p></a>
+                    <a href="#/municipio"><p style="padding: 0.75em; margin: 0.25em; font-size: 35px; opacity: 0.2;">Municipio</p></a>
+                    <a href="#/variables"><p style="padding: 0.75em; margin: 0.25em; font-size: 35px; opacity: 0.2;">Variables</p></a>
+                </div>
+                <p style="font-size:30px;">Para seleccionar el estado a visualizar:</p>
+                <p style="font-size:30px;">Da clic al estado de tu elección</p>
+
+                <img src="~/img/cubo/cubo5.png" style="width: 100%;">
+
+            </section>
+
+            <section data-auto-animate id="municipio">
+
+                <img src="~/img/sedatusniiv01.png" style=" width: 100%;">
+                <div class="r-hstack">
+                    <a href="#/periodo"><h6 style="color: #0C231E !important; padding: 0.75em; margin: 0.25em;">Seleccionar filtros</h6></a>
+                    <a href="#/filas"><h6 style="padding: 0.75em; margin: 0.25em; opacity: 0.2; ">Acomodo de filtros</h6></a>
+                </div>
+                <div class="r-hstack">
+                    <a href="#/periodo"><p style="padding: 0.75em; margin: 0.25em; font-size: 35px; opacity: 0.2;">Periodo</p></a>
+                    <a href="#/estado"><p style="padding: 0.75em; margin: 0.25em; font-size: 35px; opacity: 0.2;">Estado</p></a>
+                    <a href="#/municipio"><p style="padding: 0.75em; margin: 0.25em; font-size: 35px; ">Municipio</p></a>
+                    <a href="#/variables"><p style="padding: 0.75em; margin: 0.25em; font-size: 35px; opacity: 0.2;">Variables</p></a>
+
+                </div>
+                <p style="font-size:30px;">Para seleccionar el municipio a visualizar:</p>
+                <p style="font-size:30px;">Selecciona un estado de la lista y dar clic a la lista de municipio</p>
+
+                <img src="~/img/cubo/cubo6.png" style="width: 100%;">
+
+            </section>
+
+            <section data-auto-animate>
+
+                <img src="~/img/sedatusniiv01.png" style=" width: 100%;">
+                <div class="r-hstack">
+                    <a href="#/periodo"><h6 style="color: #0C231E !important; padding: 0.75em; margin: 0.25em;">Seleccionar filtros</h6></a>
+                    <a href="#/filas"><h6 style="padding: 0.75em; margin: 0.25em; opacity: 0.2; ">Acomodo de filtros</h6></a>
+                </div>
+                <div class="r-hstack">
+                    <a href="#/periodo"><p style="padding: 0.75em; margin: 0.25em; font-size: 35px; opacity: 0.2;">Periodo</p></a>
+                    <a href="#/estado"><p style="padding: 0.75em; margin: 0.25em; font-size: 35px; opacity: 0.2;">Estado</p></a>
+                    <a href="#/municipio"><p style="padding: 0.75em; margin: 0.25em; font-size: 35px; ">Municipio</p></a>
+                    <a href="#/variables"><p style="padding: 0.75em; margin: 0.25em; font-size: 35px; opacity: 0.2;">Variables</p></a>
+
+                </div>
+                <p style="font-size:30px;">Para seleccionar el municipio a visualizar:</p>
+                <p style="font-size:30px;">Da clic al municipio de tu elección</p>
+
+                <img src="~/img/cubo/cubo7.png" style="width: 100%;">
+
+            </section>
+
+            <section data-auto-animate id="variables">
+
+                <img src="~/img/sedatusniiv01.png" style=" width: 100%;">
+                <div class="r-hstack">
+                    <a href="#/periodo"><h6 style="color: #0C231E !important; padding: 0.75em; margin: 0.25em;">Seleccionar filtros</h6></a>
+                    <a href="#/filas"><h6 style="padding: 0.75em; margin: 0.25em; opacity: 0.2; ">Acomodo de filtros</h6></a>
+                </div>
+                <div class="r-hstack">
+                    <a href="#/periodo"><p style="padding: 0.75em; margin: 0.25em; font-size: 35px; opacity: 0.2;">Periodo</p></a>
+                    <a href="#/estado"><p style="padding: 0.75em; margin: 0.25em; font-size: 35px; opacity: 0.2;">Estado</p></a>
+                    <a href="#/municipio"><p style="padding: 0.75em; margin: 0.25em; font-size: 35px; opacity: 0.2;">Municipio</p></a>
+                    <a href="#/variables"><p style="padding: 0.75em; margin: 0.25em; font-size: 35px; ">Variables</p></a>
+
+                </div>
+                <p style="font-size:30px;">Es posible seleccionar hasta cuatro filtros.</p>
+                <p style="font-size:30px;">Al dar clic a alguna variable, esta se incluirá en el filtrado de información</p>
+
+                <img src="~/img/cubo/cubo8.png" style="width: 100%;">
+
+            </section>
+
+            <section data-auto-animate>
+
+                <img src="~/img/sedatusniiv01.png" style=" width: 100%;">
+                <div class="r-hstack">
+                    <a href="#/periodo"><h6 style="color: #0C231E !important; padding: 0.75em; margin: 0.25em;">Seleccionar filtros</h6></a>
+                    <a href="#/filas"><h6 style="padding: 0.75em; margin: 0.25em; opacity: 0.2; ">Acomodo de filtros</h6></a>
+                </div>
+                <div class="r-hstack">
+                    <a href="#/periodo"><p style="padding: 0.75em; margin: 0.25em; font-size: 35px; opacity: 0.2;">Periodo</p></a>
+                    <a href="#/estado"><p style="padding: 0.75em; margin: 0.25em; font-size: 35px; opacity: 0.2;">Estado</p></a>
+                    <a href="#/municipio"><p style="padding: 0.75em; margin: 0.25em; font-size: 35px; opacity: 0.2;">Municipio</p></a>
+                    <a href="#/variables"><p style="padding: 0.75em; margin: 0.25em; font-size: 35px; opacity: 0.2;">Variables</p></a>
+
+                </div>
+                <p style="font-size:30px;">Finalmente, da clic en el botón aceptar para aplicar los filtros.</p>
+
+                <img src="~/img/cubo/cubo9.png" style="width: 100%;">
+
+            </section>
+
+            <section data-auto-animate id="filas">
+
+                <img src="~/img/sedatusniiv01.png" style=" width: 100%;">
+                <div class="r-hstack">
+                    <a href="#/periodo"><h6 style="padding: 0.75em; margin: 0.25em; opacity: 0.2;">Seleccionar filtros</h6></a>
+                    <a href="#/filas"><h6 style="color: #0C231E !important; padding: 0.75em; margin: 0.25em; ">Acomodo de filtros</h6></a>
+                </div>
+                <div class="r-hstack">
+                    <a href="#/filas"><p style="padding: 0.75em; margin: 0.25em; font-size: 35px;">Filas y Columnas</p></a>
+                    <a href="#/unidades"><p style="padding: 0.75em; margin: 0.25em; font-size: 35px; opacity: 0.2; ">Unidades</p></a>
+                    <a href="#/grafica"><p style="padding: 0.75em; margin: 0.25em; font-size: 35px; opacity: 0.2;">Tipo de gráfica</p></a>
+                </div>
+                <p style="font-size:30px;">Para mostrar los datos, identifica las variables seleccionadas en el recuadro que se muestra.</p>
+
+                <img src="~/img/cubo/cubo10.png" style="width: 100%;">
+
+            </section>
+
+            <section data-auto-animate>
+
+                <img src="~/img/sedatusniiv01.png" style=" width: 100%;">
+                <div class="r-hstack">
+                    <a href="#/periodo"><h6 style="padding: 0.75em; margin: 0.25em; opacity: 0.2;">Seleccionar filtros</h6></a>
+                    <a href="#/filas"><h6 style="color: #0C231E !important; padding: 0.75em; margin: 0.25em; ">Acomodo de filtros</h6></a>
+                </div>
+                <div class="r-hstack">
+                    <a href="#/filas"><p style="padding: 0.75em; margin: 0.25em; font-size: 35px;">Filas y Columnas</p></a>
+                    <a href="#/unidades"><p style="padding: 0.75em; margin: 0.25em; font-size: 35px; opacity: 0.2; ">Unidades</p></a>
+                    <a href="#/grafica"><p style="padding: 0.75em; margin: 0.25em; font-size: 35px; opacity: 0.2;">Tipo de gráfica</p></a>
+                </div>
+                <p style="font-size:30px;">Arrastra las variables a los espacios en blanco para mostrar el filtro.</p>
+
+                <img src="~/img/cubo/cubo11.png" style="width: 100%;">
+
+            </section>
+
+            <section data-auto-animate>
+
+                <img src="~/img/sedatusniiv01.png" style=" width: 100%;">
+                <div class="r-hstack">
+                    <a href="#/periodo"><h6 style="padding: 0.75em; margin: 0.25em; opacity: 0.2;">Seleccionar filtros</h6></a>
+                    <a href="#/filas"><h6 style="color: #0C231E !important; padding: 0.75em; margin: 0.25em; ">Acomodo de filtros</h6></a>
+                </div>
+                <div class="r-hstack">
+                    <a href="#/filas"><p style="padding: 0.75em; margin: 0.25em; font-size: 35px;">Filas y Columnas</p></a>
+                    <a href="#/unidades"><p style="padding: 0.75em; margin: 0.25em; font-size: 35px; opacity: 0.2; ">Unidades</p></a>
+                    <a href="#/grafica"><p style="padding: 0.75em; margin: 0.25em; font-size: 35px; opacity: 0.2;">Tipo de gráfica</p></a>
+                </div>
+                <p style="font-size:30px;">Es posible reacomodar las filas y columnas e incluso agregar más de una variable.</p>
+
+                <img src="~/img/cubo/cubo12.png" style="width: 100%;">
+
+            </section>
+
+            <section data-auto-animate id="unidades">
+
+                <img src="~/img/sedatusniiv01.png" style=" width: 100%;">
+                <div class="r-hstack">
+                    <a href="#/periodo"><h6 style="padding: 0.75em; margin: 0.25em; opacity: 0.2;">Seleccionar filtros</h6></a>
+                    <a href="#/filas"><h6 style="color: #0C231E !important; padding: 0.75em; margin: 0.25em; ">Acomodo de filtros</h6></a>
+                </div>
+                <div class="r-hstack">
+                    <a href="#/filas"><p style="padding: 0.75em; margin: 0.25em; font-size: 35px; opacity: 0.2;">Filas y Columnas</p></a>
+                    <a href="#/unidades"><p style="padding: 0.75em; margin: 0.25em; font-size: 35px; ">Unidades</p></a>
+                    <a href="#/grafica"><p style="padding: 0.75em; margin: 0.25em; font-size: 35px; opacity: 0.2;">Tipo de gráfica</p></a>
+                </div>
+                <p style="font-size:30px;">Se puede cambiar las unidades de los filtros en algunos cubos.</p>
+                <p style="font-size:30px;">Para cambiar las unidades, da clic a la lista de unidades.</p>
+
+                <img src="~/img/cubo/cubo13.png" style="width: 100%;">
+
+            </section>
+
+            <section data-auto-animate>
+
+                <img src="~/img/sedatusniiv01.png" style=" width: 100%;">
+                <div class="r-hstack">
+                    <a href="#/periodo"><h6 style="padding: 0.75em; margin: 0.25em; opacity: 0.2;">Seleccionar filtros</h6></a>
+                    <a href="#/filas"><h6 style="color: #0C231E !important; padding: 0.75em; margin: 0.25em; ">Acomodo de filtros</h6></a>
+                </div>
+                <div class="r-hstack">
+                    <a href="#/filas"><p style="padding: 0.75em; margin: 0.25em; font-size: 35px; opacity: 0.2;">Filas y Columnas</p></a>
+                    <a href="#/unidades"><p style="padding: 0.75em; margin: 0.25em; font-size: 35px; ">Unidades</p></a>
+                    <a href="#/grafica"><p style="padding: 0.75em; margin: 0.25em; font-size: 35px; opacity: 0.2;">Tipo de gráfica</p></a>
+                </div>
+                <p style="font-size:30px;">Se muestra en la lista desplegable si es posible cambiar las unidades.</p>
+                <p style="font-size:30px;">En caso de mostrar más de una unidad, selecciona la de tu preferencia.</p>
+
+                <img src="~/img/cubo/cubo14.png" style="width: 100%;">
+
+            </section>
+
+            <section data-auto-animate id="grafica">
+
+                <img src="~/img/sedatusniiv01.png" style=" width: 100%;">
+                <div class="r-hstack">
+                    <a href="#/periodo"><h6 style="padding: 0.75em; margin: 0.25em; opacity: 0.2;">Seleccionar filtros</h6></a>
+                    <a href="#/filas"><h6 style="color: #0C231E !important; padding: 0.75em; margin: 0.25em; ">Acomodo de filtros</h6></a>
+                </div>
+                <div class="r-hstack">
+                    <a href="#/filas"><p style="padding: 0.75em; margin: 0.25em; font-size: 35px; opacity: 0.2;">Filas y Columnas</p></a>
+                    <a href="#/unidades"><p style="padding: 0.75em; margin: 0.25em; font-size: 35px; opacity: 0.2;">Unidades</p></a>
+                    <a href="#/grafica"><p style="padding: 0.75em; margin: 0.25em; font-size: 35px; ">Tipo de gráfica</p></a>
+                </div>
+                <p style="font-size:30px;">Por defecto al aplicar los filtros, se muestra la información mediante una tabla de calor.</p>
+
+                <img src="~/img/cubo/cubo16.png" style="width: 100%;">
+
+            </section>
+
+            <section data-auto-animate>
+
+                <img src="~/img/sedatusniiv01.png" style=" width: 100%;">
+                <div class="r-hstack">
+                    <a href="#/periodo"><h6 style="padding: 0.75em; margin: 0.25em; opacity: 0.2;">Seleccionar filtros</h6></a>
+                    <a href="#/filas"><h6 style="color: #0C231E !important; padding: 0.75em; margin: 0.25em; ">Acomodo de filtros</h6></a>
+                </div>
+                <div class="r-hstack">
+                    <a href="#/filas"><p style="padding: 0.75em; margin: 0.25em; font-size: 35px; opacity: 0.2;">Filas y Columnas</p></a>
+                    <a href="#/unidades"><p style="padding: 0.75em; margin: 0.25em; font-size: 35px; opacity: 0.2;">Unidades</p></a>
+                    <a href="#/grafica"><p style="padding: 0.75em; margin: 0.25em; font-size: 35px; ">Tipo de gráfica</p></a>
+                </div>
+                <p style="font-size:30px;">Para cambiar la gráfica, da clic a la lista de mapa de calor.</p>
+
+                <img src="~/img/cubo/cubo15.png" style="width: 100%;">
+
+            </section>
+
+            <section data-auto-animate>
+
+                <img src="~/img/sedatusniiv01.png" style=" width: 100%;">
+                <div class="r-hstack">
+                    <a href="#/periodo"><h6 style="padding: 0.75em; margin: 0.25em; opacity: 0.2;">Seleccionar filtros</h6></a>
+                    <a href="#/filas"><h6 style="color: #0C231E !important; padding: 0.75em; margin: 0.25em; ">Acomodo de filtros</h6></a>
+                </div>
+                <div class="r-hstack">
+                    <a href="#/filas"><p style="padding: 0.75em; margin: 0.25em; font-size: 35px; opacity: 0.2;">Filas y Columnas</p></a>
+                    <a href="#/unidades"><p style="padding: 0.75em; margin: 0.25em; font-size: 35px; opacity: 0.2;">Unidades</p></a>
+                    <a href="#/grafica"><p style="padding: 0.75em; margin: 0.25em; font-size: 35px; ">Tipo de gráfica</p></a>
+                </div>
+                <p style="font-size:30px;">Selecciona la gráfica de tu elección.</p>
+
+                <img src="~/img/cubo/cubo17.png" style="width: 100%;">
+
+            </section>
+
+            <section data-auto-animate>
+                <img src="~/img/cubo/flecha.gif" style=" width: 40%;">
+                <h3> Da clic en el botón para cerrar el tutorial</h3>
+                <img src="~/img/sedatusniiv01.png" style=" width: 100%;">
+
+
+            </section>
+
+
+
+        </section>
+
+
+    </div>
+</div>
+
+<script src="~/reveal-js/reveal.js"></script>
+<script>
+    Reveal.initialize({
+        controlsLayout: 'bottom-right',
+        touch: false,
+        center: true,
+        hash: true,
+    });</script>

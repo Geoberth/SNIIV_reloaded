@@ -1,0 +1,667 @@
+﻿@{
+    ViewData["Title"] = "Demanda";
+    string fechaSubsidios = ViewBag.fechaSubsidios;
+    string fechaFinanciamientos = ViewBag.fechaFinanciamientos;
+}
+
+@section Scripts
+{
+    <script src="~/js/util.js" type="text/javascript"></script>
+    <!-- DC -->
+    <link href="~/css/dc/dc.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/dashboard.css" rel="stylesheet" type="text/css" />
+    <script src="~/js/dc/d3.js" type="text/javascript"></script>
+    <script src="~/js/dc/d3.tip.js" type="text/javascript"></script>
+    <script src="~/js/dc/crossfilter.js" type="text/javascript"></script>
+    <script src="~/js/dc/dc.min.js" type="text/javascript"></script>
+    <script src="~/js/colorbrewer.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var countS, countF;
+        var mapEstadoS,
+            rowChartVv,
+            pieChartGeneroS,
+            pieChartEdadS,
+            rowChartSalarioS,
+            numberDisplayAccionesS,
+            numberDisplayMontoS,
+            barChartTt;
+
+        var mapEstadoF,
+            rowChartOrganismo,
+            pieChartGeneroF,
+            pieChartEdadF,
+            rowChartSalarioF,
+            numberDisplayAccionesF,
+            numberDisplayMontoF,
+            barChartTc;
+
+        $(function () {
+            //activaTab('demanda');
+
+            countS = 0;
+            countF = 0;
+
+            $('#tabS a').click(function (e) {
+                e.preventDefault();
+                if (countS < 1)
+                    initializeDashBoardS();
+                countS++;
+            });
+            $('#tabF a').click(function (e) {
+                e.preventDefault();
+                if (countF < 1)
+                    initializeDashBoardF();
+                countF++;
+            });
+
+            $(document).on('click', '.dv-s > div > span', function () {
+                var isMonto = $(this).parent().get(0).id.indexOf('Monto') >= 0 ? true : false;
+                $('#numberDisplayAccionesS').css('color', isMonto ? colorOff : colorOn);
+                $('#numberDisplayMontoS').css('color', isMonto ? colorOn : colorOff);
+                dc.filterAll('subsidios');
+                showDashBoardS(isMonto);
+            });
+            $(document).on('click', '.dv-f > div > span', function () {
+                var isMonto = $(this).parent().get(0).id.indexOf('Monto') >= 0 ? true : false;
+                $('#numberDisplayAccionesF').css('color', isMonto ? colorOff : colorOn);
+                $('#numberDisplayMontoF').css('color', isMonto ? colorOn : colorOff);
+                dc.filterAll('financiamientos');
+                showDashBoardF(isMonto);
+            });
+
+            $('.tab-active').addClass('active');
+            $('#tabS a').click();
+        });
+
+    //#region Subsidios
+        function initializeDashBoardS() {
+            mapEstadoS = dc.geoChoroplethChart('#mapEstadoS', 'subsidios');
+            rowChartVv = dc.rowChart('#rowChartVv', 'subsidios');
+            pieChartGeneroS = dc.pieChart('#pieChartGeneroS', 'subsidios');
+            pieChartEdadS = dc.pieChart('#pieChartEdadS', 'subsidios');
+            rowChartSalarioS = dc.rowChart('#rowChartSalarioS', 'subsidios');
+            numberDisplayAccionesS = dc.numberDisplay('#numberDisplayAccionesS', 'subsidios');
+            numberDisplayMontoS = dc.numberDisplay('#numberDisplayMontoS', 'subsidios');
+            barChartTt = dc.barChart('#barChartTt', 'subsidios');
+
+            showDashBoardS(false);
+        }
+
+        function showDashBoardS(isMonto) {
+            d3.json(path + 'DashboardAPI/GetKPIsCONAVI2', function (error, counts) {
+                var ndx = crossfilter(counts),
+                    estado = ndx.dimension(function (d) { return d.estado; }),
+                    groupEstado = estado.group().reduceSum(function (d) { return + isMonto ? d.monto : d.acciones; }),
+                    programa_presupuestal = ndx.dimension(function (d) { return d.programa_presupuestal; }),
+                    groupPrograma_presupuestal = programa_presupuestal.group().reduceSum(function (d) { return + isMonto ? d.monto : d.acciones; }),
+                    genero = ndx.dimension(function (d) { return d.sexo; }),
+                    groupGenero = genero.group().reduceSum(function (d) { return + isMonto ? d.monto : d.acciones; }),
+                    edad = ndx.dimension(function (d) { return d.grupo_edad; }),
+                    groupEdad = edad.group().reduceSum(function (d) { return + isMonto ? d.monto : d.acciones; }),
+                    salario = ndx.dimension(function (d) { return d.rango_salarial; }),
+                    groupSalario = salario.group().reduceSum(function (d) { return + isMonto ? d.monto : d.acciones; }),
+                    totalAcciones = ndx.groupAll().reduceSum(function (d) { return + d.acciones; }),
+                    totalMonto = ndx.groupAll().reduceSum(function (d) { return + d.monto; }),
+                    tipo_vivienda = ndx.dimension(function (d) { return d.tipo_vivienda; }),
+                    groupTipo_vivienda = tipo_vivienda.group().reduceSum(function (d) { return + isMonto ? d.monto : d.acciones; })
+
+                d3.json('../js/maps/mx.json', function (jsonData) {
+                    var projection = d3.geo.mercator()
+                        .center(center_map)
+                        .translate([width_map / 1.7, height_map / 1.7])
+                        .scale([width_map / .6]);
+                    var colorSchemeSelect = color_map;
+                    var colorScheme = colorbrewer[colorSchemeSelect];
+                    var quantiles = quantiles_map;
+
+                    var estados = groupEstado.all();
+                    var min = Math.min.apply(null, estados.map(x => x.value));
+                    var max = Math.max.apply(null, estados.map(x => x.value));
+
+                    mapEstadoS
+                        .width(width_map)
+                        .height(height_map)
+                        .dimension(estado)
+                        .group(groupEstado)
+                        .projection(projection)
+                        .overlayGeoJson(jsonData.features, 'name', function (d) {
+                            return d.properties.name;
+                        })
+                        .colors(d3.scale.quantile().range(colorScheme[quantiles]))
+                        .colorDomain([min, max])
+                        .colorCalculator(function (d) {
+                            return d ? mapEstadoS.colors()(d) : '#ccc';
+                        })
+                        .title(function (d) {
+                            return d.key + ": " + d3.format(isMonto ? '$,.0f' : ',.0f')(d.value) + (isMonto ? ' pesos' : ' acciones');
+                        });
+
+                    rowChartVv
+                        .dimension(programa_presupuestal)
+                        .group(groupPrograma_presupuestal)
+                        .elasticX(true)
+                        .margins({ top: 5, left: 5, right: 10, bottom: 40 })
+                        /*.label(function (d) {
+                            return d.key + ": " + d3.format(isMonto ? '$,.0f' : ',.0f')(d.value);
+                        })*/
+                        .title(function (d) { return ''; });
+
+                    pieChartGeneroS
+                        .height(200)
+                        .dimension(genero)
+                        .group(groupGenero)
+                        .legend(dc.legend().y(5))
+                        .title(function (d) { return ''; });
+
+                    pieChartEdadS
+                        .height(200)
+                        .dimension(edad)
+                        .group(groupEdad)
+                        .innerRadius(50)
+                        .legend(dc.legend().y(5))
+                        .title(function (d) { return ''; });
+                    pieChartEdadS.ordering(function (d) {
+                        var order = 0;
+                        switch (d.key) {
+                            case '29 o menos':
+                                order = 1;
+                                break;
+                            case '30 a 59':
+                                order = 2;
+                                break;
+                            default:
+                                order = 3;
+                        }
+                        return order;
+                    });
+
+                    rowChartSalarioS
+                        .dimension(salario)
+                        .group(groupSalario)
+                        .elasticX(true)
+                        .margins({ top: 5, left: 5, right: 10, bottom: 40 })
+                        /*.label(function (d) {
+                            return d.key + ": " + d3.format(isMonto ? '$,.0f' : ',.0f')(d.value);
+                        })*/
+                        .title(function (d) { return ''; });
+                    rowChartSalarioS.xAxis().tickFormat(d3.format('s'));
+                    rowChartSalarioS.ordering(function (d) {
+                        var order = 0;
+                        switch (d.key) {
+                            case '2.6 o menos':
+                                order = 1;
+                                break;
+                            case '2.61 a 4.00':
+                                order = 2;
+                                break;
+                            case '4.01 a 6.00':
+                                order = 3;
+                                break;
+                            case '6.01 a 9.00':
+                                order = 4;
+                                break;
+                            case '9.01 a 12.00':
+                                order = 5;
+                                break;
+                            case 'Más de 12':
+                                order = 6;
+                                break;
+                            default:
+                                order = 7;
+                        }
+                        return order;
+                    });
+
+                    numberDisplayAccionesS
+                        .group(totalAcciones)
+                        .formatNumber(d3.format(',.0f'))
+                        .valueAccessor(function (d) { return d; });
+
+                    numberDisplayMontoS
+                        .group(totalMonto)
+                        .formatNumber(d3.format('$,.0f'))
+                        .valueAccessor(function (d) { return d; });
+
+                    barChartTt
+                        .yAxisLabel(isMonto ? " pesos" : " acciones")
+                        .height(250)
+                        .dimension(tipo_vivienda)
+                        .group(groupTipo_vivienda)
+                        .x(d3.scale.ordinal())
+                        .xUnits(dc.units.ordinal)
+                        .elasticY(true)
+                        .renderHorizontalGridLines(true)
+                        .barPadding(0.1)
+                        .margins({ top: 20, left: 50, right: 0, bottom: 80 })
+                        .brushOn(false)
+                        .clipPadding(20)
+                        .title(function (d) { return ''; })
+                        .renderLabel(true)
+                        .label(function (d) {
+                            return d3.format(isMonto ? '$,.0f' : ',.0f')(d.y);
+                        });
+                    barChartTt.yAxis().tickFormat(d3.format('s'));
+                    barChartTt.ordering(function (d) {
+                        var order = 0;
+                        switch (d.key) {
+                            case 'Horizontal':
+                                order = 1;
+                                break;
+                            case 'Vertical':
+                                order = 2;
+                                break;
+                            default:
+                                order = 3;
+                        }
+                        return order;
+                    });
+
+                    setStyleS(isMonto);
+                    dc.renderAll('subsidios');
+                    AddXAxis(rowChartVv, isMonto ? "pesos" : "acciones");
+                    AddXAxis(rowChartSalarioS, isMonto ? "pesos" : "acciones");
+                });
+            });
+        }
+
+        function setStyleS(isMonto) {
+            var f = isMonto ? d3.format('$,.0f') : d3.format(',.0f');
+            var pieTip = d3.tip()
+                .attr('class', 'd3-tip')
+                .offset([-10, 0])
+                .html(function (d) { return "<span class='label-tip'>" + d.data.key + "</span><br/>" + f(d.value) + (isMonto ? ' pesos' : ' acciones') + ' (' + dc.utils.printSingleValue((d.endAngle - d.startAngle) / (2 * Math.PI) * 100) + '%)'; });
+            var rowTip = d3.tip()
+                .attr('class', 'd3-tip')
+                .offset([-10, 0])
+                .html(function (d) { return "<span class='label-tip'>" + d.key + "</span><br/>" + f(d.value) + (isMonto ? ' pesos' : ' acciones'); });
+            var barTip = d3.tip()
+                .attr('class', 'd3-tip')
+                .offset([-10, 0])
+                .html(function (d) { return "<span class='label-tip'>" + d.x + "</span><br/>" + f(d.y) + (isMonto ? ' pesos' : ' acciones'); });
+
+            barChartTt.on('pretransition', function (chart) {
+                chart.selectAll("rect.bar").call(barTip).on('mouseover.tip', barTip.show).on('mouseout.tip', barTip.hide);
+            });
+
+            rowChartVv.on('pretransition', function (chart) {
+                chart.selectAll("g.row").call(rowTip).on('mouseover.tip', rowTip.show).on('mouseout.tip', rowTip.hide);
+            });
+
+            pieChartGeneroS.on('pretransition', function (chart) {
+                chart.selectAll(".pie-slice").call(pieTip).on('mouseover.tip', pieTip.show).on('mouseout.tip', pieTip.hide);
+                chart.selectAll('text.pie-slice').text(function (d) {
+                    return dc.utils.printSingleValue((d.endAngle - d.startAngle) / (2 * Math.PI) * 100) + '%';
+                });
+            });
+
+            pieChartEdadS.on('pretransition', function (chart) {
+                chart.selectAll(".pie-slice").call(pieTip).on('mouseover.tip', pieTip.show).on('mouseout.tip', pieTip.hide);
+                chart.selectAll('text.pie-slice').text(function (d) {
+                    return dc.utils.printSingleValue((d.endAngle - d.startAngle) / (2 * Math.PI) * 100) + '%';
+                });
+            });
+
+            rowChartSalarioS.on('pretransition', function (chart) {
+                chart.selectAll("g.row").call(rowTip).on('mouseover.tip', rowTip.show).on('mouseout.tip', rowTip.hide);
+            });
+
+            barChartTt.ordinalColors(baseColor);
+            rowChartVv.ordinalColors(baseColor);
+            pieChartGeneroS.ordinalColors(baseColor);
+            pieChartEdadS.ordinalColors(baseColor);
+            rowChartSalarioS.ordinalColors(baseColor);
+        }
+
+    //#endregion
+
+    //#region Financiamiento
+
+        function initializeDashBoardF() {
+            mapEstadoF = dc.geoChoroplethChart('#mapEstadoF', 'financiamientos');
+            rowChartOrganismo = dc.rowChart('#rowChartOrganismo', 'financiamientos');
+            pieChartGeneroF = dc.pieChart('#pieChartGeneroF', 'financiamientos');
+            pieChartEdadF = dc.pieChart('#pieChartEdadF', 'financiamientos');
+            rowChartSalarioF = dc.rowChart('#rowChartSalarioF', 'financiamientos');
+            numberDisplayAccionesF = dc.numberDisplay('#numberDisplayAccionesF', 'financiamientos');
+            numberDisplayMontoF = dc.numberDisplay('#numberDisplayMontoF', 'financiamientos');
+            barChartTc = dc.barChart('#barChartTc', 'financiamientos');
+
+            showDashBoardF(false);
+        }
+
+        function showDashBoardF(isMonto) {
+            d3.json(path + 'DashboardAPI/GetKPIsFinanciamiento2', function (error, counts) {
+                var ndx = crossfilter(counts),
+                    estado = ndx.dimension(function (d) { return d.estado; }),
+                    groupEstado = estado.group().reduceSum(function (d) { return + isMonto ? d.monto : d.acciones; }),
+                    organismo = ndx.dimension(function (d) { return d.organismo; }),
+                    groupOrganismo = organismo.group().reduceSum(function (d) { return + isMonto ? d.monto : d.acciones; }),
+                    genero = ndx.dimension(function (d) { return d.sexo; }),
+                    groupGenero = genero.group().reduceSum(function (d) { return + isMonto ? d.monto : d.acciones; }),
+                    edad = ndx.dimension(function (d) { return d.grupo_edad; }),
+                    groupEdad = edad.group().reduceSum(function (d) { return + isMonto ? d.monto : d.acciones; }),
+                    salario = ndx.dimension(function (d) { return d.rango_salarial; }),
+                    groupSalario = salario.group().reduceSum(function (d) { return + isMonto ? d.monto : d.acciones; }),
+                    totalAcciones = ndx.groupAll().reduceSum(function (d) { return + d.acciones; }),
+                    totalMonto = ndx.groupAll().reduceSum(function (d) { return + d.monto; }),
+                    modalidad = ndx.dimension(function (d) { return d.modalidad; }),
+                    groupModalidad = modalidad.group().reduce(reduceAdd, reduceRemove, reduceInitial);
+                function reduceAdd(p, v) {
+                    p[v.tipo_credito] = (p[v.tipo_credito] || 0) + (isMonto ? v.monto : v.acciones); return p;
+                }
+                function reduceRemove(p, v) {
+                    p[v.tipo_credito] = (p[v.tipo_credito] || 0) - (isMonto ? v.monto : v.acciones); return p;
+                }
+                function reduceInitial() {
+                    return {};
+                }
+
+                d3.json('../js/maps/mx.json', function (jsonData) {
+                    var projection = d3.geo.mercator()
+                        .center(center_map)
+                        .translate([width_map / 1.7, height_map / 1.7])
+                        .scale([width_map / .6]);
+                    var colorSchemeSelect = color_map;
+                    var colorScheme = colorbrewer[colorSchemeSelect];
+                    var quantiles = quantiles_map;
+
+                    var estados = groupEstado.all();
+                    var min = Math.min.apply(null, estados.map(x => x.value));
+                    var max = Math.max.apply(null, estados.map(x => x.value));
+
+                    mapEstadoF
+                        .width(width_map)
+                        .height(height_map)
+                        .dimension(estado)
+                        .group(groupEstado)
+                        .projection(projection)
+                        .overlayGeoJson(jsonData.features, 'name', function (d) {
+                            return d.properties.name;
+                        })
+                        .colors(d3.scale.quantile().range(colorScheme[quantiles]))
+                        .colorDomain([min, max])
+                        .colorCalculator(function (d) {
+                            return d ? mapEstadoF.colors()(d) : '#ccc';
+                        })
+                        .title(function (d) {
+                            return d.key + ": " + d3.format(isMonto ? '$,.0f' : ',.0f')(d.value) + (isMonto ? ' pesos' : ' acciones');
+                        });
+
+                    rowChartOrganismo
+                        .dimension(organismo)
+                        .group(groupOrganismo)
+                        .elasticX(true)
+                        .margins({ top: 5, left: 5, right: 10, bottom: 40 })
+                        /*.label(function (d) {
+                            return d.key + ": " + d3.format(isMonto ? '$,.0f' : ',.0f')(d.value);
+                        })*/
+                        .title(function (d) { return ''; });
+                    rowChartOrganismo.xAxis().tickFormat(d3.format('s'));
+
+                    pieChartGeneroF
+                        .height(200)
+                        .dimension(genero)
+                        .group(groupGenero)
+                        .legend(dc.legend().y(5).itemHeight(item_height))
+                        .title(function (d) { return ''; });
+
+                    pieChartEdadF
+                        .height(200)
+                        .dimension(edad)
+                        .group(groupEdad)
+                        .innerRadius(50)
+                        .legend(dc.legend().y(5).itemHeight(item_height))
+                        .title(function (d) { return ''; });
+                    pieChartEdadF.ordering(function (d) {
+                        var order = 0;
+                        switch (d.key) {
+                            case '29 o menos':
+                                order = 1;
+                                break;
+                            case '30 a 59':
+                                order = 2;
+                                break;
+                            case '60 o más':
+                                order = 3;
+                                break;
+                            default:
+                                order = 4;
+                        }
+                        return order;
+                    });
+
+                    rowChartSalarioF
+                        .dimension(salario)
+                        .group(groupSalario)
+                        .elasticX(true)
+                        .margins({ top: 5, left: 5, right: 10, bottom: 40 })
+                        /*.label(function (d) {
+                            return d.key + ": " + d3.format(isMonto ? '$,.0f' : ',.0f')(d.value);
+                        })*/
+                        .title(function (d) { return ''; });
+                    rowChartSalarioF.xAxis().tickFormat(d3.format('s'));
+                    rowChartSalarioF.ordering(function (d) {
+                        var order = 0;
+                        switch (d.key) {
+                            case '2.6 o menos':
+                                order = 1;
+                                break;
+                            case '2.61 a 4.00':
+                                order = 2;
+                                break;
+                            case '4.01 a 6.00':
+                                order = 3;
+                                break;
+                            case '6.01 a 9.00':
+                                order = 4;
+                                break;
+                            case '9.01 a 12.00':
+                                order = 5;
+                                break;
+                            case 'Más de 12':
+                                order = 6;
+                                break;
+                            default:
+                                order = 7;
+                        }
+                        return order;
+                    });
+
+                    numberDisplayAccionesF
+                        .group(totalAcciones)
+                        .formatNumber(d3.format(',.0f'))
+                        .valueAccessor(function (d) { return d; });
+
+                    numberDisplayMontoF
+                        .group(totalMonto)
+                        .formatNumber(d3.format('$,.0f'))
+                        .valueAccessor(function (d) { return d; });
+
+                    barChartTc
+                        .yAxisLabel(isMonto ? " pesos" : " acciones")
+                        .height(250)
+                        .dimension(modalidad)
+                        .group(groupModalidad, "Cofinanciamientos y subsidios", function (d) { return d.value['Cofinanciamientos y subsidios'] || 0; })
+                        .stack(groupModalidad, "Credito individual", function (d) { return d.value['Credito individual'] || 0; })
+                        .x(d3.scale.ordinal().domain(['Viviendas nuevas', 'Viviendas existentes', 'Mejoramientos', 'Otros programas']))
+                        .xUnits(dc.units.ordinal)
+                        .elasticY(true)
+                        .renderHorizontalGridLines(true)
+                        .barPadding(0.1)
+                        .margins({ top: 40, left: 65, right: 0, bottom: 70 })
+                        .brushOn(false)
+                        .clipPadding(20)
+                        .title(function (d) { return ''; })
+                        .label(function (d) {
+                            return d3.format(isMonto ? '$,.0f' : ',.0f')(d.y);
+                        })
+                        .renderLabel(false);
+                    barChartTc.legend(dc.legend().y(5));
+                    barChartTc.yAxis().tickFormat(d3.format('s'));
+
+                    setStyleF(isMonto);
+                    dc.renderAll('financiamientos');
+                    AddXAxis(rowChartOrganismo, isMonto ? "pesos" : "acciones");
+                    AddXAxis(rowChartSalarioF, isMonto ? "pesos" : "acciones");
+                });
+            });
+        }
+
+        function setStyleF(isMonto) {
+            var f = isMonto ? d3.format('$,.0f') : d3.format(',.0f');
+            var pieTip = d3.tip()
+                .attr('class', 'd3-tip')
+                .offset([-10, 0])
+                .html(function (d) { return "<span class='label-tip'>" + d.data.key + "</span><br/>" + f(d.value) + (isMonto ? ' pesos' : ' acciones') + ' (' + dc.utils.printSingleValue((d.endAngle - d.startAngle) / (2 * Math.PI) * 100) + '%)'; });
+            var rowTip = d3.tip()
+                .attr('class', 'd3-tip')
+                .offset([-10, 0])
+                .html(function (d) { return "<span class='label-tip'>" + d.key + "</span><br/>" + f(d.value) + (isMonto ? ' pesos' : ' acciones'); });
+            var barTip = d3.tip()
+                .attr('class', 'd3-tip')
+                .offset([-10, 0])
+                .html(function (d) { return "<span class='label-tip'>" + d.x + "</span><br/>" + d.layer + "<br/>" + f(d.y) + (isMonto ? ' pesos' : ' acciones'); });
+
+            barChartTc.on('pretransition', function (chart) {
+                chart.selectAll("rect.bar").call(barTip).on('mouseover.tip', barTip.show).on('mouseout.tip', barTip.hide);
+            });
+
+            rowChartOrganismo.on('pretransition', function (chart) {
+                chart.selectAll("g.row").call(rowTip).on('mouseover.tip', rowTip.show).on('mouseout.tip', rowTip.hide);
+            });
+
+            pieChartGeneroF.on('pretransition', function (chart) {
+                chart.selectAll(".pie-slice").call(pieTip).on('mouseover.tip', pieTip.show).on('mouseout.tip', pieTip.hide);
+                chart.selectAll('text.pie-slice').text(function (d) {
+                    return dc.utils.printSingleValue((d.endAngle - d.startAngle) / (2 * Math.PI) * 100) + '%';
+                });
+            });
+
+            pieChartEdadF.on('pretransition', function (chart) {
+                chart.selectAll(".pie-slice").call(pieTip).on('mouseover.tip', pieTip.show).on('mouseout.tip', pieTip.hide);
+                chart.selectAll('text.pie-slice').text(function (d) {
+                    return dc.utils.printSingleValue((d.endAngle - d.startAngle) / (2 * Math.PI) * 100) + '%';
+                });
+            });
+
+            rowChartSalarioF.on('pretransition', function (chart) {
+                chart.selectAll("g.row").call(rowTip).on('mouseover.tip', rowTip.show).on('mouseout.tip', rowTip.hide);
+            });
+
+            barChartTc.ordinalColors(baseColor);
+            rowChartOrganismo.ordinalColors(baseColor);
+            pieChartGeneroF.ordinalColors(baseColor);
+            pieChartEdadF.ordinalColors(baseColor);
+            rowChartSalarioF.ordinalColors(baseColor);
+        }
+
+    //#endregion
+    </script>
+}
+
+<br />
+<div id="tabs">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+        <li id="tabS" role="presentation" class="tab-active"><a href="#lnk_s" aria-controls="lnk_s" role="tab" data-toggle="tab">Subsidios</a></li>
+        <li id="tabF" role="presentation"><a href="#lnk_f" aria-controls="lnk_f" role="tab" data-toggle="tab">Financiamientos</a></li>
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="lnk_s">
+
+            <div class="page-header">
+                <h2>
+                    Subsidios CONAVI
+                    @*<asp:Label ID="lbl_anio_s" runat="server" Text=""></asp:Label>*@
+                    <small>del @fechaSubsidios</small>
+                    <a href="javascript:dc.filterAll('subsidios'); dc.renderAll('subsidios');" title="Recargar" data-toggle="tooltip" data-placement="bottom"><span class="icon s7-refresh-2"></span></a>
+                    <a href="/Cubo/Conavi" title="Editar consulta"><span class="icon s7-edit" data-toggle="tooltip" data-placement="bottom" title="Editar consulta"></span></a>
+                </h2>
+            </div>
+
+            <div class="row">
+                <div class="col-md-8">
+                    <h3>Estado</h3>
+                    <div id="mapEstadoS" class="geoChoroplethChart" style="overflow-x: auto"></div>
+                </div>
+                <div class="col-md-4 dv-s">
+                    <h3>Total</h3>
+                    <div id="numberDisplayAccionesS" class="number-acciones"></div>
+                    <div id="numberDisplayMontoS" class="number-monto"></div>
+                </div>
+                <div class="col-md-4">
+                    <h3>Programa presupuestal</h3>
+                    <div id="rowChartVv"></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Sexo</h3>
+                    <div id="pieChartGeneroS"></div>
+                </div>
+                <div class="col-md-6">
+                    <h3>Grupos de edad</h3>
+                    <div id="pieChartEdadS"></div>
+                </div>
+                <div class="col-md-6">
+                    <h3>Rangos de salario</h3>
+                    <div id="rowChartSalarioS"></div>
+                </div>
+                <div class="col-md-6">
+                    <h3>Tipo de vivenda</h3>
+                    <div id="barChartTt"></div>
+                </div>
+            </div>
+
+        </div>
+        <div role="tabpanel" class="tab-pane" id="lnk_f">
+
+            <div class="page-header">
+                <h2>
+                    Financiamientos@*<asp:Label ID="Label1" runat="server" Text=""></asp:Label>*@
+                    <small>del @fechaFinanciamientos</small>
+                    <a href="javascript:dc.filterAll('financiamientos'); dc.renderAll('financiamientos');" title="Recargar" data-toggle="tooltip" data-placement="bottom"><span class="icon s7-refresh-2"></span></a>
+                    <a href="/Cubo/Financiamiento" title="Editar consulta"><span class="icon s7-edit" data-toggle="tooltip" data-placement="bottom" title="Editar consulta"></span></a>
+                </h2>
+            </div>
+
+            <div class="row">
+                <div class="col-md-8">
+                    <h3>Estado</h3>
+                    <div id="mapEstadoF" class="geoChoroplethChart" style="overflow-x: auto"></div>
+                </div>
+                <div class="col-md-4 dv-f">
+                    <h3>Total</h3>
+                    <div id="numberDisplayAccionesF" class="number-acciones"></div>
+                    <div id="numberDisplayMontoF" class="number-monto"></div>
+                </div>
+                <div class="col-md-4">
+                    <h3>Modalidad</h3>
+                    <div id="barChartTc"></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Rangos de salario</h3>
+                    <div id="rowChartSalarioF"></div>
+                </div>
+                <div class="col-md-6">
+                    <h3>Sexo</h3>
+                    <div id="pieChartGeneroF"></div>
+                </div>
+                <div class="col-md-6">
+                    <h3>Grupos de edad</h3>
+                    <div id="pieChartEdadF"></div>
+                </div>
+                <div class="col-md-6">
+                    <h3>Organismo</h3>
+                    <div id="rowChartOrganismo"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

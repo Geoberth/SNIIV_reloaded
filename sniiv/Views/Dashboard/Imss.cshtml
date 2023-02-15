@@ -1,0 +1,268 @@
+﻿@{
+    ViewData["Title"] = "IMSS";
+    List<SelectListItem> anios = (List<SelectListItem>)ViewBag.anios;
+    //List<SelectListItem> meses = (List<SelectListItem>)ViewBag.meses;
+    string fecha = ViewBag.fecha;
+}
+
+@section Scripts
+{
+    <script src="~/js/util.js" type="text/javascript"></script>
+    <!-- DC -->
+    <link href="~/css/dc/dc.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/dashboard.css" rel="stylesheet" type="text/css" />
+    <script src="~/js/dc/d3.js" type="text/javascript"></script>
+    <script src="~/js/dc/d3.tip.js" type="text/javascript"></script>
+    <script src="~/js/dc/crossfilter.js" type="text/javascript"></script>
+    <script src="~/js/dc/dc.min.js" type="text/javascript"></script>
+    <script src="~/js/colorbrewer.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var anio;
+        var mapEstado,
+            numberDisplayTotal,
+            pieChartGenero,
+            pieChartEdad,
+            rowChartSector,
+            rowChartSalario;
+        var unidadesChart = "trabajadores";
+        $(function () {
+            $('#ddl_anio').change(async function () {
+                anio = $('#ddl_anio').val();
+                //mes = await mostrarMes();
+                initializeDashBoard(anio);
+            });
+            /*$('#ddl_mes').change(function () {
+                mes = $('#ddl_mes').val();
+                initializeDashBoard(anio, mes);
+            });*/
+            initializeDashBoard();
+        });
+
+        /*async function mostrarMes() {
+            anio = $('#ddl_anio').val();
+            var data = await $.getJSON(path + 'CatalogoAPI/GetMesImss/' + anio, function (json) {
+                $('#ddl_mes').empty();
+                $.each(json, function (key, obj) {
+                    $('#ddl_mes').append($('<option></option>').attr('value', obj.id).text(obj.descripcion));
+                });
+            });
+            return data[0].id;
+        }*/
+
+        function initializeDashBoard(anio_v) {
+            anio = (anio_v != undefined) ? anio_v : $('#ddl_anio').val();
+            //mes = (mes_v != undefined) ? mes_v : $('#ddl_mes').val();
+            mapEstado = dc.geoChoroplethChart('#mapEstado');
+            numberDisplayTotal = dc.numberDisplay('#numberDisplayTotal');
+            pieChartGenero = dc.pieChart('#pieChartGenero');
+            pieChartEdad = dc.pieChart('#pieChartEdad');
+            rowChartSector = dc.rowChart('#rowChartSector');
+            rowChartSalario = dc.rowChart('#rowChartSalario');
+
+            d3.json(path + 'DashboardAPI/getKPIsImss/' + anio, function (error, counts) {
+                var ndx = crossfilter(counts),
+                    estado = ndx.dimension(function (d) { return d.estado; }),
+                    groupEstado = estado.group().reduceSum(function (d) { return + d.trabajadores; }),
+                    total = ndx.groupAll().reduceSum(function (d) { return + d.trabajadores; }),
+                    genero = ndx.dimension(function (d) { return d.sexo; }),
+                    groupGenero = genero.group().reduceSum(function (d) { return + d.trabajadores; }),
+                    edad = ndx.dimension(function (d) { return d.grupo_edad; }),
+                    groupEdad = edad.group().reduceSum(function (d) { return + d.trabajadores; }),
+                    sector = ndx.dimension(function (d) { return d.sector_economico; }),
+                    groupSector = sector.group().reduceSum(function (d) { return + d.trabajadores; }),
+                    salario = ndx.dimension(function (d) { return d.rango_salarial; }),
+                    groupSalario = salario.group().reduceSum(function (d) { return + d.trabajadores; });
+
+                d3.json('../js/maps/mx.json', function (jsonData) {
+                    var projection = d3.geo.mercator()
+                        .center(center_map)
+                        .translate([width_map / 1.7, height_map / 1.7])
+                        .scale([width_map / .6]);
+                    var colorSchemeSelect = color_map;
+                    var colorScheme = colorbrewer[colorSchemeSelect];
+                    var quantiles = quantiles_map;
+
+                    var estados = groupEstado.all();
+                    var min = Math.min.apply(null, estados.map(x => x.value));
+                    var max = Math.max.apply(null, estados.map(x => x.value));
+                    //console.log(estados);
+
+                    mapEstado
+                        .width(width_map)
+                        .height(height_map)
+                        .dimension(estado)
+                        .group(groupEstado)
+                        .projection(projection)
+                        .overlayGeoJson(jsonData.features, 'name', function (d) {
+                            return d.properties.name;
+                        })
+                        .colors(d3.scale.quantile().range(colorScheme[quantiles]))
+                        .colorDomain([min, max])
+                        .colorCalculator(function (d) {
+                            return d ? mapEstado.colors()(d) : '#ccc';
+                        })
+                        .title(function (d) {
+                            return d.key + ": " + d3.format(',.0f')(d.value) + " " + unidadesChart;
+                        });
+
+                    numberDisplayTotal
+                        .group(total)
+                        .formatNumber(d3.format(',.0f'))
+                        .valueAccessor(function (d) { return d; });
+
+                    pieChartGenero
+                        .height(250)
+                        .dimension(genero)
+                        .group(groupGenero)
+                        .legend(dc.legend().y(5))
+                        .title(function (d) { return ''; });
+
+                    pieChartEdad
+                        .height(250)
+                        .dimension(edad)
+                        .group(groupEdad)
+                        .innerRadius(50)
+                        .legend(dc.legend().y(5))
+                        .title(function (d) { return ''; });
+                    pieChartEdad.ordering(function (d) {
+                        var order = 0;
+                        switch (d.key) {
+                            case '29 o menos':
+                                order = 1;
+                                break;
+                            case '30 a 59':
+                                order = 2;
+                                break;
+                            default:
+                                order = 3;
+                        }
+                        return order;
+                    });
+
+                    rowChartSector
+                        .height(250)
+                        .dimension(sector)
+                        .group(groupSector)
+                        .elasticX(true)
+                        .margins({ top: 5, left: 5, right: 10, bottom: 40 })
+                        /*.label(function (d) {
+                            return d.key + ": " + d3.format(',.0f')(d.value);
+                        })*/
+                        .title(function (d) { return ''; });
+                    rowChartSector.xAxis().tickFormat(d3.format('s'));
+
+                    rowChartSalario
+                        .height(250)
+                        .dimension(salario)
+                        .group(groupSalario)
+                        .elasticX(true)
+                        .margins({ top: 5, left: 5, right: 10, bottom: 40 })
+                        /*.label(function (d) {
+                            return d.key + ": " + d3.format(',.0f')(d.value);
+                        })*/
+                        .title(function (d) { return ''; });
+                    rowChartSalario.xAxis().tickFormat(d3.format('s'));
+
+                    setStyleS();
+                    dc.renderAll();
+                    AddXAxis(rowChartSalario, unidadesChart);
+                    AddXAxis(rowChartSector, unidadesChart);
+                });
+
+
+            });
+
+            function setStyleS() {
+                var f = d3.format(',.0f');
+                var pieTip = d3.tip()
+                    .attr('class', 'd3-tip')
+                    .offset([-10, 0])
+                    .html(function (d) { return "<span class='label-tip'>" + d.data.key + "</span><br/>" + f(d.value) + " " + unidadesChart +' (' + dc.utils.printSingleValue((d.endAngle - d.startAngle) / (2 * Math.PI) * 100) + '%)'; });
+                var rowTip = d3.tip()
+                    .attr('class', 'd3-tip')
+                    .offset([-10, 0])
+                    .html(function (d) { return "<span class='label-tip'>" + d.key + "</span><br/>" + f(d.value) + " " + unidadesChart; });
+                var barTip = d3.tip()
+                    .attr('class', 'd3-tip')
+                    .offset([-10, 0])
+                    .html(function (d) { return "<span class='label-tip'>" + d.x + "</span><br/>" + f(d.y) + " " + unidadesChart; });
+
+                pieChartGenero.on('pretransition', function (chart) {
+                    chart.selectAll(".pie-slice").call(pieTip).on('mouseover.tip', pieTip.show).on('mouseout.tip', pieTip.hide);
+                    chart.selectAll('text.pie-slice').text(function (d) {
+                        return dc.utils.printSingleValue((d.endAngle - d.startAngle) / (2 * Math.PI) * 100) + '%';
+                    });
+                });
+
+                pieChartEdad.on('pretransition', function (chart) {
+                    chart.selectAll(".pie-slice").call(pieTip).on('mouseover.tip', pieTip.show).on('mouseout.tip', pieTip.hide);
+                    chart.selectAll('text.pie-slice').text(function (d) {
+                        return dc.utils.printSingleValue((d.endAngle - d.startAngle) / (2 * Math.PI) * 100) + '%';
+                    });
+                });
+
+                rowChartSector.on('pretransition', function (chart) {
+                    chart.selectAll("g.row").call(rowTip).on('mouseover.tip', rowTip.show).on('mouseout.tip', rowTip.hide);
+                });
+
+                rowChartSalario.on('pretransition', function (chart) {
+                    chart.selectAll("g.row").call(rowTip).on('mouseover.tip', rowTip.show).on('mouseout.tip', rowTip.hide);
+                });
+
+                pieChartGenero.ordinalColors(baseColor);
+                pieChartEdad.ordinalColors(baseColor);
+                rowChartSector.ordinalColors(baseColor);
+                rowChartSalario.ordinalColors(baseColor);
+            }
+        }
+    </script>
+}
+
+<div class="page-header">
+    <h2>
+        Empleo formal IMSS <small>@fecha</small>
+        <a href="javascript:dc.filterAll(); dc.renderAll();" title="Recargar" data-toggle="tooltip" data-placement="bottom"><span class="icon s7-refresh-2"></span></a>
+        <a href="/Cubo/Imss" title="Editar consulta"><span class="icon s7-edit" data-toggle="tooltip" data-placement="bottom" title="Editar consulta"></span></a>
+    </h2>
+</div>
+
+<div id="div-form" class="form-inline">
+    <div class="form-group">
+        <label>Año:</label>
+        @Html.DropDownList("ddl_anio", anios, new { @class = "form-control" })
+    </div>
+    @*<div class="form-group">
+        <label>Mes:</label>
+        @Html.DropDownList("ddl_mes", meses, new { @class = "form-control" })
+    </div>*@
+</div>
+
+<div class="row">
+    <div class="col-md-8">
+        <h3>Estado</h3>
+        <div id="mapEstado" class="geoChoroplethChart" style="overflow-x: auto"></div>
+    </div>
+    <div class="col-md-4 dv">
+        <h3>Total (trabajadores)</h3>
+        <div id="numberDisplayTotal" class="number-acciones"></div>
+    </div>
+    <div class="col-md-4">
+        <h3>Sector económico</h3>
+        <div id="rowChartSector" class="chart"></div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h3>Rangos de salario</h3>
+        <div id="rowChartSalario" class="chart"></div>
+    </div>
+    <div class="col-md-4">
+        <h3>Sexo</h3>
+        <div id="pieChartGenero" class="chart"></div>
+    </div>
+    <div class="col-md-4">
+        <h3>Grupos de edad</h3>
+        <div id="pieChartEdad" class="chart"></div>
+    </div>
+</div>
