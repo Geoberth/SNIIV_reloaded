@@ -1,0 +1,115 @@
+{
+    "Nombre": "4.2 Porcentaje de viviendas con problemas estructurales",
+    "Objetivo prioritario": "Seguimiento del cumplimiento de los objetivos, prioridades y estrategias del Programa Nacional de Vivienda; Cumplimiento del derecho a la vivienda adecuada con indicadores de seguimiento en distintas dimensiones",
+    "Definición o descripción": "Medición del porcentaje de viviendas particulares habitadas con algún tipo de problema estructural:  a) Humedad/filtraciones de agua, b) Grietas/cuarteaduras, c) Deformaciones en marcos, d) Levantamiento o hundimientos de pisos, e) Fracturas/ deformaciones de columnas vigas o trabes y f) En tubería o drenaje.",
+    "Nivel de desagregación": "Nacional",
+    "Periodicidad o frecuencia de medición": "No establecida",
+    "Tipo": "Estratégico",
+    "Acumulado o periódico": "Periódico",
+    "Unidad de medida": "Porcentaje de viviendas con problemas estructurales ",
+    "Periodo de recolección de datos": "octubre diciembre",
+    "Dimensión": "Eficacia",
+    "Disponibilidad de la información": "No establecido",
+    "Tendencia esperada": "Descendente",
+    "Unidad Responsable de reportar el avance":  "15.- Desarrollo Agrario, Territorial y Urbano 511 Dirección General de Desarrollo Urbano, Suelo y Vivienda",
+    "Método de cálculo": "Porcentaje de viviendas con problemas estructurales Xi=((Total de viviendas particulares habitadas con problemas estructurales Xi))/(Total de viviendas particulares habitadas) *100, donde i es el tipo de problema estructural= humedad/filtraciones de agua, grietas/cuarteaduras, deformaciones en marcos, levantamiento o hundimientos de pisos, fracturas/ deformaciones de columnas vigas o trabes y en tubería o drenaje.",
+    "Observaciones": " El indicador se obtiene a través de las preguntas:  4.25 Esta vivienda, ¿tiene problemas con grietas o cuarteaduras en techos o muros?, 4.25 Esta vivienda, ¿tiene problemas con pandeos o deformaciones en los marcos de las puertas o ventanas?,  4.25 Esta vivienda, ¿tiene problemas con levantamientos o hundimientos del piso?, 4.25 Esta vivienda, ¿tiene problemas con humedad o filtraciones de agua en cimientos, muros o techos?, 4.25 Esta vivienda, ¿tiene problemas con fracturas, pandeos o deformación de columnas, vigas o trabes? y 4.25 Esta vivienda, ¿tiene problemas con las tuberías de agua o drenaje dentro de la vivienda?",
+    "APLICACIÓN DEL MÉTODO DE CÁLCULO DEL INDICADOR PARA LA OBTENCIÓN DEL VALOR DE LA LÍNEA BASE":
+
+
+        {
+            "variables":[
+                {
+                    "Nombre variable":"1.-Total de viviendas particulares habitadas con problemas estructurales: humedad/filtraciones de agua",
+                    "Valor variable":  15583020,
+                    "Fuente de información variable": "ENVI 2020"
+                },
+                {
+                    "Nombre variable":"2.- Total de viviendas particulares habitadas",
+                    "Valor variable": 35259433,
+                    "Fuente de información variable": "ENVI 2020"
+                },
+                {
+                    "Nombre variable":"3.- Total de viviendas particulares habitadas con problemas estructurales: grietas/cuarteaduras",
+                    "Valor variable":  14390038,
+                    "Fuente de información variable": "ENVI 2020"
+                },
+                {
+                    "Nombre variable":"4.- Total de viviendas particulares habitadas ",
+                    "Valor variable":  35259433,
+                    "Fuente de información variable": "ENVI 2020"
+                },
+                {
+                    "Nombre variable":"5.- Total de viviendas particulares habitadas con problemas estructurales: deformaciones en marcos",
+                    "Valor variable":  5725273,
+                    "Fuente de información variable": "ENVI 2020"
+                },
+                {
+                    "Nombre variable":"6.- Total de viviendas particulares habitadas",
+                    "Valor variable":  35259433,
+                    "Fuente de información variable": "ENVI 2020"
+                },
+                {
+                    "Nombre variable":"7.- Total de viviendas particulares habitadas con problemas estructurales: levantamiento o hundimientos de pisos",
+                    "Valor variable":  5218505,
+                    "Fuente de información variable": "ENVI 2020"
+                },
+                {
+                    "Nombre variable":"8.- Total de viviendas particulares habitadas",
+                    "Valor variable":  35259433,
+                    "Fuente de información variable": "ENVI 2020"
+                },
+                {
+                    "Nombre variable":"9.- Total de viviendas particulares habitadas con problemas estructurales: fracturas/ deformaciones de columnas vigas o trabes",
+                    "Valor variable":  3729173,
+                    "Fuente de información variable": "ENVI 2020"
+                },
+                {
+                    "Nombre variable":"10.- Total de viviendas particulares habitadas",
+                    "Valor variable":  35259433,
+                    "Fuente de información variable": "ENVI 2020"
+                },
+                {
+                    "Nombre variable":"11.- Total de viviendas particulares habitadas con problemas estructurales: en tubería o drenaje",
+                    "Valor variable":  2794217,
+                    "Fuente de información variable": "ENVI 2020"
+                },
+                {
+                    "Nombre variable":"12.- Total de viviendas particulares habitadas",
+                    "Valor variable":  35259433,
+                    "Fuente de información variable": "ENVI 2020"
+                        
+                }
+                ],
+            "Sustitución en método de cálculo del indicador": "Porcentaje de viviendas con problemas estructurales Xi= 15,583,020/35,259,433*100=44.2, 14,390,038/35,259,433*100=40.8, 5,725,273/35,259,433*100=16.2, 5,218,505/35,259,433*100=14.8, 3,729,173/35,259,433*100=10.6, 2,794,217/35,259,433*100=7.9"
+        },
+    "VALOR DE LÍNEA BASE Y METAS":
+    {
+        "Línea base": 
+        {
+            "Valor problemas estructurales: humedad/filtraciones de agua ": 44.2, 
+            "Valor problemas estructurales: grietas/cuarteaduras": 40.8,
+            "Valor problemas estructurales: deformaciones en marcos ": 16.2,
+            "Valor problemas estructurales: levantamiento o hundimientos de pisos": 14.8,
+            "Valor problemas estructurales: fracturas/ deformaciones de columnas vigas o trabes": 10.6,
+            "Valor problemas estructurales: en tubería o drenaje ": 7.9,
+             "Año": 2020
+ 
+        },
+        "Nota sobre la línea base":"No aplica",
+        "META 2024":"",
+        "Nota sobre la meta 2024":""
+    },
+    "SERIE HISTÓRICA DE LA META PARA EL BIENESTAR O PARÁMETRO":
+    {
+        "2012":"ND",
+        "2013":"ND",
+        "2014":"ND",
+        "2015":"ND",
+        "2016":"ND",
+        "2017":"ND",
+        "2018":"ND",
+        "2019":"ND",
+        "2020":"44.2  40.8  16.2  14.8  10.6  7.9"
+    }
+}

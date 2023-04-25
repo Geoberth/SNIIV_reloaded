@@ -63,14 +63,22 @@ namespace sniiv
             services.AddMvc(options => options.EnableEndpointRouting = false);
 
 
-            services.AddSwaggerGen();
+            //services.AddSwaggerGen();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {
 
-                    Title = "API's para Desarrolladores",
-
+                    Title = "API´s cubos estadísticos del SNIIV",
+                    Version = "v1",
+                    Description = "El catálogo del API del Sistema Nacional de Información e Indicadores de Vivienda, es el end-point donde puedes consultar los diferentes servicios que ofrece el sistema",
+                    
+                    Contact = new OpenApiContact
+                    {
+                        Name = "OFERTA",
+                        
+                        
+                    },
                 });
             });
             //services.AddCors(options => {
@@ -95,10 +103,14 @@ namespace sniiv
                 app.UseSwaggerUI(c =>
                 {
                     c.SwaggerEndpoint("/swagger/v1/swagger.json", "Catálogo de API's");
+                   // c.RoutePrefix = "swagger";
+                    // c.ConfigObject.AdditionalItems.Add("https://localhost/", $"https://localhost:443/swagger/v1/swagger.json");
                 });
+
             }
             else
             {
+
                 app.UseExceptionHandler("/Home/Error");
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();

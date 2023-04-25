@@ -37,6 +37,14 @@ a:hover, a:focus {
     border: 0;
 }
 
+.card-header {
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: #f0f3f5;
+    border-bottom: 1px solid #c8ced3;
+}
+
+
     .nav-tabs > li > a:hover,
     .nav-tabs > li > a:focus {
         color: #B38E5D !important;

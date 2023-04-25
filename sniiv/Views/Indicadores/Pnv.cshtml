@@ -1,6 +1,6 @@
-﻿@{
+﻿@{ 
     ViewData["Title"] = "PNV";
-    string environment = (string)ViewBag.environment;
+    string environment = (string)ViewBag.environment; 
 }
 
 @section Scripts{
@@ -50,7 +50,7 @@
             }
             $(".frameHeight").css("margin-left", valueArray);
         });
-        </script>
+    </script>
 }
 
-<iframe class="frameHeight" style="background: #fff; border: none; height: 100vh; width: 100vw; " src="@environment#!/indicadores" ></iframe>
+<iframe class="frameHeight" style="background: #fff; border: none; height: 100vh; width: 100vw; " src="@environment#!/indicadores"></iframe>

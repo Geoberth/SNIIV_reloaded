@@ -1,0 +1,59 @@
+{
+    "Nombre": "1 Porcentaje de cumplimiento del Programa Nacional de Vivienda (PNV) 2021-2024",
+    "Objetivo ": "Seguimiento del cumplimiento de los objetivos, prioridades y estrategias del PNV  2021-2024",
+    "Definición o descripción": " Medición del porcentaje de avance en el cumplimiento del PNV 2021-2024.",
+    "Nivel de desagregación": "Nacional",
+    "Periodicidad o frecuencia de medición": "Trimestral",
+    "Tipo": "Estratégico",
+    "Acumulado o periódico": "Acumulado",
+    "Unidad de medida": "Acciones puntuales",
+    "Periodo de recolección de datos": "Trimestral",
+    "Dimensión": "Eficacia",
+    "Disponibilidad de la información": "Un mes posterior al cierre del trimestre",
+    "Tendencia esperada": "Ascendente",
+    "Unidad Responsable de reportar el avance":  "511 Dirección General de Desarrollo Urbano, Suelo y Vivienda",
+    "Método de cálculo": "Porcentaje de acciones puntuales concluidas o en proceso comprometidas en el PNV 2021-2024=((Total de acciones puntuales concluidas o en proceso))/Total de acciones puntuales",
+    "Observaciones": "Las acciones puntuales son clasificadas en los siguientes estatus: concluida, en proceso, por iniciar o no se realizarán. Para la estimación del indicador se toma la suma de las acciones con estatus concluida o en proceso ",
+    "APLICACIÓN DEL MÉTODO DE CÁLCULO DEL INDICADOR PARA LA OBTENCIÓN DEL VALOR DE LA LÍNEA BASE":
+
+        {
+            "variables":[
+                {
+                    "Nombre variable":"1.- Total de acciones puntuales concluidas o en proceso",
+                    "Valor variable": 96,
+                    "Fuente de información variable": "Los datos provienen de la información proporcionada por los Organismos Nacionales de Vivienda y el Instituto Nacional de Suelo Sustentable a la Dirección General de Desarrollo Urbano, Suelo y Vivienda "
+                },
+                {
+                    "Nombre variable":"2.- Total de acciones puntuales",
+                    "Valor variable": 113,
+                    "Fuente de información variable": "PNV 2021-2024"
+                
+                }
+                ],
+            "Sustitución en método de cálculo del indicador": "(96/113)*100=85.0 "
+        },
+    "VALOR DE LÍNEA BASE Y METAS":
+    {
+        "Línea base": 
+        {
+            "Valor": 85.0,
+            "Año":"Cuarto trimestre de 2021"
+        },
+        "Nota sobre la línea base":"No aplica",
+        "META 2024":100,
+        "Nota sobre la meta 2024":""
+    },
+    "SERIE HISTÓRICA DE LA META PARA EL BIENESTAR O PARÁMETRO":
+    {
+        "2021 T1":"",
+        "2021 T2":"",
+        "2021 T3":"",
+        "2021 T4":85.0,
+        "2022 T1":"",
+        "2022 T2":"",
+        "2022 T3":"",
+        "2022 T4":""
+                   
+    }
+}
+            

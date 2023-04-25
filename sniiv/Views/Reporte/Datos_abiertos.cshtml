@@ -1,26 +1,32 @@
 ﻿@{ ViewData["Title"] = "Datos abiertos";
 
-                List<SelectListItem> aniosSubsidio = (List<SelectListItem>)ViewBag.aniosSubsidio;
+    List<SelectListItem> aniosSubsidio = (List<SelectListItem>)ViewBag.aniosSubsidio;
 
-                List<SelectListItem> aniosFinanciamiento = (List<SelectListItem>)ViewBag.aniosFinanciamiento;
+    List<SelectListItem> aniosFinanciamiento = (List<SelectListItem>)ViewBag.aniosFinanciamiento;
 
-                List<SelectListItem> aniosCnbv = (List<SelectListItem>)ViewBag.aniosCnbv;
+    List<SelectListItem> aniosCnbv = (List<SelectListItem>)ViewBag.aniosCnbv;
 
-                List<SelectListItem> aniosOferta = (List<SelectListItem>)ViewBag.aniosOferta;
+    List<SelectListItem> aniosOferta = (List<SelectListItem>)ViewBag.aniosOferta;
 
-                List<SelectListItem> aniosRegistro = (List<SelectListItem>)ViewBag.aniosRegistro;
+    List<SelectListItem> aniosRegistro = (List<SelectListItem>)ViewBag.aniosRegistro;
 
-                List<SelectListItem> aniosInventario = (List<SelectListItem>)ViewBag.aniosInventario;
+    List<SelectListItem> aniosInventario = (List<SelectListItem>)ViewBag.aniosInventario;
 
-                string mes_financiamiento = ViewBag.mes_financiamiento;
-                string mes_subsidio = ViewBag.mes_subsidio;
-                string mes_cnbv = ViewBag.mes_cnbv;
-                string mes_registro = ViewBag.mes_registro;
-                string trimestre_inventario = ViewBag.trimestre_inventario;
-}
+    string mes_financiamiento = ViewBag.mes_financiamiento;
+    string mes_subsidio = ViewBag.mes_subsidio;
+    string mes_cnbv = ViewBag.mes_cnbv;
+    string mes_registro = ViewBag.mes_registro;
+    string trimestre_inventario = ViewBag.trimestre_inventario; }
 
 @section Scripts{
     <script src="~/js/util.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function () {
+            $("#dv_devep2").click(function () {
+                $("#myModal").modal();
+            });
+        });
+    </script>
     <script type="text/javascript">
         var anio;
         var _conavi = 1, _financiamiento = 2, _ofertaVivienda = 3, _registroVivienda = 4, _diasInventario = 5, _cnbv = 7;
@@ -30,6 +36,7 @@
             $(".loader").hide();
 
             $('#dv_devep').hide();
+            $('#dv_devep2').hide();
             $('#img_dev').hide();
 
             $('#img_conavi').click(function () { mostrarSubcategoria(_conavi); });
@@ -43,23 +50,48 @@
                 $('.dv_contenido').hide();
                 $('#dv_financiamiento').show();
                 $('#dv_devep').hide();
+                $('#dv_devep2').hide();
                 $('#img_dev').hide();
+                $('#dv_devep01').hide();
+                $('#dv_devep02').hide();
+                $('#dv_devep03').hide();
+                $('#dv_devep04').hide();
+                $('#dv_devep05').hide();
             });
             $('#lnk_r').click(function (e) {
                 $('.dv_contenido').hide();
                 $('#dv_oferta_vivienda').show();
                 $('#dv_devep').hide();
+                $('#dv_devep2').hide();
                 $('#img_dev').hide();
+                $('#dv_devep01').hide();
+                $('#dv_devep02').hide();
+                $('#dv_devep03').hide();
+                $('#dv_devep04').hide();
+                $('#dv_devep05').hide();
             });
             $('#lnk_d').click(function (e) {
                 $('.dv_contenido').hide();
                 $('#dv_devep').show();
+                $('#dv_devep2').show();
                 $('#img_dev').show();
+                $('#dv_devep01').hide();
+                $('#dv_devep02').hide();
+                $('#dv_devep03').hide();
+                $('#dv_devep04').hide();
+                $('#dv_devep05').hide();
             });
 
             $('#lnk_c').click(function (e) {
                 $('#dv_devep').hide();
+                $('#dv_devep2').hide();
                 $('#img_dev').hide();
+
+                $('#dv_devep01').hide();
+                $('#dv_devep02').hide();
+                $('#dv_devep03').hide();
+                $('#dv_devep04').hide();
+                $('#dv_devep05').hide();
             });
 
             $('#tab-active').addClass('active');
@@ -241,7 +273,62 @@
             }
         }
 
+        function function_d1() {
+            $('#dv_devep').show();
+            $('#dv_devep01').hide();
+            $('#dv_devep02').hide();
+            $('#dv_devep03').hide();
+            $('#dv_devep04').hide();
+            $('#dv_devep05').hide();
+        }
+
+        function function_d2() {
+            $('#dv_devep').hide();
+            $('#dv_devep01').show();
+            $('#dv_devep02').hide();
+            $('#dv_devep03').hide();
+            $('#dv_devep04').hide();
+            $('#dv_devep05').hide();
+        }
+
+        function function_d3() {
+            $('#dv_devep').hide();
+            $('#dv_devep01').hide();
+            $('#dv_devep02').show();
+            $('#dv_devep03').hide();
+            $('#dv_devep04').hide();
+            $('#dv_devep05').hide();
+        }
+
+        function function_d4() {
+            $('#dv_devep').hide();
+            $('#dv_devep01').hide();
+            $('#dv_devep02').hide();
+            $('#dv_devep03').show();
+            $('#dv_devep04').hide();
+            $('#dv_devep05').hide();
+        }
+
+        function function_d5() {
+            $('#dv_devep').hide();
+            $('#dv_devep01').hide();
+            $('#dv_devep02').hide();
+            $('#dv_devep03').hide();
+            $('#dv_devep04').show();
+            $('#dv_devep05').hide();
+        }
+
+        function function_d6() {
+            $('#dv_devep').hide();
+            $('#dv_devep01').hide();
+            $('#dv_devep02').hide();
+            $('#dv_devep03').hide();
+            $('#dv_devep04').hide();
+            $('#dv_devep05').show();
+        }
+
     </script>
+    
 
     <style>
         .text-image {
@@ -252,6 +339,14 @@
             display: block;
             margin-right: auto;
             margin-left: auto;
+        }
+
+        .center-block2 {
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: 15px;
+            max-width: 42%;
         }
 
         .tab-content {
@@ -268,6 +363,14 @@
         .lindsw {
             color: #B38E5D;
             font-size: 15px;
+        }
+
+        .codelink {
+            color: darkred;
+        }
+
+        .codelink2 {
+            color: dimgray;
         }
 
         .img-rounded {
@@ -356,7 +459,7 @@
                                         <th scope="row">Palabra clave</th>
                                         <td>
                                             financiamiento, vivienda, onavis, mejoramientos, autoproducción, vivienda nueva,
-                                            vivienda usada, acciones de vivienda, crédito a la vivienda, cofinanciamiento
+                                            vivienda existente, acciones de vivienda, crédito a la vivienda, cofinanciamiento
                                         </td>
                                     </tr>
                                     <tr>
@@ -675,7 +778,7 @@
                                         <th scope="row">Palabra clave</th>
                                         <td>
                                             financiamiento, vivienda, onavis, mejoramientos, autoproducción, vivienda nueva,
-                                            vivienda usada, acciones de vivienda, crédito a la vivienda, cofinanciamiento
+                                            vivienda existente, acciones de vivienda, crédito a la vivienda, cofinanciamiento
                                         </td>
                                     </tr>
                                     <tr>
@@ -1325,28 +1428,814 @@
             </div>
         </div>
         <div role="tabpanel" class="tab-pane" id="d">
-            <h2 class="section-title">API's de sniiv.sedatu.gob.mx</h2>
-            <h5 class="text-image">Un API o Application Programming Interface es un servicio de definiciones y protocoles para un sistema que recibe peticiones para la ejecución de una tarea previamente programa. El sistema de sniiv.sedatu.gob.mx cuenta con API's, cuya finalidad es la de que los usuarios puedan consultar información de datos abiertos, de manera manera acceder a los datos alojados sobre el estado actual del sistema.</h5>
-        </div>
-        <div class="col-md-10">
-            <div id="dv_devep">
-                <h3>Documentación</h3>
-                <p>
-                    Para la documentación, generación de codigo y casos de prueba se ha implementado Swagger,
-                    como herramienta para permitir la conexión directa a las API's utilizadas en este sistema,
-                    a través de una interfaz de usuario interactiva.
+            <h3 class="text-image">API´s del Sistema Nacional de Información e Indicadores de Vivienda</h3>
+            <br />
+            <h5 class="text-image">Un API o Interfaz de Programación de Aplicaciones, es un servicio de definiciones y protocolos que reciben peticiones para la ejecución de una tarea previamente programa.</h5>
+            <h5 class="text-image">Las API's' del Sistema Nacional de Información e Indicadores de Vivienda, permiten consultar información del sector mediante servicios informáticos implementados en el sitio, de esta manera podrás consultar la información de datos abiertos del SNIIV, y acceder a los datos alojados sobre el estado actual del sistema. Estos datos forman parte del modelo de transparencia.</h5>
 
-                    Si quieres conocer más sobre los datos alojados, y hacer uso de ellos, ingresa al siguiente
-                    end-point:
-                </p>
-                <button href="https://localhost:44369/swagger/" id="btn_swagger" type="button" target="_blank" class="btn btn-success" onclick="window.location.href='https://localhost:44369/swagger/';">
-                    <span class="glyphicon glyphicon-link"> </span>CATÁLOGO DE API'S'
-                </button>
+            <div class="col-md-4 text-center" style="text-align: center;">
+                <div class="row">
+                    <br />
+                    <button class="list-group-item" target="_blank" onclick="function_d1()">
+                        API Cubo: Financiamiento
+                    </button>
+                    <button class="list-group-item" target="_blank" onclick="function_d2()">
+                        API Cubo: INFONAVIT
+                    </button>
+                    <button class="list-group-item" target="_blank" onclick="function_d3()">
+                        API Cubo: FOVISSSTE
+                    </button>
+                    <button class="list-group-item" target="_blank" onclick="function_d4()">
+                        API Cubo: CNBV
+                    </button>
+                    <button class="list-group-item" target="_blank" onclick="function_d5()">
+                        API Cubo: INSUS
+                    </button>
+                    <button class="list-group-item" target="_blank" onclick="function_d6()">
+                        API Cubo: FONHAPO
+                    </button>
+
+                    <img src="~/img/datos_abiertos/logo9.png" id="img_dev" alt="deveploment" class="img-responsive center-block2">
+                </div>
+
             </div>
-        </div>
-        <div class="col-md-2 text-center">
-            <p> </p><a> </a><p> </p><a> .</a>
-            <img src="~/img/datos_abiertos/logo9.png" id="img_dev" alt="deveploment" class="center-block img-rounded">
-        </div>
-    </div>
-</div>
+
+
+            <div class="col-md-8">
+                <div class="d_contenido">
+                    <div id="dv_devep">
+                        <h2>API Cubo: Financiamiento</h2>
+                        <table class="table table-striped">
+                            <tbody>
+                                <br />
+                                <tr>
+                                    <td>URL</td>
+                                    <td>https://sniiv.sedatu.gob.mx/api/CuboAPI/GetFinanciamiento/{anios}/{clave_estado}/{clave_municipio}/{dimensiones}</td>
+                                </tr>
+                                <tr>
+                                    <td>Formato de respuesta</td>
+                                    <td>JSON</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h4>Datos a ingresar al API</h4>
+                        <table class="table table-striped">
+                            <tbody>
+                                <tr>
+                                    <td>Año de inicio/fin</td>
+                                    <td>Rango de años deseado a cuatro dígitos, separados por una coma, sin espacios (año inicio,año fin)</td>
+                                </tr>
+                                <tr>
+                                    <td>Clave de estado (2)</td>
+                                    <td>Clave de la entidad a dos digítos</td>
+                                </tr>
+                                <tr>
+                                    <td>Clave de municipio (3)</td>
+                                    <td>Clave de municipio a tres digítos</td>
+                                </tr>
+                                <tr>
+                                    <td>Valores</td>
+                                    <td>Especificación de las variables que se desean obtener separados por una coma, sin espacios (se permite un máximo de 5 variables)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br />
+                        <br />
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4>Ejemplo</h4>
+                            </div>
+                            <div class="panel-body">
+                                <table class="table table-striped">
+                                    <tbody>
+                                        <tr>
+                                            <td>Año de inicio / año fin</td>
+                                            <td>2019,2021</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Clave de estado</td>
+                                            <td>09</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Clave de municipio</td>
+                                            <td>002</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Valores</td>
+                                            <td>anio, estado, municipio, monto, rango_edad</td>
+                                        </tr>
+                                    </tbody>
+                                    <br />
+                                </table>
+                                <h4>Request URL</h4>
+                                <code id="finan" class"json hljs">
+                                    https://sniiv.sedatu.gob.mx/api/CuboAPI/GetFinanciamiento/2019%2C2021/09/002/anio%2Cestado%2Cmunicipio%2Cmonto%2Crango_edad
+                                </code>
+                                <h4>CURL</h4>
+                                <code id="finan" class"json hljs">
+                                    curl -X 'GET' \
+                                    'https://sniiv.sedatu.gob.mx/api/CuboAPI/GetFinanciamiento/2019%2C2021/09/002/anio%2Cestado%2Cmunicipio%2Cmonto%2Crango_edad' \
+                                    -H 'accept: text/plain'
+                                </code>
+                            </div>
+
+                            <ul class="nav nav-tabs" id="tabsCodigo">
+                                <li class="active">
+                                    <a id="jsonT">JSON</a>
+                                </li>
+                            </ul>
+
+                            <div>
+                                <pre>
+                                <code id="finan" class"json hljs">
+                                <span class="codelink2">[
+                                {</span>
+                                <span class="codelink2"> "año": </span><span class="codelink">"2019"</span>
+                                <span class="codelink2">"estado":</span><span class="codelink">"Ciudad de México",</span>
+                                <span class="codelink2">"municipio": </span></span><span class="codelink">"Azcapotzalco",</span>
+                                <span class="codelink2">"grupo_edad": </span></span><span class="codelink">"No disponible",</span>
+                                <span class="codelink2">"grupo_edad":</span></span><span class="codelink">"No disponible",</span>
+                                <span class="codelink2">"zona":</span> </span><span class="codelink">"Urbano",</span>
+                                <span class="codelink2">"acciones":</span> </span><span class="codelink">661,</span>
+                                <span class="codelink2">"monto":</span> </span><span class="codelink">34997449.85</span>
+                                <span class="codelink2">},
+                                {</span>
+                                <span class="codelink2">"año": </span><span class="codelink">2019,</span>
+                                <span class="codelink2">"estado": </span><span class="codelink">"Ciudad de México",</span>
+                                <span class="codelink2">"municipio": </span><span class="codelink">"Azcapotzalco",</span>
+                                <span class="codelink2">"grupo_edad":</span><span class="codelink">"29 o menos",</span>
+                                <span class="codelink2">"zona": </span><span class="codelink">"Urbano",</span>
+                                <span class="codelink2">"acciones":</span><span class="codelink"> 276,</span>
+                                <span class="codelink2">"monto": </span><span class="codelink">160882674.5368</span>
+                                <span class="codelink2">},
+                                {</span>
+                                <span class="codelink2">"año":</span><span class="codelink">2019,</span>
+                                <span class="codelink2">"estado":</span><span class="codelink">"Ciudad de México",</span>
+                                <span class="codelink2">"municipio":</span><span class="codelink">"Azcapotzalco",</span>
+                                <span class="codelink2">"grupo_edad":</span><span class="codelink">"30 a 59",</span>
+                                <span class="codelink2">"zona":</span><span class="codelink">"Urbano",</span>
+                                <span class="codelink2">"acciones":</span><span class="codelink">2410,</span>
+                                <span class="codelink2">"monto":</span><span class="codelink">1698162855.8162</span>
+                                <span class="codelink2">},
+                                {</span>
+                                <span class="codelink2"> "año":</span> <span class="codelink"> 2019,</span>
+                                <span class="codelink2">"estado":</span> <span class="codelink"> "Ciudad de México",</span>
+                                <span class="codelink2">"municipio":</span> <span class="codelink"> "Azcapotzalco",</span>
+                                <span class="codelink2">"grupo_edad":</span> <span class="codelink"> "60 o más",</span>
+                                <span class="codelink2">"zona": </span><span class="codelink"> "Urbano",</span>
+                                <span class="codelink2">"acciones": </span><span class="codelink"> 86,</span>
+                                <span class="codelink2">"monto":</span> <span class="codelink"> 99910867.6381</span>
+                                <span class="codelink2">},
+                                {</span>
+                                <span class="codelink2">"año":</span> <span class="codelink"> 2020,</span>
+                                <span class="codelink2">"estado":</span> <span class="codelink"> "Ciudad de México",</span>
+                                <span class="codelink2">"municipio":</span> <span class="codelink"> "Azcapotzalco",</span>
+                                <span class="codelink2">"grupo_edad": </span><span class="codelink"> "No disponible",</span>
+                                <span class="codelink2">"zona":</span> <span class="codelink"> "Urbano",</span>
+                                <span class="codelink2">"acciones": </span><span class="codelink"> 431,</span>
+                                <span class="codelink2">"monto":</span> <span class="codelink"> 26195165.86</span>
+                                <span class="codelink2">},
+                                {</span>
+                                <span class="codelink2">"año": </span><span class="codelink"> 2020,</span>
+                                <span class="codelink2">"estado":</span> <span class="codelink"> "Ciudad de México",</span>
+                                <span class="codelink2">"municipio":</span> <span class="codelink"> "Azcapotzalco",</span>
+                                <span class="codelink2">"grupo_edad":</span> <span class="codelink"> "29 o menos",</span>
+                                <span class="codelink2">"zona": </span><span class="codelink"> "Urbano",</span>
+                                <span class="codelink2">"acciones":</span> <span class="codelink"> 194,</span>
+                                <span class="codelink2">"monto": </span><span class="codelink"> 142243175.4302</span>
+                                <span class="codelink2">},
+                                {</span>
+                                <span class="codelink2">"año":</span> < class="codelink">2020,</span>
+                                <span class="codelink2">"estado": </span><span class="codelink"> "Ciudad de México",</span>
+                                <span class="codelink2">"municipio":</span> <span class="codelink"> "Azcapotzalco",</span>
+                                <span class="codelink2">"grupo_edad":</span> <span class="codelink"> "30 a 59",</span>
+                                <span class="codelink2">"zona": </span><span class="codelink"> "Urbano",</span>
+                                <span class="codelink2">"acciones": </span><span class="codelink"> 1824,</span>
+                                <span class="codelink2">"monto":</span> <span class="codelink"> 1505785007.6648</span>
+                                <span class="codelink2">},
+                                {</span>
+                                <span class="codelink2">"año":</span> <span class="codelink"> 2020,</span>
+                                <span class="codelink2">"estado":</span> <span class="codelink"> "Ciudad de México",</span>
+                                <span class="codelink2">"municipio":</span> <span class="codelink"> "Azcapotzalco",</span>
+                                <span class="codelink2">"grupo_edad":</span> <span class="codelink"> "60 o más",</span>
+                                <span class="codelink2">"zona": </span><span class="codelink"> "Urbano",</span>
+                                <span class="codelink2">"acciones":</span> <span class="codelink"> 67,</span>
+                                <span class="codelink2">"monto": </span><span class="codelink"> 77480978.8947</span>
+                                <span class="codelink2">},
+                                {</span>
+                                <span class="codelink2">"año": </span><span class="codelink"> 2021,</span>
+                                <span class="codelink2">"estado": </span><span class="codelink"> "Ciudad de México",</span>
+                                <span class="codelink2">"municipio": </span><span class="codelink"> "Azcapotzalco",</span>
+                                <span class="codelink2">"grupo_edad": </span><span class="codelink"> "No disponible",</span>
+                                <span class="codelink2">"zona":</span> <span class="codelink"> "Urbano",</span>
+                                <span class="codelink2">"acciones":</span> <span class="codelink"> 3107,</span>
+                                <span class="codelink2">"monto": </span><span class="codelink"> 622209756.4200001</span>
+                                <span class="codelink2">},
+                                {</span>
+                                <span class="codelink2">"año": </span><span class="codelink"> 2021,</span>
+                                <span class="codelink2">"estado": </span><span class="codelink"> "Ciudad de México",</span>
+                                <span class="codelink2">"municipio":</span> <span class="codelink"> "Azcapotzalco",</span>
+                                <span class="codelink2">"grupo_edad": </span><span class="codelink"> "29 o menos",</span>
+                                <span class="codelink2">"zona":</span> <span class="codelink"> "Urbano",</span>
+                                <span class="codelink2">"acciones": </span><span class="codelink"> 247,</span>
+                                <span class="codelink2">"monto": </span><span class="codelink"> 157266738.8414528</span>
+                                <span class="codelink2">},
+                                {</span>
+                                <span class="codelink2">"año": </span><span class="codelink"> 2021,</span>
+                                <span class="codelink2">"estado":</span> <span class="codelink"> "Ciudad de México",</span>
+                                <span class="codelink2">"municipio": </span><span class="codelink"> "Azcapotzalco",</span>
+                                <span class="codelink2">"grupo_edad":</span><span class="codelink"> "30 a 59",</span>
+                                <span class="codelink2">"zona": </span><span class="codelink"> "Urbano",</span>
+                                <span class="codelink2">"acciones":</span> <span class="codelink"> 2944,</span>
+                                <span class="codelink2">"monto":</span> <span class="codelink"> 2059419665.2215936</span>
+                                <span class="codelink2">},
+                                {</span>
+                                <span class="codelink2">"año": </span><span class="codelink"> 2021,</span>
+                                <span class="codelink2">"estado": </span><span class="codelink"> "Ciudad de México",</span>
+                                <span class="codelink2">"municipio": </span><span class="codelink"> "Azcapotzalco",</span>
+                                <span class="codelink2">"grupo_edad": </span><span class="codelink"> "60 o más",</span>
+                                <span class="codelink2">"zona": </span><span class="codelink">"Urbano",</span>
+                                <span class="codelink2">"acciones": </span><span class="codelink"> 74,</span>
+                                <span class="codelink2">"monto":</span> <span class="codelink"> 112713583.641584</span>
+                                <span class="codelink2">},
+                                {</span>
+                            </code>
+                            </pre>
+                            </div>
+                        </div>
+                        <p>Por default se devuelve la información solicitada en formato JSON.</p>
+                        <br />
+                        <br />
+                        <br />
+                    </div>
+
+
+                    <div id="dv_devep01">
+                        <h2>API Cubo: INFONAVIT</h2>
+                        <table class="table table-striped">
+                            <tbody>
+                                <br />
+                                <tr>
+                                    <td>URL</td>
+                                    <td>https://sniiv.sedatu.gob.mx/api/CuboAPI/GetINFONAVIT/{anios}/{clave_estado}/{clave_municipio}/{dimensiones}</td>
+                                </tr>
+                                <tr>
+                                    <td>Formato de respuesta</td>
+                                    <td>JSON</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h4>Datos a ingresar al API</h4>
+                        <table class="table table-striped">
+                            <tbody>
+                                <tr>
+                                    <td>Año de inicio/fin</td>
+                                    <td>Rango de años deseado a cuatro dígitos, separados por una coma, sin espacios (año inicio,año fin)</td>
+                                </tr>
+                                <tr>
+                                    <td>Clave de estado (2)</td>
+                                    <td>Clave de la entidad a dos digítos</td>
+                                </tr>
+                                <tr>
+                                    <td>Clave de municipio (3)</td>
+                                    <td>Clave de municipio a tres digítos</td>
+                                </tr>
+                                <tr>
+                                    <td>Valores</td>
+                                    <td>Especificación de las variables que se desean obtener separados por una coma, sin espacios (se permite un máximo de 5 variables)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br />
+                        <br />
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4>Ejemplo</h4>
+                            </div>
+                            <div class="panel-body">
+                                <table class="table table-striped">
+                                    <tbody>
+                                        <tr>
+                                            <td>Año de inicio / año fin</td>
+                                            <td>2018</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Clave de estado</td>
+                                            <td>08</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Clave de municipio</td>
+                                            <td>005</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Valores</td>
+                                            <td>anio,municipio,genero</td>
+                                        </tr>
+                                    </tbody>
+                                    <br />
+                                </table>
+                                <h4>Request URL</h4>
+                                <code id="finan" class"json hljs">
+                                    https://sniiv.sedatu.gob.mx/api/CuboAPI/GetFinanciamiento/2019%2C2021/09/002/anio%2Cestado%2Cmunicipio%2Cmonto%2Crango_edad
+                                </code>
+                                <h4>CURL</h4>
+                                <code id="finan" class"json hljs">
+                                    curl -X 'GET' \
+                                    https://sniiv.sedatu.gob.mx/api/CuboAPI/GetINFONAVIT/2018/08/005/anio%2Cmunicipio%2Cgenero' \
+                                    -H 'accept: text/plain'
+                                </code>
+                            </div>
+
+                            <ul class="nav nav-tabs" id="tabsCodigo">
+                                <li class="active">
+                                    <a id="jsonT">JSON</a>
+                                </li>
+                            </ul>
+
+                            <div>
+                                <pre>
+                                <code id="finan" class"json hljs">
+                                <span class="codelink2">[
+                                        {</span>
+                                <span class="codelink2">"municipio": </span><span class="codelink">"Ascensión",</span>
+                                <span class="codelink2">"sexo": </span><span class="codelink">"Hombre",</span>
+                                <span class="codelink2">"acciones": </span><span class="codelink">13,</span>
+                                <span class="codelink2">"monto": </span><span class="codelink">3973467.36</span>
+                                <span class="codelink2">},
+                                        {</span>
+                                <span class="codelink2">"año": </span><span class="codelink">2018,</span>
+                                <span class="codelink2">"municipio": </span><span class="codelink">"Ascensión",</span>
+                                <span class="codelink2">"sexo": </span><span class="codelink">"Mujer",</span>
+                                <span class="codelink2">"acciones": </span><span class="codelink">9,</span>
+                                <span class="codelink2">"monto": </span><span class="codelink">1527404.93</span>
+                                <span class="codelink2">},
+                                        ]</span>
+                                    </code>
+                        </pre>
+                            </div>
+
+                        </div>
+                        <p>Por default se devuelve la información solicitada en formato JSON.</p>
+                        <br />
+                        <br />
+                        <br />
+                    </div>
+                    <div id="dv_devep02">
+                        <h2>API Cubo: FOVISSSTE</h2>
+                        <table class="table table-striped">
+                            <tbody>
+                                <br />
+                                <tr>
+                                    <td>URL</td>
+                                    <td>https://sniiv.sedatu.gob.mx/api/CuboAPI/GetFOVISSSTE/{anios}/{clave_estado}/{clave_municipio}/{dimensiones}</td>
+                                </tr>
+                                <tr>
+                                    <td>Formato de respuesta</td>
+                                    <td>JSON</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h4>Datos a ingresar al API</h4>
+                        <table class="table table-striped">
+                            <tbody>
+                                <tr>
+                                    <td>Año de inicio/fin</td>
+                                    <td>Rango de años deseado a cuatro dígitos, separados por una coma, sin espacios (año inicio,año fin)</td>
+                                </tr>
+                                <tr>
+                                    <td>Clave de estado (2)</td>
+                                    <td>Clave de la entidad a dos digítos</td>
+                                </tr>
+                                <tr>
+                                    <td>Clave de municipio (3)</td>
+                                    <td>Clave de municipio a tres digítos</td>
+                                </tr>
+                                <tr>
+                                    <td>Valores</td>
+                                    <td>Especificación de las variables que se desean obtener separados por una coma, sin espacios (se permite un máximo de 5 variables)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br />
+                        <br />
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4>Ejemplo</h4>
+                            </div>
+                            <div class="panel-body">
+                                <table class="table table-striped">
+                                    <tbody>
+                                        <tr>
+                                            <td>Año de inicio / año fin</td>
+                                            <td>2020,2021</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Clave de estado</td>
+                                            <td>08</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Clave de municipio</td>
+                                            <td>005</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Valores</td>
+                                            <td>anio,municipio,genero</td>
+                                        </tr>
+                                    </tbody>
+                                    <br />
+                                </table>
+                                <h4>Request URL</h4>
+                                <code id="finan" class"json hljs">
+                                    https://sniiv.sedatu.gob.mx/api/CuboAPI/GetFOVISSSTE/2020%2C2021/08/005/anio%2Cmunicipio%2Cgenero
+                                </code>
+                                <h4>CURL</h4>
+                                <code id="finan" class"json hljs">
+                                    curl -X 'GET' \
+                                    https://sniiv.sedatu.gob.mx/api/CuboAPI/GetFOVISSSTE/2020%2C2021/08/005/anio%2Cmunicipio%2Cgenero' \
+                                    -H 'accept: text/plain'
+                                </code>
+
+                            </div>
+                            <ul class="nav nav-tabs" id="tabsCodigo">
+                                <li class="active">
+                                    <a id="jsonT">JSON</a>
+                                </li>
+                            </ul>
+
+                            <div>
+                                <pre>
+                                <code id="finan" class"json hljs">
+                                <span class="codelink2">[
+                           {</span>
+                                <span class="codelink2">"año": </span><span class="codelink">2020,</span>
+                                <span class="codelink2">"municipio": </span><span class="codelink">"Ascensión",</span>
+                                <span class="codelink2">"sexo": </span><span class="codelink">"Mujer",</span>
+                                <span class="codelink2">"acciones": </span><span class="codelink">1,</span>
+                                <span class="codelink2">"monto":</span><span class="codelink"> 793869.51</span>
+                                <span class="codelink2">},
+                           {</span>
+                                <span class="codelink2">"año":</span><span class="codelink"> 2021,</span>
+                                <span class="codelink2">"municipio": </span><span class="codelink">"Ascensión",</span>
+                                <span class="codelink2">"sexo": </span><span class="codelink">"Mujer",</span>
+                                <span class="codelink2">"acciones":</span><span class="codelink"> 1,</span>
+                                <span class="codelink2">"monto":</span><span class="codelink"> 679743.4</span>
+                                <span class="codelink2">}
+                           ]</span>
+                   </code>
+                        </pre>
+                            </div>
+
+                        </div>
+                        <p>Por default se devuelve la información solicitada en formato JSON.</p>
+                        <br />
+                        <br />
+                        <br />
+                    </div>
+
+
+
+
+
+
+
+                    <div id="dv_devep03">
+                        <h2>API Cubo: CNBV</h2>
+                        <table class="table table-striped">
+                            <tbody>
+                                <br />
+                                <tr>
+                                    <td>URL</td>
+                                    <td>https://sniiv.sedatu.gob.mx/api/CuboAPI/GetCNBV/{anios}/{clave_estado}/{clave_municipio}/{dimensiones}</td>
+                                </tr>
+                                <tr>
+                                    <td>Formato de respuesta</td>
+                                    <td>JSON</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h4>Datos a ingresar al API</h4>
+                        <table class="table table-striped">
+                            <tbody>
+                                <tr>
+                                    <td>Año de inicio/fin</td>
+                                    <td>Rango de años deseado a cuatro dígitos, separados por una coma, sin espacios (año inicio,año fin)</td>
+                                </tr>
+                                <tr>
+                                    <td>Clave de estado (2)</td>
+                                    <td>Clave de la entidad a dos digítos</td>
+                                </tr>
+                                <tr>
+                                    <td>Clave de municipio (3)</td>
+                                    <td>Clave de municipio a tres digítos</td>
+                                </tr>
+                                <tr>
+                                    <td>Dimensiones (Valores)</td>
+                                    <td>Especificación de las variables que se desean obtener separados por una coma, sin espacios (se permite un máximo de 5 variables)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br />
+                        <br />
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4>Ejemplo</h4>
+                            </div>
+                            <div class="panel-body">
+                                <table class="table table-striped">
+                                    <tbody>
+                                        <tr>
+                                            <td>Año de inicio / año fin</td>
+                                            <td>2018</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Clave de estado</td>
+                                            <td>08</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Clave de municipio</td>
+                                            <td>005</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Valores</td>
+                                            <td>anio,municipio,genero</td>
+                                        </tr>
+                                    </tbody>
+                                    <br />
+                                </table>
+                                <h4>Request URL</h4>
+                                <code id="finan" class"json hljs">
+                                    https://sniiv.sedatu.gob.mx/api/CuboAPI/GetFinanciamiento/2019%2C2021/09/002/anio%2Cestado%2Cmunicipio%2Cmonto%2Crango_edad
+                                </code>
+                                <h4>CURL</h4>
+                                <code id="finan" class"json hljs">
+                                    curl -X 'GET' \
+                                    'https://sniiv.sedatu.gob.mx/api/CuboAPI/GetCNBV/2018/08/005/anio%2Cmunicipio%2Cgenero' \
+                                    -H 'accept: text/plain'
+                                </code>
+                            </div>
+
+                            <ul class="nav nav-tabs" id="tabsCodigo">
+                                <li class="active">
+                                    <a id="jsonT">JSON</a>
+                                </li>
+                            </ul>
+
+                            <div>
+                                <pre>
+                                <code id="finan" class"json hljs">
+                                <span class="codelink2">[
+                                {</span>
+                                <span class="codelink2">"año": </span><span class="codelink">2018,</span>
+                                <span class="codelink2">"municipio": </span><span class="codelink">"Ascensión",</span>
+                                <span class="codelink2">"sexo": </span><span class="codelink">"Hombre",</span>
+                                <span class="codelink2">"acciones": </span><span class="codelink">3,</span>
+                                <span class="codelink2">"monto": </span><span class="codelink">749866</span>
+                                <span class="codelink2">},
+                                {</span>
+                                <span class="codelink2">"año":</span><span class="codelink"> 2018,</span>
+                                <span class="codelink2">"municipio":</span><span class="codelink"> "Ascensión",</span>
+                                <span class="codelink2">"sexo": </span><span class="codelink">"Mujer",</span>
+                                <span class="codelink2">"acciones":</span><span class="codelink"> 3,</span>
+                                <span class="codelink2">"monto": </span><span class="codelink">65406</span>
+                                <span class="codelink2">}
+                                ]</span>
+                        </code>
+                        </pre>
+                            </div>
+
+                        </div>
+                        <p>Por default se devuelve la información solicitada en formato JSON.</p>
+                        <br />
+                        <br />
+                        <br />
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <div id="dv_devep04">
+                        <h2>API Cubo: INSUS</h2>
+                        <table class="table table-striped">
+                            <tbody>
+                                <br />
+                                <tr>
+                                    <td>URL</td>
+                                    <td>https://sniiv.sedatu.gob.mx/api/CuboAPI/GetInsus/{anios}/{clave_estado}/{clave_municipio}/{dimensiones}</td>
+                                </tr>
+                                <tr>
+                                    <td>Formato de respuesta</td>
+                                    <td>JSON</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h4>Datos a ingresar al API</h4>
+                        <table class="table table-striped">
+                            <tbody>
+                                <tr>
+                                    <td>Año de inicio/fin</td>
+                                    <td>Rango de años deseado a cuatro dígitos, separados por una coma, sin espacios (año inicio,año fin)</td>
+                                </tr>
+                                <tr>
+                                    <td>Clave de estado (2)</td>
+                                    <td>Clave de la entidad a dos digítos</td>
+                                </tr>
+                                <tr>
+                                    <td>Clave de municipio (3)</td>
+                                    <td>Clave de municipio a tres digítos</td>
+                                </tr>
+                                <tr>
+                                    <td>Dimensiones (Valores)</td>
+                                    <td>Especificación de las variables que se desean obtener separados por una coma, sin espacios (se permite un máximo de 5 variables)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br />
+                        <br />
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4>Ejemplo</h4>
+                            </div>
+                            <div class="panel-body">
+                                <table class="table table-striped">
+                                    <tbody>
+                                        <tr>
+                                            <td>Año de inicio / año fin</td>
+                                            <td>2018</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Clave de estado</td>
+                                            <td>08</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Clave de municipio</td>
+                                            <td>005</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Valores</td>
+                                            <td>anio,municipio,genero</td>
+                                        </tr>
+                                    </tbody>
+                                    <br />
+                                </table>
+                                <h4>Request URL</h4>
+                                <code id="finan" class"json hljs">
+                                    https://sniiv.sedatu.gob.mx/api/CuboAPI/GetInsus/2022/02/006/anio%2Cmunicipio
+                                </code>
+                                <h4>CURL</h4>
+                                <code id="finan" class"json hljs">
+                                    curl -X 'GET' \
+                                    https://sniiv.sedatu.gob.mx/api/CuboAPI/GetInsus/2022/02/006/anio%2Cmunicipio' \
+                                    -H 'accept: text/plain'
+                                </code>
+                            </div>
+
+                            <ul class="nav nav-tabs" id="tabsCodigo">
+                                <li class="active">
+                                    <a id="jsonT">JSON</a>
+                                </li>
+                            </ul>
+
+                            <div>
+                                <pre>
+                                <code id="finan" class"json hljs">
+                                <span class="codelink2">[
+                                {</span>
+                                <span class="codelink2">"año": </span><span class="codelink">2022,</span>
+                                <span class="codelink2">"municipio": </span><span class="codelink">"San Quintín",</span>
+                                <span class="codelink2">"acciones": </span><span class="codelink">72,</span>
+                                <span class="codelink2">"monto": </span><span class="codelink">972000</span>
+                                <span class="codelink2">}
+                                ]</span>
+                                </code>
+                                </pre>
+                            </div>
+                        </div>
+                        <p>Por default se devuelve la información solicitada en formato JSON.</p>
+                        <br />
+                        <br />
+                        <br />
+                    </div>
+                    <div id="dv_devep05">
+                        <h2>API Cubo: FONHAPO</h2>
+                        <table class="table table-striped">
+                            <tbody>
+                                <br />
+                                <tr>
+                                    <td>URL</td>
+                                    <td>https://sniiv.sedatu.gob.mx/api/CuboAPI/GetFONHAPO/{anios}/{clave_estado}/{clave_municipio}/{dimensiones}</td>
+                                </tr>
+                                <tr>
+                                    <td>Formato de respuesta</td>
+                                    <td>JSON</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h4>Datos a ingresar al API</h4>
+                        <table class="table table-striped">
+                            <tbody>
+                                <tr>
+                                    <td>Año de inicio/fin</td>
+                                    <td>Rango de años deseado a cuatro dígitos, separados por una coma, sin espacios (año inicio,año fin)</td>
+                                </tr>
+                                <tr>
+                                    <td>Clave de estado (2)</td>
+                                    <td>Clave de la entidad a dos digítos</td>
+                                </tr>
+                                <tr>
+                                    <td>Clave de municipio (3)</td>
+                                    <td>Clave de municipio a tres digítos</td>
+                                </tr>
+                                <tr>
+                                    <td>Dimensiones (Valores)</td>
+                                    <td>Especificación de las variables que se desean obtener separados por una coma, sin espacios (se permite un máximo de 5 variables)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br />
+                        <br />
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4>Ejemplo</h4>
+                            </div>
+                            <div class="panel-body">
+                                <table class="table table-striped">
+                                    <tbody>
+                                        <tr>
+                                            <td>Año de inicio / año fin</td>
+                                            <td>2018</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Clave de estado</td>
+                                            <td>08</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Clave de municipio</td>
+                                            <td>005</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Dimensiones</td>
+                                            <td>anio,municipio,genero</td>
+                                        </tr>
+                                    </tbody>
+                                    <br />
+                                </table>
+                                <h4>Request URL</h4>
+                                <code id="finan" class"json hljs">
+                                    https://localhost:44369/api/CuboAPI/GetFONHAPO/2018%2C2018/09/002/anio%2Cgenero
+                                </code>
+                                <h4>CURL</h4>
+                                <code id="finan" class"json hljs">
+                                    curl -X 'GET' \
+                                    https://sniiv.sedatu.gob.mx/api/CuboAPI/GetFONHAPO/2018%2C2018/09/002/anio%2Cgenero' \
+                                    -H 'accept: text/plain'
+                                </code>
+                            </div>
+
+                            <ul class="nav nav-tabs" id="tabsCodigo">
+                                <li class="active">
+                                    <a id="jsonT">JSON</a>
+                                </li>
+                            </ul>
+                            <div>
+                                <pre>
+                                <code id="finan" class"json hljs">
+                                <span class="codelink2">[
+                                {</span>
+                                <span class="codelink2">"año": </span><span class="codelink">2018,</span>
+                                <span class="codelink2">"sexo": </span><span class="codelink">"Hombre",</span>
+                                <span class="codelink2">"acciones": </span><span class="codelink">3,</span>
+                                <span class="codelink2">"monto": </span><span class="codelink">12036</span>
+                                <span class="codelink2">},
+                                {</span>
+                                <span class="codelink2">"año": </span><span class="codelink">2018,</span>
+                                <span class="codelink2">"sexo": </span><span class="codelink">"Mujer",</span>
+                                <span class="codelink2">"acciones": </span><span class="codelink">19,</span>
+                                <span class="codelink2">"monto": </span><span class="codelink">99876</span>
+                                <span class="codelink2">}
+                                ]</span>
+                                </code>
+                                </pre>
+                            </div>
+                        </div>
+                        <p>Por default se devuelve la información solicitada en formato JSON.</p>
+                        <br />
+                        <br />
+                        <br />
+                    </div>
+
+                </div>
+                            </div>
+
+                            
+                            </div>
+                        </div>
+                </div>

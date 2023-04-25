@@ -402,7 +402,7 @@ public class FovisssteDAO
 
     public Option getMesModalidad(string clave_estado, int anio)
     {
-        string[] legends = { "Adquisición vivienda nueva", "Adquisición vivienda usada", "Otros" };
+        string[] legends = { "Adquisición vivienda nueva", "Adquisición vivienda existente", "Otros" };
         string type = "bar";
         Option opt = new Option();
         StringBuilder str = new StringBuilder();
@@ -466,7 +466,7 @@ public class FovisssteDAO
         Option opt = new Option();
         StringBuilder str = new StringBuilder();
         str.Append("select case when id_modalidad in (1) and t.id_linea_credito in (1,3) then 'Adquisición vivienda nueva'");
-        str.Append(" when id_modalidad in (2) and t.id_linea_credito in (1) then 'Adquisición vivienda usada'");
+        str.Append(" when id_modalidad in (2) and t.id_linea_credito in (1) then 'Adquisición vivienda existente'");
         str.Append(" else 'Otros' end as modalidad,");
         str.Append(" sum(acciones) as acciones");
         str.Append(" from cubo_fovissste_bak t");

@@ -997,6 +997,10 @@ html {
   display: block !important;
 }
 
+.w-100 {
+    width: 100% !important;
+}
+
 .d-table {
   display: table !important;
 }

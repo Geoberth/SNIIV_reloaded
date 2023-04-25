@@ -53,23 +53,7 @@
 <div class="page-header">
     <h2>Padrón de Beneficiarios</h2>
 </div>
-<div id="div-form" class="form-inline">
-    <div class="form-group">
-        <div class="form-group">
-            <label>Año:</label>
-            @Html.DropDownList("ddl_anio_pb", anios, new { @class = "form-control" })
-        </div>
-        <div class="form-group">
-            <label>Trimestre:</label>
-            @Html.DropDownList("ddl_mes_pb", meses, new { @class = "form-control" })
-        </div>
-        <button id="btn_descargar_pb" type="button" class="btn btn-default" onclick="descargarPadronBeneficiario();">
-            <span class="glyphicon glyphicon-download-alt"></span> Descargar
-        </button>
-    </div>
-</div>
 
-<br />
 <div id="info" class="row">
     <div class="col-md-12">
         <div class="panel-group" role="tablist">
@@ -83,10 +67,30 @@
                 </div>
                 <div class="panel-collapse collapse in" role="tabpanel" id="collapseListGroup1" aria-labelledby="collapseListGroupHeading1" aria-expanded="true" style="">
                     <ul id="notes" class="list-group">
-                        <li class="list-group-item">La información publicada corresponde a los subsidios otorgados en torno a los programas presupuestarios que opera la Conavi, siendo estos datos acumulados, por lo que pueden presentar variaciones en relación a lo reportado en cada trimestre.</li>
+                        <li class="list-group-item">
+                            <a href="https://siesco.conavi.gob.mx/siesco/padron.aspx" target="_blank">
+                                Seleccione este link para consultar información actualizada del <strong>Padrón de personas beneficiarias.</strong>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </div>
+    </div>
+</div>
+
+<div id="div-form" class="form-inline">
+    <div class="form-group">
+        <div class="form-group">
+            <label>Año:</label>
+            @Html.DropDownList("ddl_anio_pb", anios, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <label>Trimestre:</label>
+            @Html.DropDownList("ddl_mes_pb", meses, new { @class = "form-control" })
+        </div>
+        <button id="btn_descargar_pb" type="button" class="btn btn-default" onclick="descargarPadronBeneficiario();">
+            <span class="glyphicon glyphicon-download-alt"></span> Descargar
+        </button>
     </div>
 </div>

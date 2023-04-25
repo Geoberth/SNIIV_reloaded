@@ -1,0 +1,249 @@
+{
+    "Nombre": "3 Estatus de las acciones puntuales según objetivo prioritario",
+    "Objetivo ": "Seguimiento del cumplimiento de los objetivos, prioridades y estrategias del PNV 2021-2024 ",
+    "Definición o descripción": "Seguimiento al estatus de las acciones puntuales según objetivo prioritario del PNV 2021-2024.",
+    "Nivel de desagregación": "Nacional",
+    "Periodicidad o frecuencia de medición": "Trimestral",
+    "Tipo": "Estratégico",
+    "Acumulado o periódico": "Acumulado",
+    "Unidad de medida": "Acciones puntuales",
+    "Periodo de recolección de datos": "Trimestral",
+    "Dimensión": "Eficacia",
+    "Disponibilidad de la información": "Un mes posterior al cierre del trimestre",
+    "Tendencia esperada": "Ascendente",
+    "Unidad Responsable de reportar el avance":  "511 Dirección General de Desarrollo Urbano, Suelo y Vivienda",
+    "Método de cálculo": "Estatus de las acciones puntuales Xij=((Total de acciones Xij))/(Total de acciones Xj) *100\ndonde i=concluida, en proceso, no se realizará y por iniciar y j=objetivo 1, objetivo 2, objetivo 3, objetivo 4 y objetivo 5",
+    "Observaciones": " Se estima el estatus de las acciones puntuales de cada objetivo prioritario",
+        "APLICACIÓN DEL MÉTODO DE CÁLCULO DEL INDICADOR PARA LA OBTENCIÓN DEL VALOR DE LA LÍNEA BASE":
+
+        {
+            "variables":[
+                {
+                    "Nombre variable":"1.-Total de acciones puntuales concluidas del objetivo 1",
+                    "Valor variable": 2,
+                    "Fuente de información variable": "Los datos provienen de la información proporcionada por los Organismos Nacionales de Vivienda y el Instituto Nacional de Suelo Sustentable a la Dirección General de Desarrollo Urbano, Suelo y Vivienda"
+                },
+                {
+                    "Nombre variable":"2.-Total de acciones puntuales del objetivo 1",
+                    "Valor variable": 36,
+                    "Fuente de información variable": "PNV 2021-2024"
+                },
+                {
+                    "Nombre variable":"3.-Total de acciones puntuales en proceso del objetivo 1",
+                    "Valor variable": 33,
+                    "Fuente de información variable": "Los datos provienen de la información proporcionada por los Organismos Nacionales de Vivienda y el Instituto Nacional de Suelo Sustentable a la Dirección General de Desarrollo Urbano, Suelo y Vivienda"
+                },
+                {
+                    "Nombre variable":"4.-Total de acciones puntuales del objetivo 1",
+                    "Valor variable": 36,
+                    "Fuente de información variable": "PNV 2021-2024"
+                },
+                {
+                    "Nombre variable":"5.-Total de acciones puntuales que no se realizarán del objetivo 1",
+                    "Valor variable": 0,
+                    "Fuente de información variable": "Los datos provienen de la información proporcionada por los Organismos Nacionales de Vivienda y el Instituto Nacional de Suelo Sustentable a la Dirección General de Desarrollo Urbano, Suelo y Vivienda"
+                },
+                {
+                    "Nombre variable":"6.-Total de acciones puntuales del objetivo 1",
+                    "Valor variable": 36,
+                    "Fuente de información variable": "PNV 2021-2024"
+                },
+                {
+                    "Nombre variable":"7.- Total de acciones puntuales que están por iniciar del objetivo 1",
+                    "Valor variable": 1,
+                    "Fuente de información variable": "Los datos provienen de la información proporcionada por los Organismos Nacionales de Vivienda y el Instituto Nacional de Suelo Sustentable a la Dirección General de Desarrollo Urbano, Suelo y Vivienda"
+                },
+                {
+                    "Nombre variable":"8.-Total de acciones puntuales del objetivo 2",
+                    "Valor variable": 36,
+                    "Fuente de información variable": "PNV 2021-2024"
+                },
+                {
+                    "Nombre variable":"9.-Total de acciones puntuales concluidas del objetivo 2",
+                    "Valor variable": 1,
+                    "Fuente de información variable": "Los datos provienen de la información proporcionada por los Organismos Nacionales de Vivienda y el Instituto Nacional de Suelo Sustentable a la Dirección General de Desarrollo Urbano, Suelo y Vivienda"
+                },
+                {
+                    "Nombre variable":"10.-Total de acciones puntuales del objetivo 2",
+                    "Valor variable": 30,
+                    "Fuente de información variable": "PNV 2021-2024"
+                },
+                {
+                    "Nombre variable":"11.-Total de acciones puntuales en proceso del objetivo 2",
+                    "Valor variable": 22,
+                    "Fuente de información variable": "Los datos provienen de la información proporcionada por los Organismos Nacionales de Vivienda y el Instituto Nacional de Suelo Sustentable a la Dirección General de Desarrollo Urbano, Suelo y Vivienda"
+                },
+                {
+                    "Nombre variable":"12.-Total de acciones puntuales del objetivo 2",
+                    "Valor variable": 30,
+                    "Fuente de información variable": "PNV 2021-2024"
+                },
+                {
+                    "Nombre variable":"13.-Total de acciones puntuales que no se realizarán del objetivo 2",
+                    "Valor variable": 1,
+                    "Fuente de información variable": "Los datos provienen de la información proporcionada por los Organismos Nacionales de Vivienda y el Instituto Nacional de Suelo Sustentable a la Dirección General de Desarrollo Urbano, Suelo y Vivienda"
+                },
+                {
+                    "Nombre variable":"14.-Total de acciones puntuales del objetivo 2",
+                    "Valor variable": 30,
+                    "Fuente de información variable": "PNV 2021-2024"
+                },
+                {
+                    "Nombre variable":"15.- Total de acciones puntuales que están por iniciar del objetivo 2",
+                    "Valor variable": 6,
+                    "Fuente de información variable": "Los datos provienen de la información proporcionada por los Organismos Nacionales de Vivienda y el Instituto Nacional de Suelo Sustentable a la Dirección General de Desarrollo Urbano, Suelo y Vivienda"
+                },
+                {
+                    "Nombre variable":"16.-Total de acciones puntuales del objetivo 2",
+                    "Valor variable": 30,
+                    "Fuente de información variable": "PNV 2021-2024"
+                },
+                {
+                    "Nombre variable":"17.-Total de acciones puntuales concluidas del objetivo 3",
+                    "Valor variable": 1,
+                    "Fuente de información variable": "Los datos provienen de la información proporcionada por los Organismos Nacionales de Vivienda y el Instituto Nacional de Suelo Sustentable a la Dirección General de Desarrollo Urbano, Suelo y Vivienda"
+                },
+                {
+                    "Nombre variable":"18.-Total de acciones puntuales del objetivo 3",
+                    "Valor variable": 12,
+                    "Fuente de información variable": "PNV 2021-2024"
+                },
+                {
+                    "Nombre variable":"19.-Total de acciones puntuales en proceso del objetivo 3",
+                    "Valor variable": 9,
+                    "Fuente de información variable": "Los datos provienen de la información proporcionada por los Organismos Nacionales de Vivienda y el Instituto Nacional de Suelo Sustentable a la Dirección General de Desarrollo Urbano, Suelo y Vivienda"
+                },
+                {
+                    "Nombre variable":"20.-Total de acciones puntuales del objetivo 3",
+                    "Valor variable": 12,
+                    "Fuente de información variable": "PNV 2021-2024"
+                },
+                {
+                    "Nombre variable":"21.-Total de acciones puntuales que no se realizarán del objetivo 3",
+                    "Valor variable": 0,
+                    "Fuente de información variable": "Los datos provienen de la información proporcionada por los Organismos Nacionales de Vivienda y el Instituto Nacional de Suelo Sustentable a la Dirección General de Desarrollo Urbano, Suelo y Vivienda"
+                },
+                {
+                    "Nombre variable":"22.-Total de acciones puntuales del objetivo 3",
+                    "Valor variable": 12,
+                    "Fuente de información variable": "PNV 2021-2024"
+                },
+                {
+                    "Nombre variable":"23.- Total de acciones puntuales que están por iniciar del objetivo 3",
+                    "Valor variable": 2,
+                    "Fuente de información variable": "Los datos provienen de la información proporcionada por los Organismos Nacionales de Vivienda y el Instituto Nacional de Suelo Sustentable a la Dirección General de Desarrollo Urbano, Suelo y Vivienda"
+                },
+                {
+                    "Nombre variable":"24.-Total de acciones puntuales del objetivo 3",
+                    "Valor variable": 12,
+                    "Fuente de información variable": "PNV 2021-2024"
+                },
+                {
+                    "Nombre variable":"25.-Total de acciones puntuales concluidas del objetivo 4",
+                    "Valor variable": 1,
+                    "Fuente de información variable": "Los datos provienen de la información proporcionada por los Organismos Nacionales de Vivienda y el Instituto Nacional de Suelo Sustentable a la Dirección General de Desarrollo Urbano, Suelo y Vivienda"
+                },
+                {
+                    "Nombre variable":"26.-Total de acciones puntuales del objetivo 4",
+                    "Valor variable": 7,
+                    "Fuente de información variable": "PNV 2021-2024"
+                },
+                {
+                    "Nombre variable":"27.-Total de acciones puntuales en proceso del objetivo 4",
+                    "Valor variable": 5,
+                    "Fuente de información variable": "Los datos provienen de la información proporcionada por los Organismos Nacionales de Vivienda y el Instituto Nacional de Suelo Sustentable a la Dirección General de Desarrollo Urbano, Suelo y Vivienda"
+                },
+                {
+                    "Nombre variable":"28.-Total de acciones puntuales del objetivo 4",
+                    "Valor variable": 7,
+                    "Fuente de información variable": "PNV 2021-2024"
+                },
+                {
+                    "Nombre variable":"29.-Total de acciones puntuales que no se realizarán del objetivo 4",
+                    "Valor variable": 0,
+                    "Fuente de información variable": "Los datos provienen de la información proporcionada por los Organismos Nacionales de Vivienda y el Instituto Nacional de Suelo Sustentable a la Dirección General de Desarrollo Urbano, Suelo y Vivienda"
+                },
+                {
+                    "Nombre variable":"30.-Total de acciones puntuales del objetivo 4",
+                    "Valor variable": 7,
+                    "Fuente de información variable": "PNV 2021-2024"
+                },
+                {
+                    "Nombre variable":"31.- Total de acciones puntuales que están por iniciar del objetivo 4",
+                    "Valor variable": 1,
+                    "Fuente de información variable": "Los datos provienen de la información proporcionada por los Organismos Nacionales de Vivienda y el Instituto Nacional de Suelo Sustentable a la Dirección General de Desarrollo Urbano, Suelo y Vivienda"
+                },
+                {
+                    "Nombre variable":"32.-Total de acciones puntuales del objetivo 4",
+                    "Valor variable": 7,
+                    "Fuente de información variable": "PNV 2021-2024"
+                },
+                {
+                    "Nombre variable":"33.-Total de acciones puntuales concluidas del objetivo 5",
+                    "Valor variable": 0,
+                    "Fuente de información variable": "Los datos provienen de la información proporcionada por los Organismos Nacionales de Vivienda y el Instituto Nacional de Suelo Sustentable a la Dirección General de Desarrollo Urbano, Suelo y Vivienda"
+                },
+                {
+                    "Nombre variable":"34.-Total de acciones puntuales del objetivo 5",
+                    "Valor variable": 28,
+                    "Fuente de información variable": "PNV 2021-2024"
+                },
+                {
+                    "Nombre variable":"35.-Total de acciones puntuales en proceso del objetivo 5",
+                    "Valor variable": 22,
+                    "Fuente de información variable": "Los datos provienen de la información proporcionada por los Organismos Nacionales de Vivienda y el Instituto Nacional de Suelo Sustentable a la Dirección General de Desarrollo Urbano, Suelo y Vivienda"
+                },
+                {
+                    "Nombre variable":"36.-Total de acciones puntuales del objetivo 5",
+                    "Valor variable": 28,
+                    "Fuente de información variable": "PNV 2021-2024"
+                },
+                {
+                    "Nombre variable":"37.-Total de acciones puntuales que no se realizarán del objetivo 5",
+                    "Valor variable": 2,
+                    "Fuente de información variable": "Los datos provienen de la información proporcionada por los Organismos Nacionales de Vivienda y el Instituto Nacional de Suelo Sustentable a la Dirección General de Desarrollo Urbano, Suelo y Vivienda"
+                },
+                {
+                    "Nombre variable":"38.-Total de acciones puntuales del objetivo 5",
+                    "Valor variable": 28,
+                    "Fuente de información variable": "PNV 2021-2024"
+                },
+                {
+                    "Nombre variable":"39.- Total de acciones puntuales que están por iniciar del objetivo 5",
+                    "Valor variable": 4,
+                    "Fuente de información variable": "Los datos provienen de la información proporcionada por los Organismos Nacionales de Vivienda y el Instituto Nacional de Suelo Sustentable a la Dirección General de Desarrollo Urbano, Suelo y Vivienda"
+                },
+                {
+                    "Nombre variable":"40.-Total de acciones puntuales del objetivo 5",
+                    "Valor variable": 28,
+                    "Fuente de información variable": "PNV 2021-2024"
+                               
+                }
+                ],
+            "Sustitución en método de cálculo del indicador": "Estatus de las acciones puntuales Xij = 2/36*100=5.6; 33/36*100=91.7; 0/36*100=0; 1/36*100=2.8; 1/30*100=3.3; 22/30*100=73.3; 1/30*100=3.3; 6/30*100=20; 1/12*100=8.3; 9/12*100=75; 0/12*100=0; 2/12*100=16.7; 1/7*100=14.3; 5/7*100=71.4; 0/7*100=0; 1/7*100=14.3; 0/28*100=0; 22/28*100=78.6; 2/28*100=7.1; 4/28*100=14.3"
+        },
+    "VALOR DE LÍNEA BASE Y METAS":
+    {
+        "Línea base": 
+        {
+            "Valor": "Valor objetivo 1 Concluida:5.6, En proceso:91.7, No se realizará:0, Por iniciar:2.8,\nValor objetivo 2 Concluida:3.3, En proceso:73.3, No se realizará:3.3, Por iniciar:20,\nValor objetivo 3 Concluida:8.3, En proceso:75, No se realizará:0, Por iniciar:16.7,\nValor objetivo 4 Concluida:14.3, En proceso:71.4, No se realizará:0, Por iniciar:14.3,\nValor objetivo 5 Concluida:0, En proceso:78.6, No se realizará:7.1, Por iniciar:14.3",
+            "Año":"Cuarto trimestre de 2021"
+        },
+        "Nota sobre la línea base":"No aplica",
+        "META 2024":100,
+        "Nota sobre la meta 2024":""
+    },
+    "SERIE HISTÓRICA DE LA META PARA EL BIENESTAR O PARÁMETRO":
+    {
+        "2021 T1":"",
+        "2021 T2":"",
+        "2021 T3":"",
+        "2021 T4":"Valor objetivo 1 Concluida:5.6, En proceso:91.7, No se realizará:0, Por iniciar:2.8,\nValor objetivo 2 Concluida:3.3, En proceso:73.3, No se realizará:3.3, Por iniciar:20,\nValor objetivo 3 Concluida:8.3, En proceso:75, No se realizará:0, Por iniciar:16.7,\nValor objetivo 4 Concluida:14.3, En proceso:71.4, No se realizará:0, Por iniciar:14.3,\nValor objetivo 5 Concluida:0, En proceso:78.6, No se realizará:7.1, Por iniciar:14.3",
+        "2022 T1":"",
+        "2022 T2":"",
+        "2022 T3":"",
+        "2022 T4":""
+                   
+    }
+}
+            

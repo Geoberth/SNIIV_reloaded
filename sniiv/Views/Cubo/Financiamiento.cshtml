@@ -76,7 +76,7 @@
                         },
                         sorters: {
                             mes: $.pivotUtilities.sortAs(lstMes),
-                            modalidad: $.pivotUtilities.sortAs(['Viviendas nuevas', 'Viviendas usadas', 'Mejoramientos', 'Otros programas']),
+                            modalidad: $.pivotUtilities.sortAs(['Viviendas nuevas', 'Viviendas existentes', 'Mejoramientos', 'Otros programas']),
                             grupo_organismo: $.pivotUtilities.sortAs(['Onavis', 'Entidades financieras', 'Subsidios federales', 'Otros organismos', 'Organismos estatales', 'Programas emergentes'])
                         },
                         rendererName: "Mapa de calor"
@@ -124,7 +124,7 @@
                         rango_salarial = true;
                         break;
                     case 'modalidad':
-                        notas.append('<li class="list-group-item">Las modalidades; Vivienda nueva y Vivienda usada incluyen cofinanciamientos y subsidios ligados a un crédito</li>');
+                        notas.append('<li class="list-group-item">Las modalidades; Vivienda nueva y Vivienda existente incluyen cofinanciamientos y subsidios ligados a un crédito</li>');
                         notas.append('<li class="list-group-item">La modalidad Mejoramientos incluye créditos y subsidios para Ampliaciones y Rehabilitaciones</li>');
                         notas.append('<li class="list-group-item">La modalidad Otros programas incluye créditos y subsidios para Pago de pasivos y Lotes con servicios</li>');
                         break;

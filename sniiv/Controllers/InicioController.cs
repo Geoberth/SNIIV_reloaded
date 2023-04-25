@@ -27,5 +27,10 @@ namespace sniiv.Controllers
         {
             return View();
         }
+
+        public IActionResult Tutorial_swagger()
+        {
+            return View();
+        }
     }
 }
