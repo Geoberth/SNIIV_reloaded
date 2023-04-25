@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TOss8mP0mV+2QPRx367j3uDle+uK4y5KdYHdqoLHFpmONjM0o1KJHV4nGiGfPlAuWLvCRrgY8JAkZkGbT9YxBg==",
+  "dgSpecHash": "RFufJJyPONt8TBHYI5FPtuyj1BkTyaiJo7jKhl5Qf2kViMKn+zDGFoVQuaR6aqNf211FAQAYphBoyrkWbRPXwg==",
   "success": true,
-  "projectFilePath": "E:\\Azure\\sniiv\\sniiv.csproj",
+  "projectFilePath": "D:\\Resplado sedatu\\Azure5\\sniiv\\sniiv.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pe.norberto.rojas\\.nuget\\packages\\advancedstringbuilder\\0.1.0\\advancedstringbuilder.0.1.0.nupkg.sha512",
     "C:\\Users\\pe.norberto.rojas\\.nuget\\packages\\elastic.apm\\1.14.0\\elastic.apm.1.14.0.nupkg.sha512",
@@ -187,8 +187,7 @@
     "C:\\Users\\pe.norberto.rojas\\.nuget\\packages\\system.threading.threadpool\\4.0.10\\system.threading.threadpool.4.0.10.nupkg.sha512",
     "C:\\Users\\pe.norberto.rojas\\.nuget\\packages\\system.threading.timer\\4.0.1\\system.threading.timer.4.0.1.nupkg.sha512",
     "C:\\Users\\pe.norberto.rojas\\.nuget\\packages\\system.xml.readerwriter\\4.0.11\\system.xml.readerwriter.4.0.11.nupkg.sha512",
-    "C:\\Users\\pe.norberto.rojas\\.nuget\\packages\\system.xml.xdocument\\4.0.11\\system.xml.xdocument.4.0.11.nupkg.sha512",
-    "C:\\Users\\pe.norberto.rojas\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.25\\microsoft.netcore.app.host.win-x64.3.1.25.nupkg.sha512"
+    "C:\\Users\\pe.norberto.rojas\\.nuget\\packages\\system.xml.xdocument\\4.0.11\\system.xml.xdocument.4.0.11.nupkg.sha512"
   ],
   "logs": []
 }

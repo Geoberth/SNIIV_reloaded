@@ -1,483 +1,484 @@
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\appsettings.Development.json
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\appsettings.json
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\sniiv.exe
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\sniiv.deps.json
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\sniiv.runtimeconfig.json
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\sniiv.runtimeconfig.dev.json
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\sniiv.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\sniiv.pdb
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Antiforgery.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Authentication.Abstractions.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Authentication.Cookies.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Authentication.Core.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Authentication.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Authentication.OAuth.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Authorization.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Authorization.Policy.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Components.Authorization.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Components.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Components.Forms.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Components.Server.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Components.Web.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Connections.Abstractions.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.CookiePolicy.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Cors.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.DataProtection.Abstractions.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.DataProtection.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.DataProtection.Extensions.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Diagnostics.Abstractions.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Diagnostics.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Diagnostics.HealthChecks.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.HostFiltering.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Hosting.Abstractions.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Hosting.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Html.Abstractions.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Http.Abstractions.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Http.Connections.Common.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Http.Connections.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Http.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Http.Extensions.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Http.Features.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.HttpOverrides.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.HttpsPolicy.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Identity.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Localization.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Localization.Routing.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Metadata.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Mvc.Abstractions.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Mvc.ApiExplorer.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Mvc.Core.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Mvc.Cors.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Mvc.DataAnnotations.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Mvc.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Mvc.Formatters.Json.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Mvc.Formatters.Xml.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Mvc.Localization.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Mvc.Razor.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Mvc.RazorPages.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Mvc.TagHelpers.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Mvc.ViewFeatures.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Razor.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Razor.Runtime.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.ResponseCaching.Abstractions.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.ResponseCaching.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.ResponseCompression.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Rewrite.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Routing.Abstractions.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Routing.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Server.HttpSys.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Server.IIS.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Server.IISIntegration.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Server.Kestrel.Core.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Server.Kestrel.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Session.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.SignalR.Common.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.SignalR.Core.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.SignalR.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.SignalR.Protocols.Json.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.StaticFiles.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.WebSockets.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.WebUtilities.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.CSharp.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Configuration.CommandLine.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Configuration.FileExtensions.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Configuration.Ini.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Configuration.Json.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Configuration.KeyPerFile.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Configuration.UserSecrets.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Configuration.Xml.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Diagnostics.HealthChecks.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.FileProviders.Composite.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.FileProviders.Embedded.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.FileProviders.Physical.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.FileSystemGlobbing.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Hosting.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Http.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Localization.Abstractions.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Localization.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Logging.Configuration.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Logging.Console.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Logging.Debug.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Logging.EventLog.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Logging.EventSource.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Logging.TraceSource.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.ObjectPool.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Options.ConfigurationExtensions.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Options.DataAnnotations.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.WebEncoders.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.JSInterop.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.Net.Http.Headers.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.VisualBasic.Core.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.VisualBasic.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.Win32.Primitives.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\mscorlib.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\netstandard.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.AppContext.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Buffers.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Collections.Concurrent.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Collections.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Collections.NonGeneric.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Collections.Specialized.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.ComponentModel.Annotations.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.ComponentModel.DataAnnotations.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.ComponentModel.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.ComponentModel.EventBasedAsync.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.ComponentModel.Primitives.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.ComponentModel.TypeConverter.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Configuration.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Console.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Core.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Data.Common.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Data.DataSetExtensions.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Data.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.Contracts.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.Debug.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.EventLog.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.FileVersionInfo.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.Process.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.StackTrace.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.TextWriterTraceListener.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.Tools.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.TraceSource.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.Tracing.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Drawing.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Drawing.Primitives.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Dynamic.Runtime.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Globalization.Calendars.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Globalization.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Globalization.Extensions.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.IO.Compression.Brotli.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.IO.Compression.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.IO.Compression.FileSystem.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.IO.Compression.ZipFile.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.IO.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.IO.FileSystem.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.IO.FileSystem.DriveInfo.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.IO.FileSystem.Primitives.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.IO.FileSystem.Watcher.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.IO.IsolatedStorage.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.IO.MemoryMappedFiles.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.IO.Pipelines.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.IO.Pipes.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.IO.UnmanagedMemoryStream.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Linq.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Linq.Expressions.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Linq.Parallel.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Linq.Queryable.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Memory.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Net.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Net.Http.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Net.HttpListener.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Net.Mail.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Net.NameResolution.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Net.NetworkInformation.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Net.Ping.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Net.Primitives.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Net.Requests.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Net.Security.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Net.ServicePoint.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Net.Sockets.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Net.WebClient.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Net.WebHeaderCollection.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Net.WebProxy.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Net.WebSockets.Client.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Net.WebSockets.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Numerics.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Numerics.Vectors.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.ObjectModel.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Reflection.DispatchProxy.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Reflection.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Reflection.Emit.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Reflection.Emit.ILGeneration.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Reflection.Emit.Lightweight.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Reflection.Extensions.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Reflection.Primitives.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Reflection.TypeExtensions.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Resources.Reader.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Resources.ResourceManager.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Resources.Writer.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Runtime.CompilerServices.Unsafe.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Runtime.CompilerServices.VisualC.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Runtime.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Runtime.Extensions.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Runtime.Handles.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Runtime.InteropServices.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Runtime.InteropServices.RuntimeInformation.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Runtime.InteropServices.WindowsRuntime.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Runtime.Intrinsics.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Runtime.Loader.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Runtime.Numerics.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Runtime.Serialization.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Runtime.Serialization.Formatters.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Runtime.Serialization.Json.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Runtime.Serialization.Primitives.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Runtime.Serialization.Xml.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Security.Claims.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Security.Cryptography.Algorithms.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Security.Cryptography.Cng.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Security.Cryptography.Csp.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Security.Cryptography.Encoding.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Security.Cryptography.Primitives.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Security.Cryptography.X509Certificates.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Security.Cryptography.Xml.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Security.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Security.Permissions.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Security.Principal.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Security.SecureString.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.ServiceModel.Web.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.ServiceProcess.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Text.Encoding.CodePages.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Text.Encoding.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Text.Encoding.Extensions.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Text.Encodings.Web.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Text.RegularExpressions.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Threading.Channels.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Threading.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Threading.Overlapped.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Threading.Tasks.Dataflow.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Threading.Tasks.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Threading.Tasks.Extensions.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Threading.Tasks.Parallel.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Threading.Thread.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Threading.ThreadPool.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Threading.Timer.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Transactions.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Transactions.Local.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.ValueTuple.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Web.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Web.HttpUtility.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Windows.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Windows.Extensions.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Xml.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Xml.Linq.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Xml.ReaderWriter.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Xml.Serialization.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Xml.XDocument.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Xml.XmlDocument.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Xml.XmlSerializer.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Xml.XPath.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\System.Xml.XPath.XDocument.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\refs\WindowsBase.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\sniiv.Views.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\sniiv.Views.pdb
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\AdvancedStringBuilder.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Elastic.Apm.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Elastic.Apm.AspNetCore.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Elastic.Apm.Azure.CosmosDb.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Elastic.Apm.Azure.ServiceBus.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Elastic.Apm.Azure.Storage.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Elastic.Apm.Elasticsearch.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Elastic.Apm.EntityFrameworkCore.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Elastic.Apm.Extensions.Hosting.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Elastic.Apm.Extensions.Logging.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Elastic.Apm.GrpcClient.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Elastic.Apm.MongoDb.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Elastic.Apm.NetCoreAll.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Elastic.Apm.SerilogEnricher.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Elastic.Apm.SqlClient.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Elastic.CommonSchema.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Elastic.CommonSchema.Serilog.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Elasticsearch.Net.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\JavaScriptEngineSwitcher.Core.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\JavaScriptEngineSwitcher.Extensions.MsDependencyInjection.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\JavaScriptEngineSwitcher.V8.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\JSPool.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\ClearScript.Core.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\ClearScript.V8.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Razor.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Dia2Lib.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Microsoft.Diagnostics.FastSerialization.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Microsoft.Diagnostics.Tracing.TraceEvent.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\OSExtensions.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\TraceReloggerLib.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Abstractions.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Hosting.Abstractions.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Microsoft.Win32.Registry.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\MongoDB.Bson.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\MongoDB.Driver.Core.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Npgsql.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Npgsql.EntityFrameworkCore.PostgreSQL.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\React.AspNet.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\React.AspNet.Middleware.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\React.Core.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Serilog.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Serilog.AspNetCore.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Serilog.Extensions.Hosting.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Serilog.Extensions.Logging.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Serilog.Formatting.Compact.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Serilog.Formatting.Elasticsearch.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Serilog.Settings.Configuration.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Serilog.Sinks.Async.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Serilog.Sinks.Console.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Serilog.Sinks.Debug.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Serilog.Sinks.Elasticsearch.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Serilog.Sinks.File.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Serilog.Sinks.Http.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Serilog.Sinks.PeriodicBatching.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Serilog.Sinks.RollingFile.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\System.Diagnostics.PerformanceCounter.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\System.Reflection.Metadata.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\System.Security.AccessControl.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\System.Security.Principal.Windows.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\System.Text.Json.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\ru-ru\JavaScriptEngineSwitcher.Core.resources.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\ru-ru\JavaScriptEngineSwitcher.V8.resources.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.resources.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.resources.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.resources.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.resources.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.resources.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.resources.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.resources.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.resources.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.resources.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.resources.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.resources.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.resources.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.resources.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.resources.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.resources.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.resources.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\ClearScriptV8.win-x64.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\Microsoft.Win32.Registry.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.PerformanceCounter.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Security.AccessControl.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\AccessData.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Entity.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\AccessData.pdb
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Entity.pdb
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\sniiv.csproj.AssemblyReference.cache
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\sniiv.GeneratedMSBuildEditorConfig.editorconfig
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\sniiv.AssemblyInfoInputs.cache
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\sniiv.AssemblyInfo.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\sniiv.csproj.CoreCompileInputs.cache
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\sniiv.MvcApplicationPartsAssemblyInfo.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\sniiv.MvcApplicationPartsAssemblyInfo.cache
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\sniiv.RazorAssemblyInfo.cache
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\sniiv.RazorAssemblyInfo.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\staticwebassets\sniiv.StaticWebAssets.Manifest.cache
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\staticwebassets\sniiv.StaticWebAssets.xml
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\scopedcss\bundle\sniiv.styles.css
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\sniiv.TagHelpers.input.cache
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\sniiv.TagHelpers.output.cache
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\sniiv.RazorCoreGenerate.cache
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Cubo\Cnbv.cshtml.g.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Cubo\Conavi.cshtml.g.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Cubo\Desarrollador.cshtml.g.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Cubo\Financiamiento.cshtml.g.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Cubo\Fonhapo.cshtml.g.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Cubo\Fovissste.cshtml.g.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Cubo\Imss.cshtml.g.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Cubo\Infonavit.cshtml.g.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Cubo\Insus.cshtml.g.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Cubo\Inventario.cshtml.g.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Cubo\Issste.cshtml.g.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Cubo\Registro.cshtml.g.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Cubo\Semanal.cshtml.g.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Cubo\Sisevive.cshtml.g.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Dashboard\Conavi.cshtml.g.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Dashboard\Demanda.cshtml.g.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Dashboard\Imss.cshtml.g.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Dashboard\Inicio.cshtml.g.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Dashboard\Issste.cshtml.g.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Dashboard\Oferta.cshtml.g.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Dashboard\Semanal_financiamiento.cshtml.g.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Dashboard\Semanal_hipotecario.cshtml.g.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Dashboard\Sisevive.cshtml.g.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Demanda\Poblacion_historico.cshtml.g.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Demanda\Poblacion_proyeccion.cshtml.g.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Demanda\Potencial.cshtml.g.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Demanda\Rezago_estatal.cshtml.g.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Demanda\Rezago_municipal.cshtml.g.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Indicadores\Avances.cshtml.g.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Indicadores\Pnv.cshtml.g.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Indicadores\Vivienda.cshtml.g.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Inicio\Acerca_de.cshtml.g.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Inicio\Tutorial_cubos.cshtml.g.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Oferta\Dias_inventario.cshtml.g.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Oferta\Mapa.cshtml.g.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Oferta\Mapa_old.cshtml.g.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Oferta\Parque.cshtml.g.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Oferta\Renaret.cshtml.g.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Reporte\Analisis.cshtml.g.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Reporte\Datos_abiertos.cshtml.g.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Reporte\Datos_abiertos_anterior.cshtml.g.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Reporte\Login.cshtml.g.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Reporte\LoginRedirect.cshtml.g.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Reporte\Logout.cshtml.g.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Reporte\Mensual.cshtml.g.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Reporte\Meta.cshtml.g.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Reporte\Padron.cshtml.g.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Reporte\Semanal_empleo.cshtml.g.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Reporte\Semanal_m2.cshtml.g.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout_sniiv.cshtml.g.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\sniiv.RazorTargetAssemblyInfo.cache
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\sniiv.RazorTargetAssemblyInfo.cs
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\sniiv.Views.pdb
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\sniiv.csproj.CopyComplete
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\sniiv.dll
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\sniiv.pdb
-E:\Azure\sniiv\obj\Debug\netcoreapp3.1\sniiv.genruntimeconfig.cache
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
-E:\Azure\sniiv\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\appsettings.Development.json
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\appsettings.json
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\sniiv.exe
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\sniiv.deps.json
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\sniiv.runtimeconfig.json
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\sniiv.runtimeconfig.dev.json
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\sniiv.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\sniiv.pdb
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Antiforgery.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Authentication.Abstractions.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Authentication.Cookies.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Authentication.Core.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Authentication.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Authentication.OAuth.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Authorization.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Authorization.Policy.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Components.Authorization.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Components.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Components.Forms.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Components.Server.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Components.Web.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Connections.Abstractions.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.CookiePolicy.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Cors.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.DataProtection.Abstractions.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.DataProtection.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.DataProtection.Extensions.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Diagnostics.Abstractions.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Diagnostics.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Diagnostics.HealthChecks.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.HostFiltering.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Hosting.Abstractions.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Hosting.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Html.Abstractions.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Http.Abstractions.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Http.Connections.Common.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Http.Connections.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Http.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Http.Extensions.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Http.Features.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.HttpOverrides.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.HttpsPolicy.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Identity.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Localization.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Localization.Routing.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Metadata.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Mvc.Abstractions.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Mvc.ApiExplorer.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Mvc.Core.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Mvc.Cors.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Mvc.DataAnnotations.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Mvc.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Mvc.Formatters.Json.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Mvc.Formatters.Xml.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Mvc.Localization.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Mvc.Razor.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Mvc.RazorPages.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Mvc.TagHelpers.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Mvc.ViewFeatures.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Razor.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Razor.Runtime.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.ResponseCaching.Abstractions.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.ResponseCaching.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.ResponseCompression.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Rewrite.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Routing.Abstractions.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Routing.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Server.HttpSys.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Server.IIS.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Server.IISIntegration.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Server.Kestrel.Core.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Server.Kestrel.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Session.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.SignalR.Common.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.SignalR.Core.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.SignalR.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.SignalR.Protocols.Json.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.StaticFiles.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.WebSockets.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.WebUtilities.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.CSharp.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Configuration.CommandLine.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Configuration.FileExtensions.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Configuration.Ini.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Configuration.Json.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Configuration.KeyPerFile.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Configuration.UserSecrets.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Configuration.Xml.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Diagnostics.HealthChecks.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.FileProviders.Composite.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.FileProviders.Embedded.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.FileProviders.Physical.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.FileSystemGlobbing.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Hosting.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Http.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Localization.Abstractions.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Localization.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Logging.Configuration.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Logging.Console.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Logging.Debug.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Logging.EventLog.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Logging.EventSource.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Logging.TraceSource.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.ObjectPool.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Options.DataAnnotations.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.WebEncoders.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.JSInterop.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.Net.Http.Headers.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.VisualBasic.Core.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.VisualBasic.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\Microsoft.Win32.Primitives.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\mscorlib.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\netstandard.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.AppContext.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Buffers.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Collections.Concurrent.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Collections.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Collections.NonGeneric.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Collections.Specialized.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.ComponentModel.Annotations.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.ComponentModel.DataAnnotations.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.ComponentModel.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.ComponentModel.EventBasedAsync.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.ComponentModel.Primitives.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.ComponentModel.TypeConverter.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Configuration.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Console.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Core.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Data.Common.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Data.DataSetExtensions.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Data.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.Contracts.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.Debug.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.EventLog.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.FileVersionInfo.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.Process.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.StackTrace.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.TextWriterTraceListener.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.Tools.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.TraceSource.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.Tracing.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Drawing.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Drawing.Primitives.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Dynamic.Runtime.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Globalization.Calendars.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Globalization.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Globalization.Extensions.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.IO.Compression.Brotli.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.IO.Compression.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.IO.Compression.FileSystem.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.IO.Compression.ZipFile.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.IO.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.IO.FileSystem.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.IO.FileSystem.DriveInfo.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.IO.FileSystem.Primitives.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.IO.FileSystem.Watcher.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.IO.IsolatedStorage.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.IO.MemoryMappedFiles.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.IO.Pipelines.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.IO.Pipes.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.IO.UnmanagedMemoryStream.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Linq.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Linq.Expressions.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Linq.Parallel.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Linq.Queryable.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Memory.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Net.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Net.Http.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Net.HttpListener.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Net.Mail.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Net.NameResolution.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Net.NetworkInformation.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Net.Ping.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Net.Primitives.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Net.Requests.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Net.Security.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Net.ServicePoint.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Net.Sockets.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Net.WebClient.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Net.WebHeaderCollection.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Net.WebProxy.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Net.WebSockets.Client.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Net.WebSockets.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Numerics.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Numerics.Vectors.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.ObjectModel.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Reflection.DispatchProxy.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Reflection.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Reflection.Emit.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Reflection.Emit.ILGeneration.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Reflection.Emit.Lightweight.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Reflection.Extensions.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Reflection.Primitives.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Reflection.TypeExtensions.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Resources.Reader.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Resources.ResourceManager.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Resources.Writer.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Runtime.CompilerServices.Unsafe.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Runtime.CompilerServices.VisualC.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Runtime.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Runtime.Extensions.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Runtime.Handles.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Runtime.InteropServices.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Runtime.InteropServices.WindowsRuntime.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Runtime.Intrinsics.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Runtime.Loader.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Runtime.Numerics.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Runtime.Serialization.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Runtime.Serialization.Formatters.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Runtime.Serialization.Json.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Runtime.Serialization.Primitives.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Runtime.Serialization.Xml.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Security.Claims.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Security.Cryptography.Algorithms.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Security.Cryptography.Cng.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Security.Cryptography.Csp.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Security.Cryptography.Encoding.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Security.Cryptography.Primitives.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Security.Cryptography.X509Certificates.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Security.Cryptography.Xml.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Security.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Security.Permissions.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Security.Principal.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Security.SecureString.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.ServiceModel.Web.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.ServiceProcess.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Text.Encoding.CodePages.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Text.Encoding.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Text.Encoding.Extensions.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Text.Encodings.Web.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Text.RegularExpressions.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Threading.Channels.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Threading.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Threading.Overlapped.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Threading.Tasks.Dataflow.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Threading.Tasks.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Threading.Tasks.Extensions.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Threading.Tasks.Parallel.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Threading.Thread.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Threading.ThreadPool.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Threading.Timer.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Transactions.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Transactions.Local.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.ValueTuple.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Web.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Web.HttpUtility.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Windows.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Windows.Extensions.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Xml.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Xml.Linq.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Xml.ReaderWriter.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Xml.Serialization.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Xml.XDocument.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Xml.XmlDocument.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Xml.XmlSerializer.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Xml.XPath.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\System.Xml.XPath.XDocument.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\refs\WindowsBase.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\sniiv.Views.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\sniiv.Views.pdb
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\AdvancedStringBuilder.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Elastic.Apm.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Elastic.Apm.AspNetCore.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Elastic.Apm.Azure.CosmosDb.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Elastic.Apm.Azure.ServiceBus.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Elastic.Apm.Azure.Storage.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Elastic.Apm.Elasticsearch.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Elastic.Apm.EntityFrameworkCore.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Elastic.Apm.Extensions.Hosting.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Elastic.Apm.Extensions.Logging.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Elastic.Apm.GrpcClient.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Elastic.Apm.MongoDb.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Elastic.Apm.NetCoreAll.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Elastic.Apm.SerilogEnricher.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Elastic.Apm.SqlClient.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Elastic.CommonSchema.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Elastic.CommonSchema.Serilog.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Elasticsearch.Net.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\JavaScriptEngineSwitcher.Core.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\JavaScriptEngineSwitcher.Extensions.MsDependencyInjection.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\JavaScriptEngineSwitcher.V8.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\JSPool.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\ClearScript.Core.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\ClearScript.V8.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Razor.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Dia2Lib.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Microsoft.Diagnostics.FastSerialization.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Microsoft.Diagnostics.Tracing.TraceEvent.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\OSExtensions.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\TraceReloggerLib.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Hosting.Abstractions.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Microsoft.Win32.Registry.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\MongoDB.Bson.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\MongoDB.Driver.Core.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Npgsql.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\React.AspNet.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\React.AspNet.Middleware.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\React.Core.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Serilog.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Serilog.AspNetCore.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Serilog.Extensions.Hosting.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Serilog.Extensions.Logging.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Serilog.Formatting.Compact.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Serilog.Formatting.Elasticsearch.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Serilog.Settings.Configuration.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Serilog.Sinks.Async.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Serilog.Sinks.Console.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Serilog.Sinks.Debug.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Serilog.Sinks.Elasticsearch.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Serilog.Sinks.File.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Serilog.Sinks.Http.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Serilog.Sinks.PeriodicBatching.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Serilog.Sinks.RollingFile.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\System.Diagnostics.PerformanceCounter.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\System.Reflection.Metadata.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\System.Security.AccessControl.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\System.Security.Principal.Windows.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\System.Text.Json.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\ru-ru\JavaScriptEngineSwitcher.Core.resources.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\ru-ru\JavaScriptEngineSwitcher.V8.resources.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.resources.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.resources.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.resources.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.resources.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.resources.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.resources.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.resources.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.resources.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.resources.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.resources.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.resources.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\ClearScriptV8.win-x64.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\Microsoft.Win32.Registry.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.PerformanceCounter.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Security.AccessControl.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\AccessData.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Entity.dll
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\AccessData.pdb
+D:\Resplado sedatu\Azure5\sniiv\bin\Debug\netcoreapp3.1\Entity.pdb
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\sniiv.csproj.AssemblyReference.cache
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\sniiv.GeneratedMSBuildEditorConfig.editorconfig
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\sniiv.AssemblyInfoInputs.cache
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\sniiv.AssemblyInfo.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\sniiv.csproj.CoreCompileInputs.cache
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\sniiv.MvcApplicationPartsAssemblyInfo.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\sniiv.MvcApplicationPartsAssemblyInfo.cache
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\sniiv.RazorAssemblyInfo.cache
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\sniiv.RazorAssemblyInfo.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\staticwebassets\sniiv.StaticWebAssets.Manifest.cache
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\staticwebassets\sniiv.StaticWebAssets.xml
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\scopedcss\bundle\sniiv.styles.css
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\sniiv.TagHelpers.input.cache
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\sniiv.TagHelpers.output.cache
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\sniiv.RazorCoreGenerate.cache
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Cubo\Cnbv.cshtml.g.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Cubo\Conavi.cshtml.g.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Cubo\Desarrollador.cshtml.g.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Cubo\Financiamiento.cshtml.g.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Cubo\Fonhapo.cshtml.g.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Cubo\Fovissste.cshtml.g.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Cubo\Imss.cshtml.g.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Cubo\Infonavit.cshtml.g.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Cubo\Insus.cshtml.g.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Cubo\Inventario.cshtml.g.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Cubo\Issste.cshtml.g.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Cubo\Registro.cshtml.g.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Cubo\Semanal.cshtml.g.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Cubo\Sisevive.cshtml.g.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Dashboard\Conavi.cshtml.g.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Dashboard\Demanda.cshtml.g.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Dashboard\Imss.cshtml.g.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Dashboard\Inicio.cshtml.g.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Dashboard\Issste.cshtml.g.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Dashboard\Oferta.cshtml.g.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Dashboard\Semanal_financiamiento.cshtml.g.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Dashboard\Semanal_hipotecario.cshtml.g.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Dashboard\Sisevive.cshtml.g.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Demanda\Poblacion_historico.cshtml.g.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Demanda\Poblacion_proyeccion.cshtml.g.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Demanda\Potencial.cshtml.g.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Demanda\Rezago_estatal.cshtml.g.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Demanda\Rezago_municipal.cshtml.g.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Indicadores\Avances.cshtml.g.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Indicadores\Pnv.cshtml.g.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Indicadores\Vivienda.cshtml.g.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Inicio\Acerca_de.cshtml.g.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Inicio\Tutorial_cubos.cshtml.g.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Inicio\Tutorial_swagger.cshtml.g.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Oferta\Dias_inventario.cshtml.g.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Oferta\Mapa.cshtml.g.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Oferta\Mapa_old.cshtml.g.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Oferta\Parque.cshtml.g.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Oferta\Renaret.cshtml.g.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Reporte\Analisis.cshtml.g.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Reporte\Datos_abiertos.cshtml.g.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Reporte\Datos_abiertos_anterior.cshtml.g.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Reporte\Login.cshtml.g.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Reporte\LoginRedirect.cshtml.g.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Reporte\Logout.cshtml.g.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Reporte\Mensual.cshtml.g.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Reporte\Meta.cshtml.g.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Reporte\Padron.cshtml.g.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Reporte\Semanal_empleo.cshtml.g.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Reporte\Semanal_m2.cshtml.g.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout_sniiv.cshtml.g.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\sniiv.RazorTargetAssemblyInfo.cache
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\sniiv.RazorTargetAssemblyInfo.cs
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\sniiv.Views.pdb
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\sniiv.csproj.CopyComplete
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\sniiv.dll
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\sniiv.pdb
+D:\Resplado sedatu\Azure5\sniiv\obj\Debug\netcoreapp3.1\sniiv.genruntimeconfig.cache

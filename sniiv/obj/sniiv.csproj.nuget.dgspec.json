@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Azure\\sniiv\\sniiv.csproj": {}
+    "D:\\Resplado sedatu\\Azure5\\sniiv\\sniiv.csproj": {}
   },
   "projects": {
-    "E:\\Azure\\AccessData\\AccessData.csproj": {
+    "D:\\Resplado sedatu\\Azure5\\AccessData\\AccessData.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Azure\\AccessData\\AccessData.csproj",
+        "projectUniqueName": "D:\\Resplado sedatu\\Azure5\\AccessData\\AccessData.csproj",
         "projectName": "AccessData",
-        "projectPath": "E:\\Azure\\AccessData\\AccessData.csproj",
+        "projectPath": "D:\\Resplado sedatu\\Azure5\\AccessData\\AccessData.csproj",
         "packagesPath": "C:\\Users\\pe.norberto.rojas\\.nuget\\packages\\",
-        "outputPath": "E:\\Azure\\AccessData\\obj\\",
+        "outputPath": "D:\\Resplado sedatu\\Azure5\\AccessData\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -34,8 +34,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "E:\\Azure\\Entity\\Entity.csproj": {
-                "projectPath": "E:\\Azure\\Entity\\Entity.csproj"
+              "D:\\Resplado sedatu\\Azure5\\Entity\\Entity.csproj": {
+                "projectPath": "D:\\Resplado sedatu\\Azure5\\Entity\\Entity.csproj"
               }
             }
           }
@@ -90,18 +90,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.416\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Azure\\Entity\\Entity.csproj": {
+    "D:\\Resplado sedatu\\Azure5\\Entity\\Entity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Azure\\Entity\\Entity.csproj",
+        "projectUniqueName": "D:\\Resplado sedatu\\Azure5\\Entity\\Entity.csproj",
         "projectName": "Entity",
-        "projectPath": "E:\\Azure\\Entity\\Entity.csproj",
+        "projectPath": "D:\\Resplado sedatu\\Azure5\\Entity\\Entity.csproj",
         "packagesPath": "C:\\Users\\pe.norberto.rojas\\.nuget\\packages\\",
-        "outputPath": "E:\\Azure\\Entity\\obj\\",
+        "outputPath": "D:\\Resplado sedatu\\Azure5\\Entity\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -150,18 +150,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.416\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Azure\\sniiv\\sniiv.csproj": {
+    "D:\\Resplado sedatu\\Azure5\\sniiv\\sniiv.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Azure\\sniiv\\sniiv.csproj",
+        "projectUniqueName": "D:\\Resplado sedatu\\Azure5\\sniiv\\sniiv.csproj",
         "projectName": "sniiv",
-        "projectPath": "E:\\Azure\\sniiv\\sniiv.csproj",
+        "projectPath": "D:\\Resplado sedatu\\Azure5\\sniiv\\sniiv.csproj",
         "packagesPath": "C:\\Users\\pe.norberto.rojas\\.nuget\\packages\\",
-        "outputPath": "E:\\Azure\\sniiv\\obj\\",
+        "outputPath": "D:\\Resplado sedatu\\Azure5\\sniiv\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -184,11 +184,11 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "E:\\Azure\\AccessData\\AccessData.csproj": {
-                "projectPath": "E:\\Azure\\AccessData\\AccessData.csproj"
+              "D:\\Resplado sedatu\\Azure5\\AccessData\\AccessData.csproj": {
+                "projectPath": "D:\\Resplado sedatu\\Azure5\\AccessData\\AccessData.csproj"
               },
-              "E:\\Azure\\Entity\\Entity.csproj": {
-                "projectPath": "E:\\Azure\\Entity\\Entity.csproj"
+              "D:\\Resplado sedatu\\Azure5\\Entity\\Entity.csproj": {
+                "projectPath": "D:\\Resplado sedatu\\Azure5\\Entity\\Entity.csproj"
               }
             }
           }
@@ -292,12 +292,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[3.1.25, 3.1.25]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -306,7 +300,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.416\\RuntimeIdentifierGraph.json"
         }
       }
     }
