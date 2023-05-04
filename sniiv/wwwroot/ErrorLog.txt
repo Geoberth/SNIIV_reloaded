@@ -1,1 +1,30 @@
-﻿
+﻿Date: 04/05/2023 03:00:54 p.m.
+Message: Unable to cast object of type 'System.DBNull' to type 'System.Int32'.
+StackTrace:    at DiasInventarioDAO.<>c.<seleccionarTrimestre>b__5_0(DataRow row) in C:\Users\pe.norberto.rojas\source\repos\Geoberth\SNIIV_reloaded\AccessData\DiasInventarioDAO.cs:line 81
+   at System.Linq.Enumerable.SelectEnumerableIterator`2.ToList()
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at DiasInventarioDAO.seleccionarTrimestre() in C:\Users\pe.norberto.rojas\source\repos\Geoberth\SNIIV_reloaded\AccessData\DiasInventarioDAO.cs:line 81
+Source: AccessData
+TargetSite: Int32 <seleccionarTrimestre>b__5_0(System.Data.DataRow)
+-----------------------------------------------------------
+
+Date: 04/05/2023 05:33:35 p.m.
+Message: Unable to cast object of type 'System.DBNull' to type 'System.Int32'.
+StackTrace:    at DiasInventarioDAO.<>c.<seleccionarTrimestre>b__5_0(DataRow row) in C:\Users\pe.norberto.rojas\source\repos\Geoberth\SNIIV_reloaded\AccessData\DiasInventarioDAO.cs:line 81
+   at System.Linq.Enumerable.SelectEnumerableIterator`2.ToList()
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at DiasInventarioDAO.seleccionarTrimestre() in C:\Users\pe.norberto.rojas\source\repos\Geoberth\SNIIV_reloaded\AccessData\DiasInventarioDAO.cs:line 81
+Source: AccessData
+TargetSite: Int32 <seleccionarTrimestre>b__5_0(System.Data.DataRow)
+-----------------------------------------------------------
+
+Date: 04/05/2023 05:43:36 p.m.
+Message: Unable to cast object of type 'System.DBNull' to type 'System.Int32'.
+StackTrace:    at DiasInventarioDAO.<>c.<seleccionarTrimestre>b__5_0(DataRow row) in C:\Users\pe.norberto.rojas\source\repos\Geoberth\SNIIV_reloaded\AccessData\DiasInventarioDAO.cs:line 81
+   at System.Linq.Enumerable.SelectEnumerableIterator`2.ToList()
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at DiasInventarioDAO.seleccionarTrimestre() in C:\Users\pe.norberto.rojas\source\repos\Geoberth\SNIIV_reloaded\AccessData\DiasInventarioDAO.cs:line 81
+Source: AccessData
+TargetSite: Int32 <seleccionarTrimestre>b__5_0(System.Data.DataRow)
+-----------------------------------------------------------
+

@@ -11,3 +11,16 @@ D:\Resplado sedatu\Azure5\AccessData\obj\Debug\netcoreapp3.1\AccessData.csproj.C
 D:\Resplado sedatu\Azure5\AccessData\obj\Debug\netcoreapp3.1\AccessData.csproj.CopyComplete
 D:\Resplado sedatu\Azure5\AccessData\obj\Debug\netcoreapp3.1\AccessData.dll
 D:\Resplado sedatu\Azure5\AccessData\obj\Debug\netcoreapp3.1\AccessData.pdb
+C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\AccessData\bin\Debug\netcoreapp3.1\AccessData.deps.json
+C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\AccessData\bin\Debug\netcoreapp3.1\AccessData.dll
+C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\AccessData\bin\Debug\netcoreapp3.1\AccessData.pdb
+C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\AccessData\bin\Debug\netcoreapp3.1\Entity.dll
+C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\AccessData\bin\Debug\netcoreapp3.1\Entity.pdb
+C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\AccessData\obj\Debug\netcoreapp3.1\AccessData.csproj.AssemblyReference.cache
+C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\AccessData\obj\Debug\netcoreapp3.1\AccessData.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\AccessData\obj\Debug\netcoreapp3.1\AccessData.AssemblyInfoInputs.cache
+C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\AccessData\obj\Debug\netcoreapp3.1\AccessData.AssemblyInfo.cs
+C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\AccessData\obj\Debug\netcoreapp3.1\AccessData.csproj.CoreCompileInputs.cache
+C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\AccessData\obj\Debug\netcoreapp3.1\AccessData.csproj.CopyComplete
+C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\AccessData\obj\Debug\netcoreapp3.1\AccessData.dll
+C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\AccessData\obj\Debug\netcoreapp3.1\AccessData.pdb

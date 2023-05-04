@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "opp35L8MVOG8qI4dOWFsNdBiOhDkcfcnn7Hc2MeThbuTZ3Mdm5dUkko6nAVE3GJrByIAbb10YY/he+qjf4uBOg==",
+  "dgSpecHash": "mkshRF49U8+sf1WvMvgI7eb3U/0D/kM4DyCtkbM9A1CWqwf//pfRZ9+eUzL8mE2VENa6pFckqRt2ZRfmXYW3CQ==",
   "success": true,
-  "projectFilePath": "D:\\Resplado sedatu\\Azure5\\AccessData\\AccessData.csproj",
+  "projectFilePath": "C:\\Users\\pe.norberto.rojas\\source\\repos\\Geoberth\\SNIIV_reloaded\\AccessData\\AccessData.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pe.norberto.rojas\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.9\\microsoft.extensions.configuration.3.1.9.nupkg.sha512",
     "C:\\Users\\pe.norberto.rojas\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.9\\microsoft.extensions.configuration.abstractions.3.1.9.nupkg.sha512",

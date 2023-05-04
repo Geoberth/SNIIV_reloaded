@@ -112,3 +112,2584 @@ WHERE d.tipo = @__bn_0
 2023-04-24 20:05:02.116 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/css/stroke-7/fonts/Stroke-7.ttf?21lgsr  
 2023-04-24 20:05:02.116 -06:00 [INF] The file /css/stroke-7/fonts/Stroke-7.ttf was not modified
 2023-04-24 20:05:02.116 -06:00 [INF] Request finished in 0.5224ms 304 application/x-font-ttf
+2023-05-02 09:36:15.684 -06:00 [INF] User profile is available. Using 'C:\Users\pe.norberto.rojas\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-05-02 09:36:27.164 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-05-02 09:36:27.165 -06:00 [INF] Hosting environment: Development
+2023-05-02 09:36:27.165 -06:00 [INF] Content root path: C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv
+2023-05-02 09:36:28.036 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/  
+2023-05-02 09:36:28.540 -06:00 [INF] Executing endpoint 'sniiv.Controllers.InicioController.Acerca_de (sniiv)'
+2023-05-02 09:36:28.573 -06:00 [INF] Route matched with {action = "Acerca_de", controller = "Inicio"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Acerca_de() on controller sniiv.Controllers.InicioController (sniiv).
+2023-05-02 09:36:34.655 -06:00 [INF] Entity Framework Core 3.1.3 initialized 'AppDBContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+2023-05-02 09:36:37.952 -06:00 [INF] Executed DbCommand (176ms) [Parameters=[@__bn_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT d.id, d.anio, d.formato, d.mes, d.tipo, d.url
+FROM datos_abiertos AS d
+WHERE d.tipo = @__bn_0
+2023-05-02 09:36:38.141 -06:00 [INF] Executing ViewResult, running view Acerca_de.
+2023-05-02 09:36:39.142 -06:00 [INF] Executed ViewResult - view Acerca_de executed in 1023.8214ms.
+2023-05-02 09:36:39.144 -06:00 [INF] Executed action sniiv.Controllers.InicioController.Acerca_de (sniiv) in 10570.186ms
+2023-05-02 09:36:39.144 -06:00 [INF] Executed endpoint 'sniiv.Controllers.InicioController.Acerca_de (sniiv)'
+2023-05-02 09:36:39.145 -06:00 [INF] Request GET / => 200
+2023-05-02 09:36:39.153 -06:00 [INF] Request finished in 11120.7567ms 200 text/html; charset=utf-8
+2023-05-02 09:36:39.189 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/js/jquery-1.11/jquery.min.js  
+2023-05-02 09:36:39.201 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/css/bootstrap.min.css  
+2023-05-02 09:36:39.228 -06:00 [INF] Sending file. Request path: '/css/bootstrap.min.css'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\css\bootstrap.min.css'
+2023-05-02 09:36:39.228 -06:00 [INF] Sending file. Request path: '/js/jquery-1.11/jquery.min.js'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\js\jquery-1.11\jquery.min.js'
+2023-05-02 09:36:39.566 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/css/stroke-7/style.css  
+2023-05-02 09:36:39.568 -06:00 [INF] Sending file. Request path: '/css/stroke-7/style.css'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\css\stroke-7\style.css'
+2023-05-02 09:36:39.568 -06:00 [INF] Request finished in 367.2601ms 200 text/css
+2023-05-02 09:36:39.568 -06:00 [INF] Request finished in 378.852ms 200 application/javascript
+2023-05-02 09:36:39.568 -06:00 [INF] Request finished in 1.6758ms 200 text/css
+2023-05-02 09:36:39.899 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/js/bootstrap.min.js  
+2023-05-02 09:36:39.899 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/css/style1.css  
+2023-05-02 09:36:39.899 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/css/diag.css  
+2023-05-02 09:36:39.900 -06:00 [INF] Sending file. Request path: '/css/diag.css'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\css\diag.css'
+2023-05-02 09:36:39.900 -06:00 [INF] Sending file. Request path: '/css/style1.css'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\css\style1.css'
+2023-05-02 09:36:39.901 -06:00 [INF] Request finished in 1.9695ms 200 text/css
+2023-05-02 09:36:39.901 -06:00 [INF] Sending file. Request path: '/js/bootstrap.min.js'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\js\bootstrap.min.js'
+2023-05-02 09:36:39.901 -06:00 [INF] Request finished in 2.5858ms 200 text/css
+2023-05-02 09:36:39.903 -06:00 [INF] Request finished in 4.1592ms 200 application/javascript
+2023-05-02 09:36:39.906 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/js/acerca-de.js  
+2023-05-02 09:36:39.906 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/js/jquery.backstretch.min.js  
+2023-05-02 09:36:39.906 -06:00 [INF] Sending file. Request path: '/js/acerca-de.js'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\js\acerca-de.js'
+2023-05-02 09:36:39.907 -06:00 [INF] Request finished in 1.0855ms 200 application/javascript
+2023-05-02 09:36:39.908 -06:00 [INF] Sending file. Request path: '/js/jquery.backstretch.min.js'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\js\jquery.backstretch.min.js'
+2023-05-02 09:36:39.908 -06:00 [INF] Request finished in 2.3598ms 200 application/javascript
+2023-05-02 09:36:39.920 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/img/sniiv_ic.png  
+2023-05-02 09:36:39.921 -06:00 [INF] Sending file. Request path: '/img/sniiv_ic.png'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\img\sniiv_ic.png'
+2023-05-02 09:36:39.921 -06:00 [INF] Request finished in 1.0828ms 200 image/png
+2023-05-02 09:36:39.922 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/img/sniiv02.png  
+2023-05-02 09:36:39.925 -06:00 [INF] Sending file. Request path: '/img/sniiv02.png'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\img\sniiv02.png'
+2023-05-02 09:36:39.925 -06:00 [INF] Request finished in 2.5138ms 200 image/png
+2023-05-02 09:36:39.989 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/img/conavi.png  
+2023-05-02 09:36:39.989 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/img/cnbv.jpg  
+2023-05-02 09:36:39.992 -06:00 [INF] Sending file. Request path: '/img/cnbv.jpg'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\img\cnbv.jpg'
+2023-05-02 09:36:39.993 -06:00 [INF] Sending file. Request path: '/img/conavi.png'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\img\conavi.png'
+2023-05-02 09:36:39.992 -06:00 [INF] Request finished in 3.3267ms 200 image/jpeg
+2023-05-02 09:36:39.993 -06:00 [INF] Request finished in 3.7368ms 200 image/png
+2023-05-02 09:36:40.096 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/img/INSUS.png  
+2023-05-02 09:36:40.099 -06:00 [INF] Sending file. Request path: '/img/INSUS.png'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\img\INSUS.png'
+2023-05-02 09:36:40.099 -06:00 [INF] Request finished in 3.0764ms 200 image/png
+2023-05-02 09:36:40.105 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/img/infonavit.png  
+2023-05-02 09:36:40.105 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/img/ruv.png  
+2023-05-02 09:36:40.105 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/css/stroke-7/fonts/Stroke-7.ttf?21lgsr  
+2023-05-02 09:36:40.107 -06:00 [INF] Sending file. Request path: '/css/stroke-7/fonts/Stroke-7.ttf'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\css\stroke-7\fonts\Stroke-7.ttf'
+2023-05-02 09:36:40.107 -06:00 [INF] Request finished in 2.1981ms 200 application/x-font-ttf
+2023-05-02 09:36:40.109 -06:00 [INF] Sending file. Request path: '/img/infonavit.png'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\img\infonavit.png'
+2023-05-02 09:36:40.109 -06:00 [INF] Request finished in 4.4721ms 200 image/png
+2023-05-02 09:36:40.110 -06:00 [INF] Sending file. Request path: '/img/ruv.png'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\img\ruv.png'
+2023-05-02 09:36:40.110 -06:00 [INF] Request finished in 4.8787ms 200 image/png
+2023-05-02 09:36:40.117 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/img/fovissste.png  
+2023-05-02 09:36:40.121 -06:00 [INF] Sending file. Request path: '/img/fovissste.png'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\img\fovissste.png'
+2023-05-02 09:36:40.121 -06:00 [INF] Request finished in 3.5583ms 200 image/png
+2023-05-02 09:36:40.127 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/img/shf.png  
+2023-05-02 09:36:40.127 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/img/sedatu.png  
+2023-05-02 09:36:40.129 -06:00 [INF] Sending file. Request path: '/img/shf.png'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\img\shf.png'
+2023-05-02 09:36:40.130 -06:00 [INF] Request finished in 2.6537ms 200 image/png
+2023-05-02 09:36:40.130 -06:00 [INF] Sending file. Request path: '/img/sedatu.png'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\img\sedatu.png'
+2023-05-02 09:36:40.130 -06:00 [INF] Request finished in 2.6975ms 200 image/png
+2023-05-02 09:36:40.193 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/img/carousel-1.jpeg  
+2023-05-02 09:36:40.428 -06:00 [INF] Sending file. Request path: '/img/carousel-1.jpeg'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\img\carousel-1.jpeg'
+2023-05-02 09:36:40.428 -06:00 [INF] Request finished in 235.515ms 200 image/jpeg
+2023-05-02 09:36:40.518 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/favicon.ico  
+2023-05-02 09:36:40.521 -06:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\favicon.ico'
+2023-05-02 09:36:40.521 -06:00 [INF] Request finished in 3.5641ms 200 image/x-icon
+2023-05-02 09:37:37.778 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/Indicadores/Pnv  
+2023-05-02 09:37:37.789 -06:00 [INF] Executing endpoint 'sniiv.Controllers.IndicadoresController.Pnv (sniiv)'
+2023-05-02 09:37:37.792 -06:00 [INF] Route matched with {action = "Pnv", controller = "Indicadores"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Pnv() on controller sniiv.Controllers.IndicadoresController (sniiv).
+2023-05-02 09:37:37.873 -06:00 [INF] Executing ViewResult, running view Pnv.
+2023-05-02 09:37:37.982 -06:00 [INF] Executed ViewResult - view Pnv executed in 119.157ms.
+2023-05-02 09:37:37.982 -06:00 [INF] Executed action sniiv.Controllers.IndicadoresController.Pnv (sniiv) in 190.0804ms
+2023-05-02 09:37:37.982 -06:00 [INF] Executed endpoint 'sniiv.Controllers.IndicadoresController.Pnv (sniiv)'
+2023-05-02 09:37:37.982 -06:00 [INF] Request GET /Indicadores/Pnv => 200
+2023-05-02 09:37:37.984 -06:00 [INF] Request finished in 209.5196ms 200 text/html; charset=utf-8
+2023-05-02 09:38:26.089 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/Indicadores/Pnv  
+2023-05-02 09:38:26.095 -06:00 [INF] Executing endpoint 'sniiv.Controllers.IndicadoresController.Pnv (sniiv)'
+2023-05-02 09:38:26.096 -06:00 [INF] Route matched with {action = "Pnv", controller = "Indicadores"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Pnv() on controller sniiv.Controllers.IndicadoresController (sniiv).
+2023-05-02 09:38:26.097 -06:00 [INF] Executing ViewResult, running view Pnv.
+2023-05-02 09:38:26.109 -06:00 [INF] Executed ViewResult - view Pnv executed in 12.6354ms.
+2023-05-02 09:38:26.112 -06:00 [INF] Executed action sniiv.Controllers.IndicadoresController.Pnv (sniiv) in 15.5378ms
+2023-05-02 09:38:26.112 -06:00 [INF] Executed endpoint 'sniiv.Controllers.IndicadoresController.Pnv (sniiv)'
+2023-05-02 09:38:26.112 -06:00 [INF] Request GET /Indicadores/Pnv => 200
+2023-05-02 09:38:26.112 -06:00 [INF] Request finished in 29.125ms 200 text/html; charset=utf-8
+2023-05-04 14:57:57.159 -06:00 [INF] User profile is available. Using 'C:\Users\pe.norberto.rojas\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-05-04 14:58:08.419 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-05-04 14:58:08.420 -06:00 [INF] Hosting environment: Development
+2023-05-04 14:58:08.420 -06:00 [INF] Content root path: C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv
+2023-05-04 14:58:09.170 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/  
+2023-05-04 14:58:09.617 -06:00 [INF] Executing endpoint 'sniiv.Controllers.InicioController.Acerca_de (sniiv)'
+2023-05-04 14:58:09.649 -06:00 [INF] Route matched with {action = "Acerca_de", controller = "Inicio"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Acerca_de() on controller sniiv.Controllers.InicioController (sniiv).
+2023-05-04 14:58:16.153 -06:00 [INF] Entity Framework Core 3.1.3 initialized 'AppDBContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+2023-05-04 14:58:18.647 -06:00 [INF] Executed DbCommand (10ms) [Parameters=[@__bn_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT d.id, d.anio, d.formato, d.mes, d.tipo, d.url
+FROM datos_abiertos AS d
+WHERE d.tipo = @__bn_0
+2023-05-04 14:58:18.838 -06:00 [INF] Executing ViewResult, running view Acerca_de.
+2023-05-04 14:58:19.784 -06:00 [INF] Executed ViewResult - view Acerca_de executed in 966.5381ms.
+2023-05-04 14:58:19.785 -06:00 [INF] Executed action sniiv.Controllers.InicioController.Acerca_de (sniiv) in 10134.9878ms
+2023-05-04 14:58:19.786 -06:00 [INF] Executed endpoint 'sniiv.Controllers.InicioController.Acerca_de (sniiv)'
+2023-05-04 14:58:19.786 -06:00 [INF] Request GET / => 200
+2023-05-04 14:58:19.800 -06:00 [INF] Request finished in 10631.426ms 200 text/html; charset=utf-8
+2023-05-04 14:58:19.832 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/css/style1.css  
+2023-05-04 14:58:19.832 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/css/bootstrap.min.css  
+2023-05-04 14:58:20.205 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/js/jquery-1.11/jquery.min.js  
+2023-05-04 14:58:20.210 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/js/acerca-de.js  
+2023-05-04 14:58:20.223 -06:00 [INF] Sending file. Request path: '/css/style1.css'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\css\style1.css'
+2023-05-04 14:58:20.223 -06:00 [INF] Sending file. Request path: '/js/acerca-de.js'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\js\acerca-de.js'
+2023-05-04 14:58:20.223 -06:00 [INF] Request finished in 390.9256ms 200 text/css
+2023-05-04 14:58:20.223 -06:00 [INF] Request finished in 13.4996ms 200 application/javascript
+2023-05-04 14:58:20.224 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/js/jquery.backstretch.min.js  
+2023-05-04 14:58:20.224 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/img/sniiv_ic.png  
+2023-05-04 14:58:20.237 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/img/sniiv02.png  
+2023-05-04 14:58:20.237 -06:00 [INF] Sending file. Request path: '/img/sniiv_ic.png'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\img\sniiv_ic.png'
+2023-05-04 14:58:20.238 -06:00 [INF] Request finished in 14.7573ms 200 image/png
+2023-05-04 14:58:20.239 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/css/diag.css  
+2023-05-04 14:58:20.244 -06:00 [INF] Sending file. Request path: '/js/jquery.backstretch.min.js'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\js\jquery.backstretch.min.js'
+2023-05-04 14:58:20.245 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/js/bootstrap.min.js  
+2023-05-04 14:58:20.247 -06:00 [INF] Sending file. Request path: '/css/diag.css'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\css\diag.css'
+2023-05-04 14:58:20.248 -06:00 [INF] Request finished in 24.1107ms 200 application/javascript
+2023-05-04 14:58:20.248 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/img/INSUS.png  
+2023-05-04 14:58:20.248 -06:00 [INF] Request finished in 9.2943ms 200 text/css
+2023-05-04 14:58:20.248 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/img/infonavit.png  
+2023-05-04 14:58:20.264 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/css/stroke-7/style.css  
+2023-05-04 14:58:20.264 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/img/ruv.png  
+2023-05-04 14:58:20.271 -06:00 [INF] Sending file. Request path: '/css/stroke-7/style.css'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\css\stroke-7\style.css'
+2023-05-04 14:58:20.272 -06:00 [INF] Request finished in 7.8127ms 200 text/css
+2023-05-04 14:58:20.272 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/img/fovissste.png  
+2023-05-04 14:58:20.275 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/img/shf.png  
+2023-05-04 14:58:20.277 -06:00 [INF] Sending file. Request path: '/js/bootstrap.min.js'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\js\bootstrap.min.js'
+2023-05-04 14:58:20.277 -06:00 [INF] Request finished in 31.513ms 200 application/javascript
+2023-05-04 14:58:20.277 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/img/cnbv.jpg  
+2023-05-04 14:58:20.282 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/img/conavi.png  
+2023-05-04 14:58:20.283 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/img/sedatu.png  
+2023-05-04 14:58:20.704 -06:00 [INF] Sending file. Request path: '/img/sniiv02.png'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\img\sniiv02.png'
+2023-05-04 14:58:20.704 -06:00 [INF] Request finished in 467.0147ms 200 image/png
+2023-05-04 14:58:20.714 -06:00 [INF] Sending file. Request path: '/css/bootstrap.min.css'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\css\bootstrap.min.css'
+2023-05-04 14:58:20.714 -06:00 [INF] Request finished in 881.775ms 200 text/css
+2023-05-04 14:58:20.735 -06:00 [INF] Sending file. Request path: '/img/ruv.png'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\img\ruv.png'
+2023-05-04 14:58:20.735 -06:00 [INF] Sending file. Request path: '/img/cnbv.jpg'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\img\cnbv.jpg'
+2023-05-04 14:58:20.735 -06:00 [INF] Request finished in 470.955ms 200 image/png
+2023-05-04 14:58:20.735 -06:00 [INF] Request finished in 458.4128ms 200 image/jpeg
+2023-05-04 14:58:20.738 -06:00 [INF] Sending file. Request path: '/js/jquery-1.11/jquery.min.js'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\js\jquery-1.11\jquery.min.js'
+2023-05-04 14:58:20.739 -06:00 [INF] Request finished in 533.0691ms 200 application/javascript
+2023-05-04 14:58:20.742 -06:00 [INF] Sending file. Request path: '/img/conavi.png'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\img\conavi.png'
+2023-05-04 14:58:20.742 -06:00 [INF] Request finished in 460.297ms 200 image/png
+2023-05-04 14:58:20.743 -06:00 [INF] Sending file. Request path: '/img/shf.png'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\img\shf.png'
+2023-05-04 14:58:20.743 -06:00 [INF] Request finished in 468.1114ms 200 image/png
+2023-05-04 14:58:20.743 -06:00 [INF] Sending file. Request path: '/img/sedatu.png'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\img\sedatu.png'
+2023-05-04 14:58:20.743 -06:00 [INF] Request finished in 460.9685ms 200 image/png
+2023-05-04 14:58:20.743 -06:00 [INF] Sending file. Request path: '/img/INSUS.png'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\img\INSUS.png'
+2023-05-04 14:58:20.743 -06:00 [INF] Request finished in 495.2474ms 200 image/png
+2023-05-04 14:58:20.751 -06:00 [INF] Sending file. Request path: '/img/infonavit.png'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\img\infonavit.png'
+2023-05-04 14:58:20.751 -06:00 [INF] Request finished in 502.4221ms 200 image/png
+2023-05-04 14:58:20.760 -06:00 [INF] Sending file. Request path: '/img/fovissste.png'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\img\fovissste.png'
+2023-05-04 14:58:20.760 -06:00 [INF] Request finished in 488.3669ms 200 image/png
+2023-05-04 14:58:20.807 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/css/stroke-7/fonts/Stroke-7.ttf?21lgsr  
+2023-05-04 14:58:20.817 -06:00 [INF] Sending file. Request path: '/css/stroke-7/fonts/Stroke-7.ttf'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\css\stroke-7\fonts\Stroke-7.ttf'
+2023-05-04 14:58:20.818 -06:00 [INF] Request finished in 10.7796ms 200 application/x-font-ttf
+2023-05-04 14:58:20.883 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/img/carousel-1.jpeg  
+2023-05-04 14:58:21.527 -06:00 [INF] Sending file. Request path: '/img/carousel-1.jpeg'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\img\carousel-1.jpeg'
+2023-05-04 14:58:21.527 -06:00 [INF] Request finished in 643.9904ms 200 image/jpeg
+2023-05-04 14:58:21.574 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/favicon.ico  
+2023-05-04 14:58:21.586 -06:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\favicon.ico'
+2023-05-04 14:58:21.587 -06:00 [INF] Request finished in 12.4611ms 200 image/x-icon
+2023-05-04 15:00:37.607 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/homemx/  
+2023-05-04 15:00:37.616 -06:00 [INF] Request GET /homemx/ => 404
+2023-05-04 15:00:37.617 -06:00 [INF] Request finished in 10.1293ms 404 
+2023-05-04 15:00:41.315 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/homemx/  
+2023-05-04 15:00:41.320 -06:00 [INF] Request GET /homemx/ => 404
+2023-05-04 15:00:41.321 -06:00 [INF] Request finished in 6.4544ms 404 
+2023-05-04 15:00:41.849 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/homemx/  
+2023-05-04 15:00:41.851 -06:00 [INF] Request GET /homemx/ => 404
+2023-05-04 15:00:41.852 -06:00 [INF] Request finished in 2.2281ms 404 
+2023-05-04 15:00:42.080 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/homemx/  
+2023-05-04 15:00:42.082 -06:00 [INF] Request GET /homemx/ => 404
+2023-05-04 15:00:42.082 -06:00 [INF] Request finished in 2.4587ms 404 
+2023-05-04 15:00:47.406 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/Demanda/Potencial  
+2023-05-04 15:00:47.408 -06:00 [INF] Executing endpoint 'sniiv.Controllers.DemandaController.Potencial (sniiv)'
+2023-05-04 15:00:47.416 -06:00 [INF] Route matched with {action = "Potencial", controller = "Demanda"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Potencial() on controller sniiv.Controllers.DemandaController (sniiv).
+2023-05-04 15:00:47.725 -06:00 [INF] Executing ViewResult, running view Potencial.
+2023-05-04 15:00:47.925 -06:00 [INF] Executed ViewResult - view Potencial executed in 208.3209ms.
+2023-05-04 15:00:47.925 -06:00 [INF] Executed action sniiv.Controllers.DemandaController.Potencial (sniiv) in 509.3925ms
+2023-05-04 15:00:47.926 -06:00 [INF] Executed endpoint 'sniiv.Controllers.DemandaController.Potencial (sniiv)'
+2023-05-04 15:00:47.926 -06:00 [INF] Request GET /Demanda/Potencial => 200
+2023-05-04 15:00:47.926 -06:00 [INF] Request finished in 519.9838ms 200 text/html; charset=utf-8
+2023-05-04 15:00:47.957 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/js/datatable2/datatables.min.js  
+2023-05-04 15:00:47.957 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/js/datatable2/datatables.min.css  
+2023-05-04 15:00:47.958 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/css/echarts.css  
+2023-05-04 15:00:47.982 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/js/data.js  
+2023-05-04 15:00:47.983 -06:00 [INF] Sending file. Request path: '/css/echarts.css'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\css\echarts.css'
+2023-05-04 15:00:47.983 -06:00 [INF] Request finished in 25.3059ms 200 text/css
+2023-05-04 15:00:47.984 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/js/echarts/echarts.js  
+2023-05-04 15:00:47.987 -06:00 [INF] Sending file. Request path: '/js/data.js'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\js\data.js'
+2023-05-04 15:00:47.988 -06:00 [INF] Sending file. Request path: '/js/datatable2/datatables.min.css'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\js\datatable2\datatables.min.css'
+2023-05-04 15:00:47.988 -06:00 [INF] Request finished in 5.1947ms 200 application/javascript
+2023-05-04 15:00:47.988 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/js/util.js  
+2023-05-04 15:00:47.988 -06:00 [INF] Request finished in 30.5031ms 200 text/css
+2023-05-04 15:00:47.994 -06:00 [INF] Sending file. Request path: '/js/util.js'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\js\util.js'
+2023-05-04 15:00:47.994 -06:00 [INF] Request finished in 5.6126ms 200 application/javascript
+2023-05-04 15:00:48.012 -06:00 [INF] Sending file. Request path: '/js/echarts/echarts.js'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\js\echarts\echarts.js'
+2023-05-04 15:00:48.012 -06:00 [INF] Request finished in 28.8366ms 200 application/javascript
+2023-05-04 15:00:48.236 -06:00 [INF] Sending file. Request path: '/js/datatable2/datatables.min.js'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\js\datatable2\datatables.min.js'
+2023-05-04 15:00:48.237 -06:00 [INF] Request finished in 279.2383ms 200 application/javascript
+2023-05-04 15:00:48.574 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/api/DemandaAPI/GetDemandaPotencial/2022/12  
+2023-05-04 15:00:48.579 -06:00 [INF] Executing endpoint 'sniiv.Controllers.DemandaAPIController.GetDemandaPotencial (sniiv)'
+2023-05-04 15:00:48.603 -06:00 [INF] Route matched with {action = "GetDemandaPotencial", controller = "DemandaAPI"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetDemandaPotencial(Int32, Int32) on controller sniiv.Controllers.DemandaAPIController (sniiv).
+2023-05-04 15:00:48.662 -06:00 [INF] Entity Framework Core 3.1.3 initialized 'AppDBContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+2023-05-04 15:00:49.348 -06:00 [INF] Executed DbCommand (676ms) [Parameters=[@__anio_0='?' (DbType = Int32), @__mes_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT d.id, d.anio, d.clave_entidad_federativa, d.clave_municipio, d.id_salario_infonavit, d.mes, d.valor
+FROM demanda_potencial_infonavit AS d
+WHERE (d.anio = @__anio_0) AND (d.mes = @__mes_1)
+2023-05-04 15:00:49.561 -06:00 [INF] Executed DbCommand (3ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.596 -06:00 [INF] Executed DbCommand (19ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.605 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.606 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.608 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.610 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.611 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.613 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.632 -06:00 [INF] Executed DbCommand (2ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.634 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.636 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.638 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.640 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.642 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.644 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.645 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.648 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.649 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.650 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.652 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.653 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.655 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.656 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.657 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.659 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.661 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.663 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.664 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.665 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.667 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.668 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.670 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.671 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.673 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.675 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.676 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.677 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.679 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.681 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.682 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.683 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.685 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.686 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.687 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.689 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.690 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.692 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.693 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.695 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.696 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.698 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.699 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.701 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.702 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.703 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.705 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.707 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.709 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.710 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.712 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.713 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.715 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.716 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.718 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.719 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.721 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.722 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.724 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.725 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.727 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.729 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.730 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.732 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.733 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.735 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.736 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.738 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.740 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.741 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.743 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.744 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.745 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.747 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.748 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.749 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.751 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.753 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.754 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.756 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.758 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.759 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.761 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.762 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.764 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.766 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.767 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.769 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.771 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.773 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.774 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.776 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.777 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.779 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.780 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.782 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.783 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.785 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.787 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.788 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.790 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.792 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.794 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.796 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.797 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.799 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.803 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.807 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.810 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.813 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.816 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.819 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.822 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.825 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.828 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.830 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.833 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.836 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.839 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.841 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.843 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.845 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.848 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.851 -06:00 [INF] Executed DbCommand (2ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.853 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.855 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.857 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.858 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.860 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.861 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.862 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.864 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.866 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.867 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.868 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.870 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.871 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.873 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.875 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.876 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.878 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.879 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.881 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.882 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.883 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.886 -06:00 [INF] Executed DbCommand (2ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.887 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.889 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.890 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.892 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.893 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.895 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.897 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.899 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.901 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.903 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.905 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.907 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.908 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.909 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.911 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.913 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.914 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.915 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.917 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.918 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.920 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.921 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.923 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.924 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.925 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.927 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.929 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.930 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.931 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.933 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.934 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.936 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.937 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.939 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.941 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.942 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.944 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.945 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.947 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.948 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.950 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.951 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.952 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.954 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.956 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.957 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.961 -06:00 [INF] Executed DbCommand (3ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.965 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.967 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.969 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.970 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.975 -06:00 [INF] Executed DbCommand (3ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.977 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.978 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.980 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.982 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.983 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.984 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.986 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.987 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.989 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.991 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.992 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.994 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.995 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.997 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:49.998 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:49.999 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.001 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.003 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.004 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.006 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.009 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.011 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.013 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.015 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.017 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.018 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.020 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.021 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.023 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.024 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.026 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.027 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.029 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.030 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.031 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.033 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.034 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.036 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.038 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.040 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.041 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.043 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.044 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.046 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.047 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.048 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.050 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.051 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.053 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.055 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.057 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.058 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.059 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.061 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.062 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.064 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.065 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.067 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.068 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.070 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.071 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.073 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.075 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.076 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.077 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.079 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.080 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.083 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.084 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.086 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.088 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.089 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.091 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.092 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.094 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.095 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.096 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.098 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.100 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.102 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.103 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.105 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.107 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.108 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.110 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.111 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.113 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.114 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.116 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.117 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.118 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.120 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.121 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.125 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.126 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.128 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.129 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.131 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.133 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.135 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.136 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.137 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.139 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.141 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.142 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.144 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.145 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.146 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.148 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.149 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.151 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.152 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.153 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.155 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.156 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.158 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.159 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.161 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.162 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.163 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.165 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.166 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.168 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.169 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.170 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.172 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.173 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.175 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.176 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.178 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.179 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.181 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.182 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.183 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.185 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.186 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.187 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.189 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.191 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.192 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.195 -06:00 [INF] Executed DbCommand (2ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.196 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.198 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.199 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.201 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.203 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.204 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.206 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.207 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.209 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.211 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.213 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.214 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.216 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.217 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.219 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.220 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.222 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.224 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.226 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.228 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.229 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.230 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.232 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.233 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.235 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.236 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.238 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.240 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.242 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.243 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.245 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.246 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.248 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.249 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.250 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_clave_entidad_federativa_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_clave_entidad_federativa_0
+LIMIT 1
+2023-05-04 15:00:50.252 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_salario_infonavit_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='120']
+SELECT c.id, c.descripcion
+FROM c_salario_infonavit AS c
+WHERE c.id = @__FirstOrDefault_id_salario_infonavit_0
+LIMIT 1
+2023-05-04 15:00:50.256 -06:00 [INF] Executing ObjectResult, writing value of type 'System.Linq.Enumerable+SelectEnumerableIterator`2[[System.Linq.IGrouping`2[[<>f__AnonymousType4`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], sniiv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[<>f__AnonymousType3`5[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], sniiv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Linq, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a],[<>f__AnonymousType5`4[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Linq.IOrderedEnumerable`1[[<>f__AnonymousType3`5[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], sniiv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Linq, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a]], sniiv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-05-04 15:00:50.274 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_estado_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_id_estado_0
+LIMIT 1
+2023-05-04 15:00:50.283 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_estado_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_id_estado_0
+LIMIT 1
+2023-05-04 15:00:50.285 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_estado_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_id_estado_0
+LIMIT 1
+2023-05-04 15:00:50.286 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_estado_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_id_estado_0
+LIMIT 1
+2023-05-04 15:00:50.288 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_estado_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_id_estado_0
+LIMIT 1
+2023-05-04 15:00:50.289 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_estado_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_id_estado_0
+LIMIT 1
+2023-05-04 15:00:50.297 -06:00 [INF] Executed DbCommand (7ms) [Parameters=[@__FirstOrDefault_id_estado_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_id_estado_0
+LIMIT 1
+2023-05-04 15:00:50.299 -06:00 [INF] Executed DbCommand (2ms) [Parameters=[@__FirstOrDefault_id_estado_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_id_estado_0
+LIMIT 1
+2023-05-04 15:00:50.302 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_estado_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_id_estado_0
+LIMIT 1
+2023-05-04 15:00:50.303 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_estado_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_id_estado_0
+LIMIT 1
+2023-05-04 15:00:50.305 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_estado_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_id_estado_0
+LIMIT 1
+2023-05-04 15:00:50.307 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_estado_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_id_estado_0
+LIMIT 1
+2023-05-04 15:00:50.308 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_estado_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_id_estado_0
+LIMIT 1
+2023-05-04 15:00:50.311 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_estado_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_id_estado_0
+LIMIT 1
+2023-05-04 15:00:50.312 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_estado_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_id_estado_0
+LIMIT 1
+2023-05-04 15:00:50.313 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_estado_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_id_estado_0
+LIMIT 1
+2023-05-04 15:00:50.315 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_estado_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_id_estado_0
+LIMIT 1
+2023-05-04 15:00:50.316 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_estado_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_id_estado_0
+LIMIT 1
+2023-05-04 15:00:50.318 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_estado_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_id_estado_0
+LIMIT 1
+2023-05-04 15:00:50.319 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_estado_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_id_estado_0
+LIMIT 1
+2023-05-04 15:00:50.321 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_estado_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_id_estado_0
+LIMIT 1
+2023-05-04 15:00:50.322 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_estado_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_id_estado_0
+LIMIT 1
+2023-05-04 15:00:50.325 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_estado_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_id_estado_0
+LIMIT 1
+2023-05-04 15:00:50.327 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_estado_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_id_estado_0
+LIMIT 1
+2023-05-04 15:00:50.328 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_estado_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_id_estado_0
+LIMIT 1
+2023-05-04 15:00:50.330 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_estado_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_id_estado_0
+LIMIT 1
+2023-05-04 15:00:50.332 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_estado_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_id_estado_0
+LIMIT 1
+2023-05-04 15:00:50.333 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_estado_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_id_estado_0
+LIMIT 1
+2023-05-04 15:00:50.335 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_estado_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_id_estado_0
+LIMIT 1
+2023-05-04 15:00:50.337 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_estado_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_id_estado_0
+LIMIT 1
+2023-05-04 15:00:50.338 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_estado_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_id_estado_0
+LIMIT 1
+2023-05-04 15:00:50.339 -06:00 [INF] Executed DbCommand (1ms) [Parameters=[@__FirstOrDefault_id_estado_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT c.clave, c.abreviacion, c.descripcion, c.id_region
+FROM c_entidad_federativa AS c
+WHERE c.clave = @__FirstOrDefault_id_estado_0
+LIMIT 1
+2023-05-04 15:00:50.340 -06:00 [INF] Executed action sniiv.Controllers.DemandaAPIController.GetDemandaPotencial (sniiv) in 1736.6908ms
+2023-05-04 15:00:50.340 -06:00 [INF] Executed endpoint 'sniiv.Controllers.DemandaAPIController.GetDemandaPotencial (sniiv)'
+2023-05-04 15:00:50.340 -06:00 [INF] Request GET /api/DemandaAPI/GetDemandaPotencial/2022/12 => 200
+2023-05-04 15:00:50.341 -06:00 [INF] Request finished in 1767.0073ms 200 application/json; charset=utf-8
+2023-05-04 15:00:50.348 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/js/maps/00.json  
+2023-05-04 15:00:50.363 -06:00 [INF] Sending file. Request path: '/js/maps/00.json'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\js\maps\00.json'
+2023-05-04 15:00:50.364 -06:00 [INF] Request finished in 16.0697ms 200 application/json
+2023-05-04 15:00:50.371 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/fonts/glyphicons-halflings-regular.woff2  
+2023-05-04 15:00:50.379 -06:00 [INF] Sending file. Request path: '/fonts/glyphicons-halflings-regular.woff2'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\fonts\glyphicons-halflings-regular.woff2'
+2023-05-04 15:00:50.379 -06:00 [INF] Request finished in 7.993ms 200 font/woff2
+2023-05-04 15:00:54.607 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/Reporte/Datos_abiertos  
+2023-05-04 15:00:54.610 -06:00 [INF] Executing endpoint 'sniiv.Controllers.ReporteController.Datos_abiertos (sniiv)'
+2023-05-04 15:00:54.612 -06:00 [INF] Route matched with {action = "Datos_abiertos", controller = "Reporte"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Datos_abiertos() on controller sniiv.Controllers.ReporteController (sniiv).
+2023-05-04 15:00:56.291 -06:00 [ERR] Date: 04/05/2023 03:00:54 p.m.
+Message: Unable to cast object of type 'System.DBNull' to type 'System.Int32'.
+StackTrace:    at DiasInventarioDAO.<>c.<seleccionarTrimestre>b__5_0(DataRow row) in C:\Users\pe.norberto.rojas\source\repos\Geoberth\SNIIV_reloaded\AccessData\DiasInventarioDAO.cs:line 81
+   at System.Linq.Enumerable.SelectEnumerableIterator`2.ToList()
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at DiasInventarioDAO.seleccionarTrimestre() in C:\Users\pe.norberto.rojas\source\repos\Geoberth\SNIIV_reloaded\AccessData\DiasInventarioDAO.cs:line 81
+Source: AccessData
+TargetSite: Int32 <seleccionarTrimestre>b__5_0(System.Data.DataRow)
+-----------------------------------------------------------
+
+System.InvalidCastException: Unable to cast object of type 'System.DBNull' to type 'System.Int32'.
+   at DiasInventarioDAO.<>c.<seleccionarTrimestre>b__5_0(DataRow row) in C:\Users\pe.norberto.rojas\source\repos\Geoberth\SNIIV_reloaded\AccessData\DiasInventarioDAO.cs:line 81
+   at System.Linq.Enumerable.SelectEnumerableIterator`2.ToList()
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at DiasInventarioDAO.seleccionarTrimestre() in C:\Users\pe.norberto.rojas\source\repos\Geoberth\SNIIV_reloaded\AccessData\DiasInventarioDAO.cs:line 81
+2023-05-04 15:00:57.147 -06:00 [INF] Executing ViewResult, running view Datos_abiertos.
+2023-05-04 15:00:58.171 -06:00 [INF] Executed ViewResult - view Datos_abiertos executed in 1035.1177ms.
+2023-05-04 15:00:58.171 -06:00 [INF] Executed action sniiv.Controllers.ReporteController.Datos_abiertos (sniiv) in 3559.1537ms
+2023-05-04 15:00:58.171 -06:00 [INF] Executed endpoint 'sniiv.Controllers.ReporteController.Datos_abiertos (sniiv)'
+2023-05-04 15:00:58.172 -06:00 [INF] Request GET /Reporte/Datos_abiertos => 200
+2023-05-04 15:00:58.172 -06:00 [INF] Request finished in 3565.2392ms 200 text/html; charset=utf-8
+2023-05-04 15:00:58.215 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/img/datos_abiertos/logo5.png  
+2023-05-04 15:00:58.216 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/img/datos_abiertos/logo3.png  
+2023-05-04 15:00:58.218 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/img/datos_abiertos/logo1.png  
+2023-05-04 15:00:58.219 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/img/datos_abiertos/logo8.png  
+2023-05-04 15:00:58.220 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/img/loader.gif  
+2023-05-04 15:00:58.244 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/img/datos_abiertos/logo6.png  
+2023-05-04 15:00:58.244 -06:00 [INF] Sending file. Request path: '/img/loader.gif'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\img\loader.gif'
+2023-05-04 15:00:58.246 -06:00 [INF] Request finished in 26.7149ms 200 image/gif
+2023-05-04 15:00:58.265 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/img/datos_abiertos/logo9.png  
+2023-05-04 15:00:58.265 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/img/datos_abiertos/logo7.png  
+2023-05-04 15:00:58.267 -06:00 [INF] Sending file. Request path: '/img/datos_abiertos/logo5.png'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\img\datos_abiertos\logo5.png'
+2023-05-04 15:00:58.271 -06:00 [INF] Sending file. Request path: '/img/datos_abiertos/logo6.png'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\img\datos_abiertos\logo6.png'
+2023-05-04 15:00:58.273 -06:00 [INF] Request finished in 28.5367ms 200 image/png
+2023-05-04 15:00:58.274 -06:00 [INF] Sending file. Request path: '/img/datos_abiertos/logo8.png'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\img\datos_abiertos\logo8.png'
+2023-05-04 15:00:58.274 -06:00 [INF] Sending file. Request path: '/img/datos_abiertos/logo7.png'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\img\datos_abiertos\logo7.png'
+2023-05-04 15:00:58.274 -06:00 [INF] Request finished in 9.4902ms 200 image/png
+2023-05-04 15:00:58.274 -06:00 [INF] Request finished in 55.0948ms 200 image/png
+2023-05-04 15:00:58.275 -06:00 [INF] Sending file. Request path: '/img/datos_abiertos/logo1.png'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\img\datos_abiertos\logo1.png'
+2023-05-04 15:00:58.275 -06:00 [INF] Request finished in 56.9096ms 200 image/png
+2023-05-04 15:00:58.275 -06:00 [INF] Request finished in 60.3501ms 200 image/png
+2023-05-04 15:00:58.277 -06:00 [INF] Sending file. Request path: '/img/datos_abiertos/logo9.png'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\img\datos_abiertos\logo9.png'
+2023-05-04 15:00:58.291 -06:00 [INF] Request finished in 26.2279ms 200 image/png
+2023-05-04 15:00:58.291 -06:00 [INF] Sending file. Request path: '/img/datos_abiertos/logo3.png'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\img\datos_abiertos\logo3.png'
+2023-05-04 15:00:58.291 -06:00 [INF] Request finished in 75.0694ms 200 image/png
+2023-05-04 15:07:55.331 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/Dashboard/Oferta  
+2023-05-04 15:07:55.336 -06:00 [INF] Executing endpoint 'sniiv.Controllers.DashboardController.Oferta (sniiv)'
+2023-05-04 15:07:55.338 -06:00 [INF] Route matched with {action = "Oferta", controller = "Dashboard"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Oferta() on controller sniiv.Controllers.DashboardController (sniiv).
+2023-05-04 15:07:55.827 -06:00 [INF] Executing ViewResult, running view Oferta.
+2023-05-04 15:07:56.248 -06:00 [INF] Executed ViewResult - view Oferta executed in 436.8204ms.
+2023-05-04 15:07:56.248 -06:00 [INF] Executed action sniiv.Controllers.DashboardController.Oferta (sniiv) in 910.4706ms
+2023-05-04 15:07:56.249 -06:00 [INF] Executed endpoint 'sniiv.Controllers.DashboardController.Oferta (sniiv)'
+2023-05-04 15:07:56.249 -06:00 [INF] Request GET /Dashboard/Oferta => 200
+2023-05-04 15:07:56.249 -06:00 [INF] Request finished in 918.4928ms 200 text/html; charset=utf-8
+2023-05-04 15:07:56.291 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/css/dashboard.css  
+2023-05-04 15:07:56.291 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/css/dc/dc.css  
+2023-05-04 15:07:56.293 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/js/dc/d3.js  
+2023-05-04 15:07:56.301 -06:00 [INF] Sending file. Request path: '/css/dashboard.css'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\css\dashboard.css'
+2023-05-04 15:07:56.301 -06:00 [INF] Request finished in 10.4954ms 200 text/css
+2023-05-04 15:07:56.301 -06:00 [INF] Sending file. Request path: '/css/dc/dc.css'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\css\dc\dc.css'
+2023-05-04 15:07:56.301 -06:00 [INF] Request finished in 10.365ms 200 text/css
+2023-05-04 15:07:56.302 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/js/dc/d3.tip.js  
+2023-05-04 15:07:56.302 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/js/dc/crossfilter.js  
+2023-05-04 15:07:56.303 -06:00 [INF] Sending file. Request path: '/js/dc/d3.tip.js'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\js\dc\d3.tip.js'
+2023-05-04 15:07:56.303 -06:00 [INF] Request finished in 1.1958ms 200 application/javascript
+2023-05-04 15:07:56.311 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/js/dc/dc.min.js  
+2023-05-04 15:07:56.345 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/js/colorbrewer.js  
+2023-05-04 15:07:56.351 -06:00 [INF] Sending file. Request path: '/js/colorbrewer.js'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\js\colorbrewer.js'
+2023-05-04 15:07:56.352 -06:00 [INF] Request finished in 6.6666ms 200 application/javascript
+2023-05-04 15:07:56.352 -06:00 [INF] Sending file. Request path: '/js/dc/crossfilter.js'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\js\dc\crossfilter.js'
+2023-05-04 15:07:56.352 -06:00 [INF] Request finished in 50.4714ms 200 application/javascript
+2023-05-04 15:07:56.370 -06:00 [INF] Sending file. Request path: '/js/dc/dc.min.js'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\js\dc\dc.min.js'
+2023-05-04 15:07:56.370 -06:00 [INF] Request finished in 59.0198ms 200 application/javascript
+2023-05-04 15:07:56.396 -06:00 [INF] Sending file. Request path: '/js/dc/d3.js'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\js\dc\d3.js'
+2023-05-04 15:07:56.396 -06:00 [INF] Request finished in 102.8687ms 200 application/javascript
+2023-05-04 15:07:56.450 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/api/DashboardAPI/GetKPIsInventario2/2023/1  
+2023-05-04 15:07:56.480 -06:00 [INF] Executing endpoint 'sniiv.Controllers.DashboardAPIController.GetKPIsInventario2 (sniiv)'
+2023-05-04 15:07:56.483 -06:00 [INF] Route matched with {action = "GetKPIsInventario2", controller = "DashboardAPI"}. Executing controller action with signature System.Collections.Generic.List`1[OfertaInventarioVO] GetKPIsInventario2(Int32, Int32) on controller sniiv.Controllers.DashboardAPIController (sniiv).
+2023-05-04 15:07:58.732 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/Indicadores/Pnv  
+2023-05-04 15:07:58.735 -06:00 [INF] Executing endpoint 'sniiv.Controllers.IndicadoresController.Pnv (sniiv)'
+2023-05-04 15:07:58.736 -06:00 [INF] Route matched with {action = "Pnv", controller = "Indicadores"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Pnv() on controller sniiv.Controllers.IndicadoresController (sniiv).
+2023-05-04 15:07:58.816 -06:00 [INF] Executing ViewResult, running view Pnv.
+2023-05-04 15:07:58.902 -06:00 [INF] Executed ViewResult - view Pnv executed in 89.0824ms.
+2023-05-04 15:07:58.902 -06:00 [INF] Executed action sniiv.Controllers.IndicadoresController.Pnv (sniiv) in 166.107ms
+2023-05-04 15:07:58.903 -06:00 [INF] Executed endpoint 'sniiv.Controllers.IndicadoresController.Pnv (sniiv)'
+2023-05-04 15:07:58.903 -06:00 [INF] Request GET /Indicadores/Pnv => 200
+2023-05-04 15:07:58.903 -06:00 [INF] Request finished in 170.6651ms 200 text/html; charset=utf-8
+2023-05-04 15:07:59.490 -06:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[OfertaInventarioVO, Entity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-05-04 15:08:00.059 -06:00 [INF] Executed action sniiv.Controllers.DashboardAPIController.GetKPIsInventario2 (sniiv) in 3576.4218ms
+2023-05-04 15:08:00.060 -06:00 [INF] Executed endpoint 'sniiv.Controllers.DashboardAPIController.GetKPIsInventario2 (sniiv)'
+2023-05-04 15:08:00.060 -06:00 [INF] Request GET /api/DashboardAPI/GetKPIsInventario2/2023/1 => 200
+2023-05-04 15:08:00.060 -06:00 [INF] Request finished in 3609.7307ms 200 application/json; charset=utf-8
+2023-05-04 15:08:08.520 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/homemx/  
+2023-05-04 15:08:08.521 -06:00 [INF] Request GET /homemx/ => 404
+2023-05-04 15:08:08.522 -06:00 [INF] Request finished in 1.2986ms 404 
+2023-05-04 15:08:12.138 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/homemx/  
+2023-05-04 15:08:12.139 -06:00 [INF] Request GET /homemx/ => 404
+2023-05-04 15:08:12.140 -06:00 [INF] Request finished in 1.7643ms 404 
+2023-05-04 15:08:15.748 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/homemx/  
+2023-05-04 15:08:15.749 -06:00 [INF] Request GET /homemx/ => 404
+2023-05-04 15:08:15.751 -06:00 [INF] Request finished in 3.0842ms 404 
+2023-05-04 17:33:35.292 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/Reporte/Datos_abiertos  
+2023-05-04 17:33:35.300 -06:00 [INF] Executing endpoint 'sniiv.Controllers.ReporteController.Datos_abiertos (sniiv)'
+2023-05-04 17:33:35.301 -06:00 [INF] Route matched with {action = "Datos_abiertos", controller = "Reporte"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Datos_abiertos() on controller sniiv.Controllers.ReporteController (sniiv).
+2023-05-04 17:33:35.448 -06:00 [ERR] Date: 04/05/2023 05:33:35 p.m.
+Message: Unable to cast object of type 'System.DBNull' to type 'System.Int32'.
+StackTrace:    at DiasInventarioDAO.<>c.<seleccionarTrimestre>b__5_0(DataRow row) in C:\Users\pe.norberto.rojas\source\repos\Geoberth\SNIIV_reloaded\AccessData\DiasInventarioDAO.cs:line 81
+   at System.Linq.Enumerable.SelectEnumerableIterator`2.ToList()
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at DiasInventarioDAO.seleccionarTrimestre() in C:\Users\pe.norberto.rojas\source\repos\Geoberth\SNIIV_reloaded\AccessData\DiasInventarioDAO.cs:line 81
+Source: AccessData
+TargetSite: Int32 <seleccionarTrimestre>b__5_0(System.Data.DataRow)
+-----------------------------------------------------------
+
+System.InvalidCastException: Unable to cast object of type 'System.DBNull' to type 'System.Int32'.
+   at DiasInventarioDAO.<>c.<seleccionarTrimestre>b__5_0(DataRow row) in C:\Users\pe.norberto.rojas\source\repos\Geoberth\SNIIV_reloaded\AccessData\DiasInventarioDAO.cs:line 81
+   at System.Linq.Enumerable.SelectEnumerableIterator`2.ToList()
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at DiasInventarioDAO.seleccionarTrimestre() in C:\Users\pe.norberto.rojas\source\repos\Geoberth\SNIIV_reloaded\AccessData\DiasInventarioDAO.cs:line 81
+2023-05-04 17:33:35.455 -06:00 [INF] Executing ViewResult, running view Datos_abiertos.
+2023-05-04 17:33:35.494 -06:00 [INF] Executed ViewResult - view Datos_abiertos executed in 43.3326ms.
+2023-05-04 17:33:35.523 -06:00 [INF] Executed action sniiv.Controllers.ReporteController.Datos_abiertos (sniiv) in 222.209ms
+2023-05-04 17:33:35.524 -06:00 [INF] Executed endpoint 'sniiv.Controllers.ReporteController.Datos_abiertos (sniiv)'
+2023-05-04 17:33:35.525 -06:00 [INF] Request GET /Reporte/Datos_abiertos => 200
+2023-05-04 17:33:35.526 -06:00 [INF] Request finished in 235.0018ms 200 text/html; charset=utf-8
+2023-05-04 17:43:26.911 -06:00 [INF] User profile is available. Using 'C:\Users\pe.norberto.rojas\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-05-04 17:43:27.756 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-05-04 17:43:27.757 -06:00 [INF] Hosting environment: Development
+2023-05-04 17:43:27.757 -06:00 [INF] Content root path: C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv
+2023-05-04 17:43:27.814 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/  
+2023-05-04 17:43:27.919 -06:00 [INF] Executing endpoint 'sniiv.Controllers.InicioController.Acerca_de (sniiv)'
+2023-05-04 17:43:27.948 -06:00 [INF] Route matched with {action = "Acerca_de", controller = "Inicio"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Acerca_de() on controller sniiv.Controllers.InicioController (sniiv).
+2023-05-04 17:43:29.261 -06:00 [INF] Entity Framework Core 3.1.3 initialized 'AppDBContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+2023-05-04 17:43:30.467 -06:00 [INF] Executed DbCommand (9ms) [Parameters=[@__bn_0='?'], CommandType='"Text"', CommandTimeout='120']
+SELECT d.id, d.anio, d.formato, d.mes, d.tipo, d.url
+FROM datos_abiertos AS d
+WHERE d.tipo = @__bn_0
+2023-05-04 17:43:30.666 -06:00 [INF] Executing ViewResult, running view Acerca_de.
+2023-05-04 17:43:30.917 -06:00 [INF] Executed ViewResult - view Acerca_de executed in 271.2502ms.
+2023-05-04 17:43:30.918 -06:00 [INF] Executed action sniiv.Controllers.InicioController.Acerca_de (sniiv) in 2969.7122ms
+2023-05-04 17:43:30.919 -06:00 [INF] Executed endpoint 'sniiv.Controllers.InicioController.Acerca_de (sniiv)'
+2023-05-04 17:43:30.919 -06:00 [INF] Request GET / => 200
+2023-05-04 17:43:30.929 -06:00 [INF] Request finished in 3120.2003ms 200 text/html; charset=utf-8
+2023-05-04 17:43:30.942 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/js/jquery-1.11/jquery.min.js  
+2023-05-04 17:43:30.943 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/js/bootstrap.min.js  
+2023-05-04 17:43:30.977 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/css/stroke-7/style.css  
+2023-05-04 17:43:30.979 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/css/style1.css  
+2023-05-04 17:43:30.984 -06:00 [INF] Sending file. Request path: '/css/stroke-7/style.css'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\css\stroke-7\style.css'
+2023-05-04 17:43:30.984 -06:00 [INF] Sending file. Request path: '/css/style1.css'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\css\style1.css'
+2023-05-04 17:43:30.985 -06:00 [INF] Request finished in 7.2848ms 200 text/css
+2023-05-04 17:43:30.985 -06:00 [INF] Request finished in 5.419ms 200 text/css
+2023-05-04 17:43:30.985 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/css/diag.css  
+2023-05-04 17:43:30.985 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/css/bootstrap.min.css  
+2023-05-04 17:43:30.991 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/img/sniiv_ic.png  
+2023-05-04 17:43:30.991 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/js/acerca-de.js  
+2023-05-04 17:43:30.992 -06:00 [INF] Sending file. Request path: '/css/diag.css'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\css\diag.css'
+2023-05-04 17:43:30.992 -06:00 [INF] Request finished in 6.7726ms 200 text/css
+2023-05-04 17:43:30.992 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/js/jquery.backstretch.min.js  
+2023-05-04 17:43:30.992 -06:00 [INF] Sending file. Request path: '/js/bootstrap.min.js'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\js\bootstrap.min.js'
+2023-05-04 17:43:30.997 -06:00 [INF] Sending file. Request path: '/img/sniiv_ic.png'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\img\sniiv_ic.png'
+2023-05-04 17:43:30.997 -06:00 [INF] Request finished in 5.3919ms 200 image/png
+2023-05-04 17:43:30.997 -06:00 [INF] Sending file. Request path: '/js/acerca-de.js'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\js\acerca-de.js'
+2023-05-04 17:43:30.998 -06:00 [INF] Request finished in 6.4144ms 200 application/javascript
+2023-05-04 17:43:31.000 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/img/cnbv.jpg  
+2023-05-04 17:43:31.001 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/img/conavi.png  
+2023-05-04 17:43:31.003 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/img/INSUS.png  
+2023-05-04 17:43:31.003 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/img/infonavit.png  
+2023-05-04 17:43:31.006 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/img/ruv.png  
+2023-05-04 17:43:31.006 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/img/fovissste.png  
+2023-05-04 17:43:31.009 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/img/shf.png  
+2023-05-04 17:43:31.009 -06:00 [INF] Request finished in 65.7693ms 200 application/javascript
+2023-05-04 17:43:31.010 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/img/sniiv02.png  
+2023-05-04 17:43:31.010 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/img/sedatu.png  
+2023-05-04 17:43:31.023 -06:00 [INF] Sending file. Request path: '/js/jquery.backstretch.min.js'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\js\jquery.backstretch.min.js'
+2023-05-04 17:43:31.023 -06:00 [INF] Request finished in 31.183ms 200 application/javascript
+2023-05-04 17:43:31.024 -06:00 [INF] Sending file. Request path: '/img/cnbv.jpg'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\img\cnbv.jpg'
+2023-05-04 17:43:31.024 -06:00 [INF] Request finished in 24.7771ms 200 image/jpeg
+2023-05-04 17:43:31.026 -06:00 [INF] Sending file. Request path: '/img/shf.png'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\img\shf.png'
+2023-05-04 17:43:31.027 -06:00 [INF] Request finished in 18.631ms 200 image/png
+2023-05-04 17:43:31.027 -06:00 [INF] Sending file. Request path: '/img/sniiv02.png'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\img\sniiv02.png'
+2023-05-04 17:43:31.027 -06:00 [INF] Request finished in 17.79ms 200 image/png
+2023-05-04 17:43:31.029 -06:00 [INF] Sending file. Request path: '/js/jquery-1.11/jquery.min.js'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\js\jquery-1.11\jquery.min.js'
+2023-05-04 17:43:31.029 -06:00 [INF] Sending file. Request path: '/img/sedatu.png'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\img\sedatu.png'
+2023-05-04 17:43:31.029 -06:00 [INF] Request finished in 89.1069ms 200 application/javascript
+2023-05-04 17:43:31.029 -06:00 [INF] Request finished in 19.0774ms 200 image/png
+2023-05-04 17:43:31.030 -06:00 [INF] Sending file. Request path: '/img/ruv.png'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\img\ruv.png'
+2023-05-04 17:43:31.030 -06:00 [INF] Request finished in 24.0145ms 200 image/png
+2023-05-04 17:43:31.031 -06:00 [INF] Sending file. Request path: '/css/bootstrap.min.css'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\css\bootstrap.min.css'
+2023-05-04 17:43:31.031 -06:00 [INF] Request finished in 45.9943ms 200 text/css
+2023-05-04 17:43:31.033 -06:00 [INF] Sending file. Request path: '/img/INSUS.png'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\img\INSUS.png'
+2023-05-04 17:43:31.033 -06:00 [INF] Sending file. Request path: '/img/infonavit.png'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\img\infonavit.png'
+2023-05-04 17:43:31.034 -06:00 [INF] Request finished in 30.6322ms 200 image/png
+2023-05-04 17:43:31.035 -06:00 [INF] Request finished in 32.1527ms 200 image/png
+2023-05-04 17:43:31.037 -06:00 [INF] Sending file. Request path: '/img/fovissste.png'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\img\fovissste.png'
+2023-05-04 17:43:31.038 -06:00 [INF] Request finished in 31.358ms 200 image/png
+2023-05-04 17:43:31.042 -06:00 [INF] Sending file. Request path: '/img/conavi.png'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\img\conavi.png'
+2023-05-04 17:43:31.042 -06:00 [INF] Request finished in 40.8438ms 200 image/png
+2023-05-04 17:43:31.280 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/img/carousel-1.jpeg  
+2023-05-04 17:43:31.313 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/css/stroke-7/fonts/Stroke-7.ttf?21lgsr  
+2023-05-04 17:43:31.321 -06:00 [INF] Sending file. Request path: '/css/stroke-7/fonts/Stroke-7.ttf'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\css\stroke-7\fonts\Stroke-7.ttf'
+2023-05-04 17:43:31.321 -06:00 [INF] Request finished in 8.3695ms 200 application/x-font-ttf
+2023-05-04 17:43:31.815 -06:00 [INF] Sending file. Request path: '/img/carousel-1.jpeg'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\img\carousel-1.jpeg'
+2023-05-04 17:43:31.816 -06:00 [INF] Request finished in 535.7655ms 200 image/jpeg
+2023-05-04 17:43:31.879 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/favicon.ico  
+2023-05-04 17:43:31.881 -06:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\favicon.ico'
+2023-05-04 17:43:31.882 -06:00 [INF] Request finished in 3.5552ms 200 image/x-icon
+2023-05-04 17:43:36.664 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/Reporte/Datos_abiertos  
+2023-05-04 17:43:36.670 -06:00 [INF] Executing endpoint 'sniiv.Controllers.ReporteController.Datos_abiertos (sniiv)'
+2023-05-04 17:43:36.674 -06:00 [INF] Route matched with {action = "Datos_abiertos", controller = "Reporte"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Datos_abiertos() on controller sniiv.Controllers.ReporteController (sniiv).
+2023-05-04 17:43:36.913 -06:00 [ERR] Date: 04/05/2023 05:43:36 p.m.
+Message: Unable to cast object of type 'System.DBNull' to type 'System.Int32'.
+StackTrace:    at DiasInventarioDAO.<>c.<seleccionarTrimestre>b__5_0(DataRow row) in C:\Users\pe.norberto.rojas\source\repos\Geoberth\SNIIV_reloaded\AccessData\DiasInventarioDAO.cs:line 81
+   at System.Linq.Enumerable.SelectEnumerableIterator`2.ToList()
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at DiasInventarioDAO.seleccionarTrimestre() in C:\Users\pe.norberto.rojas\source\repos\Geoberth\SNIIV_reloaded\AccessData\DiasInventarioDAO.cs:line 81
+Source: AccessData
+TargetSite: Int32 <seleccionarTrimestre>b__5_0(System.Data.DataRow)
+-----------------------------------------------------------
+
+System.InvalidCastException: Unable to cast object of type 'System.DBNull' to type 'System.Int32'.
+   at DiasInventarioDAO.<>c.<seleccionarTrimestre>b__5_0(DataRow row) in C:\Users\pe.norberto.rojas\source\repos\Geoberth\SNIIV_reloaded\AccessData\DiasInventarioDAO.cs:line 81
+   at System.Linq.Enumerable.SelectEnumerableIterator`2.ToList()
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at DiasInventarioDAO.seleccionarTrimestre() in C:\Users\pe.norberto.rojas\source\repos\Geoberth\SNIIV_reloaded\AccessData\DiasInventarioDAO.cs:line 81
+2023-05-04 17:43:37.773 -06:00 [INF] Executing ViewResult, running view Datos_abiertos.
+2023-05-04 17:43:38.811 -06:00 [INF] Executed ViewResult - view Datos_abiertos executed in 1050.6538ms.
+2023-05-04 17:43:38.812 -06:00 [INF] Executed action sniiv.Controllers.ReporteController.Datos_abiertos (sniiv) in 2137.8901ms
+2023-05-04 17:43:38.812 -06:00 [INF] Executed endpoint 'sniiv.Controllers.ReporteController.Datos_abiertos (sniiv)'
+2023-05-04 17:43:38.812 -06:00 [INF] Request GET /Reporte/Datos_abiertos => 200
+2023-05-04 17:43:38.812 -06:00 [INF] Request finished in 2148.4466ms 200 text/html; charset=utf-8
+2023-05-04 17:43:38.824 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/js/util.js  
+2023-05-04 17:43:38.826 -06:00 [INF] Sending file. Request path: '/js/util.js'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\js\util.js'
+2023-05-04 17:43:38.826 -06:00 [INF] Request finished in 2.0377ms 200 application/javascript
+2023-05-04 17:43:38.867 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/img/datos_abiertos/logo5.png  
+2023-05-04 17:43:38.872 -06:00 [INF] Sending file. Request path: '/img/datos_abiertos/logo5.png'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\img\datos_abiertos\logo5.png'
+2023-05-04 17:43:38.873 -06:00 [INF] Request finished in 5.3476ms 200 image/png
+2023-05-04 17:43:38.876 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/img/loader.gif  
+2023-05-04 17:43:38.876 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/img/datos_abiertos/logo6.png  
+2023-05-04 17:43:38.876 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/img/datos_abiertos/logo7.png  
+2023-05-04 17:43:38.878 -06:00 [INF] Sending file. Request path: '/img/datos_abiertos/logo6.png'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\img\datos_abiertos\logo6.png'
+2023-05-04 17:43:38.878 -06:00 [INF] Request finished in 2.3842ms 200 image/png
+2023-05-04 17:43:38.878 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/img/datos_abiertos/logo8.png  
+2023-05-04 17:43:38.880 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/img/datos_abiertos/logo9.png  
+2023-05-04 17:43:38.881 -06:00 [INF] Sending file. Request path: '/img/loader.gif'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\img\loader.gif'
+2023-05-04 17:43:38.881 -06:00 [INF] Sending file. Request path: '/img/datos_abiertos/logo8.png'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\img\datos_abiertos\logo8.png'
+2023-05-04 17:43:38.881 -06:00 [INF] Request finished in 5.2659ms 200 image/gif
+2023-05-04 17:43:38.881 -06:00 [INF] Request finished in 2.6934ms 200 image/png
+2023-05-04 17:43:38.881 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/img/datos_abiertos/logo3.png  
+2023-05-04 17:43:38.881 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/img/datos_abiertos/logo1.png  
+2023-05-04 17:43:38.881 -06:00 [INF] Sending file. Request path: '/img/datos_abiertos/logo9.png'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\img\datos_abiertos\logo9.png'
+2023-05-04 17:43:38.882 -06:00 [INF] Request finished in 1.758ms 200 image/png
+2023-05-04 17:43:38.887 -06:00 [INF] Sending file. Request path: '/img/datos_abiertos/logo3.png'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\img\datos_abiertos\logo3.png'
+2023-05-04 17:43:38.891 -06:00 [INF] Sending file. Request path: '/img/datos_abiertos/logo7.png'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\img\datos_abiertos\logo7.png'
+2023-05-04 17:43:38.891 -06:00 [INF] Sending file. Request path: '/img/datos_abiertos/logo1.png'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\img\datos_abiertos\logo1.png'
+2023-05-04 17:43:38.891 -06:00 [INF] Request finished in 14.9677ms 200 image/png
+2023-05-04 17:43:38.892 -06:00 [INF] Request finished in 10.6224ms 200 image/png
+2023-05-04 17:43:38.892 -06:00 [INF] Request finished in 10.8863ms 200 image/png
+2023-05-04 17:43:38.930 -06:00 [INF] Request starting HTTP/2.0 GET https://localhost:44369/fonts/glyphicons-halflings-regular.woff2  
+2023-05-04 17:43:38.934 -06:00 [INF] Sending file. Request path: '/fonts/glyphicons-halflings-regular.woff2'. Physical path: 'C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\sniiv\wwwroot\fonts\glyphicons-halflings-regular.woff2'
+2023-05-04 17:43:38.934 -06:00 [INF] Request finished in 4.4083ms 200 font/woff2

@@ -9241,11 +9241,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Resplado sedatu\\Azure5\\sniiv\\sniiv.csproj",
+      "projectUniqueName": "C:\\Users\\pe.norberto.rojas\\source\\repos\\Geoberth\\SNIIV_reloaded\\sniiv\\sniiv.csproj",
       "projectName": "sniiv",
-      "projectPath": "D:\\Resplado sedatu\\Azure5\\sniiv\\sniiv.csproj",
+      "projectPath": "C:\\Users\\pe.norberto.rojas\\source\\repos\\Geoberth\\SNIIV_reloaded\\sniiv\\sniiv.csproj",
       "packagesPath": "C:\\Users\\pe.norberto.rojas\\.nuget\\packages\\",
-      "outputPath": "D:\\Resplado sedatu\\Azure5\\sniiv\\obj\\",
+      "outputPath": "C:\\Users\\pe.norberto.rojas\\source\\repos\\Geoberth\\SNIIV_reloaded\\sniiv\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -9268,11 +9268,11 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\Resplado sedatu\\Azure5\\AccessData\\AccessData.csproj": {
-              "projectPath": "D:\\Resplado sedatu\\Azure5\\AccessData\\AccessData.csproj"
+            "C:\\Users\\pe.norberto.rojas\\source\\repos\\Geoberth\\SNIIV_reloaded\\AccessData\\AccessData.csproj": {
+              "projectPath": "C:\\Users\\pe.norberto.rojas\\source\\repos\\Geoberth\\SNIIV_reloaded\\AccessData\\AccessData.csproj"
             },
-            "D:\\Resplado sedatu\\Azure5\\Entity\\Entity.csproj": {
-              "projectPath": "D:\\Resplado sedatu\\Azure5\\Entity\\Entity.csproj"
+            "C:\\Users\\pe.norberto.rojas\\source\\repos\\Geoberth\\SNIIV_reloaded\\Entity\\Entity.csproj": {
+              "projectPath": "C:\\Users\\pe.norberto.rojas\\source\\repos\\Geoberth\\SNIIV_reloaded\\Entity\\Entity.csproj"
             }
           }
         }
@@ -9376,6 +9376,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[3.1.25, 3.1.25]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -9384,7 +9390,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.416\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
       }
     }
   }

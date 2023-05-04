@@ -8,3 +8,13 @@ D:\Resplado sedatu\Azure5\Entity\obj\Debug\netcoreapp3.1\Entity.AssemblyInfo.cs
 D:\Resplado sedatu\Azure5\Entity\obj\Debug\netcoreapp3.1\Entity.csproj.CoreCompileInputs.cache
 D:\Resplado sedatu\Azure5\Entity\obj\Debug\netcoreapp3.1\Entity.dll
 D:\Resplado sedatu\Azure5\Entity\obj\Debug\netcoreapp3.1\Entity.pdb
+C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\Entity\bin\Debug\netcoreapp3.1\Entity.deps.json
+C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\Entity\bin\Debug\netcoreapp3.1\Entity.dll
+C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\Entity\bin\Debug\netcoreapp3.1\Entity.pdb
+C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\Entity\obj\Debug\netcoreapp3.1\Entity.csproj.AssemblyReference.cache
+C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\Entity\obj\Debug\netcoreapp3.1\Entity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\Entity\obj\Debug\netcoreapp3.1\Entity.AssemblyInfoInputs.cache
+C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\Entity\obj\Debug\netcoreapp3.1\Entity.AssemblyInfo.cs
+C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\Entity\obj\Debug\netcoreapp3.1\Entity.csproj.CoreCompileInputs.cache
+C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\Entity\obj\Debug\netcoreapp3.1\Entity.dll
+C:\Users\pe.norberto.rojas\Source\Repos\Geoberth\SNIIV_reloaded\Entity\obj\Debug\netcoreapp3.1\Entity.pdb
